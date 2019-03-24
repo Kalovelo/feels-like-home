@@ -1,0 +1,50 @@
+.status
+{
+background-Color:#1e1e1e;
+color:whitesmoke;
+display: inline-block;
+border:2px black solid;
+}
+
+.status:hover
+{
+   
+   background-Color:white ;
+   color:black ;
+   transition: color 0.5s;
+   transition: background-color 0.3s;
+   border:2px #1e1e1e solid;
+}
+
+
+.status h4
+{
+padding-Bottom:3%;
+}
+
+@media (max-width: 1000px) {
+    .status
+{
+padding-Top:2%;
+border-Radius:0%;
+padding-bottom: 6%;
+color:whitesmoke;
+}
+ }
+
+ .statusMore
+ {
+    margin-Top:15%;
+    margin-bottom:10%;
+    text-Align:Right!important;
+    border:solid 1px transparent;
+    border-radius: 0%;
+    color:inherit;
+ }
+.btn-outline-light:hover
+ {
+    text-Align:Right!important;
+    border-radius: 0%;
+    border:solid black 1px;
+    background-color:transparent;
+ }

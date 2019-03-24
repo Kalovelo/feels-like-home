@@ -1,0 +1,76 @@
+ul li
+{
+    display:inline;
+}
+
+h2
+{
+    font-family: 'Adobe Garamond Pro Regular';
+}
+
+.Footer
+{
+    padding-top:1%;
+    padding-bottom:2%;
+    text-align: center;
+    margin-top:6%;
+}
+
+@media (max-width:1000px)
+    {
+    .Footer
+    {
+        padding-top:10%!important;
+        padding-bottom:10%!important;
+    }
+
+    .row
+    {
+        padding-top:5%!important;
+    }
+}
+
+a
+{
+    font-family:roboto;
+    color:white;
+    
+}
+
+.row
+{
+    padding-top:1%;
+}
+
+
+.footerMenu 
+{
+    padding-left:0px;
+    margin-right:35px;
+}
+
+.footerMenu a
+{
+    margin-left:35px ;
+}
+
+
+
+.footerSocial a
+{
+    font-size:18px;
+    margin-left: 25px;
+}
+
+
+.footerSocial 
+{
+    margin-right: 80px;
+}
+
+a:hover
+{
+    color:#424242;
+    transition: color 0.1s;
+    text-decoration: none;
+}

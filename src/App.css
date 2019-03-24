@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900);
+
+@media only screen and (min-width: 700px) 
+{
+    #topBar{ visibility: hidden; }
+    
+}
+
+body,html
+{
+  height:100%;
+}
+
+
+
+h1,h2,h3,h4,p
+{
+  font-family: 'Roboto';
+  font-weight:300;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#apostolesNavbar a
+{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight:lighter 
+}
+
+
+
+

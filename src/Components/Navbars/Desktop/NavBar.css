@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900);
+
+
+#apostolesNavbar a
+{
+    font-family: 'Roboto';
+    color:#707070;
+    font-weight: 300;
+}
+
+#apostolesNavbar a:hover
+{
+    color:black;
+    transition: color 0.8s;
+}
+
+#apostolesNavbar
+{
+    background-color:white;
+    border-bottom:solid black 1px;
+    margin-bottom:5%;
+    
+}
+ 
+/*hide navbar on mobile */
+@media (max-width: 768px) {
+    #apostolesNavbar 
+    {
+       display: none!important;
+    }
+ }

@@ -1,0 +1,63 @@
+.paral {
+    height: 300px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    width:100%;
+    }
+
+    
+        
+
+/* Paragraph for Parallax Section */ 
+.paral p {
+    font-size: 24px;
+    color:#000000;
+    text-align: center;
+    line-height: 60px;
+    
+    }
+     
+    /* Heading for Parallax Section */ 
+    .paral h1 {
+    color: #000000;
+    font-size: 23px;
+    text-align: center;
+    padding-top: 10px;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+    }
+
+    @media (max-width:1000px)
+    {
+        .paral h1
+        {
+            -webkit-filter:none!important; /* Safari 6.0 - 9.0 */
+            filter: none!important;
+        }
+    }
+
+    .paral :hover{
+        -webkit-filter:none!important; /* Safari 6.0 - 9.0 */
+    filter: none!important;
+    transition: 0.3s;
+    }
+
+
+    .paralsec {
+        background-image: url("./dubai.jpg");
+        }
+    
+        .paralsec :hover{
+
+        }
+         
+        .paralsec1 {
+        background-image: url("https://img.webnots.com/2017/05/parallax1.jpg");}
+         
+        .paralsec2 {
+        background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
+        }	
+        /* Remove Bottom Margin from Jumbotron */
+        .jumbotron{margin-bottom: 0;}
+         
