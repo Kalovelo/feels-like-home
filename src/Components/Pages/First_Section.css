@@ -1,0 +1,66 @@
+.topHalf
+{
+    background-color:#232323;
+    color:#fff;
+    padding-top:8%;
+    padding-bottom:8%;
+    padding-left:3%;   
+}
+
+.hideMob
+{
+  width:40%;
+  top:40%;
+  left:30%;
+  position:absolute;
+}
+
+
+.topHeadline
+{
+    text-align: center;
+
+  }
+
+.halfRow
+{
+    padding-bottom: 15%;
+}
+
+.frstImage
+{
+  margin-top:10%;
+  width:50%;
+}
+
+.rowPost
+{
+  margin-top:10%;
+}
+
+@media (max-width: 1000px) {
+    .topHalf 
+    {
+      background-image: url("../Images/apostolesblurred.jpg");
+      background-size: contain;
+      color:white;
+      
+    }
+    #homeMob{ padding-top:10% }
+    .hideMob{visibility: hidden;}
+    #topImgs{overflow:hidden;visibility: hidden;display:none!important}
+    h3,p    
+    {
+      text-align: center;
+    }
+
+    .frstImage
+    {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width:70%;
+    }
+
+ }
+
