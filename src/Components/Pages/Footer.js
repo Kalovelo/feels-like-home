@@ -2,19 +2,30 @@ import React from 'react';
 import {Container,Row,Col,Nav,Navbar} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF,faInstagram,faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
-import "./home.css"
 import "./footer.css"
+import { Component } from 'react';
 
-const Footer = () => {
+
+class Footer extends Component
+{
+    constructor() 
+    {
+        super();
+        this.state = {finished: false};
+        this.finishedHover = this.finishedHover.bind(this);
+    }
+
+    finishedHover() 
+      {
+        this.setState(prevState => ({finished: !prevState.finished}));
+      }
+
+render(){
     return (
-        <Container className="Footer" fluid="true" style={{backgroundColor:"black",color:"white",paddingTop:"2%"}}>
+        <Container className="Footer" fluid="true" style={{backgroundImage: "linear-gradient(#232323, #0c0b0b)",color:"white",paddingTop:"2%"}}>
             <Row  >
-                <Col xs={{span:12}}>
-                    <h2 style={{fontSize:"40px",textAlign:"center"}}>You made it to the end.</h2>
+                <Col md={{span:4,offset:4}}>
+                    <h2 style={{fontSize:"40px",textAlign:"center"}} onMouseEnter={this.finishedHover} onMouseLeave={this.finishedHover}>{this.state.finished?"but keep pushing forward.":"You made it to the end"}</h2>
                 </Col>
             </Row>
 
@@ -37,15 +48,17 @@ const Footer = () => {
             <Row >
                 <Col xs={{span:12}}>
                     <ul className="footerSocial">
-                        <li className="firstLi"><a href="dsfdsf"><FontAwesomeIcon icon={faFacebookF}/></a></li>
-                        <li><a href="dsfdsf"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                        <li className="lastLi"><a href="dsfdsf"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                        <li className="firstLi"><a href="https://www.facebook.com/kalovelo"><FontAwesomeIcon icon={faFacebookF}/></a></li>
+                        <li>                    <a href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                        <li className="lastLi"> <a href="https://linkedin.com/in/apostolos-kalovelonis-0b886116a"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
                     </ul>                
                 </Col>
             </Row>
 
         </Container>
     )
+}
+
 }
 
 export default Footer;

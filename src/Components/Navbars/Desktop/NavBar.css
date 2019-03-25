@@ -1,11 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900);
-
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 
 #apostolesNavbar a
 {
-    font-family: 'Roboto';
+    font-family: 'Montserrat';
     color:#707070;
-    font-weight: 300;
+    font-weight: 700;
+    font-size:16px!important;
 }
 
 #apostolesNavbar a:hover

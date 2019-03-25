@@ -26,6 +26,7 @@
     padding-top: 10px;
     -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
     filter: blur(5px);
+    transition: 0.3s;
     }
 
     @media (max-width:1000px)

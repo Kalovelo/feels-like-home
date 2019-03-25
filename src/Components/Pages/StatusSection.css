@@ -1,28 +1,58 @@
-.status
+.status h4
 {
-background-Color:#1e1e1e;
 color:whitesmoke;
-display: inline-block;
-border:2px black solid;
+font-size: 20px;
 }
 
 .status:hover
-{
+{  
    
-   background-Color:white ;
-   color:black ;
+   color:white ;
    transition: color 0.5s;
-   transition: background-color 0.3s;
-   border:2px #1e1e1e solid;
 }
-
-
-.status h4
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+.statusRow h3
 {
-padding-Bottom:3%;
+   margin-Top:8%;
+   padding-bottom: 3%;
+   font-family: 'Montserrat';
+   font-weight: 900;
 }
 
-@media (max-width: 1000px) {
+.statusRow
+{
+   text-Align:center;
+   background-image: url("../Images/buildings.jpg");
+   background-position: center;
+   background-size: contain;
+}
+
+
+.statusMore
+{
+   margin-Top:2%;
+   margin-bottom:2%;
+   text-Align:Right!important;
+   border:solid 1px transparent;
+   border-radius: 0%;
+   color:inherit;
+   color:white;
+}
+
+.btn-outline-light
+{
+   font-size:20px;
+}
+.btn-outline-light:hover
+{
+   text-Align:Right!important;
+   border-radius: 0%;
+   border:solid white 1px;
+   background-color: transparent;
+   color:white;
+}
+
+@media (max-width: 1200px) {
     .status
 {
 padding-Top:2%;
@@ -30,21 +60,38 @@ border-Radius:0%;
 padding-bottom: 6%;
 color:whitesmoke;
 }
+
+.statusRow
+{
+
+   background-size: cover;
+}
+
+.statusRow h3
+{
+   margin-top:30%;
+}
+
+.statusMore
+ {
+    margin-Top:10%!important;
+    
+      
  }
 
- .statusMore
- {
-    margin-Top:15%;
-    margin-bottom:10%;
-    text-Align:Right!important;
-    border:solid 1px transparent;
-    border-radius: 0%;
-    color:inherit;
  }
-.btn-outline-light:hover
- {
-    text-Align:Right!important;
-    border-radius: 0%;
-    border:solid black 1px;
-    background-color:transparent;
- }
+
+
+ @media (max-width: 700px) {
+   .statusRow h3
+   {
+      margin-top:50%;
+   }
+   
+   h4
+   {
+      font-size:19px!important;
+   }
+
+   
+}

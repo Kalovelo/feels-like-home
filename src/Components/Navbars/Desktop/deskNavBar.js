@@ -6,9 +6,9 @@ const NavBarDesktop=() =>{
     return (
          <Navbar id="apostolesNavbar" className="d-flex flex-row-reverse">
           <Nav>
-            <Nav.Link >Projects</Nav.Link>
-            <Nav.Link >Hello</Nav.Link>
-            <Nav.Link >Hello</Nav.Link>
+            <Nav.Link >PROJECTS</Nav.Link>
+            <Nav.Link >ABOUT</Nav.Link>
+            <Nav.Link >PORTFOLIO</Nav.Link>
 
       </Nav>
   </Navbar>

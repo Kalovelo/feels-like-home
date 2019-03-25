@@ -18,7 +18,7 @@ export default props => {
           Hello
         </a>
       </Menu>
-      <h1 id="topText">tessdfdsfdt</h1>
+      <h1 id="topText"><b>フロー</b></h1>
     </div>
   );
 };
