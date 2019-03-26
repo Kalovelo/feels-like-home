@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900);
-
+@import url("https://use.typekit.net/jqd8xpv.css");
 @media only screen and (min-width: 700px) 
 {
     #topBar{ visibility: hidden; }

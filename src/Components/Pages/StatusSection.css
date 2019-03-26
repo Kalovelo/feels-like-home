@@ -39,9 +39,16 @@ font-size: 20px;
    color:white;
 }
 
+.statusMore a
+{
+   font-family: adobe-garamond-pro, serif!important   ;
+
+}
+
 .btn-outline-light
 {
    font-size:20px;
+   font-family: adobe-garamond-pro, serif!important;
 }
 .btn-outline-light:hover
 {
@@ -50,6 +57,8 @@ font-size: 20px;
    border:solid white 1px;
    background-color: transparent;
    color:white;
+   
+   
 }
 
 @media (max-width: 1200px) {
@@ -75,7 +84,7 @@ color:whitesmoke;
 .statusMore
  {
     margin-Top:10%!important;
-    
+    font-family: adobe-garamond-pro, serif!important   ;
       
  }
 

@@ -3,9 +3,10 @@ ul li
     display:inline;
 }
 
+
 h2
 {
-    font-family: 'Adobe Garamond Pro Regular';
+    font-family: adobe-garamond-pro, serif; 
 }
 
 .Footer

@@ -2,6 +2,7 @@ import React from 'react';
 import {Container,Row,Col} from 'react-bootstrap'
 import apostoles1 from '../Images/apostoles1.png'
 import apostoles2 from '../Images/apostoles2.jpg'
+import '../Images/lightbox.css'
 import "./First_Section.css"
 const FirstSection = () => {
 
@@ -19,10 +20,15 @@ const FirstSection = () => {
                         </p>
                     </Col>
 
-                    <Col lg={{span:6, offset:0}} xl={{span:5,offset:1}}  xs="12 content" id="topImgs">
-                        <img  alt="sds" src={apostoles1} className="frstImage"/>
-                        <img className="hideMob" alt="sasdsa" src={apostoles2} />
-                        <h3 className="hideMob">woo.</h3>
+                    <Col md ={{span:5, offset:1}} xl={{span:5,offset:1}}  xs="12 content" id="topImgs">
+                            <a href="#img1"><img  alt="sds" src={apostoles1} className="frstImage thumbnail"/></a>
+                            <a href="#_" class="lightbox" id="img1">
+                            <img src={apostoles1}/>
+                            </a>
+                        <a href="#img2"><img className="hideMob" alt="sasdsa" src={apostoles2} /></a>
+                        <a href="#_" class="lightbox" id="img2">
+                            <img src={apostoles2}/>
+                        </a>
                 </Col>
             </Row>
             {/* <Row className="rowPost">
