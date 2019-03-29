@@ -8,14 +8,14 @@ export default props => {
     <div id="topbar">
       <Menu {...props} className="mobile-hide">
         <a className="menu-item" href="/">
-          Home
+          HOME
         </a>
         <a className="menu-item" href="/burgers">
-          Projects
+          ABOUT
         </a>
 
         <a className="menu-item" href="/pizzas">
-          Hello
+          BACKGROUND
         </a>
       </Menu>
       <h1 id="topText"><b>フロー</b></h1>

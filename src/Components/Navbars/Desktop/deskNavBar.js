@@ -8,7 +8,7 @@ const NavBarDesktop=() =>{
           <Nav>
             <Nav.Link >PROJECTS</Nav.Link>
             <Nav.Link >ABOUT</Nav.Link>
-            <Nav.Link >PORTFOLIO</Nav.Link>
+            <Nav.Link >BACKGROUND</Nav.Link>
 
       </Nav>
   </Navbar>

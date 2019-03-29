@@ -49,11 +49,15 @@ font-size: 20px;
 {
    font-size:20px;
    font-family: adobe-garamond-pro, serif!important;
+   border-left:none!important;
+   border-top:none!important;
 }
 .btn-outline-light:hover
 {
    text-Align:Right!important;
    border-radius: 0%;
+   border-left:none!important;
+   border-top:none!important;
    border:solid white 1px;
    background-color: transparent;
    color:white;
