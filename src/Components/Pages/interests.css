@@ -4,7 +4,7 @@
 {
     font-family: adobe-garamond-pro, serif; 
     font-size:50px;
-    text-align: center;
+    
     color:#3d3d3d;
     padding-bottom:2%;
     }
@@ -13,11 +13,12 @@
     .interestsTitle.B
     {
     color:white;
+    text-align: center;
     }
 
 .graySection
 {
-   background-color:#f7f4f4;
+   background-color:#FFFBFB;
    text-align: center;
    padding-top:3%;
    padding-bottom:3%;
@@ -26,7 +27,7 @@
 #blackend
 {
     padding-top:5%;
-    background-color:black;
+    background-color:#050505;
     height:65vh!important;
     color:white;
 }

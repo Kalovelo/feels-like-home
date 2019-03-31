@@ -25,10 +25,11 @@ render(){
                     <p>
                     I see the world of Design as complex yet based on simple principles
                     that guide you, but they don't cut down your own determination to apply your personal touches.
-                    <br/>My experience involves web design with WordPress
+                    <br/>My experience involves web design with WordPress, 
                     creating video thumbnails for our IEEE Student Branch and a few logos.
-                    Technologies working & forging :
-                    <ul>
+                    I have also worked in moving and cafe services.
+                    
+                    <ul>working & forging :
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>UI/UX</li>
@@ -37,13 +38,14 @@ render(){
                         <li>WordPress</li>
                         <li>Java</li>
                         <li>C</li>
+                        <li>Git</li>
                         <li>SEO</li>
                     </ul>
                 </p> 
             </Col>
 
-            <Row>
-                <Col xs="12" id="blackend">
+            <Row style={{backgroundColor:"#050505"}}>
+                <Col xs="12" md={{span:8,offset:2   }} id="blackend">
                     <h1 className="interestsTitle B">Inkloom</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus explicabo, exercitationem eveniet natus ratione consequuntur illum perferendis minus accusamus ipsa ad, blanditiis repudiandae suscipit beatae pariatur ab velit, eum voluptate. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis reiciendis officia inventore veritatis sequi aliquam earum amet, et quae illum aliquid quod cupiditate. Cum magnam aliquam ducimus soluta. Ducimus, suscipit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo minus fugit odio saepe ipsam nostrum sint et impedit sed voluptates quia quas soluta quos, eos accusantium officia, veritatis ratione blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quas similique nihil necessitatibus, modi praesentium magni nemo eum temporibus expedita alias tempore dolorum enim explicabo cumque laborum ullam ex quo?</p>
                 </Col>
