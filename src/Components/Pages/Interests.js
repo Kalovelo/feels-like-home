@@ -16,11 +16,30 @@ class Interests extends Component
     
 render(){
     return (
-        <Container fluid="true">
-            <Col xs="12" md={{span:8,offset:2}} className="fullH">
-                <h1 className="interestsTitle">Utilities</h1>
-                <p>I'm interested in whatever helps me express my thoughts and satisfy my curiosity.
-                </p>
+        <Container fluid="true" >
+            <Col xs="12" md={{span:8,offset:2   }} className="fullH">
+                <h1 className="interestsTitle">Background</h1>
+                <p>I admire creations which try to show their flavour to the world, creations whose main goal is 
+                    to have an impact by expressing their own philosophy, their own story. Thereby, I am leaning towards
+                    Web & Game Development.</p>
+                    <p>
+                    I see the world of Design as complex yet based on simple principles
+                    that guide you, but they don't cut down your own determination to apply your personal touches.
+                    <br/>My experience involves web design with WordPress
+                    creating video thumbnails for our IEEE Student Branch and a few logos.
+                    Technologies working & forging :
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>UI/UX</li>
+                        <li>JavaScript</li>
+                        <li>ReactJS</li>
+                        <li>WordPress</li>
+                        <li>Java</li>
+                        <li>C</li>
+                        <li>SEO</li>
+                    </ul>
+                </p> 
             </Col>
 
             <Row>
@@ -32,7 +51,7 @@ render(){
 
             <Row className="graySection"> 
                 <Col md={{span:4,offset:1}}>
-                    <h1 className="interestsTitle">[Title]</h1>
+                    <h1 className="interestsTitle">ΙΕΕΕ</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus doloremque repellendus a placeat, corporis praesentium dolor voluptatibus esse, ipsam earum illo, consequatur facere voluptatem. Voluptatem vitae aspernatur aliquid numquam nihil.</p>
                 </Col>
        

@@ -9,6 +9,7 @@
     padding-bottom:2%;
     }
 
+
     .interestsTitle.B
     {
     color:white;
@@ -31,7 +32,8 @@
 }
 
 
-.fullH
+
+.fullH p
 {
-   height:90vh!important;
+    font-size:20px;
 }
