@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container,Row,Col,Nav,Navbar} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF,faInstagram,faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF,faInstagram,faLinkedinIn,faGithub } from '@fortawesome/free-brands-svg-icons';
 import "./footer.css"
 import { Component } from 'react';
 
@@ -50,6 +50,7 @@ render(){
                     <ul className="footerSocial">
                         <li className="firstLi"><a href="https://www.facebook.com/kalovelo"><FontAwesomeIcon icon={faFacebookF}/></a></li>
                         <li>                    <a href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                        <li>                    <a href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faGithub} /></a></li>
                         <li className="lastLi"> <a href="https://linkedin.com/in/apostolos-kalovelonis-0b886116a"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
                     </ul>                
                 </Col>

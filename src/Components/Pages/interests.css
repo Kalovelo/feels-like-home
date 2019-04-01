@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700,900');
 
+
+#interestsContainer ul li
+{
+    list-style:none;
+
+}
+
+.fullH p
+{
+    font-size:20px;
+}
+
 .interestsTitle
 {
     font-family: adobe-garamond-pro, serif; 
@@ -7,6 +19,7 @@
     
     color:#3d3d3d;
     padding-bottom:2%;
+    padding-top:5%;
     }
 
 
@@ -16,17 +29,49 @@
     text-align: center;
     }
 
-.graySection
+#graySection
 {
    background-color:#FFFBFB;
-   text-align: center;
+   text-align: left;
    padding-top:3%;
    padding-bottom:3%;
 }
 
+#graySection .IEEEthumbnail  
+{
+    width:100%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10%;
+}
+
+
+
+#graySection a
+{
+    color:#3d3d3d;
+    font-weight: 400;
+}
+
+#graySection a:hover
+{
+    color:#616161;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+#graySection h6
+{
+    font-size:15px;
+    font-family: roboto;
+    font-weight: 300;
+}
+
 #blackend
 {
-    padding-top:5%;
     background-color:#050505;
     height:65vh!important;
     color:white;
@@ -34,7 +79,54 @@
 
 
 
-.fullH p
+
+
+#TechnologiesRow
 {
-    font-size:20px;
+    padding-bottom: 5%;
+}
+#TechnologiesRow h5
+{
+    font-size: 20px;
+    font-family: roboto;
+    font-weight: 300;
+}
+
+#TechnologiesRow hr
+{
+    width:10%;
+    height:0.5px;
+    color:black;
+    background-color: black;
+    
+}
+
+#TechnologiesRow ul li
+{
+    font-size:17px;
+    letter-spacing: 1px;
+    font-family:roboto;
+}
+
+@media (max-width:700px)
+{
+
+
+    #TechnologiesRow ul li
+    {
+        text-align:right;
+    }
+
+
+    #graySection 
+    {
+        text-align: center;
+    }
+
+    #graySection .IEEEthumbnail  
+    {
+        width:100%;
+    }
+    
+
 }
