@@ -22,7 +22,7 @@ font-size: 20px;
 .statusRow
 {
    text-Align:center;
-   background-image: url("../Images/buildings.jpg");
+   background-image: url("../../Images/buildings.jpg");
    background-position: center;
    background-size: contain;
 }

@@ -3,7 +3,7 @@ import { Component } from 'react';
 import {Container,Row} from 'react-bootstrap'
 import FirstSection from './First_Section';
 import StatusSection from './StatusSection'
-import Parallax from '../Images/Parallax'
+import Parallax from '../../Images/Parallax'
 const HomePage = () =>
 {
     return(

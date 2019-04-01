@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import NavBar from './Components/Navbars/NavBar';
-import Homepage from './Components/Pages/homePage'
+import Homepage from './Components/Pages/Homepage/homePage'
 import Footer from './Components/Pages/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Interests from './Components/Pages/Interests'

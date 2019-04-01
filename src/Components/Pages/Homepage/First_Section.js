@@ -1,8 +1,8 @@
 import React from 'react';
 import {Container,Row,Col} from 'react-bootstrap'
-import apostoles1 from '../Images/apostoles1.png'
-import apostoles2 from '../Images/apostoles2.jpg'
-import '../Images/lightbox.css'
+import apostoles1 from '../../Images/apostoles1.png'
+import apostoles2 from '../../Images/apostoles2.jpg'
+import '../../Images/lightbox.css'
 import "./First_Section.css"
 const FirstSection = () => {
 
