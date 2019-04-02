@@ -9,7 +9,6 @@ const NavBarDesktop=() =>{
             <Nav.Link >PROJECTS</Nav.Link>
             <Nav.Link >ABOUT</Nav.Link>
             <Nav.Link >BACKGROUND</Nav.Link>
-
       </Nav>
   </Navbar>
     );

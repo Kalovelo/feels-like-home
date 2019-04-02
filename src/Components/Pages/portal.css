@@ -1,0 +1,23 @@
+#darkSection 
+{
+    background-color:#000000;
+    height:110vh;
+    color:#FFFFFF;
+}
+
+#darkSection,#lightSection
+{
+    padding-top:15%!important;
+    padding-left:3%;
+    padding-right:3%;
+}
+
+#darkSection
+{
+    text-align: right;
+}
+
+#portal
+{
+    margin-top:-5%!important;
+}

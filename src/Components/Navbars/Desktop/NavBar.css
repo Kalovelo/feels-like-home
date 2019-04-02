@@ -4,8 +4,8 @@
 #apostolesNavbar a
 {
     font-family: 'Montserrat';
-    color:#707070;
-    font-weight: 700;
+    color:#FFFFFF;
+    font-weight: 100;
     font-size:16px!important;
 }
 
@@ -13,14 +13,15 @@
 {
     color:black;
     transition: color 0.8s;
+    
 }
 
 #apostolesNavbar
 {
-    background-color:white;
-    border-bottom:solid black 1px;
-    margin-bottom:5%;
-    
+    position: absolute;
+    width:100%;
+    z-index: 100;
+    padding-top:5.5%;
 }
  
 /*hide navbar on mobile */

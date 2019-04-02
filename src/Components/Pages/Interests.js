@@ -7,11 +7,6 @@ import IEEE from '../Images/IEEE.JPG'
 import '../Images/lightbox.css'
 class Interests extends Component
 {
-    constructor() 
-    {
-        super();
-        
-    }
 
     
 render(){
