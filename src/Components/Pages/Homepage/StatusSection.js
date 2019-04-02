@@ -52,7 +52,7 @@ class StatusSection extends Component
                             </Col>
                             
                         <Col xs="12">
-                        <Button className="statusMore"  onMouseEnter={this.buttontoggleHover} onMouseLeave={this.buttontoggleHover} variant="outline-light">{this.state.buttonisHovered ? <a>More!</a> : <a>More?</a>}</Button>
+                        <Button id="statusMore"  onMouseEnter={this.buttontoggleHover} onMouseLeave={this.buttontoggleHover} variant="outline-light">{this.state.buttonisHovered ? <a>More!</a> : <a>More?</a>}</Button>
                         </Col>
                     </Row>
                 </Container>

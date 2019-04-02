@@ -28,7 +28,7 @@ font-size: 20px;
 }
 
 
-.statusMore
+#statusMore
 {
    margin-Top:2%;
    margin-bottom:2%;
@@ -39,20 +39,21 @@ font-size: 20px;
    color:white;
 }
 
-.statusMore a
+#statusMore a
 {
    font-family: adobe-garamond-pro, serif!important   ;
 
 }
 
-.btn-outline-light
+#statusMore.btn-outline-light
 {
    font-size:20px;
    font-family: adobe-garamond-pro, serif!important;
    border-left:none!important;
    border-top:none!important;
 }
-.btn-outline-light:hover
+
+#statusMore.btn-outline-light:hover 
 {
    text-Align:Right!important;
    border-radius: 0%;
@@ -61,8 +62,6 @@ font-size: 20px;
    border:solid #7F7E7E 1px;
    background-color: transparent;
    color:white;
-   
-   
 }
 
 @media (max-width: 1200px) {
@@ -85,7 +84,7 @@ color:whitesmoke;
    margin-top:30%;
 }
 
-.statusMore
+#statusMore
  {
     margin-Top:10%!important;
     font-family: adobe-garamond-pro, serif!important   ;

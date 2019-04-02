@@ -1,7 +1,11 @@
+#portal
+{
+    margin-top:-5%!important;
+}
+
 #darkSection 
 {
-    background-color:#000000;
-    height:110vh;
+    background-color:#242323;
     color:#FFFFFF;
 }
 
@@ -10,14 +14,89 @@
     padding-top:15%!important;
     padding-left:3%;
     padding-right:3%;
+    padding-bottom:10%;
 }
 
-#darkSection
+
+.darkButton
 {
-    text-align: right;
+    margin-top:20%;
+    margin-right:55%;
+  
+    border: none;
+    font-size: 28px;
+    font-family: roboto;
+    font-weight: 100;
+    border-bottom: 0.5px solid transparent; /* <- here */   
+
 }
 
-#portal
-{
-    margin-top:-5%!important;
+.darkButton:hover
+{   
+    color:rgb(190, 190, 190);
 }
+
+.darkButton:hover,.lightButton:hover
+{
+    transition: border-bottom 1s;
+    background-color: transparent!important;
+
+    transition:   1s;
+    border-width:10%;
+
+}
+
+.darkButton:hover:before {
+    border-width:50px!important;
+}
+
+.lightButton:hover
+{
+    color: #747474;
+    border-color: #000000;
+}
+
+.lightButton
+{
+    margin-top:20%;
+    margin-left:55%;
+    text-align: left!important;
+    border: none;
+    font-size: 28px;
+    font-family: roboto;
+    font-weight: 100;
+    color:#000000;
+    border-bottom: 0.5px solid transparent;
+}
+#darkSection,#darkSection p
+{
+    text-align: right!important;
+}
+#lightSection p
+{
+    text-align: left;
+}
+
+@media (max-width:1000px)
+{
+    
+    .lightButton,.darkButton
+    {
+        margin-left:0%;
+        margin-right:0%;
+    }
+
+    
+  
+}
+
+@media (max-width:700px)
+{
+    #darkSection ,#lightSection
+{
+
+    height:90vh;
+}
+
+}
+

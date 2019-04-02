@@ -100,6 +100,6 @@ a
 a:hover
 {
     color:#424242;
-    transition: color 0.1s;
+    transition: color 0.3s;
     text-decoration: none;
 }

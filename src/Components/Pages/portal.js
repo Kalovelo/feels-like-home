@@ -20,12 +20,15 @@ render(){
             <Row>
                 <Col id='lightSection' md='6'>
                 <h1>About</h1>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore corporis dolor accusantium beatae, possimus dignissimos vel tempora in molestiae explicabo sed corrupti vero amet recusandae. Ratione et cupiditate molestias ullam.</p>
+                <p> Get to know me as a person ·<br/>
+                Random facts, how i spend my free time or which hot liquid i prefer inside my cup. </p>
+                <Button className="lightButton"   variant="outline-light">Ocean route ·</Button>
+
                 </Col>
                 <Col id='darkSection' md='6'>
                 <h1>Background</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore corporis dolor accusantium beatae, possimus dignissimos vel tempora in molestiae explicabo sed corrupti vero amet recusandae. Ratione et cupiditate molestias ullam.</p>
-                
+                <p>Check my journey as a digital deshi ·<br/>My background,how it all started, the tools I use or my future plans.</p>
+                <Button className="darkButton"   variant="outline-light">· Earth route</Button>
                 </Col>
             </Row>
 

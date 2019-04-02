@@ -12,14 +12,23 @@ body,html
 }
 
 
-
 h1,h2,h3,h4,p
 {
   font-family: 'Roboto';
   font-weight:300;
 }
 
+.btn:focus
+{
+  box-shadow: none;
+  background-color: none!important;
+}
 
+.btn:active
+{
+  box-shadow: none!important;
+  background-color: none!important;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
