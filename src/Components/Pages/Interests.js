@@ -64,7 +64,7 @@ render(){
             <Row id="graySection"> 
                 <Col lg={{span:6,offset:3}} xs='12'> 
                 <a href="#arduinoDay"><img  alt="sds" src={IEEE} className="IEEEthumbnail"/></a>
-                            <a href="graySection" class="lightbox" id="arduinoDay">
+                            <a href="#_" class="lightbox" id="arduinoDay">
                             <img src={IEEE}/>
                         </a>
                         <h6 style={{textAlign:'center',paddingBottom:'10%'}}>Arduino Serres Day 2, photo taken by my good friend Stella.</h6>

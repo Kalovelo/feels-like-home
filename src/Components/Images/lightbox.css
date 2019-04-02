@@ -6,8 +6,10 @@
   
   .lightbox {
       /** Default lightbox to hidden */
-      display: none;
-  
+      visibility: hidden;
+      opacity: 0;
+      
+
       /** Position and style */
       position: fixed;
       z-index: 999;
@@ -24,12 +26,17 @@
       max-width: 100%;
       max-height: 80%;
       margin-top: 2%;
+      
   }
   
+
   .lightbox:target {
-      /** Remove default browser outline */
-      outline: none;
-  
-      /** Unhide lightbox **/
-      display: block;
-  }
+    /** Remove default browser outline */
+    outline: none;
+
+    /** Unhide lightbox **/
+    visibility: visible;
+    opacity: 1;
+  transition: visibility 0s, opacity 0.1s linear;
+
+}

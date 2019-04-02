@@ -48,10 +48,10 @@ render(){
             <Row >
                 <Col xs={{span:12}}>
                     <ul className="footerSocial">
-                        <li className="firstLi"><a href="https://www.facebook.com/kalovelo"><FontAwesomeIcon icon={faFacebookF}/></a></li>
+                        <li ><a href="https://www.facebook.com/kalovelo"><FontAwesomeIcon icon={faFacebookF}/></a></li>
                         <li>                    <a href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faInstagram} /></a></li>
                         <li>                    <a href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faGithub} /></a></li>
-                        <li className="lastLi"> <a href="https://linkedin.com/in/apostolos-kalovelonis-0b886116a"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                        <li > <a href="https://linkedin.com/in/apostolos-kalovelonis-0b886116a"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
                     </ul>                
                 </Col>
             </Row>

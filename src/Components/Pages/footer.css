@@ -4,7 +4,7 @@
 }
 
 
-h2
+.Footer h2
 {
     font-family: adobe-garamond-pro, serif; 
 }
@@ -38,7 +38,26 @@ h2
             padding-left:1px!important;
             margin-left:20px!important;
         }
-}
+
+        .Footer h2
+        {
+            font-family: adobe-garamond-pro, serif;
+            font-size: 38px!important;
+        }
+
+
+        .footerSocial a
+        {
+          
+            margin-left: 15px!important;
+        }
+
+
+        .footerSocial 
+        {
+            margin-right: 55px!important;
+        }
+    }
 
 a
 {
