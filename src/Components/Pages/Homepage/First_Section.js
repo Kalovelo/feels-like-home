@@ -21,13 +21,13 @@ const FirstSection = () => {
                     </Col>
 
                     <Col md ={{span:5, offset:1}} xl={{span:5,offset:1}}  xs="12 content" id="topImgs">
-                            <a href="#img1"><img  alt="sds" src={apostoles1} className="frstImage thumbnail"/></a>
+                            <a href="#img1"><img  alt="myself in side view, pointing at something, low angle" src={apostoles1} className="frstImage thumbnail"/></a>
                             <a href="#_" class="lightbox" id="img1">
-                            <img src={apostoles1}/>
+                            <img src={apostoles1} alt='myself in side view, pointing at something, low angle'/>
                             </a>
-                        <a href="#img2"><img className="hideMob" alt="sasdsa" src={apostoles2} /></a>
-                        <a href="#_" class="lightbox" id="img2">
-                            <img src={apostoles2}/>
+                        <a href="#img2"><img className="hideMob" alt="myself laying on the ground while laughing with eyes closed and my hand on chest" src={apostoles2} /></a>
+                        <a href="#_" class="lightbox"  id="img2">
+                            <img alt='myself laying on the ground while laughing with eyes closed and my hand on chest' src={apostoles2}/>
                         </a>
                 </Col>
             </Row>

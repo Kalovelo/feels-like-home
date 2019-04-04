@@ -9,9 +9,6 @@ class NavBar extends React.Component{
         nav:NavBarDesktop
     }
 
-    
-
-
 
 
     componentDidMount = () =>
