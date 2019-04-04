@@ -19,7 +19,7 @@
     }
      
     /* Heading for Parallax Section */ 
-    .paral h1 {
+    .paralh1 {
     color: #000000;
     font-size: 23px;
     text-align: center;
@@ -31,14 +31,14 @@
 
     @media (max-width:1000px)
     {
-        .paral h1
+        .paralh1
         {
             -webkit-filter:none!important; /* Safari 6.0 - 9.0 */
             filter: none!important;
         }
     }
 
-    .paral :hover{
+    .paralh1:hover{
         -webkit-filter:none!important; /* Safari 6.0 - 9.0 */
     filter: none!important;
     transition: 0.3s;
@@ -49,16 +49,6 @@
         background-image: url("./dubai.jpg");
         }
     
-        .paralsec :hover{
 
-        }
-         
-        .paralsec1 {
-        background-image: url("https://img.webnots.com/2017/05/parallax1.jpg");}
-         
-        .paralsec2 {
-        background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
-        }	
-        /* Remove Bottom Margin from Jumbotron */
         .jumbotron{margin-bottom: 0;}
          

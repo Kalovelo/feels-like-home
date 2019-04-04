@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 
-#apostolesNavbar a
+#transNavbar a
 {
     font-family: 'Montserrat';
     color:#FFFFFF;
@@ -9,19 +9,38 @@
     font-size:16px!important;
 }
 
-#apostolesNavbar a:hover
+#solidNavbar a
+{
+    font-family: 'Montserrat';
+    color:#000000;
+    font-weight: 100;
+    font-size:16px!important;
+}
+
+#transNavbar a:hover
 {
     color:black;
     transition: color 0.8s;
-    
 }
 
-#apostolesNavbar
+#solidNavbar a:hover
+{
+    color:#7a7a7a;
+    transition: color 0.8s;
+}
+
+#transNavbar
 {
     position: absolute;
     width:100%;
     z-index: 100;
     padding-top:5.5%;
+}
+
+#solidNavbar
+{
+    width:100%;
+    z-index: 100;
 }
  
 /*hide navbar on mobile */

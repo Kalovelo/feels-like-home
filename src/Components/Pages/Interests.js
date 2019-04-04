@@ -14,7 +14,7 @@ render(){
         <Container fluid="true" id='interestsContainer'>
             <Col xs="12" md={{span:8,offset:2   }} className="fullH">
                 <h1 className="interestsTitle">Background</h1>
-                <p>I admire creations which try to show their flavour to the world, creations whose main goal is 
+                <p>I admire creations that try to show their flavour to the world, creations whose main goal is 
                     to have an impact by expressing their own philosophy, their own story. Thereby, I am leaning towards
                     Web & Game Development.</p>
                     <p>

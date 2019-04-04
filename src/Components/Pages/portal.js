@@ -6,11 +6,6 @@ import { Component } from 'react';
 class Portal extends Component
 {
 
-    constructor() 
-    {
-        super();
-        
-    }
 
     
 render(){
