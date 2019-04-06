@@ -1,34 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 
-#transNavbar a
-{
-    font-family: 'Montserrat';
-    color:#FFFFFF;
-    font-weight: 100;
-    font-size:16px!important;
-}
-
-#solidNavbar a
-{
-    font-family: 'Montserrat';
-    color:#000000;
-    font-weight: 100;
-    font-size:16px!important;
-}
-
-#transNavbar a:hover
-{
-    color:black;
-    transition: color 0.8s;
-}
-
-#solidNavbar a:hover
-{
-    color:#7a7a7a;
-    transition: color 0.8s;
-}
-
 #transNavbar
 {
     position: absolute;
@@ -37,10 +9,45 @@
     padding-top:5.5%;
 }
 
-#solidNavbar
+#transNavbar a
+{
+    color:#FFFFFF;
+}
+#transNavbar a:hover
+{
+    color:black;
+    transition: color 0.8s;
+}
+
+
+
+#solidNavbar 
 {
     width:100%;
-    z-index: 100;
+    z-index: 100;   
+}
+
+#solidNavbar a
+{
+    color:#000000;
+}
+
+#solidNavbar a:hover
+{
+    color:#7a7a7a;
+    transition: color 0.8s;
+}
+
+#solidNavbar *, #transNavbar *
+{
+    margin-right:8%;
+}
+
+#transNavbar a,#solidNavbar a{
+    padding:4%;
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size:16px!important;
 }
  
 /*hide navbar on mobile */

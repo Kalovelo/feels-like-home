@@ -1,4 +1,4 @@
-.Footer ul li
+.Footer ul li 
 {
     display:inline;
 }
@@ -33,7 +33,7 @@
 
 @media (max-width:400px)
     {
-        .footerMenu a
+        .footerMenu 
         {
             padding-left:1px!important;
             margin-left:20px!important;
@@ -59,7 +59,7 @@
         }
     }
 
-a
+ a
 {
     font-family:roboto;
     color:white;
@@ -71,16 +71,32 @@ a
     padding-top:1%;
 }
 
+.Footer *::selection {
+    background:  #ffffff; /* WebKit/Blink Browsers */
+    color: #000000;
+  }
+  .Footer *::-moz-selection {
+      background:  #ffffff; /* WebKit/Blink Browsers */
+    color: #000000;
+  }
+
 
 .footerMenu 
 {
-    padding-left:0px;
-    margin-right:35px;
+
+    margin-right:45px;
+    font-family:'Montserrat';
 }
 
-.footerMenu a
+.footerMenu .nav-link
 {
-    margin-left:35px ;
+    padding:5px;
+    display: inline;
+}
+.footerMenu .nav-link a
+{
+
+    font-size:14px;
 }
 
 

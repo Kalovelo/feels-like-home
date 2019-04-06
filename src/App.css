@@ -30,12 +30,25 @@ h1,h2,h3,h4,p
   background-color: none!important;
 }
 
+a {
+  outline: 0;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 #apostolesNavbar a
 {
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-weight:lighter 
+}
+
+*::selection {
+  background: #000000; /* WebKit/Blink Browsers */
+  color: #ffffff
+}
+*::-moz-selection {
+  background: #000000; /* Gecko Browsers */
+  color:#ffffff
 }
 
 

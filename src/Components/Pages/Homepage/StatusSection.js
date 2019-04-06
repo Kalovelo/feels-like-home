@@ -1,7 +1,8 @@
 import React from 'react';
-import {Container,Row,Col,Button} from 'react-bootstrap'
+import {Container,Row,Col,Button,Nav} from 'react-bootstrap'
 import './StatusSection.css'
 import { Component } from 'react';
+import {NavLink} from 'react-router-dom';
 
 class StatusSection extends Component
 {
@@ -52,7 +53,9 @@ class StatusSection extends Component
                             </Col>
                             
                         <Col xs="12">
-                        <Button id="statusMore"  onMouseEnter={this.buttontoggleHover} onMouseLeave={this.buttontoggleHover} variant="outline-light">{this.state.buttonisHovered ? <a>More!</a> : <a>More?</a>}</Button>
+                        <Button id="statusMore"  onMouseEnter={this.buttontoggleHover} onMouseLeave={this.buttontoggleHover} variant="outline-light">{this.state.buttonisHovered ?
+                        <NavLink to='/:portal'>More!</NavLink>
+ : <NavLink to='/:portal'>More?</NavLink>}</Button>
                         </Col>
                     </Row>
                 </Container>

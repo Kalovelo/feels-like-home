@@ -13,7 +13,7 @@ font-size: 20px;
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400');
 .statusRow h3
 {
-   margin-Top:8%;
+   margin-Top:2%;
    padding-bottom: 3%;
    font-family: 'Montserrat';
    font-weight: 900;
@@ -22,11 +22,21 @@ font-size: 20px;
 .statusRow
 {
    text-Align:center;
-   background-image: url("../../Images/buildings.jpg");
+   /* background-image: url("../../Images/buildings.jpg");
    background-position: center;
-   background-size: contain;
+   background-size: contain; */
+   background-color:#232323;
 }
 
+
+.statusRow *::selection {
+   background:  #ffffff; /* WebKit/Blink Browsers */
+   color: #000000;
+ }
+ .statusRow *::-moz-selection {
+     background:  #ffffff; /* WebKit/Blink Browsers */
+   color: #000000;
+ }
 
 #statusMore
 {
@@ -49,17 +59,12 @@ font-size: 20px;
 {
    font-size:20px;
    font-family: adobe-garamond-pro, serif!important;
-   border-left:none!important;
-   border-top:none!important;
 }
 
 #statusMore.btn-outline-light:hover 
 {
    text-Align:Right!important;
    border-radius: 0%;
-   border-left:none!important;
-   border-top:none!important;
-   border:solid #7F7E7E 1px;
    background-color: transparent;
    color:white;
 }

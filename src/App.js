@@ -6,40 +6,28 @@ import Footer from './Components/Pages/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Interests from './Components/Pages/Interests'
 import Portal from './Components/Pages/portal'
-import {BrowserRouter,Route} from 'react-router-dom'
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
 
+const NavType = ({match}) =>
+{
+  let nav = (match.params.id == 'portal') ? 'transNavbar' : 'solidNavbar'
+};
 
 
 class App extends Component {
 
-  constructor()
-  {
-    super();
-    this.state={
-      portalActive:false
-    }
-  }
 
-  activatePortal = () =>{
-    this.setState(value=>({portalActive:value}));
-  }
-  componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      this.onRouteChanged();
-    }
-  }
 
-  onRouteChanged() {
-    console.log("ROUTE CHANGED");
-  }
   render() {
     return (
       <BrowserRouter>
           <div className="App">
             <NavBar/>
+            <Switch>
             <Route exact path='/' component={Homepage}/>
-            <Route path='/portal' component={Portal}/>
             <Route path='/Background' component={Interests}/>
+            <Route path='/:portal' component={Portal}/>
+            </Switch>
             <Footer/>
 
           </div>

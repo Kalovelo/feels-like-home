@@ -1,21 +1,27 @@
-import React from 'react'; 
+import React,{Component} from 'react'; 
 import { Navbar, Nav} from 'react-bootstrap';
-import {Link,NavLink} from 'react-router-dom';
+import {Link,NavLink,withRouter} from 'react-router-dom';
 import './NavBar.css'
-import { faRProject } from '@fortawesome/free-brands-svg-icons';
-const NavBarDesktop=() =>{
 
+
+class NavBarDesktop extends Component
+{
+
+
+  
+render(){
+  let navID = this.props.location.pathname === '/:portal' ? 'transNavbar' : 'solidNavbar';
     return (
-         <Navbar id="solidNavbar" className="d-flex flex-row-reverse">
+         <Navbar id={navID} className="d-flex flex-row-reverse">
           <Nav>
-            <Nav.Link><NavLink to='/'>Home</NavLink></Nav.Link>
-            <Nav.Link> <NavLink to='/portal'>About</NavLink></Nav.Link>
-            <Nav.Link> <NavLink to='/background'>Background</NavLink></Nav.Link>
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/:portal'>About</NavLink>
+            <NavLink to='/background'>Background</NavLink>
       </Nav>
   </Navbar>
     );
- 
+}
 }
 
 
-export default NavBarDesktop
+export default withRouter(NavBarDesktop)

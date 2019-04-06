@@ -31,9 +31,7 @@ const FirstSection = () => {
                         </a>
                 </Col>
             </Row>
-            {/* <Row className="rowPost">
-                <ParallaxImage />
-            </Row> */}
+\
            </Container>
     )
 }

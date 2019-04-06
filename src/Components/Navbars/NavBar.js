@@ -12,10 +12,10 @@ class NavBar extends React.Component{
 
 
     componentDidMount = () =>
-{
-  window.addEventListener("resize", this.resize.bind(this));
-  this.resize();
-}
+        {
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize();
+        }
 
 resize=()=> 
 {
@@ -28,7 +28,7 @@ resize=()=>
 
 render() {
     return (
-        <this.state.nav/>
+        <this.state.nav />
     )
 }
 

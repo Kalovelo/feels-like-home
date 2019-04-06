@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF,faInstagram,faLinkedinIn,faGithub } from '@fortawesome/free-brands-svg-icons';
 import "./footer.css"
 import { Component } from 'react';
-
+import {NavLink} from 'react-router-dom';
+import {connect} from 'react-redux'
 
 class Footer extends Component
 {
@@ -32,9 +33,10 @@ render(){
             <Row >
                 <Col xs={{span:12}}>
                   <ul style={{fontSize:"15px"}} className="footerMenu">
-                      <li><a href="dsfdsf">ABOUT</a></li>
-                      <li><a href="dsfdsf">PORTFOLIO</a></li>
-                      <li><a href="dsfdsf">CONTACT</a></li>
+                      <li><Nav.Link> <NavLink to='/'>Home</NavLink></Nav.Link></li>
+                      <li> <Nav.Link> <NavLink to='/Background'>Background</NavLink></Nav.Link></li>
+                      <li> <Nav.Link> <NavLink to='/portal'>About</NavLink></Nav.Link></li>
+                      <li> <Nav.Link> <NavLink to='/Background'>Contact</NavLink></Nav.Link></li>
                   </ul>
                 </Col>
             </Row>
@@ -60,6 +62,7 @@ render(){
     )
 }
 
+ 
 }
 
 export default Footer;

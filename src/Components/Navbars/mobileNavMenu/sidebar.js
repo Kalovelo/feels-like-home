@@ -1,22 +1,19 @@
 import React from 'react'; 
 import { slide as Menu } from "react-burger-menu";
 import './styles.css'
+import { Navbar, Nav} from 'react-bootstrap';
+import {Link,NavLink} from 'react-router-dom';
 
 export default props => {
   return (
     // Pass on our props
     <div id="topbar">
       <Menu {...props} className="mobile-hide">
-        <a className="menu-item" href="/">
-          HOME
-        </a>
-        <a className="menu-item" href="/burgers">
-          ABOUT
-        </a>
-
-        <a className="menu-item" href="/pizzas">
-          BACKGROUND
-        </a>
+      <Nav>
+            <Nav.Link> <NavLink to='/'>Home</NavLink></Nav.Link>
+            <Nav.Link> <NavLink to='/portal'>About</NavLink></Nav.Link>
+            <Nav.Link> <NavLink to='/background'>Background</NavLink></Nav.Link>
+      </Nav>
       </Menu>
       <h1 id="topText"><b>フロー</b></h1>
     </div>
