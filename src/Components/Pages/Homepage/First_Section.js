@@ -9,7 +9,7 @@ const FirstSection = () => {
     return (
          <Container  fluid="true" id="homeMob" style={{marginTop:"13%"}}> 
                 <Row className="halfRow">
-                    <Col lg={{span:6}} xl={{span:6}}  className="topHalf"  xs="12 content">
+                    <Col lg={{span:6}} xl={{span:6}}  className="topHalf "  xs="12 content">
                         <h3>Greetings, stranger!</h3>
                         <p><br/>My name is Apostolos Kalovelonis, coming straight out of the olives and oregano country, Greece.
                             Currently studying IT and working with WordPress. You can find me at local meetups about marketing or development, reading peacefully a book on public transport, or

@@ -23,28 +23,28 @@ class StatusSection extends Component
                 <Container fluid="true">
                     <Row  className="statusRow">
                         <Col lg="12">
-                        <h3 style={{fontWeight:"400" ,fontSize:"26px",textAlign:"center",color:"white"}}>// Current Status //<br/><br/></h3>       
+                        <h3 >· Current Status ·<br/><br/></h3>       
                         </Col>
-                            <Col className="status" id="statusCol" lg={{span:3}}xs="12">
+                            <Col className="status" lg={{span:3}}xs="12">
                                     <h4 >
                                     <b>IT Student·</b> Ateith
                                     <br/>
                                     <i>AKA the daily apple.</i>
                                     </h4>
                             </Col>
-                            <Col className="status" id="statusCol" lg={{span:3}}xs="12">
+                            <Col className="status" lg={{span:3}}xs="12">
                                     <h4><b>WordPress Knight·</b> [Insert Brand]
                                     <br/>
                                     <i>The 'W' stands for 'WOW!'</i>
                                     </h4>
                             </Col>
-                            <Col className="status" id="statusCol" lg={{span:3}}xs="12">
+                            <Col className="status"  lg={{span:3}}xs="12">
                                     <h4><b>IEEE Media Committee·</b> Ateith SB
                                     <br/>
                                     <i>Primarily Photography Shooting.</i>
                                     </h4>
                             </Col>
-                            <Col className="status" id="statusCol" lg={{span:3}}xs="12">
+                            <Col className="status" lg={{span:3}}xs="12">
                                     <h4><b>Writing Enthusiast·</b> Books & Poetry. 
                                     <br/>
                                     <i>Daydreaming on Bukowski's drunk stories.</i>

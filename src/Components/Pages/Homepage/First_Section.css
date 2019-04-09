@@ -54,7 +54,7 @@
   }
 }
 
-.topHalf {
+.slideleft {
 	-webkit-animation: scale-up-hor-left 2.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-hor-left 2.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }

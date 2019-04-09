@@ -19,6 +19,10 @@ font-size: 20px;
    font-weight: 900;
 }
 
+.statusRow h3
+{
+   font-Weight:300;font-Size:26px;text-Align:center;color:white;font-family:roboto , serif;
+}
 .statusRow
 {
    text-Align:center;

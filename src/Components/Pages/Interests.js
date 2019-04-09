@@ -76,16 +76,16 @@ render(){
                         </p>
                 </Col>
        
-                <Col md={{span:4,offset:2}}>
+                <Col md={{span:4,offset:2}} xs={12}>
                     <h1 className="interestsTitle" >Volunteering</h1>
                     <p>Apart from being an IEEE member, i have also taken volunteering actions in conferences. 
                     </p>
-                    <ul>
+                    <ul className='volunteeringLi'>
                         <li>
-                            <h6><a href='http://www.5gsummit.org/Thessaloniki/'>IEEE 5G and IoT Thessaloniki Summit 2018</a> - Technical Support</h6>
+                            <h6><a href='http://www.5gsummit.org/Thessaloniki/'>-IEEE 5G and IoT Thessaloniki Summit 2018</a> | Technical Support</h6>
                         </li>
                         <li>
-                            <h6><a href='https://fosdem.org/2019/'>FOSDEM 2019</a> - Info Desk</h6>
+                            <h6><a href='https://fosdem.org/2019/'>-FOSDEM 2019</a> | Info Desk</h6>
                         </li>
                     </ul>
                 </Col>

@@ -80,6 +80,7 @@
 
 
 
+
 #TechnologiesRow
 {
     padding-bottom: 5%;
@@ -115,6 +116,11 @@
     {
         text-align:right;
     }
+
+    #interestsContainer li
+{
+    margin-left:-20%;
+}
 
 
     #graySection 

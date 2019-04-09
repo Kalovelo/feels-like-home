@@ -5,7 +5,7 @@ import { faFacebookF,faInstagram,faLinkedinIn,faGithub } from '@fortawesome/free
 import "./footer.css"
 import { Component } from 'react';
 import {NavLink} from 'react-router-dom';
-import {connect} from 'react-redux'
+
 
 class Footer extends Component
 {
@@ -26,7 +26,7 @@ render(){
         <Container className="Footer" fluid="true" style={{backgroundImage: "linear-gradient(#232323, #0c0b0b)",color:"white",paddingTop:"2%"}}>
             <Row  >
                 <Col md={{span:4,offset:4}}>
-                    <h2 style={{fontSize:"40px",textAlign:"center"}} onMouseEnter={this.finishedHover} onMouseLeave={this.finishedHover}>{this.state.finished?<span class='fade-in'>but keep pushing forward.</span>:"You made it to the end"}</h2>
+                    <h2 style={{fontSize:"40px",textAlign:"center"}} onMouseEnter={this.finishedHover} onMouseLeave={this.finishedHover}>{this.state.finished?<span class='fade-in'>but keep pushing forward.</span>:<span className='puff-in-center'>You made it to the end</span>}</h2>
                 </Col>
             </Row>
 
