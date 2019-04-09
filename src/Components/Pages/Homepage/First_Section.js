@@ -31,7 +31,6 @@ const FirstSection = () => {
                         </a>
                 </Col>
             </Row>
-\
            </Container>
     )
 }
