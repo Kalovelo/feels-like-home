@@ -1,13 +1,13 @@
 .status h4
 {
-color:whitesmoke;
+color:black;
 font-size: 20px;
 }
 
 .status:hover
 {  
    
-   color:white ;
+   color:red!important;
    transition: color 0.5s;
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400');
@@ -17,11 +17,12 @@ font-size: 20px;
    padding-bottom: 3%;
    font-family: 'Montserrat';
    font-weight: 900;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .statusRow h3
 {
-   font-Weight:300;font-Size:26px;text-Align:center;color:white;font-family:roboto , serif;
+   font-Weight:300;font-Size:26px;text-Align:center;color:black;font-family:roboto , serif;
 }
 .statusRow
 {
@@ -29,17 +30,22 @@ font-size: 20px;
    /* background-image: url("../../Images/buildings.jpg");
    background-position: center;
    background-size: contain; */
-   background-color:#232323;
+   background-color:white;
 }
 
+.status h3
+{
+   font-size:45px;
+   color:#303030;
+}
 
 .statusRow *::selection {
-   background:  #ffffff; /* WebKit/Blink Browsers */
-   color: #000000;
+   background:  #000000; /* WebKit/Blink Browsers */
+   color: #ffffff;
  }
  .statusRow *::-moz-selection {
-     background:  #ffffff; /* WebKit/Blink Browsers */
-   color: #000000;
+   background:  #000000; /* WebKit/Blink Browsers */
+   color: #ffffff;
  }
 
 #statusMore
@@ -49,13 +55,12 @@ font-size: 20px;
    text-Align:Right!important;
    border:solid 1px transparent;
    border-radius: 0%;
-   color:inherit;
-   color:white;
+   color:black;
 }
 
 #statusMore a
 {
-   font-family: adobe-garamond-pro, serif!important;
+   font-family: adobe-garamond-pro, serif!important;color:black;
 
 }
 
@@ -70,7 +75,7 @@ font-size: 20px;
    text-Align:Right!important;
    border-radius: 0%;
    background-color: transparent;
-   color:white;
+   color:red!important;
 }
 
 @media (max-width: 1200px) {
@@ -79,7 +84,7 @@ font-size: 20px;
 padding-Top:2%;
 border-Radius:0%;
 padding-bottom: 6%;
-color:whitesmoke;
+color:black;
 }
 
 .statusRow

@@ -5,6 +5,7 @@
     padding-top:8%;
     padding-bottom:8%;
     padding-left:3%;   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hideMob
@@ -13,6 +14,7 @@
   top:40%;
   left:30%;
   position:absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* ----------------------------------------------
@@ -83,6 +85,7 @@
 {
   margin-top:10%;
   width:50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .rowPost

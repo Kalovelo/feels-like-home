@@ -1,8 +1,8 @@
 import React from 'react'; 
 import { slide as Menu } from "react-burger-menu";
 import './styles.css'
-import { Navbar, Nav} from 'react-bootstrap';
-import {Link,NavLink} from 'react-router-dom';
+import {  Nav} from 'react-bootstrap';
+import {NavLink} from 'react-router-dom';
 
 export default props => {
   return (

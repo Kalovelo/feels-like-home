@@ -1,9 +1,10 @@
 .paral {
-    height: 300px;
+    height: 600px;
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 50%;
     width:100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     
@@ -12,33 +13,36 @@
 /* Paragraph for Parallax Section */ 
 .paral p {
     font-size: 24px;
-    color:#000000;
+    color:red;
     text-align: center;
     line-height: 60px;
     
     }
      
     /* Heading for Parallax Section */ 
-    .paralh1 {
+    .paralsec h1 {
     color: #000000;
     font-size: 23px;
     text-align: center;
-    padding-top: 10px;
-    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-    filter: blur(5px);
-    transition: 0.3s;
+    }
+
+    .paralh1trans
+    {
+        -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+        filter: blur(5px);
+        transition: 0.3s;
     }
 
     @media (max-width:1000px)
     {
-        .paralh1
+        .paralh1trans
         {
             -webkit-filter:none!important; /* Safari 6.0 - 9.0 */
             filter: none!important;
         }
     }
 
-    .paralh1:hover{
+    .paralh1trans:hover{
         -webkit-filter:none!important; /* Safari 6.0 - 9.0 */
     filter: none!important;
     transition: 0.3s;

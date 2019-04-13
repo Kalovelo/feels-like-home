@@ -1,8 +1,15 @@
 import React from 'react';
-import {Container,Row,Col,Button,Nav} from 'react-bootstrap'
+import {Container,Row,Col,Button} from 'react-bootstrap'
 import './StatusSection.css'
 import { Component } from 'react';
 import {NavLink} from 'react-router-dom';
+import { faChessKnight } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faUniversity } from '@fortawesome/free-solid-svg-icons';
+import { faHandsHelping } from '@fortawesome/free-solid-svg-icons';
+import { faUnderline } from '@fortawesome/free-solid-svg-icons';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class StatusSection extends Component
 {
@@ -26,6 +33,8 @@ class StatusSection extends Component
                         <h3 >· Current Status ·<br/><br/></h3>       
                         </Col>
                             <Col className="status" lg={{span:3}}xs="12">
+
+                                    <h3><FontAwesomeIcon icon={faUniversity}/></h3>
                                     <h4 >
                                     <b>IT Student·</b> Ateith
                                     <br/>
@@ -33,18 +42,23 @@ class StatusSection extends Component
                                     </h4>
                             </Col>
                             <Col className="status" lg={{span:3}}xs="12">
+                                    <h3><FontAwesomeIcon icon={faCode}/></h3>
                                     <h4><b>WordPress Knight·</b> [Insert Brand]
                                     <br/>
                                     <i>The 'W' stands for 'WOW!'</i>
                                     </h4>
                             </Col>
                             <Col className="status"  lg={{span:3}}xs="12">
+
+                            <h3><FontAwesomeIcon icon={faHandsHelping}/></h3>
                                     <h4><b>IEEE Media Committee·</b> Ateith SB
                                     <br/>
                                     <i>Primarily Photography Shooting.</i>
                                     </h4>
                             </Col>
                             <Col className="status" lg={{span:3}}xs="12">
+
+                            <h3><FontAwesomeIcon icon={faUnderline}/></h3>
                                     <h4><b>Writing Enthusiast·</b> Books & Poetry. 
                                     <br/>
                                     <i>Daydreaming on Bukowski's drunk stories.</i>

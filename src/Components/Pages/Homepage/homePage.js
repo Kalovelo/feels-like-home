@@ -1,5 +1,4 @@
 import React from 'react';
-import { Component } from 'react';
 import {Container,Row} from 'react-bootstrap'
 import FirstSection from './First_Section';
 import StatusSection from './StatusSection'
