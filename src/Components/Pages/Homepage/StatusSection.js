@@ -32,7 +32,7 @@ class StatusSection extends Component
                         <Col lg="12">
                         <h3 >· Current Status ·<br/><br/></h3>       
                         </Col>
-                            <Col className="status" lg={{span:3}}xs="12">
+                            <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
 
                                     <h3><FontAwesomeIcon icon={faUniversity}/></h3>
                                     <h4 >
@@ -41,14 +41,14 @@ class StatusSection extends Component
                                     <i>AKA the daily apple.</i>
                                     </h4>
                             </Col>
-                            <Col className="status" lg={{span:3}}xs="12">
+                            <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
                                     <h3><FontAwesomeIcon icon={faCode}/></h3>
                                     <h4><b>WordPress Knight·</b> [Insert Brand]
                                     <br/>
                                     <i>The 'W' stands for 'WOW!'</i>
                                     </h4>
                             </Col>
-                            <Col className="status"  lg={{span:3}}xs="12">
+                            <Col className="status" sm={{span:6}}  lg={{span:3}}xs="12">
 
                             <h3><FontAwesomeIcon icon={faHandsHelping}/></h3>
                                     <h4><b>IEEE Media Committee·</b> Ateith SB
@@ -56,7 +56,7 @@ class StatusSection extends Component
                                     <i>Primarily Photography Shooting.</i>
                                     </h4>
                             </Col>
-                            <Col className="status" lg={{span:3}}xs="12">
+                            <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
 
                             <h3><FontAwesomeIcon icon={faUnderline}/></h3>
                                     <h4><b>Writing Enthusiast·</b> Books & Poetry. 

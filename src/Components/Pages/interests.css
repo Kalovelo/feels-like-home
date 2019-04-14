@@ -7,9 +7,17 @@
 
 }
 
-.fullH p
+#interestsContainer p
 {
     font-size:20px;
+    
+}
+
+p::first-letter {
+    font-size: 150%;
+  -webkit-initial-letter: 4;
+  font-weight: 300;
+  initial-letter: 4!important;
 }
 
 .interestsTitle

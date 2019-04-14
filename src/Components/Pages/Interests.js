@@ -36,14 +36,13 @@ render(){
                 <ul>
                             <li>- HTML</li>
                             <li>- CSS</li>
-                            <li>- UI/UX</li>
                             <li>- JavaScript</li>
                             <li>- ReactJS</li>
                             <li>- WordPress</li>
                             <li>- Java</li>
-                            <li>- C</li>
-                            <li>- Git</li>
+                            <li>- UI/UX</li>
                             <li>- SEO</li>
+                            <li>- Git</li>
                 </ul>
                 </Col>
             </Row>

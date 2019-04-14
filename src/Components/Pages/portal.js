@@ -23,7 +23,7 @@ render(){
                 <Col id='darkSection' md='6'>
                 <h1>Background</h1>
                 <p>Check my journey as a digital deshi ·<br/>My background, how it all started, the tools I use or my future plans.</p>
-                <Button className="darkButton"   variant="outline-light"><NavLink to='/:portal'>· Earth route</NavLink></Button>
+                <Button className="darkButton"   variant="outline-light"><NavLink to='/Background'>· Earth route</NavLink></Button>
                 </Col>
             </Row>
 

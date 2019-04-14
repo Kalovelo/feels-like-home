@@ -40,6 +40,17 @@
             -webkit-filter:none!important; /* Safari 6.0 - 9.0 */
             filter: none!important;
         }
+
+        .paral
+        {
+            height:350px;
+            font-size: 20px;
+        }
+
+        .paral h1
+        {
+            font-size: 20px!important;
+        }
     }
 
     .paralh1trans:hover{

@@ -7,14 +7,19 @@
     padding-left:3%;   
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+.frstImage
+{
+  margin-top:10%;
+  width:50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  border-radius: 50%;
+}
 .hideMob
 {
   width:40%;
   top:40%;
   left:30%;
   position:absolute;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 50%;
 }
 
 /* ----------------------------------------------
@@ -81,12 +86,7 @@
     padding-bottom: 15%;
 }
 
-.frstImage
-{
-  margin-top:10%;
-  width:50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
 
 .rowPost
 {
@@ -102,9 +102,16 @@
       background-repeat:no-repeat;
     }
 
+    .hideMob
+    {
+      margin-top:8%;
+      padding:0px;
+      left:25%;
+    }
+
     #homeMob{ padding-top:10% }
-    .hideMob{visibility: hidden;}
-    #topImgs{overflow:hidden;visibility: hidden;display:none!important}
+    
+    .frstImage{overflow:hidden;visibility: hidden;display:none!important}
     h3,p    
     {
       text-align: center;

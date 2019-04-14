@@ -29,6 +29,7 @@ const FirstSection = () => {
                         <a href="#_" class="lightbox"  id="img2">
                             <img alt='myself laying on the ground while laughing with eyes closed and my hand on chest' src={apostoles2}/>
                         </a>
+                        
                 </Col>
             </Row>
            </Container>
