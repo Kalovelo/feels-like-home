@@ -8,6 +8,9 @@ import '../Images/lightbox.css'
 class Interests extends Component
 {
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+      }
     
 render(){
     return (
@@ -58,7 +61,7 @@ render(){
             <Row id="graySection"> 
                 <Col lg={{span:6,offset:3}} xs='12'> 
                 <a href="#arduinoDay"><img  alt="a group of friends posing,smiling. There's a person with a t-shirt with 'Short is the new sexy' text on it." src={IEEE} className="IEEEthumbnail"/></a>
-                            <a href="#_" class="lightbox" id="arduinoDay">
+                            <a href="#" class="lightbox" id="arduinoDay">
                             <img src={IEEE} alt="a group of friends posing, smiling. There's a person with a t-shirt with 'Short is the new sexy' text on it."/>
                         </a>
                         <h6 style={{textAlign:'center',paddingBottom:'10%'}}>Arduino Serres Day 2, photo taken by my good friend Stella.</h6>

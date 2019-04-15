@@ -13,6 +13,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class StatusSection extends Component
 {
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+      }
+
     constructor() {
         super();
         this.state = {buttonisHovered: false,colisHovered:false};
