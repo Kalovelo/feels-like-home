@@ -17,6 +17,7 @@ render(){
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/:portal'>About</NavLink>
             <NavLink to='/background'>Background</NavLink>
+            <NavLink to='/about'>about</NavLink>
       </Nav>
   </Navbar>
     );

@@ -1,0 +1,84 @@
+#pageTitle
+{
+    text-align: center;
+    font-family: adobe-garamond-pro, serif; 
+    margin-bottom: 10%;
+    margin-top: 10%;
+    font-size:45px;
+}
+
+
+
+.factsMD
+{
+    font-size:24px;
+}
+
+.factsS
+{
+    font-size:18px;
+}
+
+.factsL
+{
+    font-size:35px;
+}
+
+#aboutTitle
+{
+    font-weight: 900;
+    z-index: 10;
+    position: absolute;
+    margin-top:-1.3%;
+    font-family:Lato;
+    
+}
+@media (max-width:1000px)and (min-width:750px){
+    #aboutTitle 
+    {
+        margin-top:1%!important;
+    }
+}
+
+.boxTitle
+{
+    text-align: center;
+    font-family: adobe-garamond-pro, serif; 
+}
+
+#SportsBox
+{
+    background-color:#e9e8e8;
+}
+
+#BooksBox
+{
+    
+    background-color:#272727;
+    color: #ffffff;
+}
+#BooksBox *::selection 
+{
+    color:#272727;
+    background-color:#ffffff;
+
+}
+
+#GamesBox
+{
+    background-color:#e8e8e8;
+    background-color:#272727;
+    color: #e8e8e8;
+}
+
+#GamesBox,#BooksBox,#SportsBox
+{
+    padding:5%;
+    
+}
+
+#GamesBox p,#BooksBox p ,#SportsBox p
+{
+    font-size:20px;
+    
+}

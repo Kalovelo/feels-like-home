@@ -6,6 +6,7 @@ import Footer from './Components/Pages/Footer';
 import Interests from './Components/Pages/Interests';
 import Portal from './Components/Pages/portal';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import About from './Components/Pages/about'
 
 class App extends Component {
 
@@ -18,6 +19,7 @@ class App extends Component {
             <Switch>
             <Route exact path='/' component={Homepage}/>
             <Route path='/Background' component={Interests}/>
+            <Route path='/about' component={About}/>
             <Route path='/:portal' component={Portal}/>
             </Switch>
             <Footer/>
