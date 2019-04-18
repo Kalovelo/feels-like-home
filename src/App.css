@@ -13,9 +13,24 @@ body,html
   scroll-behavior:smooth;
 }
 
+@media (min-width:1000px)
+{
+  .lightboxImg
+  {
+    width:1280px!important;
+    height:770px!important;
+  }
+}
 
-
-
+@media (max-width:750px)
+{
+  .lightboxImg
+  {
+    margin-top:25%!important;
+    width:300%!important;
+    height:50%!important;
+  }
+}
 h1,h2,h3,h4,p
 {
   font-family: 'Roboto';

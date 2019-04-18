@@ -3,7 +3,6 @@ import {Container,Row,Col,Button} from 'react-bootstrap'
 import './StatusSection.css'
 import { Component } from 'react';
 import {NavLink} from 'react-router-dom';
-import { faChessKnight } from '@fortawesome/free-solid-svg-icons';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faUniversity } from '@fortawesome/free-solid-svg-icons';
 import { faHandsHelping } from '@fortawesome/free-solid-svg-icons';

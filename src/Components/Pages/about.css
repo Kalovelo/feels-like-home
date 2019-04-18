@@ -7,21 +7,24 @@
     font-size:45px;
 }
 
-
-
-.factsMD
+#secondRowAbout img
 {
-    font-size:24px;
+    width:100%;
 }
 
-.factsS
+#secondRowAbout
 {
-    font-size:18px;
+    display: block;
 }
 
-.factsL
+#lezanta
 {
-    font-size:35px;
+    text-align: right;
+    font-family: roboto;
+    display:block;
+    font-size:15px;
+    margin-top:3px;
+    font-weight: 300;
 }
 
 #aboutTitle
@@ -71,14 +74,53 @@
     color: #e8e8e8;
 }
 
-#GamesBox,#BooksBox,#SportsBox
+#videogamesBox,#BooksBox,#SportsBox
 {
     padding:5%;
     
 }
 
-#GamesBox p,#BooksBox p ,#SportsBox p
+#videogamesBox
+{
+    margin-top:10%;
+    background-color: #e5e5e5;
+    color: #000000;
+}
+.quote
+{
+    font-style: italic;
+    display: block;
+    text-align:right;
+    font-family: adobe-garamond-pro, serif; 
+}
+
+
+#videogamesBox p,#BooksBox p ,#SportsBox p
 {
     font-size:20px;
+}
+
+#videogamesBox a
+{
+    color:#777777;
+}
+.gamesSpan
+{
+    font-family: adobe-garamond-pro, serif!important; 
     
+}
+
+#videogamesBox a:hover
+{
+    color:#272727;
+    transition: color .3s;
+}
+#tolesIll
+{
+    width:100%;
+}
+
+.aboutRow
+{
+    margin-top:10%!important;
 }

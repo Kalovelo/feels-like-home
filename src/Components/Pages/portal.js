@@ -3,7 +3,7 @@ import {Container,Row,Col,Button} from 'react-bootstrap'
 import './portal.css'
 import { Component } from 'react';
 import {NavLink} from 'react-router-dom';
-import ReactDom from 'react-dom'
+
 class Portal extends Component
 {
 

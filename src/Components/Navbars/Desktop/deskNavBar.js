@@ -15,9 +15,9 @@ render(){
          <Navbar id={navID} className="d-flex flex-row-reverse">
           <Nav>
             <NavLink to='/'>Home</NavLink>
-            <NavLink to='/:portal'>About</NavLink>
+            <NavLink to='/about'>About</NavLink>
             <NavLink to='/background'>Background</NavLink>
-            <NavLink to='/about'>about</NavLink>
+
       </Nav>
   </Navbar>
     );

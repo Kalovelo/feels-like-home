@@ -35,8 +35,7 @@ render(){
                   <ul style={{fontSize:"15px"}} className="footerMenu">
                       <li><Nav.Link> <NavLink to='/'>Home</NavLink></Nav.Link></li>
                       <li> <Nav.Link> <NavLink to='/Background'>Background</NavLink></Nav.Link></li>
-                      <li> <Nav.Link> <NavLink to='/portal'>About</NavLink></Nav.Link></li>
-                      <li> <Nav.Link> <NavLink to='/Background'>Contact</NavLink></Nav.Link></li>
+                      <li> <Nav.Link> <NavLink to='/about'>About</NavLink></Nav.Link></li>
                   </ul>
                 </Col>
             </Row>
