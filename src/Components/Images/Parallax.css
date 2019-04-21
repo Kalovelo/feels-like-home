@@ -4,7 +4,9 @@
     background-size: cover;
     background-position: 50% 50%;
     width:100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
+-moz-box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
+box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
     }
 
     
@@ -61,7 +63,7 @@
 
 
     .paralsec {
-        background-image: url("./dubai.jpg");
+        background-image: url("./dubai2.jpg");
         }
     
 

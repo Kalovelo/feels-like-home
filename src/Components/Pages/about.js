@@ -30,7 +30,7 @@ class About extends Component
         <Row>
             <Col id='SportsBox' md={{span:5,offset:1}}>
                 <h1 className='boxTitle'>Athletics</h1>
-                <p>Spending an hour or two sweating is enough to lift a day's weight.(pun intended).
+                <p>Spending an hour or two sweating is enough to lift a day's weight.(puntastic).
                 Extra points having a session in a more natural environment than gym - seaside or inside a forest - 
                 for working out both the body and spirit. What a combo!</p>
                 <p>Talking about physical and spiritual improvement, i have zeal for the martial artist's lifestyle, where
@@ -51,7 +51,7 @@ class About extends Component
             </Col>
         </Row>
 
-        <Row id='secondRowAbout'>
+        <Row className='aboutRow' id='secondRowAbout'>
             <Col md={{span:8,offset:2}}> 
                 <Col id='videogamesBox' md={{span:12}}>
                 <h1 className='boxTitle'>Entertainment</h1>
