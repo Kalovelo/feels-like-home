@@ -1,0 +1,25 @@
+.helloh1 
+{
+    display:block;
+    text-align:right;
+    position:absolute;
+    left:40%;
+    top:20%;
+    font-family: adobe-garamond-pro, serif; 
+}
+
+#teah1
+{
+    font-size:36px;
+}
+
+@media (max-width:1000px)
+{
+    .helloh1
+{
+    text-align:center;
+    position:static;
+    left:0%;
+    margin-top:20%;
+}
+}

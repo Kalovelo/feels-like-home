@@ -1,12 +1,13 @@
 .paral {
-    height: 600px;
+    margin-top:7%;
+    height:700px;
     background-attachment: fixed;
-    background-size: cover;
-    background-position: 50% 50%;
+    background-size: auto;
+    background-position: 100% 10%;
     width:100%;
     -webkit-box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
--moz-box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
-box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
+    -moz-box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
+    box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
     }
 
     
@@ -26,6 +27,7 @@ box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
     color: #000000;
     font-size: 23px;
     text-align: center;
+    font-family: adobe-garamond-pro, serif;
     }
 
     .paralh1trans
@@ -45,13 +47,14 @@ box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
 
         .paral
         {
-            height:350px;
+            height:500px;
             font-size: 20px;
         }
 
         .paral h1
         {
             font-size: 20px!important;
+            color:#fff
         }
     }
 
@@ -63,7 +66,7 @@ box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
 
 
     .paralsec {
-        background-image: url("./dubai2.jpg");
+        background-image: url("./mountain.jpg");
         }
     
 

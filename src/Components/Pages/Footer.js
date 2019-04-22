@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container,Row,Col,Nav} from 'react-bootstrap';
+import {Container,Row,Col} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF,faInstagram,faLinkedinIn,faGithub } from '@fortawesome/free-brands-svg-icons';
 import "./footer.css"
@@ -21,21 +21,27 @@ class Footer extends Component
         this.setState(prevState => ({finished: !prevState.finished}));
       }
 
+     
+      
+
 render(){
+    
     return (
         <Container className="Footer" fluid="true" style={{backgroundImage: "linear-gradient(#232323, #0c0b0b)",color:"white",paddingTop:"2%"}}>
             <Row  >
                 <Col md={{span:4,offset:4}}>
-                    <h2 style={{fontSize:"40px",textAlign:"center"}} onMouseEnter={this.finishedHover} onMouseLeave={this.finishedHover}>{this.state.finished?<span class='fade-in'>but keep pushing forward.</span>:<span className='puff-in-center'>You made it to the end</span>}</h2>
+                    <h2 style={{fontSize:"40px",textAlign:"center"}} onMouseEnter={this.finishedHover} onMouseLeave={this.finishedHover}>{this.state.finished?<span className='fade-in'>but keep pushing forward.</span>:<span className='puff-in-center'>You made it to the end</span>}</h2>
                 </Col>
             </Row>
 
             <Row >
                 <Col xs={{span:12}}>
-                  <ul style={{fontSize:"15px"}} className="footerMenu">
-                      <li><Nav.Link> <NavLink to='/'>Home</NavLink></Nav.Link></li>
-                      <li> <Nav.Link> <NavLink to='/Background'>Background</NavLink></Nav.Link></li>
-                      <li> <Nav.Link> <NavLink to='/about'>About</NavLink></Nav.Link></li>
+                  <ul onClick={()=>{window.scrollTo(1,1);console.log('done');}} style={{fontSize:"15px"}} className="footerMenu">
+                      <li><NavLink to='/'>Home</NavLink></li>
+                      <li><NavLink to='/Background'>Background</NavLink></li>
+                      <li><NavLink to='/about'>About</NavLink></li>
+                      
+                      
                   </ul>
                 </Col>
             </Row>

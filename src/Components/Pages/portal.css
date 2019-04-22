@@ -82,6 +82,12 @@
     border-bottom: 0.5px solid transparent;
     border-top: 0.5px solid transparent;
 }
+
+.lightButton a
+{
+  color:#000000;
+}
+
 #darkSection,#darkSection p
 {
     text-align: right!important;

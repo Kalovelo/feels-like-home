@@ -8,6 +8,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.3.1",
+    "delayed-scroll-restoration-polyfill": "^0.1.1",
+    "history": "^4.9.0",
     "jquery": "^1.12.4",
     "popper.js": "^1.14.7",
     "react": "^16.8.6",

@@ -3,30 +3,39 @@ import './App.css';
 import NavBar from './Components/Navbars/NavBar';
 import Homepage from './Components/Pages/Homepage/homePage';
 import Footer from './Components/Pages/Footer';
-import Interests from './Components/Pages/Interests';
+import Background from './Components/Pages/background';
 import Portal from './Components/Pages/portal';
-import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import {Router,Route,Switch} from 'react-router-dom'
 import About from './Components/Pages/about'
+import { createBrowserHistory } from 'history';
+
+
+const browserHistory = createBrowserHistory();
+
 
 class App extends Component {
 
 
+ 
+
   render() {
     return (
-      <BrowserRouter>
+      
+      <Router history={browserHistory}>
+     
           <div className="App fade-in">
-            <NavBar/>
+            <NavBar id='mynav'/>
             <Switch>
-            <Route exact path='/' component={Homepage}/>
-            <Route path='/Background' component={Interests}/>
-            <Route path='/about' component={About}/>
-            <Route path='/:portal' component={Portal}/>
+              <Route exact path='/' component={Homepage}/>
+              <Route path='/Background' component={Background}/>
+              <Route path='/about' component={About}/>
+              <Route path='/:portal' component={Portal}/>
             </Switch>
             <Footer/>
 
           </div>
-
-      </BrowserRouter>
+         
+      </Router>
       
     );
   }

@@ -9,11 +9,12 @@ export default props => {
     // Pass on our props
     <div id="topbar">
       <Menu {...props} className="mobile-hide">
-      <Nav>
-            <Nav.Link> <NavLink to='/'>Home</NavLink></Nav.Link>
-            <Nav.Link> <NavLink to='/portal'>About</NavLink></Nav.Link>
-            <Nav.Link> <NavLink to='/background'>Background</NavLink></Nav.Link>
-      </Nav>
+      <ul>
+      
+             <li><NavLink to='/'>Home</NavLink></li>
+             <li><NavLink to='/portal'>About</NavLink></li>
+             <li><NavLink to='/background'>Background</NavLink></li>
+      </ul>
       </Menu>
       <h1 id="topText"><b>フロー</b></h1>
     </div>

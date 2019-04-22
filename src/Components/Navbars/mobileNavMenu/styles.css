@@ -15,7 +15,10 @@ html,
 body {
   margin: 0;
 }
-
+ul
+{
+  list-style:none;
+}
 #App{
   font-family: 'Roboto';
   font-weight: 300;

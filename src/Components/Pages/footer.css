@@ -88,12 +88,12 @@
     font-family:'Montserrat';
 }
 
-.footerMenu .nav-link
+.footerMenu a
 {
-    padding:5px;
+    padding:25px;
     display: inline;
 }
-.footerMenu .nav-link a
+.footerMenu a
 {
 
     font-size:14px;

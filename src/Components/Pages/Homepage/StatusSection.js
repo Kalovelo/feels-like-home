@@ -34,7 +34,7 @@ class StatusSection extends Component
                 <Container fluid="true">
                     <Row  className="statusRow">
                         <Col lg="12">
-                        <h3 >· Current Status ·<br/><br/></h3>       
+                        <h3 >· Current Status ·</h3>       
                         </Col>
                             <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
 

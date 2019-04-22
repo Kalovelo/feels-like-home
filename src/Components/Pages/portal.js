@@ -20,13 +20,13 @@ render(){
                 <h1>About</h1>
                 <p> Get to know me as a person ·<br/>
                 Random facts, how i spend my free time or which hot liquid i prefer inside my cup. </p>
-                <Button className="lightButton fade-in"   variant="outline-light">Ocean route ·</Button>
+                <Button className="lightButton fade-in" variant="outline-light"><NavLink to='/about'>Ocean route ·</NavLink></Button>
 
                 </Col>
                 <Col id='darkSection' md='6'>
                 <h1>Background</h1>
                 <p>Check my journey as a digital deshi ·<br/>My background, how it all started, the tools I use or my future plans.</p>
-                <Button className="darkButton"   variant="outline-light"><NavLink to='/Background'>· Earth route</NavLink></Button>
+                <Button className="darkButton"  variant="outline-light"><NavLink to='/Background'>· Earth route</NavLink></Button>
                 </Col>
             </Row>
 

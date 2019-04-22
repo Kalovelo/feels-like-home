@@ -1,9 +1,8 @@
 import React from 'react';
 import {Container,Row,Col} from 'react-bootstrap';
-import './interests.css'
+import './background.css'
 import "./footer.css"
 import { Component } from 'react';
-
 import '../Images/lightbox.css'
 import './about.css'
 import ptexta2 from '../Images/ptexta2.jpg'
@@ -11,16 +10,14 @@ import ptextawhole from '../Images/ptextawhole.jpg'
 import '../Images/lightbox.css'
 
 import toles_illustrator from '../Images/toles_illustrator.jpg'
+
 class About extends Component
 {
 
-    componentDidMount() {
-        window.scrollTo(0, 0);
-      }
-    
     render(){
         return(
-    <Container fluid="true">
+          
+    <Container ref={this.myRef} fluid="true">
         <h1 id='pageTitle'>FOOD TO KEEP PASSION FLOWING</h1>
         <Row>
             <Col md={{span:6,offset:1}}> 
@@ -73,7 +70,7 @@ class About extends Component
                     <img alt='me and my friends posing in the woods.2 of us are standing and the other 2 are sitting on a rock.I am observing the sky.' src={ptexta2}/>
                 </a>
 
-                <a href="#_" class="lightbox" id="ptexta">
+                <a href="#_" className="lightbox" id="ptexta">
                     <img className='lightboxImg' alt='me and my friends posing in the woods.2 of us are standing and the other 2 are sitting on a rock.I am observing the sky.' src={ptextawhole}/>
                 
                 </a>
@@ -86,7 +83,7 @@ class About extends Component
 
         <Row className='aboutRow'>
             <Col md={{span:2,offset:2}}>
-            <img id='tolesIll' src={toles_illustrator}/> 
+            <img id='tolesIll' alt='dummy' src={toles_illustrator}/> 
             </Col>
 
             <Col md={{span:5}}>

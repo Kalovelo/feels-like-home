@@ -1,19 +1,35 @@
 import React from 'react';
-import {Container,Row} from 'react-bootstrap'
+import {Container,Row,Col} from 'react-bootstrap'
 import FirstSection from './First_Section';
 import StatusSection from './StatusSection'
+import { Component } from 'react';
 import Parallax from '../../Images/Parallax'
-const HomePage = () =>
+import './homepage.css'
+class HomePage extends Component
 {
-    return(
-        <Container fluid="true">
-            <Row style={{overflow:"hidden"}}>
-                <Parallax/>
-                <FirstSection/>
-                <StatusSection/>
-            </Row>
-        </Container>
-    )
+  
+      
+    render(){
+        return(
+            <Container fluid="true">
+            <Row>
+            <Col md={{span:5,offset:1}}>
+                <h1 className='helloh1'>Hello there.<br/><span id='teah1'>Grab a cup of tea and enjoy your stay.</span></h1>
+            </Col>
+            
+            
+            <Col  md={{span:5}}>
+            <Parallax/>
+            </Col>
+        </Row>
+                <Row style={{overflow:"hidden"}}>
+                   
+                    <FirstSection/>
+                    <StatusSection/>
+                </Row>
+            </Container>
+        );
+    }
 }
 
 export default HomePage;
