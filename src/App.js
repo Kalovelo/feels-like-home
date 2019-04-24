@@ -8,6 +8,7 @@ import Portal from './Components/Pages/portal';
 import {Router,Route,Switch} from 'react-router-dom'
 import About from './Components/Pages/about'
 import { createBrowserHistory } from 'history';
+import './animations/animations.css'
 
 
 const browserHistory = createBrowserHistory();

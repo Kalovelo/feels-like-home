@@ -69,7 +69,16 @@ a {
   background: #000000; /* Gecko Browsers */
   color:#ffffff
 }
-
-
-
-
+@media (min-width:800px)
+{
+p.press::first-letter {
+  font-family: adobe-garamond-pro, serif;
+font-weight: 300;
+float: left;
+font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+}

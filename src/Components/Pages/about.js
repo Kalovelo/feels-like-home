@@ -17,17 +17,18 @@ class About extends Component
     render(){
         return(
           
-    <Container ref={this.myRef} fluid="true">
-        <h1 id='pageTitle'>FOOD TO KEEP PASSION FLOWING</h1>
+    <Container ref={this.myRef} id='aboutContainer' fluid="true">
+        <h1 className='fade-in' id='pageTitle'>FOOD TO KEEP PASSION FLOWING</h1>
         <Row>
             <Col md={{span:6,offset:1}}> 
-            <h1 id='aboutTitle'>KAIZEN</h1>
+            <h1 className='fade-in slide-in-top' id='aboutTitle'>KAIZEN</h1>
             </Col>
         </Row>
         <Row>
-            <Col id='SportsBox' md={{span:5,offset:1}}>
+            <Col  id='SportsBox' md={{span:5,offset:1}}>
                 <h1 className='boxTitle'>Athletics</h1>
-                <p>Spending an hour or two sweating is enough to lift a day's weight.(puntastic).
+                <hr align='center' size='50'/>
+                <p className='press'>Spending an hour or two sweating is enough to lift a day's weight.(puntastic).
                 Extra points having a session in a more natural environment than gym - seaside or inside a forest - 
                 for working out both the body and spirit. What a combo!</p>
                 <p>Talking about physical and spiritual improvement, i have zeal for the martial artist's lifestyle, where
@@ -35,14 +36,15 @@ class About extends Component
                     <i>The story begins with a young kid having extra fat and a hard-copy of Rocky. Passion forged from the italian stallion's story.</i>
                 </p>
             </Col>
-            <Col id='BooksBox' md={{span:5}}>
+            <Col className='slide-in-right' id='BooksBox' md={{span:5}}>
             <h1  className='boxTitle'>Literature</h1>
-            <p>You know what, I really can't understand why people hate taking notes or underlining on their books.
+            <hr align='center' size='50'/>
+            <p className='press'> You know what, I really can't understand why people hate taking notes or underlining on their books.
                 Notes add story, to the story. Have you ever tried reading a borrowed book? The owner's notes guide you
                 through the story,and they also help you keep concentrated on the important lines. <i><b>Win-Win Condition!</b></i>
             </p>
             <p>
-                My cup of tea includes self-improvement, philosophy and classic literature books. By the way, the closer I to nature,
+                My cup of tea includes self-improvement, philosophy and classic literature books. By the way, the closer I am to nature,
                 the more i appreciate a good poem.
             </p>
             </Col>
@@ -52,8 +54,9 @@ class About extends Component
             <Col md={{span:8,offset:2}}> 
                 <Col id='videogamesBox' md={{span:12}}>
                 <h1 className='boxTitle'>Entertainment</h1>
-                <p>My music preference ranges from the heaviest metal riffs to the slowest, calming hip-hop beats. It always depends on the mood, 
-                    the situtation - and of course - the company. <br/><i>By the way, the design of this website was influenced by Evidence's album, <a href='https://www.youtube.com/watch?v=APStAKRV8yE'>Weather or not.</a></i>
+                <hr align='center' size='50'/>
+                <p className='press'>My music preference ranges from the heaviest metal riffs to the slowest, calming hip-hop beats. It always depends on the mood, 
+                    the situtation - and of course - the company. <br/><i>the design of this website was influenced by Evidence's album, <a href='https://www.youtube.com/watch?v=APStAKRV8yE'>Weather or not.</a></i>
                 </p>
                     <span className='gamesSpan'><i>and if we're talking about...</i></span>
                     <p>Videogames feel just like reading a good book but here you're in the protagonist's shoes.
@@ -83,31 +86,16 @@ class About extends Component
 
         <Row className='aboutRow'>
             <Col md={{span:2,offset:2}}>
+
+            <p className='thanosCredits'>Illustration by my inspirational friend, <a href='https://www.instagram.com/thanostryfonidis'>Thanos Tryfonidis</a></p>
             <img id='tolesIll' alt='dummy' src={toles_illustrator}/> 
             </Col>
 
             <Col md={{span:5}}>
-            <h1  className='boxTitle'>Conquer the Mountain</h1>
-            <p></p>
+            <h1  className='boxTitle mountain'>Conquer the Mountain</h1>
+            <h4 className='boxTitle sisiphus'><i>even if you're Sisiphus.</i></h4>
             </Col>
         </Row>
-            
-{/* 
-            <span className='factsS'>Videogames </span>
-            <span className='factsL'>Mountains </span> 
-            <span className='factsS'>Joe Rogan </span>
-            <span className='factsMD'>MMA </span>
-            <span className='factsL'>Bukowski </span>
-            <span className='factsS'>Dark Souls </span> 
-            <span className='factsMD'>Black Coffee </span>
-            <span className='factsS'>Heavy Metal </span> 
-            <span className='factsL'>Woods </span>
-            <span className='factsMD'>Camus </span>
-            <span className='factsL'>Ocean </span>
-            <span className='factsMD'>Dogs </span>
-            <span className='factsS'>Breaking Bad </span> 
-            <span className='factsL'>Kaizen </span>
-            <span className='factsS'>Hip-Hop </span>  */}
 
             
   

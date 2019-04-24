@@ -14,16 +14,16 @@ render(){
         <Container fluid="true" id='interestsContainer'>
             <Col xs="12" md={{span:8,offset:2   }} className="fullH">
                 <h1 className="interestsTitle">Background</h1>
-                <p>I admire creations that try to show their flavour to the world, creations whose main goal is 
-                    to have an impact by expressing their own philosophy, their own story. Thereby, I am leaning towards
+                <p className='press'>I admire creations that try to show their flavour to the world, creations whose main goal is 
+                    to have an impact by expressing their own philosophy, <b>their own story</b>. Thereby, I am leaning towards
                     Web & Game Development.</p>
                     <p>
                     I see the world of Design as complex yet based on simple principles
                     that guide you, but they don't cut down your own determination to apply your personal touches.
-                    <br/>My experience involves web design with WordPress, 
+                    <br/>My experience involves <b>web design</b> with WordPress, 
                     creating video thumbnails for our IEEE Student Branch and a few logos.
                     I have also worked in moving and cafe services.
-                </p> 
+                </p>
             </Col>
 
             <Row id="TechnologiesRow">
@@ -50,7 +50,7 @@ render(){
             <Row style={{backgroundColor:"#050505"}}>
                 <Col xs="12" md={{span:8,offset:2   }} id="blackend">
                     <h1 className="interestsTitle B">Inkloom</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores, animi velit ipsa accusamus veniam beatae voluptas natus fugit dolorem? Cumque fugit quia porro quo obcaecati sunt quasi voluptatum dolores.
+                    <p className='press'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores, animi velit ipsa accusamus veniam beatae voluptas natus fugit dolorem? Cumque fugit quia porro quo obcaecati sunt quasi voluptatum dolores.
                     </p>
                 </Col>
             </Row>
@@ -66,7 +66,7 @@ render(){
                         </Col>
                 <Col md={{span:4,offset:1}}>
                     <h1 className="interestsTitle">IEEE</h1>
-                    <p>In 2018, i joined <a href='http://ieee.teithe.gr/'>IEEEteithe Student Branch</a> to participate in IEEEX-TREME. Since then
+                    <p className='press'>In 2018, i joined <a href='http://ieee.teithe.gr/'>IEEEteithe Student Branch</a> to participate in IEEEX-TREME. Since then
                         i became a part of a bigger team, where we create projects, organize events, meet new people.
                         As for myself, i am the primary phtographer and the representitive of the branch's media group. I also 
                         design thumbnails for our youtube videos.
@@ -88,6 +88,9 @@ render(){
                             <h6><a href='https://fosdem.org/2019/'>-FOSDEM 2019</a> | Info Desk</h6>
                         </li>
                     </ul>
+                </Col>
+                <Col>
+                <h1 className="interestsContact">Contact me at<br/>apostoloskalovelonis@ieee.org</h1>
                 </Col>
             </Row>
         </Container>

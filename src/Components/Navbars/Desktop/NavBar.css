@@ -14,8 +14,7 @@
     color:#FFFFFF;
 }
 #transNavbar a:hover
-{
-    color:black;
+{   color:#919191;
     transition: color 0.8s;
 }
 

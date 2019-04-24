@@ -13,12 +13,7 @@
     
 }
 
-p::first-letter {
-    font-size: 150%;
-  -webkit-initial-letter: 4;
-  font-weight: 300;
-  initial-letter: 4!important;
-}
+
 
 .interestsTitle
 {
@@ -30,12 +25,37 @@ p::first-letter {
     padding-top:5%;
     }
 
+    .interestsContact
+{
+    font-family: adobe-garamond-pro, serif; 
+    font-size:50px;
+    color:#3d3d3d;
+    display: block;
+    text-align: center;
+    margin-top:10%;
+    }
+
+    @media (max-width:1000px)
+    {
+
+    .interestsContact
+    {
+        font-size: 22px;
+    }
+    }
+
 
     .interestsTitle.B
     {
     color:white;
     text-align: center;
     }
+
+    #blackend *::selection 
+{
+    color:#272727;
+    background-color:#ffffff!important;
+}
 
 #graySection
 {
@@ -119,7 +139,10 @@ p::first-letter {
 @media (max-width:900px)
 {
 
-
+    #interestsContainer
+    {
+        margin-top:20%;
+    }
     #TechnologiesRow ul li
     {
         text-align:right;

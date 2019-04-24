@@ -8,6 +8,20 @@
 }
 
 
+#SportsBox hr,#BooksBox hr,#videogamesBox hr
+{
+    width:10%;
+    height:0.01px;
+    color:black;
+    background-color: black;
+}
+
+#BooksBox hr
+{
+    background-color:white;
+    height:.01px!important;
+}
+
 
 #secondRowAbout img
 {
@@ -45,6 +59,36 @@
     }
 }
 
+@media (max-width: 800px)
+{
+    #pageTitle
+    {
+        margin-top:30%;
+    
+    }
+
+    #tolesIll
+    {
+        height:80%;
+        width:50%;
+    }
+
+    .mountain
+    {
+        margin-top:40%;
+    }
+
+    .sisiphus
+    {
+
+        margin-bottom:40%;
+    }
+}
+
+@media (max-width:750px)
+{
+
+}
 .boxTitle
 {
     text-align: center;
@@ -66,7 +110,6 @@
 {
     color:#272727;
     background-color:#ffffff;
-
 }
 
 #GamesBox
@@ -79,6 +122,8 @@
 #videogamesBox,#BooksBox,#SportsBox
 {
     padding:5%;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     
 }
 
@@ -125,4 +170,19 @@
 .aboutRow
 {
     margin-top:20%!important;
+}
+
+.sisiphus
+{
+    margin-left:11%;
+}
+
+.thanosCredits
+{
+    margin-top:20%;
+}
+
+.thanosCredits a
+{
+    color:#000;
 }

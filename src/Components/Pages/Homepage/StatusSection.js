@@ -42,11 +42,11 @@ class StatusSection extends Component
                                     <h4 >
                                     <b>IT Student·</b> Ateith
                                     <br/>
-                                    <i>AKA the daily apple.</i>
+                                    <i>dark coffee and couple of apples.</i>
                                     </h4>
                             </Col>
                             <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
-                                    <h3><FontAwesomeIcon icon={faCode}/></h3>
+                                    <h3><FontAwesomeIcon className='rotating' icon={faCode}/></h3>
                                     <h4><b>WordPress Knight·</b> [Insert Brand]
                                     <br/>
                                     <i>The 'W' stands for 'WOW!'</i>
@@ -54,7 +54,7 @@ class StatusSection extends Component
                             </Col>
                             <Col className="status" sm={{span:6}}  lg={{span:3}}xs="12">
 
-                            <h3><FontAwesomeIcon icon={faHandsHelping}/></h3>
+                            <h3><FontAwesomeIcon  icon={faHandsHelping}/></h3>
                                     <h4><b>IEEE Media Committee·</b> Ateith SB
                                     <br/>
                                     <i>Primarily Photography Shooting.</i>
@@ -62,7 +62,7 @@ class StatusSection extends Component
                             </Col>
                             <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
 
-                            <h3><FontAwesomeIcon icon={faUnderline}/></h3>
+                            <h3><FontAwesomeIcon  icon={faUnderline}/></h3>
                                     <h4><b>Writing Enthusiast·</b> Books & Poetry. 
                                     <br/>
                                     <i>Daydreaming on Bukowski's drunk stories.</i>
@@ -71,9 +71,8 @@ class StatusSection extends Component
                             </Col>
                             
                         <Col xs="12">
-                        <Button id="statusMore"  onMouseEnter={this.buttontoggleHover} onMouseLeave={this.buttontoggleHover} variant="outline-light">{this.state.buttonisHovered ?
-                        <NavLink to='/:portal'>More!</NavLink>
- : <NavLink to='/:portal'>More?</NavLink>}</Button>
+                        <NavLink to='/:portal'><Button id="statusMore"  onMouseEnter={this.buttontoggleHover} onMouseLeave={this.buttontoggleHover} variant="outline-light">{this.state.buttonisHovered ?
+                        'More!': 'More?'}</Button></NavLink>
                         </Col>
                     </Row>
                 </Container>
