@@ -42,7 +42,7 @@ class StatusSection extends Component
                                     <h4 >
                                     <b>IT Student·</b> Ateith
                                     <br/>
-                                    <i>dark coffee and couple of apples.</i>
+                                    <i>dark coffee and a couple of apples.</i>
                                     </h4>
                             </Col>
                             <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
