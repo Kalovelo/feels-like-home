@@ -23,7 +23,7 @@ resize=()=>
     if (currentHideNav ) {
         this.setState({nav: SideBar});
     }
-    else this.setState({nav: NavBarDesktop})
+    else this.setState({nav: NavBarDesktop});
 }
 
 render() {

@@ -56,13 +56,13 @@ class About extends Component
                 <h1 className='boxTitle'>Entertainment</h1>
                 <hr align='center' size='50'/>
                 <p className='press'>My music preference ranges from the heaviest metal riffs to the slowest, calming hip-hop beats. It always depends on the mood, 
-                    the situtation - and of course - the company. <br/><i>the design of this website was influenced by Evidence's album, <a href='https://www.youtube.com/watch?v=APStAKRV8yE'>Weather or not.</a></i>
+                    the situtation - and of course - the company. <br/><i>the design of this website was influenced by Evidence's album, <a target="_blank" href='https://www.youtube.com/watch?v=APStAKRV8yE'>Weather or not.</a></i>
                 </p>
                     <span className='gamesSpan'><i>and if we're talking about...</i></span>
                     <p>Videogames feel just like reading a good book but here you're in the protagonist's shoes.
                     I used to game on since i can remember, and in exchange i got some extra passion for challenges and exploration. Grew up
                         with Crash Bandicoot, fell in love with Dark Souls and lately I am on a hunt for unique & innovating indie games.
-                    <br/>I also used to write some amateur reviews on Steam, and you can find them right <a href='https://steamcommunity.com/id/Unscxrred/recommended/'> here</a>, or you could simply
+                    <br/>I also used to write some amateur reviews on Steam, and you can find them right <a target="_blank" href='https://steamcommunity.com/id/Unscxrred/recommended/'> here</a>, or you could simply
                         hit me up with a friend request! </p>
                         <span className='quote'>'Dont you dare go hollow.'</span>
               
@@ -87,7 +87,7 @@ class About extends Component
         <Row className='aboutRow'>
             <Col md={{span:2,offset:2}}>
 
-            <p className='thanosCredits'>Illustration by my inspirational friend, <a href='https://www.instagram.com/thanostryfonidis'>Thanos Tryfonidis</a></p>
+            <p className='thanosCredits'>Illustration by my inspirational friend, <a target="_blank" href='https://www.instagram.com/thanostryfonidis'>Thanos Tryfonidis</a></p>
             <img id='tolesIll' alt='dummy' src={toles_illustrator}/> 
             </Col>
 
