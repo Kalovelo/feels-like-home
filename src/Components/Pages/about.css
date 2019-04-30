@@ -3,10 +3,14 @@
     text-align: center;
     font-family: adobe-garamond-pro, serif; 
     margin-bottom: 10%;
-    margin-top: 10%;
+    padding-top: 10%;
     font-size:45px;
 }
 
+#aboutContainer
+{
+    overflow-x: hidden;
+}
 
 #SportsBox hr,#BooksBox hr,#videogamesBox hr
 {
@@ -14,6 +18,7 @@
     height:0.01px;
     color:black;
     background-color: black;
+    
 }
 
 #BooksBox hr
@@ -63,7 +68,7 @@
 {
     #pageTitle
     {
-        margin-top:30%;
+        padding-top:30%;
     
     }
 

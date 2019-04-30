@@ -60,9 +60,11 @@ ul
 .bm-burger-button {
   position: absolute;
   width: 36px;
-  height: 30px;
+  height: 40px;
   left: 36px;
   top: 16px;
+  opacity: 0.5;
+
 }
 
 /* Color/shape of burger icon bars */

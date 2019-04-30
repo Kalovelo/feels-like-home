@@ -47,9 +47,9 @@ class StatusSection extends Component
                             </Col>
                             <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
                                     <h3><FontAwesomeIcon className='rotating' onClick={()=>{console.log('This is the first part of our treasure hunt. Come back later for the next hint!')}} icon={faCode}/></h3>
-                                    <h4><b>WordPress Knight·</b> [Insert Brand]
+                                    <h4><b>WordPress Knight · </b> Freelancing 
                                     <br/>
-                                    <i>The 'W' stands for 'WOW!'</i>
+                                    <i>lorem, lorem ipsum!</i>
                                     </h4>
                             </Col>
                             <Col className="status" sm={{span:6}}  lg={{span:3}}xs="12">

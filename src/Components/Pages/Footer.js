@@ -55,10 +55,10 @@ render(){
             <Row >
                 <Col xs={{span:12}}>
                     <ul className="footerSocial">
-                        <li><a target="_blank"  href="https://www.facebook.com/kalovelo"><FontAwesomeIcon icon={faFacebookF}/></a></li>
-                        <li><a target="_blank" href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                        <li><a target="_blank" href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faGithub} /></a></li>
-                        <li><a target="_blank" href="https://linkedin.com/in/apostolos-kalovelonis-0b886116a"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                        <li><a rel="noopener noreferrer" target="_blank"  href="https://www.facebook.com/kalovelo"><FontAwesomeIcon icon={faFacebookF}/></a></li>
+                        <li><a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                        <li><a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faGithub} /></a></li>
+                        <li><a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/apostolos-kalovelonis-0b886116a"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
                     </ul>                
                 </Col>
             </Row>

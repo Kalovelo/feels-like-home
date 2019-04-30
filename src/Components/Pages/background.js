@@ -47,13 +47,13 @@ render(){
                 </Col>
             </Row>
 
-            <Row style={{backgroundColor:"#050505"}}>
+            {/* <Row style={{backgroundColor:"#050505"}}>
                 <Col xs="12" md={{span:8,offset:2   }} id="blackend">
                     <h1 className="interestsTitle B">Inkloom</h1>
                     <p className='press'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores, animi velit ipsa accusamus veniam beatae voluptas natus fugit dolorem? Cumque fugit quia porro quo obcaecati sunt quasi voluptatum dolores.
                     </p>
                 </Col>
-            </Row>
+            </Row> */}
 
             <Row id="graySection"> 
                 <Col lg={{span:6,offset:3}} xs='12'> 
@@ -66,13 +66,13 @@ render(){
                         </Col>
                 <Col md={{span:4,offset:1}}>
                     <h1 className="interestsTitle">IEEE</h1>
-                    <p className='press'>In 2018, i joined <a href='http://ieee.teithe.gr/' target="_blank">IEEEteithe Student Branch</a> to participate in IEEEX-TREME. Since then
+                    <p className='press'>In 2018, i joined <a rel="noopener noreferrer" href='http://ieee.teithe.gr/' target="_blank">IEEEteithe Student Branch</a> to participate in IEEEX-TREME. Since then
                         i became a part of a bigger team, where we create projects, organize events, meet new people.
                         As for myself, i am the primary phtographer and the representitive of the branch's media group. I also 
                         design thumbnails for our youtube videos.
                         <br/>
                         <br/>
-                        Photos taken from <a href='https://arduinodayserres.gr/tag/arduino-serres/' target="_blank">arduino day Serres 2.0</a>, posted on Greece's public broadcaster's website, <a href='http://www.ert.gr/perifereiakoi-stathmoi/seres/serres-clean-serreskai-arduino-day-2019/'>ERT.</a>
+                        Photos taken from <a href='https://arduinodayserres.gr/tag/arduino-serres/' rel="noopener noreferrer" target="_blank">arduino day Serres 2.0</a>, posted on Greece's public broadcaster's website, <a href='http://www.ert.gr/perifereiakoi-stathmoi/seres/serres-clean-serreskai-arduino-day-2019/'>ERT.</a>
                         </p>
                 </Col>
        
@@ -82,10 +82,10 @@ render(){
                     </p>
                     <ul className='volunteeringLi'>
                         <li>
-                            <h6><a href='http://www.5gsummit.org/Thessaloniki/' target="_blank">-IEEE 5G and IoT Thessaloniki Summit 2018</a> | Technical Support</h6>
+                            <h6><a rel="noopener noreferrer" href='http://www.5gsummit.org/Thessaloniki/' target="_blank">-IEEE 5G and IoT Thessaloniki Summit 2018</a> | Technical Support</h6>
                         </li>
                         <li>
-                            <h6><a href='https://fosdem.org/2019/' target="_blank">-FOSDEM 2019</a> | Info Desk</h6>
+                            <h6><a href='https://fosdem.org/2019/' rel="noopener noreferrer" target="_blank">-FOSDEM 2019</a> | Info Desk</h6>
                         </li>
                     </ul>
                 </Col>
