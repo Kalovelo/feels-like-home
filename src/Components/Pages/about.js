@@ -22,7 +22,7 @@ class About extends Component
           
     <Container ref={this.myRef} id='aboutContainer'  fluid="true">
         <h1 className='fade-in' id='pageTitle'>FOOD TO KEEP PASSION FLOWING</h1>
-        <Row>
+        <Row id='aboutBoxes'>
             <Col md={{span:6,offset:1}}> 
             <h1 className='fade-in slide-in-top' id='aboutTitle'>KAIZEN</h1>
             </Col>

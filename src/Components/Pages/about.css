@@ -72,6 +72,11 @@
     
     }
 
+    #BooksBox,#aboutBoxes
+    {
+        margin-top:50%;
+    }
+
     #tolesIll
     {
         height:80%;

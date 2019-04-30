@@ -150,7 +150,10 @@
     {
         padding-top:20%;
     }
-    
+    .bot
+    {
+        margin-top:50%;
+    }
     #TechnologiesRow ul li
     {
         text-align:right;

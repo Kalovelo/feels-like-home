@@ -68,7 +68,7 @@ render(){
                         <h6 style={{textAlign:'center',paddingBottom:'10%'}}>Arduino Serres Day 2, photo taken by my good friend Stella.</h6>
                         </Col>
                 <Col md={{span:4,offset:1}}>
-                    <h1 className="interestsTitle">IEEE</h1>
+                    <h1 className="interestsTitle bot">IEEE</h1>
                     <p className='press'>In 2018, i joined <a rel="noopener noreferrer" href='http://ieee.teithe.gr/' target="_blank">IEEEteithe Student Branch</a> to participate in IEEEX-TREME. Since then
                         i became a part of a bigger team, where we create projects, organize events, meet new people.
                         As for myself, i am the primary phtographer and the representitive of the branch's media group. I also 
@@ -80,7 +80,7 @@ render(){
                 </Col>
        
                 <Col md={{span:4,offset:2}} xs={12}>
-                    <h1 className="interestsTitle" >Volunteering</h1>
+                    <h1 className="interestsTitle bot" >Volunteering</h1>
                     <p>Apart from being an IEEE member, i have also taken volunteering actions in conferences. 
                     </p>
                     <ul className='volunteeringLi'>
