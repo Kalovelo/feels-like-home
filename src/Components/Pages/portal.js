@@ -9,7 +9,9 @@ class Portal extends Component
 
     componentDidMount() {
         window.scrollTo(1,1);
+        document.title = 'Choose a Path';
       }
+
     
 render(){
 

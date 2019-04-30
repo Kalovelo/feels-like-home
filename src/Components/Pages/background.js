@@ -8,7 +8,10 @@ import '../Images/lightbox.css'
 
 class Background extends Component
 {
-    
+    componentDidMount() {
+        document.title = 'Earth Herself';
+      }
+      
 render(){
     return (
         <Container fluid="true" id='interestsContainer'>

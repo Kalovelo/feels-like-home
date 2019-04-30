@@ -13,11 +13,14 @@ import toles_illustrator from '../Images/toles_illustrator.jpg'
 
 class About extends Component
 {
+    componentDidMount() {
+        document.title = 'The Ocean';
+      }
 
     render(){
         return(
           
-    <Container ref={this.myRef}  fluid="true">
+    <Container ref={this.myRef} id='aboutContainer'  fluid="true">
         <h1 className='fade-in' id='pageTitle'>FOOD TO KEEP PASSION FLOWING</h1>
         <Row>
             <Col md={{span:6,offset:1}}> 

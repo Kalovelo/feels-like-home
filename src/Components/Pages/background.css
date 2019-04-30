@@ -59,7 +59,6 @@
 
 #graySection
 {
-   background-color:#FFFBFB;
    text-align: left;
    padding-top:3%;
    padding-bottom:3%;
@@ -76,6 +75,14 @@
 }
 
 
+@media (min-width:1200px)
+{
+    #arduinoDay img
+    {
+        margin-top:-1%;
+        
+    }
+}
 
 #graySection a
 {

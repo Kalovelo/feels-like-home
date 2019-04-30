@@ -1,7 +1,7 @@
 {
   "name": "apostoles",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
@@ -43,10 +43,10 @@
     "type": "git",
     "url": "git+https://github.com/ApostolosKalovelo/feels-like-home.git"
   },
-  "author": "",
+  "author": "Apostoles",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ApostolosKalovelo/feels-like-home/issues"
   },
-  "homepage": "https://github.com/ApostolosKalovelo/feels-like-home#readme"
-}
+  "homepage": "https://kalovelo.com"
+} 

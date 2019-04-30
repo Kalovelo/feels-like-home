@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF,faInstagram,faLinkedinIn,faGithub } from '@fortawesome/free-brands-svg-icons';
 import "./footer.css"
 import { Component } from 'react';
-import {NavLink} from 'react-router-dom';
+
 
 
 class Footer extends Component
@@ -37,9 +37,9 @@ render(){
             <Row >
                 <Col xs={{span:12}}>
                   <ul onClick={()=>{window.scrollTo(1,1);console.log('done');}} style={{fontSize:"15px"}} className="footerMenu">
-                      <li><NavLink to='/'>Home</NavLink></li>
-                      <li><NavLink to='/Background'>Background</NavLink></li>
-                      <li><NavLink to='/about'>About</NavLink></li>
+                      <li><a   href="https://kalovelo.com">Home</a></li>
+                      <li><a   href="https://kalovelo.com/background">Background</a></li>
+                      <li><a   href="https://kalovelo.com/about">About</a></li>
                       
                       
                   </ul>
