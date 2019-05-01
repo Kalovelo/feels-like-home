@@ -6,9 +6,9 @@
   import Background from './Components/Pages/background';
   import Portal from './Components/Pages/portal';
   import { BrowserRouter as Router,Route,Switch} from 'react-router-dom'
-  import About from './Components/Pages/about'
-  import './animations/animations.css'
-
+  import About from './Components/Pages/about';
+  import './animations/animations.css';
+  import Cookiefier from './Components/cookiefier';
 
 
 
@@ -25,6 +25,7 @@ class App extends Component {
      
           <div className="App fade-in">
             <NavBar id='mynav'/>
+            <Cookiefier/>
             <Switch>
               <Route exact path='/' component={Homepage}/>
               <Route path='/Background' component={Background}/>
