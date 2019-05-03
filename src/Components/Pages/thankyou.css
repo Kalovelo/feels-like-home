@@ -1,0 +1,75 @@
+#thankYouNames a
+{
+    color:#424242;
+}
+
+#thankYouNames a:hover
+{
+    color:#cccccc;
+}
+#thankYou
+{
+    text-align: center;
+}
+#thankYouNames
+{
+    margin-bottom:20%;
+}
+
+
+.thankYouLeft
+{
+    text-align: left;
+   
+}
+
+.thankYouLeft,.thankYouRight
+{
+    margin-top:5%;
+    font-size:20px;
+
+}
+
+@media (max-width:1000px)
+{ 
+    .thankYouLeft, .thankYouRight
+    {
+        margin-top:20%;
+        font-size:15px;
+    }
+
+    #ofCourse
+    {
+        font-size:18px;
+    }
+
+    #youHere
+    {
+        font-size:22px;
+    }
+}
+#ofCourse
+{
+    margin-top:20%;
+}
+#youHere,#ofCourse
+{
+    
+    text-align: center;
+}
+
+#youHere,#ofCourse,.thankYouLeft,.thankYouRight,#thankYouNames a
+{
+    font-family: adobe-garamond-pro, serif; 
+}
+.thankYouRight
+{
+    text-align: right;
+    
+}
+
+#thankYouCol
+{
+    margin-top:8%;
+    margin-bottom:8%;
+}

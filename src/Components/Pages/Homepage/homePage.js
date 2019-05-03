@@ -26,14 +26,14 @@ class HomePage extends Component
             
             
             <Col className='fade-in'  md={{span:5}}>
-            <Parallax/>
+            <Parallax />
             <p className='lezanta' style={{textAlign:'right'}}>From my trip in Corfu.</p>
             </Col>
         </Row>
                 <Row style={{overflow:"hidden"}}>
                    
-                    <FirstSection/>
-                    <StatusSection/>
+                    <FirstSection />
+                    <StatusSection test='helloo'/>
                 </Row>
             </Container>
         );

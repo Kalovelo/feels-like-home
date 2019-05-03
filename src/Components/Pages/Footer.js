@@ -2,6 +2,7 @@ import React from 'react';
 import {Container,Row,Col} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF,faInstagram,faLinkedinIn,faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
 import "./footer.css"
 import { Component } from 'react';
 
@@ -36,10 +37,11 @@ render(){
 
             <Row >
                 <Col xs={{span:12}}>
-                  <ul onClick={()=>{window.scrollTo(1,1);console.log('done');}} style={{fontSize:"15px"}} className="footerMenu">
+                  <ul onClick={()=>{window.scrollTo(1,1);}} style={{fontSize:"15px"}} className="footerMenu">
                       <li><a   href="https://kalovelo.com">Home</a></li>
                       <li><a   href="https://kalovelo.com/background">Background</a></li>
                       <li><a   href="https://kalovelo.com/about">About</a></li>
+                      <li><a   href="https://kalovelo.com/thankYou">Thank You</a></li>
                       
                       
                   </ul>
@@ -57,8 +59,10 @@ render(){
                     <ul className="footerSocial">
                         <li><a rel="noopener noreferrer" target="_blank"  href="https://www.facebook.com/kalovelo"><FontAwesomeIcon icon={faFacebookF}/></a></li>
                         <li><a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/unscxrred/"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                        <li><a rel="noopener noreferrer" target="_blank" href="mailto:apostoloskalovelonis@ieee.org"><FontAwesomeIcon icon={faEnvelopeOpenText} /></a></li>
                         <li><a rel="noopener noreferrer" target="_blank" href="https://github.com/ApostolosKalovelo"><FontAwesomeIcon icon={faGithub} /></a></li>
                         <li><a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/apostolos-kalovelonis-0b886116a"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                        
                     </ul>                
                 </Col>
             </Row>

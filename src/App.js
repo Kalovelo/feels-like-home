@@ -9,7 +9,7 @@
   import About from './Components/Pages/about';
   import './animations/animations.css';
   import Cookiefier from './Components/cookiefier';
-
+  import ThankYou from './Components/Pages/thankYou';
 
 
 
@@ -30,6 +30,7 @@ class App extends Component {
               <Route exact path='/' component={Homepage}/>
               <Route path='/Background' component={Background}/>
               <Route path='/about' component={About}/>
+              <Route path='/thankYou' component={ThankYou}/>
               <Route path='/:portal' component={Portal}/>
             </Switch>
             <Footer/>

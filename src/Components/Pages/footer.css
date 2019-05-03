@@ -28,8 +28,26 @@
     {
         padding-top:5%!important;
     }
+
+    
+   
 }
 
+@media (max-width:400px)
+{
+    .footerMenu 
+    {
+        margin-right: 10px!important;
+    }
+}
+
+@media (min-width:501px) and (max-width:1000px)
+{
+    .footerMenu 
+    {
+        margin-right: 60px!important;
+    }
+}
 @media (max-width:400px)
     {
         .footerMenu 
@@ -87,11 +105,14 @@
     font-family:'Montserrat';
 }
 
+
 .footerMenu a
 {
-    padding:20px;
+    padding:10px;
     display: inline;
 }
+
+
 .footerMenu a
 {
 
