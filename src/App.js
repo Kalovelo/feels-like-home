@@ -10,7 +10,7 @@
   import './animations/animations.css';
   import Cookiefier from './Components/cookiefier';
   import ThankYou from './Components/Pages/thankYou';
-
+  import NotFound404 from './Components/Pages/notFound404';
 
 
 class App extends Component {
@@ -31,7 +31,9 @@ class App extends Component {
               <Route path='/Background' component={Background}/>
               <Route path='/about' component={About}/>
               <Route path='/thankYou' component={ThankYou}/>
+              <Route path='' component={NotFound404}/>
               <Route path='/:portal' component={Portal}/>
+              
             </Switch>
             <Footer/>
           </div>
