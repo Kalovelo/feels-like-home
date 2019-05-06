@@ -10,7 +10,7 @@ class NavBarDesktop extends Component
 
   
 render(){
-  let navID = this.props.location.pathname === '/:portal' ? 'transNavbar' : 'solidNavbar';
+  let navID = this.props.location.pathname === '/portal' ? 'transNavbar' : 'solidNavbar';
     return (
          <Navbar id={navID} className="d-flex flex-row-reverse">
           <Nav>

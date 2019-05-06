@@ -71,7 +71,7 @@ class StatusSection extends Component
                             </Col>
                             
                         <Col xs="12">
-                        <NavLink to='/:portal'><Button id="statusMore"  onMouseEnter={this.buttontoggleHover} onMouseLeave={this.buttontoggleHover} variant="outline-light">{this.state.buttonisHovered ?
+                        <NavLink to='/portal'><Button id="statusMore"  onMouseEnter={this.buttontoggleHover} onMouseLeave={this.buttontoggleHover} variant="outline-light">{this.state.buttonisHovered ?
                         'More!': 'More?'}</Button></NavLink>
                         </Col>
                     </Row>

@@ -20,7 +20,7 @@ const FirstSection = () => {
                         <p><br/>
                             I am keen on <b>marketing, design and coding</b>. Combining all three, along with a tube full of love for story-driven videogames, i aspire to be a web developer by day, and part of a game development team by night.
                         </p>
-                        <NavLink to='/:portal'><Button id='firstButton'  variant="outline-light">Take a walk?</Button> </NavLink>
+                        <NavLink to='/portal'><Button id='firstButton'  variant="outline-light">Take a walk?</Button> </NavLink>
 
                     </Col>
 
