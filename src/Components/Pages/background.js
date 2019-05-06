@@ -5,6 +5,7 @@ import "./footer.css"
 import { Component } from 'react';
 import IEEE from '../Images/IEEE.JPG'
 import '../Images/lightbox.css'
+import {Helmet} from "react-helmet";
 
 class Background extends Component
 {
@@ -15,6 +16,15 @@ class Background extends Component
 render(){
     return (
         <Container fluid="true" id='interestsContainer'>
+
+            <Helmet>
+            <meta name="description" content=" Check my journey as a digital deshi ·
+            My background, how it all started, the tools I use or my future plans." />
+             <meta itemprop="description" content=" Check my journey as a digital deshi ·
+            My background, how it all started, the tools I use or my future plans."/>
+            <meta NAME="ROBOTS" CONTENT="noindex,follow"/>
+        </Helmet>
+
             <Col xs="12" md={{span:8,offset:2   }} className="fullH">
                 <h1 className="interestsTitle">Background</h1>
                 <p className='press'>I admire creations that try to show their flavour to the world, creations whose main goal is 

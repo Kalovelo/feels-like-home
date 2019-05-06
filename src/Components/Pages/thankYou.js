@@ -1,8 +1,7 @@
 import React from 'react';
-import {Container,Row,Col,Button} from 'react-bootstrap'
+import {Container,Row,Col} from 'react-bootstrap'
 import './thankyou.css'
 import { Component } from 'react';
-import {NavLink} from 'react-router-dom';
 
 class ThankYou extends Component
 {

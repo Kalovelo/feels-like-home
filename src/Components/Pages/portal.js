@@ -3,6 +3,7 @@ import {Container,Row,Col,Button} from 'react-bootstrap'
 import './portal.css'
 import { Component } from 'react';
 import {NavLink} from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 class Portal extends Component
 {
@@ -14,9 +15,11 @@ class Portal extends Component
 
     
 render(){
-
     return(
         <Container id='portal' className='fade-in' fluid='true'>
+                <Helmet>
+                    <meta NAME="ROBOTS" CONTENT="noindex,nofollow"/>
+                </Helmet>
             <Row>
                 <Col id='lightSection' md='6'>
                 <h1>About</h1>

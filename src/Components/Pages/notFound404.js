@@ -1,12 +1,9 @@
 import React from 'react';
-import {Container,Row,Col} from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF,faInstagram,faLinkedinIn,faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
+import {Container} from 'react-bootstrap';
 import "./footer.css"
 import { Component } from 'react';
 import './notFound404.css'
-
+import {Helmet} from "react-helmet";
 
 
 class NotFound404 extends Component
@@ -49,6 +46,11 @@ class NotFound404 extends Component
         
         return(
             <Container id='notFoundBody' fluid='true'>
+
+                <Helmet>
+                <meta NAME="ROBOTS" CONTENT="noindex,nofollow"/>
+                </Helmet>
+
             <p>{this.state.randomString1} <a href='/' className='beat' id='notFoundT'>{this.props.location.pathname} 404 NOT FOUND.<br/>GO BACK. NOW.</a> {this.state.randomString2}</p>
             
             </Container>

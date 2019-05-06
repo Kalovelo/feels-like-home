@@ -6,8 +6,6 @@ import * as serviceWorker from './serviceWorker';
 
 
 
-// const store = createStore(rootReducer);
-
 ReactDOM.render(<Apostoloskalovelonis />, document.getElementById('root'));
 
 serviceWorker.unregister();

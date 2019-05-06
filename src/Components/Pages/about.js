@@ -8,6 +8,8 @@ import './about.css'
 import ptexta2 from '../Images/ptexta2.jpg'
 import ptextawhole from '../Images/ptextawhole.jpg'
 import '../Images/lightbox.css'
+import {Helmet} from "react-helmet";
+
 
 import toles_illustrator from '../Images/toles_illustrator.jpg'
 
@@ -21,6 +23,15 @@ class About extends Component
         return(
           
     <Container ref={this.myRef} id='aboutContainer'  fluid="true">
+     <Helmet>
+            <meta name="description" content=" Get to know me as a person ·
+            Random facts, how i spend my free time or which hot liquid i prefer inside my cup." />
+                        <meta itemprop="description" content=" Get to know me as a person ·
+            Random facts, how i spend my free time or which hot liquid i prefer inside my cup."/>
+
+            <meta NAME="ROBOTS" CONTENT="noindex,follow"/>
+     </Helmet>
+
         <h1 className='fade-in' id='pageTitle'>FOOD TO KEEP PASSION FLOWING</h1>
         <Row id='aboutBoxes'>
             <Col md={{span:6,offset:1}}> 
