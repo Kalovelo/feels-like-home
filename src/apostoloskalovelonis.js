@@ -13,7 +13,7 @@
   import NotFound404 from './Components/Pages/notFound404';
 
 
-class App extends Component {
+class Apostoloskalovelonis extends Component {
 
 
  
@@ -45,4 +45,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Apostoloskalovelonis;

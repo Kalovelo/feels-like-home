@@ -14,6 +14,7 @@ class NotFound404 extends Component
    
     componentDidMount(){
             this.generate_random_string();
+                document.title = 'Mistakes were made.';
     }
 
     constructor()
