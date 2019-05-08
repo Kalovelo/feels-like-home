@@ -5,8 +5,9 @@ import favicon from '../../Images/favicon.png'
 export default props => {
   return (
     // Pass on our props
+    //customBurgerIcon={ <img alt='a black and white mountain sketch' src={favicon}/>}
     <div id="topbar">
-      <Menu width={ '100%' } customBurgerIcon={ <img alt='a black and white mountain sketch' src={favicon}/>} {...props} className="mobile-hide"> 
+      <Menu width={ '100%' }  {...props} className="mobile-hide"> 
       <ul>
       
              <li><a href='https://kalovelo.com'>Home</a></li>

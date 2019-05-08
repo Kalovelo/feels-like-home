@@ -30,7 +30,7 @@ render(){
                 <p className='press'>I admire creations that try to show their flavour to the world, creations whose main goal is 
                     to have an impact by expressing their own philosophy, <b>their own story</b>. Thereby, I am leaning towards
                     Web & Game Development.</p>
-                    <p>
+                    <p >
                     I see the world of Design as complex yet based on simple principles
                     that guide you, but they don't cut down your own determination to apply your personal touches.
                     <br/>My experience involves <b>web design</b> with WordPress, 
@@ -60,13 +60,7 @@ render(){
                 </Col>
             </Row>
 
-            {/* <Row style={{backgroundColor:"#050505"}}>
-                <Col xs="12" md={{span:8,offset:2   }} id="blackend">
-                    <h1 className="interestsTitle B">Inkloom</h1>
-                    <p className='press'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores, animi velit ipsa accusamus veniam beatae voluptas natus fugit dolorem? Cumque fugit quia porro quo obcaecati sunt quasi voluptatum dolores.
-                    </p>
-                </Col>
-            </Row> */}
+         
 
             <Row id="graySection"> 
                 <Col lg={{span:6,offset:3}} xs='12'> 
@@ -91,7 +85,7 @@ render(){
        
                 <Col md={{span:4,offset:2}} xs={12}>
                     <h1 className="interestsTitle bot" >Volunteering</h1>
-                    <p>Apart from being an IEEE member, i have also taken volunteering actions in conferences. 
+                    <p className='press'>Apart from being an IEEE member, i have also taken volunteering actions in conferences. 
                     </p>
                     <ul className='volunteeringLi'>
                         <li>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700,900');
+
 
 
 #interestsContainer ul li
@@ -42,7 +42,27 @@
     {
         font-size: 22px;
     }
+
+    .press
+    {
+        font-size:18px!important;
+        margin-top:20%;
+        margin-bottom:15%;
     }
+
+    .interestsTitle
+    {
+        
+        text-align: left;
+    }
+
+    .interestsContact
+    {
+        margin-top:35%;
+    }
+    }
+
+    
 
 
     .interestsTitle.B
