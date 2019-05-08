@@ -11,7 +11,7 @@
   import Cookiefier from './Components/cookiefier';
   import ThankYou from './Components/Pages/thankYou';
   import NotFound404 from './Components/Pages/notFound404';
-
+  import './fonts/font.css'
 
 class Apostoloskalovelonis extends Component {
 
