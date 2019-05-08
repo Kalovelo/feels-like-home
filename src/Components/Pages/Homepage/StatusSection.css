@@ -9,8 +9,7 @@ font-size: 20px;
 
 .status:hover
 {  
-   
-   color:red!important;
+
    transition: color 0.5s;
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400');
@@ -26,9 +25,6 @@ font-size: 20px;
 .statusRow
 {
    text-Align:center;
-   /* background-image: url("../../Images/buildings.jpg");
-   background-position: center;
-   background-size: contain; */
    background-color:white;
 }
 

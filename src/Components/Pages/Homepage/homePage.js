@@ -12,7 +12,8 @@ class HomePage extends Component
 
     
     componentDidMount() {
-        document.title = 'Apostolos Kalovelones | Design & Development enthusiastnpm install --save react-helmet';
+        document.title = 'Apostolos Kalovelones | Design & Development enthusiast';
+        
       }
   
       
@@ -25,13 +26,13 @@ class HomePage extends Component
             </Col>
 
             <Helmet>
-            <meta name="description" content="Design & Development Enthusiast. Currently Working with WordPress and exploring technologies. Learn more about my background & hobbies."></meta>
-            <meta itemprop="description" content="Design & Development Enthusiast. Currently Working with WordPress and exploring technologies. Learn more about my background & hobbies."/>
+                <meta name="description" content="Design & Development Enthusiast. Currently Working with WordPress and exploring technologies. Learn more about my background & hobbies."></meta>
+                <meta itemprop="description" content="Design & Development Enthusiast. Currently Working with WordPress and exploring technologies. Learn more about my background & hobbies."/>
             </Helmet>
             
             <Col className='fade-in'  md={{span:5}}>
-            <Parallax />
-            <p className='lezanta' style={{textAlign:'right'}}>From my trip in Corfu.</p>
+                <Parallax />
+                <p className='lezanta' style={{textAlign:'right'}}>From my trip in Corfu.</p>
             </Col>
         </Row>
                 <Row style={{overflow:"hidden"}}>

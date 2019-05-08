@@ -11,13 +11,13 @@ const FirstSection = () => {
          <Container  fluid="true" id="homeMob" style={{marginTop:"13%"}}> 
          
                 <Row className="halfRow">
-                    <Col lg={{span:6}} xl={{span:6}}  className="topHalf "  xs="12 content">
+                    <Col xl={{span:5,offset:1}}  className="topHalf "  xs="12 content">
                         <h2>Greetings, stranger!</h2>
                         <p>My name is Apostolos Kalovelonis, coming straight out of the olives and oregano country, <b>Greece</b>.
                             Currently studying IT and developing websites with WordPress. You can find me at <b>local meetups</b> about marketing or development, reading peacefully a book on public transport, or
                             jogging by the sea.
                         </p>
-                        <p><br/>
+                        <p><br/><br/>
                             I am keen on <b>marketing, design and coding</b>. Combining all three, along with a tube full of love for story-driven videogames, i aspire to be a web developer by day, and part of a game development team by night.
                         </p>
                         <NavLink to='/portal'><Button id='firstButton'  variant="outline-light">Take a walk?</Button> </NavLink>

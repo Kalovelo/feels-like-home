@@ -97,7 +97,10 @@
 
 @media (max-width:750px)
 {
-
+    .boxTitle
+    {
+        margin-top:8%;
+    }
 }
 .boxTitle
 {

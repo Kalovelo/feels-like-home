@@ -1,12 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900);
-@import url(https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,700,900);
-@import url("https://use.typekit.net/jqd8xpv.css");
+
 @media only screen and (min-width: 700px) 
 {
     #topBar{ visibility: hidden; }
     
 }
 
+@font-face {
+  font-family: adobe-garamond-pro;
+  src: url(./fonts/EBGaramond-Regular.woff) format('woff'),
+  url(./fonts/EBGaramond-Regular.ttf) format('ttf'),
+  url(./fonts//EBGaramond-Regular.woff2) format('woff2');
+  font-display: swap;
+}
 body,html
 {
   
@@ -53,8 +58,6 @@ h1,h2,h3,h4,p
 a {
   outline: 0;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 #apostolesNavbar a
 {
