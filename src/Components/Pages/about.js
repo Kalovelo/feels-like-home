@@ -13,12 +13,48 @@ import {Helmet} from "react-helmet";
 
 import toles_illustrator from '../Images/toles_illustrator.jpg'
 
+
+
 class About extends Component
 {
-    componentDidMount() {
-        document.title = 'The Ocean';
+
+    state =
+    {
+        showIllu:'this.illustration'
+    }
+      
+    
+      componentDidMount = () =>
+      {
+      window.addEventListener("resize", this.resize.bind(this));
+      this.resize();
+      document.title = 'The Ocean';
       }
 
+      illustration = () => {
+        return(
+    <Row  className='hideonMob'>
+                <Col  md={{span:2,offset:2}}>
+    
+                <img id='tolesIll' alt='dummy' src={toles_illustrator}/>
+                </Col>
+                <Col md={{span:4}}>
+                <p className='thanosCredits'>Illustration by my inspirational friend, <a rel="noopener noreferrer" target="_blank" href='https://www.instagram.com/thanostryfonidis'>Thanos Tryfonidis</a></p>
+                </Col>
+            </Row>
+        )
+    }
+  
+  resize=()=> 
+  {
+  let windowSizeSM = (window.innerWidth <= 768);
+  if (windowSizeSM ) {
+      this.setState({showIllu: ''});
+  }
+  else
+  this.setState({showIllu: 'this.illustration'});
+  }
+    
     render(){
         return(
           
@@ -97,20 +133,14 @@ class About extends Component
         </Row>
 
     
-
-        <Row className='aboutRow'>
-            <Col md={{span:2,offset:2}}>
-
-            <p className='thanosCredits'>Illustration by my inspirational friend, <a rel="noopener noreferrer" target="_blank" href='https://www.instagram.com/thanostryfonidis'>Thanos Tryfonidis</a></p>
-            <img id='tolesIll' alt='dummy' src={toles_illustrator}/> 
-            </Col>
-
-            <Col md={{span:5}}>
-            <h1  className='boxTitle mountain'>Conquer the Mountain</h1>
+            <Row className='aboutRow'>
+            <Col className='mountainCol' md={{span:5,offset:4}}>
+            <h1  className='boxTitle mountain'>Conquer the Mountain </h1>
             <h4 className='boxTitle sisiphus'><i>even if you're Sisiphus.</i></h4>
             </Col>
-        </Row>
+            </Row>
 
+            <this.state.showIllu/>
             
   
 

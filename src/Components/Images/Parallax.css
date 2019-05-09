@@ -10,7 +10,10 @@
     box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
     
     }
-
+.jumbotron
+{
+    border-radius: 0%;
+}
     
         
 

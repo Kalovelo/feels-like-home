@@ -99,7 +99,10 @@
 
 @media (max-width:1000px)
 {
-    
+    .darkButton , .lightButton
+    {
+        border-color:#979797; 
+    }
     .lightButton,.darkButton
     {
         margin-left:0%;

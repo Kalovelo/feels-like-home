@@ -19,6 +19,7 @@ class HomePage extends Component
     {
     window.addEventListener("resize", this.resize.bind(this));
     this.resize();
+    document.title = 'Apostolos Kalovelones | Design & Development enthusiast';
     }
 
 resize=()=> 
@@ -31,10 +32,6 @@ else
 this.setState({showParallax: Parallax});
 }
 
-    componentDidMount() {
-        document.title = 'Apostolos Kalovelones | Design & Development enthusiast';
-        
-      }
   
       
     render(){

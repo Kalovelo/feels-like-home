@@ -36,7 +36,7 @@ class StatusSection extends Component
                         <Col lg="12">
                         <h3 >· Current Status ·</h3>       
                         </Col>
-                            <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
+                            <Col className="status"  lg={{span:6}}xs="12">
 
                                     <h3><FontAwesomeIcon icon={faUniversity}/></h3>
                                     <h4 >
@@ -45,14 +45,14 @@ class StatusSection extends Component
                                     <i>dark coffee and a couple of apples.</i>
                                     </h4>
                             </Col>
-                            <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
+                            <Col className="status"  lg={{span:6}}xs="12">
                                     <h3><FontAwesomeIcon className='rotating' onClick={()=>{console.log('This is the first part of our treasure hunt. Come back later for the next hint!')}} icon={faCode}/></h3>
                                     <h4><b>WordPress Knight · </b> Freelancing 
                                     <br/>
                                     <i>lorem, lorem ipsum!</i>
                                     </h4>
                             </Col>
-                            <Col className="status" sm={{span:6}}  lg={{span:3}}xs="12">
+                            <Col className="status"lg={{span:6}}xs="12">
 
                             <h3><FontAwesomeIcon  icon={faHandsHelping}/></h3>
                                     <h4><b>IEEE Media Committee·</b> Ateith SB
@@ -60,7 +60,7 @@ class StatusSection extends Component
                                     <i>Primarily Photography Shooting.</i>
                                     </h4>
                             </Col>
-                            <Col className="status" sm={{span:6}} lg={{span:3}}xs="12">
+                            <Col className="status"  lg={{span:6}}xs="12">
 
                             <h3><FontAwesomeIcon  icon={faUnderline}/></h3>
                                     <h4><b>Writing Enthusiast·</b> Books & Poetry. 

@@ -7,6 +7,12 @@
     font-size:45px;
 }
 
+.mountainCol 
+{
+    
+    margin-top:6%!important;
+}
+
 #aboutContainer
 {
     overflow-x: hidden;
@@ -64,6 +70,17 @@
     }
 }
 
+@media (max-width: 1300px)
+{
+   
+
+
+.sisiphus
+{
+    margin-left: 0%!important;
+}
+}
+
 @media (max-width: 800px)
 {
     #pageTitle
@@ -71,6 +88,10 @@
         padding-top:30%;
     
     }
+
+    
+
+
 
     #BooksBox,#aboutBoxes
     {
@@ -101,6 +122,35 @@
     {
         margin-top:8%;
     }
+    .hideonMob
+    {
+        display:none;
+    }
+
+    .mountainCol 
+    {
+        position: relative!important;
+        margin-bottom:-25%!important;
+    }
+
+    .thanosCredits
+{
+    margin-top:-20%!important;
+    margin-left:0%!important;
+    text-align:center;
+    margin-bottom:20%;
+}
+
+#tolesIll
+{
+    position: relative!important;
+    bottom:0;
+}
+    
+  
+    
+
+  
 }
 .boxTitle
 {
@@ -188,14 +238,23 @@
 .sisiphus
 {
     margin-left:11%;
+    
 }
+
 
 .thanosCredits
 {
     margin-top:20%;
+    padding-bottom:40%;
+    margin-left:20%;
 }
-
 .thanosCredits a
 {
     color:#000;
+}
+
+#tolesIll
+{
+    position: absolute;
+    bottom:0;
 }
