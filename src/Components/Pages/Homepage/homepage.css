@@ -22,4 +22,9 @@
     left:0%;
     margin-top:20%;
 }
+
+#homePage .lezanta
+{
+    display: none;
+}
 }

@@ -4,8 +4,8 @@
     background-color:#232323;
     color:#fff;
     padding:1%;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     border-radius: 1%;
     top:60%;
     z-index: 9999;
@@ -27,7 +27,7 @@
 {
     #cookiefier
     {
-        padding:2%;
+        padding:4%;
     }
 
     #cookiefier p
@@ -38,8 +38,8 @@
 
     #cookieButton
     {
-        top:4%;
-        margin-left: 85%!important;
+        top:7%;
+        margin-left: 80%!important;
         position: absolute;
         font-size: 30px!important;
         

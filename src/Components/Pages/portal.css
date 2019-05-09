@@ -109,7 +109,11 @@
     #darkSection ,#lightSection
     {
     padding-bottom:20%;
-    
+}
+
+#portal h1
+{
+    margin-top:20%;
 }
   
 }

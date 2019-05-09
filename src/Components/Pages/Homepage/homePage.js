@@ -10,7 +10,27 @@ import {Helmet} from "react-helmet";
 class HomePage extends Component
 {
 
-    
+    state=
+    {
+        showParallax:Parallax
+    }
+
+    componentDidMount = () =>
+    {
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+    }
+
+resize=()=> 
+{
+let currentHideNav = (window.innerWidth <= 768);
+if (currentHideNav ) {
+    this.setState({showParallax: 'div'});
+}
+else
+this.setState({showParallax: Parallax});
+}
+
     componentDidMount() {
         document.title = 'Apostolos Kalovelones | Design & Development enthusiast';
         
@@ -19,7 +39,7 @@ class HomePage extends Component
       
     render(){
         return(
-            <Container fluid="true">
+            <Container id='homePage' fluid="true">
             <Row>
             <Col md={{span:5,offset:1}}>
                 <h1 className='helloh1 slide-in-left'>Hello there.<br/><span id='teah1'>Grab a cup of tea and enjoy your stay.</span></h1>
@@ -31,7 +51,7 @@ class HomePage extends Component
             </Helmet>
             
             <Col className='fade-in'  md={{span:5}}>
-                <Parallax />
+                <this.state.showParallax />
                 <p className='lezanta' style={{textAlign:'right'}}>From my trip in Corfu.</p>
             </Col>
         </Row>

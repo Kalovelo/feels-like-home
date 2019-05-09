@@ -1,10 +1,20 @@
-@font-face {
+
+
+  
+  @font-face {
     font-family: adobe-garamond-pro;
-    src: url(./EBGaramond-Regular.woff) format('woff'),
-    url(./EBGaramond-Regular.ttf) format('ttf'),
-    url(.//EBGaramond-Regular.woff2) format('woff2');
+    src: url("./EBGaramond-Medium.eot"); /* IE9 Compat Modes */
+    src: url("./EBGaramond-Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("./EBGaramond-Medium.otf") format("opentype"), /* Open Type Font */
+      url("./EBGaramond-Medium.svg") format("svg"), /* Legacy iOS */
+      url("./EBGaramond-Medium.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("./EBGaramond-Medium.woff") format("woff"), /* Modern Browsers */
+      url("./EBGaramond-Medium.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
     font-display: swap;
   }
+
   @font-face {
     font-family: "Roboto";
     src: url("./Roboto-Thin.eot"); /* IE9 Compat Modes */
