@@ -38,22 +38,8 @@ class About extends Component
     
       componentDidMount = () =>
       {
-      window.addEventListener("resize", this.resize.bind(this));
-      this.resize();
       document.title = 'The Ocean';
       }
-
- 
-  
-  resize=()=> 
-  {
-  let windowSizeSM = (window.innerWidth <= 768);
-  if (windowSizeSM ) {
-      this.setState({showIllu: ''});
-  }
-  else
-  this.setState({showIllu: illustration});
-  }
     
     render(){
         return(
@@ -139,8 +125,8 @@ class About extends Component
             <h4 className='boxTitle sisiphus'><i>even if you're Sisiphus.</i></h4>
             </Col>
             </Row>
-            <this.state.showIllu/>
-            {window.innerWidth <= 768 ? '' : '<'+this.state.showIllu+'/>'}
+
+            {window.innerWidth <= 768 ? '' : <this.state.showIllu/>}
             
   
 
