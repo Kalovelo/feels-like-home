@@ -13,14 +13,26 @@ import {Helmet} from "react-helmet";
 
 import toles_illustrator from '../Images/toles_illustrator.jpg'
 
+const illustration = () => {
+    return(
+<Row  className='hideonMob'>
+            <Col  md={{span:2,offset:2}}>
 
+            <img id='tolesIll' alt='dummy' src={toles_illustrator}/>
+            </Col>
+            <Col md={{span:4}}>
+            <p className='thanosCredits'>Illustration by my inspirational friend, <a rel="noopener noreferrer" target="_blank" href='https://www.instagram.com/thanostryfonidis'>Thanos Tryfonidis</a></p>
+            </Col>
+        </Row>
+    )
+}
 
 class About extends Component
 {
 
     state =
     {
-        showIllu:'this.illustration'
+        showIllu:illustration
     }
       
     
@@ -31,19 +43,7 @@ class About extends Component
       document.title = 'The Ocean';
       }
 
-      illustration = () => {
-        return(
-    <Row  className='hideonMob'>
-                <Col  md={{span:2,offset:2}}>
-    
-                <img id='tolesIll' alt='dummy' src={toles_illustrator}/>
-                </Col>
-                <Col md={{span:4}}>
-                <p className='thanosCredits'>Illustration by my inspirational friend, <a rel="noopener noreferrer" target="_blank" href='https://www.instagram.com/thanostryfonidis'>Thanos Tryfonidis</a></p>
-                </Col>
-            </Row>
-        )
-    }
+ 
   
   resize=()=> 
   {
@@ -52,7 +52,7 @@ class About extends Component
       this.setState({showIllu: ''});
   }
   else
-  this.setState({showIllu: 'this.illustration'});
+  this.setState({showIllu: illustration});
   }
     
     render(){
@@ -139,8 +139,8 @@ class About extends Component
             <h4 className='boxTitle sisiphus'><i>even if you're Sisiphus.</i></h4>
             </Col>
             </Row>
-
             <this.state.showIllu/>
+            {window.innerWidth <= 768 ? '' : '<'+this.state.showIllu+'/>'}
             
   
 
