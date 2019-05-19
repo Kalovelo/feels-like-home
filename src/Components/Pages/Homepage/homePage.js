@@ -55,7 +55,7 @@ this.setState({showParallax: Parallax});
                 <Row style={{overflow:"hidden"}}>
                    
                     <FirstSection />
-                    <StatusSection test='helloo'/>
+                    <StatusSection />
                 </Row>
             </Container>
         );
