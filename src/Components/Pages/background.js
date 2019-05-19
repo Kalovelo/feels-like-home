@@ -94,6 +94,9 @@ render(){
                         <li>
                             <h6><a href='https://fosdem.org/2019/' rel="noopener noreferrer" target="_blank">-FOSDEM 2019</a> | Info Desk</h6>
                         </li>
+                        <li>
+                            <h6><a href='http://railsgirls.com/athens.html' rel="noopener noreferrer" target="_blank">-Rails Girls Athens v4 2019</a> | Assistant Coach</h6>
+                        </li>
                     </ul>
                 </Col>
                 <Col>

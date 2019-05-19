@@ -4,7 +4,6 @@
   @font-face {
     font-family: adobe-garamond-pro;
     src:
-      url("./EBGaramond-Medium.woff") format("woff"), /* Modern Browsers */
       url("./EBGaramond-Medium.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
     font-style: normal;
@@ -14,7 +13,6 @@
   @font-face {
     font-family: "Roboto";
     src:
-      url("./Roboto-Thin.woff") format("woff"), /* Modern Browsers */
       url("./Roboto-Thin.woff2") format("woff2"); /* Modern Browsers */
     font-weight: 100;
     font-style: normal;font-display: swap;
@@ -23,7 +21,6 @@
   @font-face {
     font-family: "Roboto";
     src:
-      url("./Roboto-Light.woff") format("woff"), /* Modern Browsers */
       url("./Roboto-Light.woff2") format("woff2"); /* Modern Browsers */
     font-weight: 300;
     font-style: normal;font-display: swap;
@@ -32,7 +29,6 @@
   @font-face {
     font-family: "Roboto";
     src:
-      url("./Roboto-Regular.woff") format("woff"), /* Modern Browsers */
       url("./Roboto-Regular.woff2") format("woff2"); /* Modern Browsers */
     font-weight: 500;
     font-style: normal;font-display: swap;
@@ -41,7 +37,6 @@
   @font-face {
     font-family: "Montserrat";
     src:
-      url("./Montserrat-Regular.woff") format("woff"), /* Modern Browsers */
       url("./Montserrat-Regular.woff2") format("woff2"); /* Modern Browsers */
     font-weight: 400;
     font-style: normal;font-display: swap;
@@ -50,7 +45,6 @@
   @font-face {
     font-family: "Lato";
     src:
-      url("./Lato-Black.woff") format("woff"), /* Modern Browsers */
       url("./Lato-Black.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
     font-style: normal;font-display: swap;
