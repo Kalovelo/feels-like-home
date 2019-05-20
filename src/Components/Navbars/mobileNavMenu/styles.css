@@ -9,6 +9,12 @@
   text-align: right;
   padding-top: 3%;
   padding-right:6%;
+
+}
+#topbar a 
+{
+  font-family:adobe-garamond-pro;
+  font-size:25px;
 }
 
 html,
@@ -20,9 +26,8 @@ ul
   list-style:none;
 }
 #App{
-  font-family: 'Roboto';
+  
   font-weight: 300;
-
   /* Give app full page to work with */
   height: 100vh;
 }
@@ -38,7 +43,6 @@ ul
 /* Individual item */
 .bm-item {
   display: inline-block;
-  font-family: 'Roboto';
   font-weight: 300;
 
   /* Our sidebar item styling */

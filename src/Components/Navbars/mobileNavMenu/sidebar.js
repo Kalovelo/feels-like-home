@@ -1,7 +1,6 @@
 import React from 'react'; 
 import { slide as Menu } from "react-burger-menu";
 import './styles.css'
-import favicon from '../../Images/favicon.png'
 export default props => {
   return (
     // Pass on our props

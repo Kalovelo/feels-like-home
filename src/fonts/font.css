@@ -7,7 +7,7 @@
       url("./EBGaramond-Medium.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: auto;
   }
 
   @font-face {
@@ -15,7 +15,7 @@
     src:
       url("./Roboto-Thin.woff2") format("woff2"); /* Modern Browsers */
     font-weight: 100;
-    font-style: normal;font-display: swap;
+    font-style: normal;font-display: auto;
   }
   
   @font-face {
@@ -23,7 +23,7 @@
     src:
       url("./Roboto-Light.woff2") format("woff2"); /* Modern Browsers */
     font-weight: 300;
-    font-style: normal;font-display: swap;
+    font-style: normal;font-display: auto;
   }
   
   @font-face {
@@ -31,21 +31,14 @@
     src:
       url("./Roboto-Regular.woff2") format("woff2"); /* Modern Browsers */
     font-weight: 500;
-    font-style: normal;font-display: swap;
+    font-style: normal;font-display: auto;
   }
   
-  @font-face {
-    font-family: "Montserrat";
-    src:
-      url("./Montserrat-Regular.woff2") format("woff2"); /* Modern Browsers */
-    font-weight: 400;
-    font-style: normal;font-display: swap;
-  }
   
   @font-face {
     font-family: "Lato";
     src:
       url("./Lato-Black.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
-    font-style: normal;font-display: swap;
+    font-style: normal;font-display: auto;
   }
