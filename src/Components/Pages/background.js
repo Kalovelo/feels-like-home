@@ -10,6 +10,7 @@ import {Helmet} from "react-helmet";
 class Background extends Component
 {
     componentDidMount() {
+        window.scrollTo(1,1);
         document.title = 'Earth Herself';
       }
       

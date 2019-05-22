@@ -37,12 +37,13 @@ class About extends Component
       componentDidMount = () =>
       {
       document.title = 'The Ocean';
+      window.scrollTo(1,1);
       }
     
     render(){
         return(
           
-    <Container ref={this.myRef} id='aboutContainer'  fluid="true">
+    <Container id='aboutContainer'  fluid="true">
      <Helmet>
             <meta name="description" content=" Get to know me as a person ·
             Random facts, how i spend my free time or which hot liquid i prefer inside my cup." />

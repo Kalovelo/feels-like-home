@@ -5,6 +5,7 @@
     padding-top:1%;
     padding-bottom:2%;
     text-align: center;
+    overflow: hidden!important;
 }
 .Footer h2
 {

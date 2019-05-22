@@ -1,6 +1,7 @@
 #portal
 {
     margin-top:-5%!important;
+    overflow-y: hidden!important;
 }
 
 #darkSection 

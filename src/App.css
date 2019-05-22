@@ -5,11 +5,10 @@
     
 }
 
+
 *{
   cursor:none!important;
 }
-
-
 
 body,html
 {
@@ -17,8 +16,9 @@ body,html
   scroll-behavior:smooth;
   overflow-x: hidden;
   overflow: visible;
-  
 }
+
+
 
 @media (min-width:1000px)
 {
@@ -80,7 +80,7 @@ a {
   position: absolute;
   z-index: 10000;
   pointer-events: none;
-  transition: opacity 700ms linear,top 50ms ease-out,left 50ms ease-out;
+  transition: opacity 700ms linear,top 100ms ease-out,left 100ms ease-out;
   overflow-y: hidden;
   opacity:0.7;
 }

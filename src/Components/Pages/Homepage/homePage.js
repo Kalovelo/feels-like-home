@@ -19,7 +19,7 @@ class HomePage extends Component
     {
     window.addEventListener("resize", this.resize.bind(this));
     this.resize();
-    document.title = 'Apostolos Kalovelones | Design & Development enthusiast';
+    document.title = 'Apostolos Kalovelonis | Design & Development enthusiast';
     }
 
 resize=()=> 

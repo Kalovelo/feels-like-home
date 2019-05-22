@@ -7,6 +7,11 @@
     font-size:45px;
 }
 
+#aboutContainer
+{
+    overflow-y: hidden;
+}
+
 .mountainCol 
 {
     
@@ -233,6 +238,7 @@
 .aboutRow
 {
     margin-top:20%!important;
+    overflow-y:visible;
 }
 
 .sisiphus

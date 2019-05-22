@@ -5,14 +5,25 @@ import { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import {Helmet} from "react-helmet";
 
-class Portal extends Component
+class Portal extends React.Component
 {
 
-    componentDidMount() {
-        window.scrollTo(1,1);
+    componentDidMount() {  
+        window.scrollTo(1,1)      
         document.title = 'Choose a Path';
+        if(window.innerWidth >= 768){
+        setTimeout(this.moveCursors,300);
+        }
       }
 
+      moveCursors =(e) =>
+      {
+         
+        document.getElementById('cursor').style.top=500+'px';
+        document.getElementById('cursor').style.opacity=0;
+        document.getElementById('minicursor').style.opacity=0;
+        document.getElementById('minicursor').style.top=460+'px';
+      }
     
 render(){
     return(
