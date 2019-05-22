@@ -5,7 +5,9 @@
     
 }
 
-
+*{
+  cursor:none!important;
+}
 
 
 
@@ -14,6 +16,8 @@ body,html
   
   scroll-behavior:smooth;
   overflow-x: hidden;
+  overflow: visible;
+  
 }
 
 @media (min-width:1000px)
@@ -64,6 +68,51 @@ a {
   background: #000000; /* Gecko Browsers */
   color:#ffffff
 }
+
+#cursor{
+  width:20px;
+  height:20px;
+  background-color: #232323;
+  border:1px solid #dbdbdb;
+  background-color: #dbdbdb;
+  border:1px solid #232323;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10000;
+  pointer-events: none;
+  transition: opacity 700ms linear,top 50ms ease-out,left 50ms ease-out;
+  overflow-y: hidden;
+  opacity:0.7;
+}
+#minicursor{
+  width:15px;
+  height:15px;
+  background-color: #232323;
+  border:1px solid #dbdbdb;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10000;
+  pointer-events: none;
+  transition: opacity 700ms linear,top 600ms ease-out,left 600ms ease-out;
+  overflow-y: hidden;
+  opacity:0.7;
+}
+
+#cursors
+{
+  position:fixed;
+  z-index: 9999;
+}
+
+#topCursors
+{
+  position:relative;
+  z-index: 9999;
+}
+
+
+
+
 @media (min-width:800px)
 {
 p.press::first-letter {
@@ -77,3 +126,4 @@ font-size: 75px;
   padding-left: 3px;
 }
 }
+
