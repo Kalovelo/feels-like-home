@@ -6,14 +6,12 @@ export default props => {
     // Pass on our props
     //customBurgerIcon={ <img alt='a black and white mountain sketch' src={favicon}/>}
     <div id="topbar">
-      <Menu width={ '100%' }  {...props} className="mobile-hide"> 
-      <ul>
-      
+      <Menu width={ '100%' }  {...props} className="mobile-hide">
+        <div className='sideMenu'>
              <li><a href='https://kalovelo.com'>Home</a></li>
              <li><a href='https://kalovelo.com/about'>About</a></li>
              <li><a href='https://kalovelo.com/background'>Background</a></li>
-      </ul>
-      
+        </div>
       </Menu>
       
     </div>
