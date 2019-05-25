@@ -15,6 +15,38 @@ class Background extends Component
       }
       
 render(){
+
+    var skills = [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'ReactJS',
+        'WordPress',
+        'Java',
+        'UI/UX',
+        'SEO',
+        'Git'
+    ]
+
+    var volunteeringEvents = [
+            {
+                'link' : 'http://www.5gsummit.org/Thessaloniki/',
+                'name' : 'IEEE 5G and IoT Thessaloniki Summit 2018',
+                'role' : 'Technical Support'
+            },
+            {
+                'link' : 'https://fosdem.org/2019/',
+                'name' : 'FOSDEM 2019',
+                'role' : 'Info Desk'
+            },
+            {
+                'link' : 'http://railsgirls.com/athens.html',
+                'name' : 'Rails Girls Athens v4 2019',
+                'role' : 'Assistant Coach'
+            }
+
+    ]
+
     return (
         <Container fluid="true" id='interestsContainer'>
 
@@ -48,15 +80,7 @@ render(){
                 <Col md={{span:3,offset:0}}>
                 
                 <ul>
-                            <li>- HTML</li>
-                            <li>- CSS</li>
-                            <li>- JavaScript</li>
-                            <li>- ReactJS</li>
-                            <li>- WordPress</li>
-                            <li>- Java</li>
-                            <li>- UI/UX</li>
-                            <li>- SEO</li>
-                            <li>- Git</li>
+                    {skills.map((skill,i)=><li key={i}>- {skill}</li>)}
                 </ul>
                 </Col>
             </Row>
@@ -89,15 +113,8 @@ render(){
                     <p className='press'>Apart from being an IEEE member, i have also taken volunteering actions in conferences. 
                     </p>
                     <ul className='volunteeringLi'>
-                        <li>
-                            <h6><a rel="noopener noreferrer" href='http://www.5gsummit.org/Thessaloniki/' target="_blank">-IEEE 5G and IoT Thessaloniki Summit 2018</a> | Technical Support</h6>
-                        </li>
-                        <li>
-                            <h6><a href='https://fosdem.org/2019/' rel="noopener noreferrer" target="_blank">-FOSDEM 2019</a> | Info Desk</h6>
-                        </li>
-                        <li>
-                            <h6><a href='http://railsgirls.com/athens.html' rel="noopener noreferrer" target="_blank">-Rails Girls Athens v4 2019</a> | Assistant Coach</h6>
-                        </li>
+
+    {volunteeringEvents.map((event,i)=><li><h6><a rel="noopener noreferrer" href={event.link} target="_blank">- {event.name}</a> | {event.role} </h6></li>)}
                     </ul>
                 </Col>
                 <Col>
