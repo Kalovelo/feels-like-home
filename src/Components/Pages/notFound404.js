@@ -51,7 +51,7 @@ class NotFound404 extends Component
                 <meta NAME="ROBOTS" CONTENT="noindex,nofollow"/>
                 </Helmet>
 
-            <p>{this.state.randomString1} <a href='/' className='beat' id='notFoundT'>{this.props.location.pathname} 404 NOT FOUND.<br/>GO BACK. NOW.</a> {this.state.randomString2}</p>
+            <p>{this.state.randomString1} <a href='/' id='notFoundT'>{this.props.location.pathname} wasn't found.<br/>Friend, you should go back.</a> {this.state.randomString2}</p>
             
             </Container>
         )
