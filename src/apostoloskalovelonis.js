@@ -21,7 +21,6 @@ class Apostoloskalovelonis extends Component {
     if(window.innerWidth >= 768){
       document.getElementById('cursor').setAttribute("style", "opacity:0");
       document.getElementById('minicursor').setAttribute("style", "opacity:0");
-
     }
 
    

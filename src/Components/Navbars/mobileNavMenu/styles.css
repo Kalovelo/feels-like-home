@@ -6,30 +6,38 @@
 
 #topText
 {
-  text-align: right;
+  text-align: center;
   padding-top: 3%;
-  padding-right:6%;
-
 }
-#topbar a 
+#topbar *
 {
   font-family:adobe-garamond-pro;
   font-size:25px;
+  text-align: center!important;
+  outline: none;
+}
+.sideMenu
+{
+  padding-top:50%;
+  list-style: none;
 }
 
+.sideMenu li
+{
+  padding-top:10%;
+}
 html,
 body {
   margin: 0;
 }
-ul
-{
-  list-style:none;
-}
+
+
 #App{
   
   font-weight: 300;
   /* Give app full page to work with */
   height: 100vh;
+  
 }
 
 #page-wrap {
@@ -92,6 +100,7 @@ ul
   background: #000000;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  
 }
 
 /* Morph shape necessary with bubble or elastic */

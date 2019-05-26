@@ -6,8 +6,10 @@
 }
 
 
-*{
+@media (min-width:768px){
+  *{
   cursor:none!important;
+  }
 }
 
 body,html
