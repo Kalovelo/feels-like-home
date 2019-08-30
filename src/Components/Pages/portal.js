@@ -8,18 +8,8 @@ class Portal extends React.Component {
 
     componentDidMount() {
         document.title = 'Choose a Path';
-        if (window.innerWidth >= 768) {
-            setTimeout(this.moveCursors, 300);
-        }
     }
 
-    moveCursors = () => {
-
-        document.getElementById('cursor').style.top = 500 + 'px';
-        document.getElementById('cursor').style.opacity = 0;
-        document.getElementById('minicursor').style.opacity = 0;
-        document.getElementById('minicursor').style.top = 460 + 'px';
-    }
 
     render() {
         return (

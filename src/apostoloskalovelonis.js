@@ -13,59 +13,13 @@ import ThankYou from './Components/Pages/thankYou';
 import NotFound404 from './Components/Pages/notFound404';
 import './fonts/font.css'
 import ScrollToTop from './ScrollToTop'
-
-
 class Apostoloskalovelonis extends Component {
 
-  componentDidMount() {
-    if(window.innerWidth >= 768){
-      document.getElementById('cursor').setAttribute("style", "opacity:0");
-      document.getElementById('minicursor').setAttribute("style", "opacity:0");
-
-      this.moveCursors();
-    }
-
-   
-    }
-
-    moveCursors = () => {
-
-      document.getElementById('cursor').style.top = 500 + 'px';
-      document.getElementById('cursor').style.opacity = 0;
-      document.getElementById('minicursor').style.opacity = 0;
-      document.getElementById('minicursor').style.top = 460 + 'px';
-  }
-
-
     render(){
-
-      let onMouseMoveH = (e) => {
-
-        if(window.innerWidth >= 768){
-        document.getElementById('cursor').setAttribute("style", "top: " + (e.pageY - 10) + "px;left:" + (e.pageX - 10) + "px;");
-        document.getElementById('minicursor').setAttribute("style", "top: " + (e.pageY - 50) + "px;left:" + (e.pageX - 20) + "px;");        
-        }    
-      }
-
-      let onMouseLeaveH = (e) => {
-        if(window.innerWidth >= 768){
-        document.getElementById('cursor').setAttribute("style", "top: " + (e.pageY - 10) + "px;left:" + (e.pageX - 10) + "px;opacity:0;position:absolute;");
-        document.getElementById('minicursor').setAttribute("style", "top: " + (e.pageY - 20) + "px;left:" + (e.pageX - 20) + "px;opacity:0;position:absolute");
-        }
-      }
-
-    
-
-     
-
-
       return (
-        <Router>
+        <Router >
+          <div id='App' className="App fade-in">
           <ScrollToTop />
-          <div id='App' className="App fade-in" onMouseLeave={onMouseLeaveH} onMouseMove={onMouseMoveH}>
-            {window.innerWidth <= 768 ? '' : <div><div id='cursor' />
-            <div id='minicursor' /> </div>}
-            {this.position}
             <NavBar id='mynav' />
             <Cookiefier />
             <Switch>

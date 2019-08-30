@@ -1,4 +1,4 @@
-import React,{Component} from 'react'; 
+import React from 'react'; 
 import { Navbar, Nav} from 'react-bootstrap';
 import {NavLink,withRouter} from 'react-router-dom';
 import './NavBar.css'

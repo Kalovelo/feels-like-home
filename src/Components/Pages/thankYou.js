@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container,Row,Col} from 'react-bootstrap'
+import {Row,Col} from 'react-bootstrap'
 import './thankyou.css'
 import { Component } from 'react';
 
@@ -8,17 +8,9 @@ class ThankYou extends Component
 
     componentDidMount() {
         document.title = 'Thank you!';
-        this.moveCursors();
-
       }
 
-      moveCursors = () => {
-
-        document.getElementById('cursor').style.top = 500 + 'px';
-        document.getElementById('cursor').style.opacity = 0;
-        document.getElementById('minicursor').style.opacity = 0;
-        document.getElementById('minicursor').style.top = 460 + 'px';
-    }
+   
 
     
 render(){
