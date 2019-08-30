@@ -12,7 +12,7 @@ import Cookiefier from './Components/cookiefier';
 import ThankYou from './Components/Pages/thankYou';
 import NotFound404 from './Components/Pages/notFound404';
 import './fonts/font.css'
-
+import ScrollToTop from './ScrollToTop'
 
 
 class Apostoloskalovelonis extends Component {
@@ -21,10 +21,20 @@ class Apostoloskalovelonis extends Component {
     if(window.innerWidth >= 768){
       document.getElementById('cursor').setAttribute("style", "opacity:0");
       document.getElementById('minicursor').setAttribute("style", "opacity:0");
+
+      this.moveCursors();
     }
 
    
     }
+
+    moveCursors = () => {
+
+      document.getElementById('cursor').style.top = 500 + 'px';
+      document.getElementById('cursor').style.opacity = 0;
+      document.getElementById('minicursor').style.opacity = 0;
+      document.getElementById('minicursor').style.top = 460 + 'px';
+  }
 
 
     render(){
@@ -51,6 +61,7 @@ class Apostoloskalovelonis extends Component {
 
       return (
         <Router>
+          <ScrollToTop />
           <div id='App' className="App fade-in" onMouseLeave={onMouseLeaveH} onMouseMove={onMouseMoveH}>
             {window.innerWidth <= 768 ? '' : <div><div id='cursor' />
             <div id='minicursor' /> </div>}
@@ -64,8 +75,6 @@ class Apostoloskalovelonis extends Component {
               <Route path='/thankYou' component={ThankYou} />
               <Route path='/portal'component={Portal} />
               <Route path='' component={NotFound404} />
-
-
             </Switch>
             <Footer />
           </div>

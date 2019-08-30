@@ -5,6 +5,7 @@ import { faFacebookF, faInstagram, faLinkedinIn, faGithub } from '@fortawesome/f
 import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
 import "./footer.css"
 import { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -26,20 +27,20 @@ class Footer extends Component {
 
         var menu = [
             {
-                'link' : 'https://kalovelo.com',
+                'link' : '/',
                 'title' : 'Home'
             }
             ,
             {
-                'link' : 'https://kalovelo.com/Background',
+                'link' : '/background',
                 'title' : 'Background'
             },
             {
-                'link' : 'https://kalovelo.com/about',
+                'link' : '/about',
                 'title' : 'About'
             },
             {
-                'link' : 'https://kalovelo.com/thankYou',
+                'link' : '/thankYou',
                 'title' : 'Thank you'
             }
         ]
@@ -77,7 +78,7 @@ class Footer extends Component {
                 <Row >
                     <Col xs={{ span: 12 }}>
                         <ul onClick={() => { window.scrollTo(1, 1); }} style={{ fontSize: "15px" }} className="footerMenu">
-                            {menu.map((menuLink,i)=><li><a href={menuLink.link}>{menuLink.title}</a></li>)}
+                            {menu.map((menuLink,i)=><li><NavLink to={menuLink.link}>{menuLink.title}</NavLink></li>)}
                         </ul>
                     </Col>
                 </Row>

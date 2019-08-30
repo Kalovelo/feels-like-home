@@ -15,7 +15,7 @@ class HomePage extends Component
         showParallax:Parallax
     }
 
-    componentDidMount = () =>
+    componentDidMount()
     {
     window.addEventListener("resize", this.resize.bind(this));
     this.resize();

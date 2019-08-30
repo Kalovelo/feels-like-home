@@ -10,15 +10,15 @@ import {Helmet} from "react-helmet";
 class Background extends Component
 {
     componentDidMount() {
-        window.scrollTo(1,1);
         document.title = 'Earth Herself';
       }
       
+      
 render(){
-
+            
     var skills = [
         'HTML',
-        'CSS',
+        'CSS / SASS',
         'JavaScript',
         'ReactJS',
         'WordPress',

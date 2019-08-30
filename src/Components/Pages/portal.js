@@ -7,14 +7,13 @@ import { Helmet } from "react-helmet";
 class Portal extends React.Component {
 
     componentDidMount() {
-        window.scrollTo(1, 1)
         document.title = 'Choose a Path';
         if (window.innerWidth >= 768) {
             setTimeout(this.moveCursors, 300);
         }
     }
 
-    moveCursors = (e) => {
+    moveCursors = () => {
 
         document.getElementById('cursor').style.top = 500 + 'px';
         document.getElementById('cursor').style.opacity = 0;

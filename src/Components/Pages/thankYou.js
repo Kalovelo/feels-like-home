@@ -7,15 +7,23 @@ class ThankYou extends Component
 {
 
     componentDidMount() {
-        window.scrollTo(1,1);
         document.title = 'Thank you!';
+        this.moveCursors();
+
       }
+
+      moveCursors = () => {
+
+        document.getElementById('cursor').style.top = 500 + 'px';
+        document.getElementById('cursor').style.opacity = 0;
+        document.getElementById('minicursor').style.opacity = 0;
+        document.getElementById('minicursor').style.top = 460 + 'px';
+    }
 
     
 render(){
 
     return(
-        <Container className='fade-in' fluid='true'>
             <Row>
                 <Col id='thankYouCol' xs='12'><h1 id='thankYou'>Thank You</h1></Col>
                     <Col id='thankYouNames' xs='12' md={{span:'10',offset:'1'}}>
@@ -35,7 +43,6 @@ render(){
                 
             </Row>
 
-        </Container>
     );
 }
 

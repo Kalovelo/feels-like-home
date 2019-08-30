@@ -33,11 +33,10 @@ class About extends Component
         showIllu:illustration
     }
       
-    
-      componentDidMount = () =>
-      {
-      document.title = 'The Ocean';
-      window.scrollTo(1,1);
+
+
+      componentDidMount() {
+        document.title = 'Earth Herself';
       }
     
     render(){
