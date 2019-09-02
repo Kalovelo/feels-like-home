@@ -6,7 +6,6 @@ import { Component } from 'react';
 import Parallax from '../../Images/Parallax'
 import './homepage.css'
 import {Helmet} from "react-helmet";
-
 class HomePage extends Component
 {
 

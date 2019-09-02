@@ -40,14 +40,14 @@ class StatusSection extends Component
 
                                     <h3><FontAwesomeIcon icon={faUniversity}/></h3>
                                     <h4 >
-                                    <b>IT Student·</b> Ateith
+                                    <b>IT Student ·</b> International Hellenic University
                                     <br/>
                                     <i>dark coffee and a couple of apples.</i>
                                     </h4>
                             </Col>
                             <Col className="status"  lg={{span:6}}xs="12">
                                     <h3><FontAwesomeIcon className='rotating' onClick={()=>{console.log('This is the first part of our treasure hunt. Come back later for the next hint!')}} icon={faCode}/></h3>
-                                    <h4><b>WordPress Knight · </b> Freelancing 
+                                    <h4><b>Front-End Dude · </b> Black Lane 
                                     <br/>
                                     <i>lorem, lorem ipsum!</i>
                                     </h4>

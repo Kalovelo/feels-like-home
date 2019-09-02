@@ -27,7 +27,6 @@ render(){
                     <h3 className='thankYouLeft'>Master <a rel="noopener noreferrer" target="_blank" href='https://github.com/dpliakos'>Pliakos</a>, for his guidance on ReactJS</h3>
                     <h3 className='thankYouRight'><a rel="noopener noreferrer" target="_blank" href='https://github.com/negomi'>Negomi</a>, for her burger menu</h3>
                     <h3 className='thankYouLeft'><a rel="noopener noreferrer" target="_blank" href='https://alligator.io/author/joshua-bemenderfer'>Joshua Bemenderfer</a>, for his parallax effect</h3>
-                    <h3 className='thankYouRight'><a rel="noopener noreferrer" target="_blank" href='https://freepik.com'>Freepik</a>, for their mountain illustration</h3>
 
                     <h3 id='ofCourse'>and of course,</h3>
                     <h1 id='youHere'>You, for being here.</h1>

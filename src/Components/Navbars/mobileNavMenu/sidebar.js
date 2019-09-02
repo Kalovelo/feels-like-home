@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { slide as Menu } from "react-burger-menu";
 import './styles.css'
 import {NavLink} from 'react-router-dom';
+import logo from '../../Images/logo.jpg';
 
 export default class sidebar extends Component {
 
@@ -24,7 +25,8 @@ export default class sidebar extends Component {
   render()
   {
   return <div id="topbar">
-      <Menu isOpen={ this.state.menuOpen }  onStateChange={(state) => this.handleStateChange(state)} width={ '100%' } className="mobile-hide">
+
+      <Menu customBurgerIcon={ <img alt='' src={logo}/>} isOpen={ this.state.menuOpen }  onStateChange={(state) => this.handleStateChange(state)} width={ '100%' } className="mobile-hide">
         <div className='sideMenu'>
              <li><NavLink onClick={()=>this.closeMenu()} to='/'>Home</NavLink></li>
              <li><NavLink onClick={()=>this.closeMenu()} to='/about'>About</NavLink></li>

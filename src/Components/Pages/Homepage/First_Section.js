@@ -14,7 +14,7 @@ const FirstSection = () => {
                     <Col xl={{span:5,offset:1}}  className="topHalf "  xs="12 content">
                         <h2>Greetings, stranger!</h2>
                         <p>My name is Apostolos Kalovelonis, coming straight out of the olives and oregano country, <b>Greece</b>.
-                            Currently studying IT and developing websites with WordPress. You can find me at <b>local meetups</b> about marketing or development, reading peacefully a book on public transport, or
+                            Currently studying IT and working under the name of Black Lane. You can find me at <b>local meetups</b> about marketing or development, reading peacefully a book on public transport, or
                             jogging by the sea.
                         </p>
                         <p><br/><br/>
