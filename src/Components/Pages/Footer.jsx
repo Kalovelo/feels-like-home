@@ -85,7 +85,7 @@ class Footer extends Component {
 
                 <Row >
                     <Col xs={{ span: 12 }}>
-                        <h1 style={{ fontSize: "10px" }}>©2019 Apostolos Kalovelonis, Black Lane. All rights reserved.</h1>
+                        <h1 style={{ fontSize: "10px" }}>©2020 Apostolos Kalovelonis. All rights reserved.</h1>
                     </Col>
                 </Row>
 

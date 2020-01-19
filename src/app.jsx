@@ -14,12 +14,13 @@ import ThankYou from './Components/Pages/thankYou';
 import NotFound404 from './Components/Pages/notFound404';
 import './fonts/font.css'
 import ScrollToTop from './ScrollToTop'
-class Apostoloskalovelonis extends Component {
-
+import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+class App extends Component {
     render(){
       return (
         <Router >
           <div id='App' className="App fade-in">
+          {[...Array(3)].map(()=><span className="floatingElement"></span>)}
           <ScrollToTop />
             <NavBar id='mynav' />
             <Cookiefier />
@@ -40,4 +41,4 @@ class Apostoloskalovelonis extends Component {
     }
   }
 
-  export default Apostoloskalovelonis;
+  export default App;

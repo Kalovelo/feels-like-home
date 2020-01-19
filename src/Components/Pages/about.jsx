@@ -5,9 +5,6 @@ import "./footer.css";
 import { Component } from "react";
 import "../Images/lightbox.css";
 import "./about.css";
-import ptexta2 from "../Images/ptexta2.jpg";
-import ptextawhole from "../Images/ptextawhole.jpg";
-import "../Images/lightbox.css";
 import { Helmet } from "react-helmet";
 import toles_illustrator from "../Images/toles_illustrator.jpg";
 

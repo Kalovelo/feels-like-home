@@ -80,6 +80,7 @@
     height: 200px;
     box-shadow: $boxShadow;
     border-radius: 50%;
+    cursor:pointer;
 
     img {
       object-fit: cover;
@@ -96,6 +97,7 @@
 
     @media (min-width: $desktop-large) {
       width: 400px;
+      height:400px;
     }
 
     &--second {

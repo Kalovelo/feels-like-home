@@ -1,35 +1,73 @@
 import React from "react";
 import Button from "../../components/button";
-import StatusSection from "./StatusSection";
 import { Component } from "react";
 import Parallax from "../../Images/Parallax";
 import apostoles1 from "../../Images/apostoles1.png";
 import apostoles2 from "../../Images/apostoles2.jpg";
+import Lightbox from "react-image-lightbox";
+import anime from 'animejs/lib/anime.es.js';
+const images = [apostoles1, apostoles2];
 
-import "./homepage.css";
 class HomePage extends Component {
   state = {
     showParallax: Parallax
   };
 
-  componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
-    document.title = "Apostolos Kalovelonis | Design & Development enthusiast";
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      photoIndex: 0,
+      isOpen: false
+    };
+
+    this.headtitle = null;
   }
 
-  resize = () => {
-    let currentHideNav = window.innerWidth <= 768;
-    if (currentHideNav) {
-      this.setState({ showParallax: "div" });
-    } else this.setState({ showParallax: Parallax });
-  };
+   timeline = null;
+
+  componentDidMount() {
+    document.title = "Apostolos Kalovelonis | Design & Development enthusiast";
+    this.timeline = anime.timeline();
+    this.scatterAnimation();
+  }
+
+  scatterAnimation() {
+    var textWrapper = document.querySelector(".homepage__headtitle");
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    this.timeline
+    .add({
+      targets: ' .letter',
+      opacity: [0, 1],
+      easing: "easeInOutSine",
+      duration: 1500,
+      delay: function (el, i) {
+          return 150 * (i + 1)
+      }
+  }).add({
+    targets: '.homepage__subtitle',
+    opacity: [0, 1],
+    easing: "easeInOutSine",
+    duration: 1500,
+})
+      
+  }
 
   render() {
+    const { photoIndex, isOpen } = this.state;
     return (
       <div className="homepage" fluid="true">
+        <span className="animatedElement"></span>
+        <span className="animatedElement"></span>
+        <span className="animatedElement"></span>
+
+
+
+
         <div className="homepage__title-wrapper">
-          <h1 className="homepage__headtitle">Hey there, it's Apostoles.</h1>
+          <h1 ref={h1 => (this.headtitle = h1)} className="homepage__headtitle">
+          <span className="letters">Hey there, it's Apostoles.{" "}</span>
+          </h1>
           <h2 className="homepage__subtitle">Front-End Dev.</h2>
         </div>
         <div className="halfRow homepage__introduction-wrapper">
@@ -58,36 +96,41 @@ class HomePage extends Component {
 
           <div className="homepage__introduction-all-image-wrapper">
             <div className="homepage__introduction-image">
-              <a href="#img1">
-                <img
-                  alt="myself in side view, pointing at something, low angle"
-                  src={apostoles1}
-                />
-              </a>
-              <a href="#_" className="lightbox" id="img1">
-                <img
-                  src={apostoles1}
-                  alt="myself in side view, pointing at something, low angle"
-                />
-              </a>
+              <img
+                alt="myself in side view, pointing at something, low angle"
+                src={apostoles1}
+                onClick={() => this.setState({ isOpen: true, photoIndex: 0 })}
+              />
             </div>
-            
+
             <div className="homepage__introduction-image homepage__introduction-image--second">
-              <a href="#img2">
-                <img
-                  alt="myself laying on the ground while laughing with eyes closed and my hand on chest"
-                  src={apostoles2}
-                />
-              </a>
-              <a href="#_" className="lightbox" id="img2">
-                <img
-                  alt="myself laying on the ground while laughing with eyes closed and my hand on chest"
-                  src={apostoles2}
-                />
-              </a>
+              <img
+                alt="myself laying on the ground while laughing with eyes closed and my hand on chest"
+                src={apostoles2}
+                onClick={() => this.setState({ isOpen: true, photoIndex: 1 })}
+              />
             </div>
           </div>
         </div>
+
+        {isOpen && (
+          <Lightbox
+            mainSrc={images[photoIndex]}
+            nextSrc={images[(photoIndex + 1) % images.length]}
+            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            onCloseRequest={() => this.setState({ isOpen: false })}
+            onMovePrevRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + images.length - 1) % images.length
+              })
+            }
+            onMoveNextRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + 1) % images.length
+              })
+            }
+          />
+        )}
       </div>
     );
   }
