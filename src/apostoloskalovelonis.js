@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './styles/styles.scss'
 import NavBar from './Components/Navbars/NavBar';
 import Homepage from './Components/Pages/Homepage/homePage';
 import Footer from './Components/Pages/Footer';

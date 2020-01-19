@@ -1,0 +1,24 @@
+.button {
+  font-size: 20px;
+  transition: 0.5s;
+  display: inline;
+  cursor: pointer;
+
+  a {
+    font-family: $garamond;
+  }
+
+  &--square {
+    border: 1px solid white;
+    padding: 10px;
+    background: $black;
+
+    &:hover {
+      border: 1px solid white;
+      background: #fff;
+      a {
+        color: $black;
+      }
+    }
+  }
+}

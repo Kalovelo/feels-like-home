@@ -21,10 +21,10 @@ render(){
         'CSS / SASS',
         'JavaScript',
         'ReactJS',
-        'WordPress',
+        'Socket.io',
         'Java',
         'UI/UX',
-        'SEO',
+        'Python',
         'Git'
     ]
 
@@ -61,14 +61,11 @@ render(){
             <Col xs="12" md={{span:8,offset:2   }} className="fullH">
                 <h1 className="interestsTitle">Background</h1>
                 <p className='press'>I admire creations that try to show their flavour to the world, creations whose main goal is 
-                    to have an impact by expressing their own philosophy, <b>their own story</b>. Thereby, I am leaning towards
-                    Web & Game Development.
+                    to have an impact by expressing their own philosophy, <b>their own story.</b>
                     <br/><br/>
                     I see the world of Design as complex yet based on simple principles
-                    that guide you, but they don't cut down your own determination to apply your personal touches.
-                    <br/>My experience involves <b>web design</b> with WordPress, 
-                    creating video thumbnails for our IEEE Student Branch and a few logos.
-                    I have also worked in moving and cafe services.
+                    that guide you, but don't cut down your own determination to apply your personal touches.
+                    <br/>My experience involves working as a WordPress freelancer and in-house Front / React Developer.
                 </p>
             </Col>
 
