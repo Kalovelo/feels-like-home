@@ -11,13 +11,13 @@
   &--square {
     border: 1px solid white;
     padding: 10px;
-    background: $black;
+    background: $color__black;
 
     &:hover {
       border: 1px solid white;
       background: #fff;
       a {
-        color: $black;
+        color: $color__black;
       }
     }
   }

@@ -20,10 +20,11 @@ class App extends Component {
       return (
         <Router >
           <div id='App' className="App fade-in">
-          {[...Array(3)].map(()=><span className="floatingElement"></span>)}
           <ScrollToTop />
             <NavBar id='mynav' />
             <Cookiefier />
+            {[...Array(3)].map((index)=><span key={index} className="floatingElement"></span>)}
+
             <Switch>
               <Route exact path='/' component={Homepage} />
               <Route path='/Background' component={Background} />

@@ -57,13 +57,6 @@ class HomePage extends Component {
     const { photoIndex, isOpen } = this.state;
     return (
       <div className="homepage" fluid="true">
-        <span className="animatedElement"></span>
-        <span className="animatedElement"></span>
-        <span className="animatedElement"></span>
-
-
-
-
         <div className="homepage__title-wrapper">
           <h1 ref={h1 => (this.headtitle = h1)} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles.{" "}</span>
@@ -71,8 +64,8 @@ class HomePage extends Component {
           <h2 className="homepage__subtitle">Front-End Dev.</h2>
         </div>
         <div className="halfRow homepage__introduction-wrapper">
-          <div className="homepage__introduction-text" xs="12 content">
-            <h2>Greetings, stranger!</h2>
+          <div className="homepage__introduction-text">
+            <h2 className="homepage__introduction-title">Greetings, stranger!</h2>
             <p>
               My name is Apostolos Kalovelonis, coming straight out of the
               olives and oregano country, <b>Greece</b>. I am keen on clean
@@ -85,9 +78,9 @@ class HomePage extends Component {
               reading peacefully a book on public transport, or jogging by the
               sea.
             </p>
-            <div class="homepage__button-wrapper">
+            <div className="homepage__button-wrapper">
               <Button
-                class="button--square"
+                className="button--square"
                 link="/portal"
                 text="Take a walk?"
               />
