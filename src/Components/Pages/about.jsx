@@ -150,17 +150,6 @@ class About extends Component {
             </Col>
           </Col>
         </Row>
-
-        <Row className="aboutRow">
-          <Col className="mountainCol" md={{ span: 5, offset: 4 }}>
-            <h1 className="boxTitle mountain">Conquer the Mountain </h1>
-            <h4 className="boxTitle sisiphus">
-              <i>even if you're Sisiphus.</i>
-            </h4>
-          </Col>
-        </Row>
-
-        {window.innerWidth <= 768 ? "" : <this.state.showIllu />}
       </Container>
     );
   }

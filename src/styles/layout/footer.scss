@@ -1,24 +1,75 @@
-.footer{
-    background:$color__black;
+.footer {
+    margin:$desktop-large-paddings;
     display: flex;
-    min-height:200px;
-    justify-content: space-evenly;
-    color:white;
+  min-height: 800px;
+  color: $color__blackPale;
+  flex-direction: column;
+  align-items: center;
 
-    &__title-wrapper{
+  &__divider {
+    margin:50px 0;
+    width: 1000px;
+    height: 2px;
+    background: $color__greyPale;
+  }
+
+  &__wrapper {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
+  }
+  ul {
+    list-style-type: none;
+    font-family: $maax;
+    width:150px;
+    margin:0;
+    padding: 0;
+
+    a {
+      color: $color__blackPale;
+      &:hover {
+        color: #bfab5c;
+        text-decoration: none;
+      }
     }
+  }
 
-    &__CTA-wrapper{
+  &__title-wrapper {
+  }
 
-    }
+  &__CTA-wrapper {
+  }
 
-    &__CTA-title{
-        font-weight:700;
-        font-size:50px;
-    }
+  &__socialMedia-wrapper{
+      display: flex;
+      flex-direction: row-reverse;
+      text-align: right;
+  }
 
-    &__quote{
-        font-family:$maax;
-        font-weight: 900;
-    }
+  &__CTA-title {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  &__CTA-concept {
+    display: block;
+    font-size: 60px;
+    color: $color__black;
+  }
+
+  &__CTA {
+    font-weight: 500;
+    font-size: 80px;
+  }
+
+  &__quote {
+    margin-top:100px;
+    font-family: $garamond;
+    font-weight: 100;
+    text-align: right;
+    display: block;
+
+  }
 }
