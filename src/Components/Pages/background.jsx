@@ -1,7 +1,6 @@
 import React from 'react';
 import {Container,Row,Col} from 'react-bootstrap';
 import './background.css'
-import "./footer.css"
 import { Component } from 'react';
 import IEEE from '../Images/IEEE.JPG'
 import '../Images/lightbox.css'

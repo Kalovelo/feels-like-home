@@ -1,9 +1,7 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
-import "./footer.css"
 import { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -68,36 +66,35 @@ class Footer extends Component {
             }
         ]
         return (
-            <Container className="Footer" fluid="true" style={{ backgroundImage: "linear-gradient(#232323, #0c0b0b)", color: "white", paddingTop: "2%" }}>
-                <Row  >
-                    <Col md={{ span: 4, offset: 4 }}>
-                        <h2 style={{ fontSize: "40px", textAlign: "center" }} onMouseEnter={this.finishedHover} onMouseLeave={this.finishedHover}>{this.state.finished ? <span className='fade-in'>but keep pushing forward.</span> : <span className='puff-in-center'>You made it to the end</span>}</h2>
-                    </Col>
-                </Row>
+            <div className="footer" >
 
-                <Row >
-                    <Col xs={{ span: 12 }}>
-                        <ul onClick={() => { window.scrollTo(1, 1); }} style={{ fontSize: "15px" }} className="footerMenu">
+                <div className="footer__CTA-wrapper">
+                    <h3 className="footer__CTA-title"> Let's talk about a project </h3>
+                </div>
+
+{/* 
+                <div >
+                    <div >
+                        <ul onClick={() => { window.scrollTo(1, 1); }}>
                             {menu.map((menuLink,i)=><li><NavLink to={menuLink.link}>{menuLink.title}</NavLink></li>)}
                         </ul>
-                    </Col>
-                </Row>
+                    </div>
+                </div> */}
+{/* 
+                <div className="footer__title-wrapper">
+                        <h2 className="footer__quote" onMouseEnter={this.finishedHover} onMouseLeave={this.finishedHover}>{this.state.finished ? <span className='fade-in'>even if you're Sisyphus.</span> : <span className='puff-in-center'>Conquer the mountain </span>}</h2>
+                </div> */}
 
-                <Row >
-                    <Col xs={{ span: 12 }}>
-                        <h1 style={{ fontSize: "10px" }}>©2020 Apostolos Kalovelonis. All rights reserved.</h1>
-                    </Col>
-                </Row>
 
-                <Row >
-                    <Col xs={{ span: 12 }}>
-                        <ul className="footerSocial">
+                {/* <div >
+                    <div>
+                        <ul>
                             {social.map((smedia,i)=><li><a rel="noopener noreferrer" target="_blank" href={smedia.link}><FontAwesomeIcon icon={smedia.icon}/></a></li>)}
                         </ul>
-                    </Col>
-                </Row>
+                    </div>
+                </div> */}
 
-            </Container>
+            </div>
         )
     }
 

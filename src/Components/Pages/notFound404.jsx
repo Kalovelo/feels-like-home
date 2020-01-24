@@ -1,6 +1,5 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
-import "./footer.css"
 import { Component } from 'react';
 import './notFound404.css'
 import {Helmet} from "react-helmet";

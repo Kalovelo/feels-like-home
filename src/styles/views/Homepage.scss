@@ -12,8 +12,9 @@
 
   &__headtitle {
     margin-top: $desktop-content-margin;
-    font-family: $gilroy;
+    font-family: $maax;
     font-size: 40px;
+    font-weight: 900;
 
     @media (min-width: $desktop) {
       font-size: 90px;
@@ -60,7 +61,8 @@
   }
 
   &__introduction-title{
-    font-family: $gilroy;
+    font-family: $maax;
+    font-weight: bold;
   }
 
   &__button-wrapper {
