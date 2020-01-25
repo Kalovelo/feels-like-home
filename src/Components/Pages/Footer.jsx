@@ -16,10 +16,16 @@ class Footer extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {this.typewriterAnimation()}, 3800);
+   this.typewriterInterval =  setInterval(() => {this.typewriterAnimation()}, 3800);
   }
 
+  componentWillUnmount(){
+      clearInterval(this.typewriterInterval);
+  }
+
+
   typewriterAnimation() {
+    if(document.hasFocus())
     new anime.timeline()
       .add({
         targets: ".footer__CTA-concept-text",
