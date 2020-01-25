@@ -3,7 +3,7 @@ import { Component } from "react";
 import { NavLink } from "react-router-dom";
 import anime from "animejs/lib/anime.es.js";
 
-const ctaConcepts = ["philosophy", "books", "events", "a project"];
+const ctaConcepts = ["philosophy", "books", "events", "a project","your idea"];
 class Footer extends Component {
   constructor() {
     super();
@@ -16,7 +16,7 @@ class Footer extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {this.typewriterAnimation()}, 3500);
+    setInterval(() => {this.typewriterAnimation()}, 3800);
   }
 
   typewriterAnimation() {
@@ -33,7 +33,7 @@ class Footer extends Component {
         easing: "easeOutExpo",
         duration: 1500,
         offset: "-=775",
-        delay: (el, i) => 80 * (i + 1)
+        delay: (el, i) => 45 * (i + 1)
       })
       .add({
         targets: ".footer__CTA-concept-text",
