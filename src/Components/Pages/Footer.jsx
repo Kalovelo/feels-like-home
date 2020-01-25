@@ -1,12 +1,65 @@
 import React from "react";
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
+import anime from "animejs/lib/anime.es.js";
 
+const ctaConcepts = ["philosophy", "books", "events", "a project"];
 class Footer extends Component {
   constructor() {
     super();
-    this.state = { finished: false };
+    this.state = {
+      finished: false,
+      indexCTA: 0,
+      letterClass: ".footer-letter"
+    };
+    this.conceptText = null;
   }
+
+  componentDidMount() {
+    setInterval(() => {this.typewriterAnimation()}, 3500);
+  }
+
+  typewriterAnimation() {
+    new anime.timeline()
+      .add({
+        targets: ".footer__CTA-concept-text",
+        opacity: 1,
+        duration: 300,
+        easing: "easeOutExpo"
+      })
+      .add({
+        targets: ".footer-letter",
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1500,
+        offset: "-=775",
+        delay: (el, i) => 80 * (i + 1)
+      })
+      .add({
+        targets: ".footer__CTA-concept-text",
+        opacity: 0,
+        duration: 700,
+        easing: "easeOutExpo",
+        delay: 400,
+      })
+      .finished.then(this.updateIndex)
+  }
+  updateIndex = () => {
+    let prevIndex = this.state.indexCTA;
+    this.setState({
+      indexCTA: ctaConcepts.length > prevIndex + 1 ? prevIndex + 1 : 0,
+      letterClass: ".footer-letter"
+    },this.conceptLetterReplace);
+  };
+
+
+  conceptLetterReplace = () => {
+    let textWrapper = this.conceptText;
+    textWrapper.innerHTML = ctaConcepts[this.state.indexCTA].replace(
+      /([^\x00-\x80]|\w)/g,
+      "<span class='footer-letter'>$&</span>"
+    );
+  };
 
   finishedHover = () => {
     this.setState(prevState => ({ finished: !prevState.finished }));
@@ -59,42 +112,50 @@ class Footer extends Component {
         title: "Github"
       }
     ];
-    return <div className="footer">
+    return (
+      <div className="footer">
         <div className="footer__divider" />
 
         <div className="footer__wrapper">
           <div className="footer__CTA-wrapper">
             <h3 className="footer__CTA-title">
               Let's talk about
-              <span className="footer__CTA-concept"> a project</span>
+              <div>
+                <span className="footer__CTA-concept">
+                  <span
+                    ref={span => (this.conceptText = span)}
+                    className="footer__CTA-concept-text"
+                  >
+                    philosophy
+                  </span>
+                </span>
+              </div>
             </h3>
             <h3 className="footer__CTA"> opa@kalovelo.com</h3>
           </div>
 
           <div className="footer__socialMedia-wrapper">
-
-              <div>
-                <ul
-                  onClick={() => {
-                    window.scrollTo(1, 1);
-                  }}
-                >
-                  {menu.map((menuLink, i) => (
-                    <li>
-                      <NavLink to={menuLink.link}>{menuLink.title}</NavLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div>
+              <ul
+                onClick={() => {
+                  window.scrollTo(1, 1);
+                }}
+              >
+                {menu.map((menuLink, i) => (
+                  <li key={i}>
+                    <NavLink  to={menuLink.link}>{menuLink.title}</NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div>
               <ul>
                 {social.map((smedia, i) => (
-                  <li>
+                  <li key={i}>
                     <a
                       rel="noopener noreferrer"
                       className="footer__socialMedia"
-                      key={i}
                       target="_blank"
                       href={smedia.link}
                     >
@@ -104,7 +165,6 @@ class Footer extends Component {
                 ))}
               </ul>
             </div>
-            
           </div>
 
           <h2
@@ -121,8 +181,8 @@ class Footer extends Component {
         </div>
 
         <div className="footer__divider" />
-
-        </div>
+      </div>
+    );
   }
 }
 
