@@ -19,6 +19,20 @@ class Footer extends Component {
    this.typewriterInterval =  setInterval(() => {this.typewriterAnimation()}, 3800);
   }
 
+  copyMailtoClipboard=()=>{
+      this.copyToClipboard("opa@kalovelo.com")
+      this.copyAnimation();
+  }
+
+ copyToClipboard(text) {
+    var dummy = document.createElement("input");
+    document.body.appendChild(dummy);
+    dummy.setAttribute('value', text);
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+}
+
   componentWillUnmount(){
       clearInterval(this.typewriterInterval);
   }
@@ -70,6 +84,23 @@ class Footer extends Component {
   finishedHover = () => {
     this.setState(prevState => ({ finished: !prevState.finished }));
   };
+
+  copyAnimation=()=>anime.timeline().add({
+      targets:".footer__copied",
+      opacity:[0,1],
+      translateY:[200,0],
+      duration:600,
+      easing:'easeInOutSine'
+
+  })
+  .add({
+    targets:".footer__copied",
+    opacity:0,
+    duration:1000,
+    easing:'easeInOutSine'
+
+})
+
 
   render() {
     var menu = [
@@ -137,7 +168,9 @@ class Footer extends Component {
                 </span>
               </div>
             </h3>
-            <h3 className="footer__CTA"> opa@kalovelo.com</h3>
+            <h3 className="footer__CTA" onClick={this.copyMailtoClipboard} > opa@kalovelo.com</h3>
+            <input type="hidden" id="copyText" value="opa@kalovelo.com" ref={input=>{this.mailElement = input}}/>
+            <span className="footer__copied">copied!</span>
           </div>
 
           <div className="footer__socialMedia-wrapper">
