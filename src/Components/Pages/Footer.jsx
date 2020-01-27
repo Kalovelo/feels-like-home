@@ -76,7 +76,8 @@ class Footer extends Component {
   conceptLetterReplace = () => {
     let textWrapper = this.conceptText;
     textWrapper.innerHTML = ctaConcepts[this.state.indexCTA].replace(
-      /([^\x00-\x80]|\w)/g,
+      // eslint-disable-next-line
+        /([^\x00-\x80]|\w)/g,
       "<span class='footer-letter'>$&</span>"
     );
   };
@@ -206,6 +207,7 @@ class Footer extends Component {
             </div>
           </div>
 
+<div className="footer__quote-wrapper">
           <h2
             className="footer__quote"
             onMouseEnter={this.finishedHover}
@@ -219,6 +221,7 @@ class Footer extends Component {
           </h2>
         </div>
 
+      </div>
         <div className="footer__divider" />
       </div>
     );

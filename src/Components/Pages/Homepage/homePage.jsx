@@ -78,14 +78,7 @@ class HomePage extends Component {
               reading peacefully a book on public transport, or jogging by the
               sea.
             </p>
-            <div className="homepage__button-wrapper">
-              <Button
-                className="button--square"
-                link="/portal"
-                text="Take a walk?"
-              />
-            </div>
-          </div>
+          </div> 
 
           <div className="homepage__introduction-all-image-wrapper">
             <div className="homepage__introduction-image">
@@ -103,6 +96,15 @@ class HomePage extends Component {
                 onClick={() => this.setState({ isOpen: true, photoIndex: 1 })}
               />
             </div>
+          </div>
+        </div>
+
+        <div className="homepage__cta-wrapper">
+          <div className="homepage__cta-innerWrapper">
+          <span className="homepage__cta-title">
+            Up for a walk?
+          </span>
+          <h3 className="homepage__cta">PROCEED</h3>
           </div>
         </div>
 

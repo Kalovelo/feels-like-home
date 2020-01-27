@@ -1,16 +1,32 @@
 .footer {
-    margin:$desktop-large-paddings;
-    display: flex;
+  display: flex;
   min-height: 800px;
   color: $color__blackPale;
   flex-direction: column;
   align-items: center;
 
+
   &__divider {
     margin:50px 0;
-    width: 1000px;
+    width: 90%;
     height: 2px;
     background: $color__greyPale;
+
+
+    @media(min-width:$mobile){
+        width: 80%;
+    }
+    @media(min-width:$tablet){
+        width: 95%;
+    }
+
+    @media(min-width:$desktop){
+        width: 70%;
+    }
+
+    @media(min-width:$desktop-large){
+        width: 60%;
+    }
   }
 
   &__wrapper {
@@ -52,28 +68,59 @@
   &__CTA-title {
     margin-top: 20px;
     font-weight: 700;
-    font-size: 30px;
+    font-size:15px;
+
+    @media(min-width:$tablet){
+        font-size: 22px;
+    }
+
+    @media(min-width:$desktop){
+        font-size: 30px;
+    }
   }
 
   &__CTA-concept {
     display: block;
-    font-size: 60px;
     color: $color__black;
+    font-size: 30px;
+
+    @media(min-width:$tablet){
+        font-size: 45px;
+    }
+
+    @media(min-width:$desktop){
+        font-size: 60px;
+    }
   }
 
   &__CTA {
     font-weight: 500;
-    font-size: 80px;
     cursor: pointer;
+    font-size: 35px;
+    @media(min-width:$tablet){
+        font-size: 60px;
+    }
+    margin:50px 0;
+
+    @media(min-width:$desktop){
+        font-size: 80px;
+    }
   }
 
   &__quote {
-    margin-top:100px;
     font-family: $garamond;
     font-weight: 100;
     text-align: right;
-    display: block;
+    display: inline;
+    font-size: 20px;
 
+    @media(min-width:$tablet){
+        font-size: 30px;
+    }
+
+    @media(min-width:$desktop){
+        font-size: 40px;
+    }
   }
 
   &__copied{
@@ -83,5 +130,11 @@
       position: absolute;
       font-weight: bold;
       opacity: 0;
+  }
+
+  &__quote-wrapper{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row-reverse;
   }
 }
