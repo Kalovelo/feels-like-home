@@ -11,7 +11,6 @@
   }
 
   &__headtitle {
-    margin-top: 50px;
     font-family: $maax;
     font-size: 40px;
     font-weight: 900;
@@ -49,6 +48,11 @@
     width: 100%;
     font-size: 14px;
     box-shadow: $boxShadow;
+
+    .homepage--darkMode & {
+      background-color: $color__blackDarkMode;
+      box-shadow: $boxShadowLight;
+    }
 
     p {
       padding: 20px 0;
@@ -106,6 +110,9 @@
       height: 400px;
     }
 
+    .homepage--darkMode &{
+      box-shadow: $boxShadowLight;
+    }
     &--second {
       width: 150px;
       height: 150px;
@@ -126,10 +133,14 @@
   &__cta {
     display: flex;
     font-size: 100px;
-    font-family: $garamond;
+    font-family: $maax;
     text-align: center;
+    font-weight: 900;
+    cursor: pointer;
   }
   &__cta-wrapper {
+    margin-top: $desktop-content-margin;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -139,8 +150,8 @@
   &__cta-title {
     display: block;
     text-align: right;
-    font-family: $maax;
-    font-weight: 900;
+    font-family: $garamond;
     text-transform: uppercase;
+    font-size: 20px;
   }
 }

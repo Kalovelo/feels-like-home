@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../../components/button";
 import { Component } from "react";
 import Parallax from "../../Images/Parallax";
 import apostoles1 from "../../Images/apostoles1.png";
@@ -53,10 +52,31 @@ class HomePage extends Component {
       
   }
 
+  hoverCTAAnimation=()=>{
+    anime({
+    targets:'body',
+    backgroundColor:"#232323",
+    duration:1000,
+    easing:'linear',
+    color:"#fff",
+  });
+
+}
+
+  resetCTAHoverAnimation=()=>{anime({
+    targets:'body',
+    backgroundColor:"#fff",
+    duration:1000,
+    easing:'linear',
+    color:"#4b4b4b"
+  })
+
+}
+
   render() {
     const { photoIndex, isOpen } = this.state;
     return (
-      <div className="homepage" fluid="true">
+      <div className="homepage homepage--darkMode" fluid="true">
         <div className="homepage__title-wrapper">
           <h1 ref={h1 => (this.headtitle = h1)} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles.{" "}</span>
@@ -99,8 +119,8 @@ class HomePage extends Component {
           </div>
         </div>
 
-        <div className="homepage__cta-wrapper">
-          <div className="homepage__cta-innerWrapper">
+        <div className="homepage__cta-wrapper" >
+          <div className="homepage__cta-innerWrapper" onMouseOver={this.hoverCTAAnimation} onMouseLeave={this.resetCTAHoverAnimation} >
           <span className="homepage__cta-title">
             Up for a walk?
           </span>

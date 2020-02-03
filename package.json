@@ -8,6 +8,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
+    "@storybook/addon-knobs": "^5.3.9",
     "animejs": "^3.1.0",
     "bootstrap": "^4.4.1",
     "delayed-scroll-restoration-polyfill": "^0.1.1",
@@ -31,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,7 +47,13 @@
   ],
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.3.9",
+    "@storybook/addon-links": "^5.3.9",
+    "@storybook/addons": "^5.3.9",
+    "@storybook/preset-create-react-app": "^1.5.2",
+    "@storybook/react": "^5.3.9"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ApostolosKalovelo/feels-like-home.git"

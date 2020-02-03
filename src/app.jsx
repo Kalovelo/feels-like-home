@@ -23,7 +23,7 @@ class App extends Component {
           <ScrollToTop />
             <NavBar id='mynav' />
             <Cookiefier />
-            {[...Array(3)].map((index)=><span key={index} className="floatingElement"></span>)}
+            {[...Array(3)].map((index)=><span key={index} className="floatingElement floatingElement--darkMode"></span>)}
 
             <Switch>
               <Route exact path='/' component={Homepage} />
