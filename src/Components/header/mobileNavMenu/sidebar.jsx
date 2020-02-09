@@ -4,7 +4,7 @@ import './styles.css'
 import {NavLink} from 'react-router-dom';
 import logo from '../../Images/logo.jpg';
 
-export default class sidebar extends Component {
+export default class Sidebar extends Component {
 
   constructor (props) {
     super(props)

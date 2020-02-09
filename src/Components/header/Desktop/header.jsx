@@ -3,8 +3,7 @@ import {NavLink,withRouter} from 'react-router-dom';
 import './NavBar.css'
 
 
-const NavBarDesktop = (props) => {
-  let navID = props.location.pathname === '/portal' ? 'transNavbar' : 'solidNavbar';
+const HeaderDesktop = (props) => {
     return <div className="header">
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/background'>Background</NavLink>
@@ -13,4 +12,4 @@ const NavBarDesktop = (props) => {
 }
 
 
-export default withRouter(NavBarDesktop)
+export default withRouter(HeaderDesktop)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './styles/styles.scss'
-import NavBar from './Components/Navbars/NavBar';
+import Header from './Components/header/header';
 import Homepage from './Components/Pages/Homepage/homePage';
 import Footer from './Components/Pages/Footer';
 import Background from './Components/Pages/background';
@@ -21,7 +21,7 @@ class App extends Component {
         <Router >
           <div id='App' className="App fade-in">
           <ScrollToTop />
-            <NavBar id='mynav' />
+            <Header id='mynav' />
             <Cookiefier />
             {[...Array(3)].map((index)=><span key={index} className="floatingElement floatingElement--darkMode"></span>)}
 

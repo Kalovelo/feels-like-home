@@ -1,12 +1,12 @@
 import React from 'react';
-import NavBarDesktop from './Desktop/deskNavBar';
-import SideBar from './mobileNavMenu/sidebar'
+import HeaderDesktop from './Desktop/header'
+import Sidebar from './mobileNavMenu/sidebar'
 
 class NavBar extends React.Component{
     
     state=
     {
-        nav:NavBarDesktop
+        nav:HeaderDesktop
     }
 
 
@@ -21,9 +21,9 @@ resize=()=>
 {
   let currentHideNav = (window.innerWidth <= 760);
     if (currentHideNav ) {
-        this.setState({nav: SideBar});
+        this.setState({nav: Sidebar});
     }
-    else this.setState({nav: NavBarDesktop});
+    else this.setState({nav: HeaderDesktop});
 }
 
 render() {
