@@ -1,8 +1,31 @@
 .header{
     display: flex;
     flex-direction: row-reverse;
+    margin: 20px 10px;
+    z-index: 2000;
+
+    @media(min-width:$desktop){
+        margin: 20px 50px;
+        
+    }
+
+    @media(min-width:$desktop-large){
+        margin: 0px 200px;
+    }
 
     &__item{
-        padding:15px;
+        color:$color__black;
+        padding:20px 30px;
+        font-family: $garamond;
+        font-size:18px;
+
+        &--light{
+        color:$color__greyPale;
+        }
+
+        &:hover{
+            text-decoration: none;
+            color:initial;
+        }
     }
 }

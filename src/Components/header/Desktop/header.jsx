@@ -5,9 +5,7 @@ import './NavBar.css'
 
 const HeaderDesktop = (props) => {
     return <div className="header">
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/background'>Background</NavLink>
-            <NavLink to='/about'>About</NavLink>
+            {props.links.map(path => <NavLink className={'header__item '+(props.location.pathname=="/portal"?'header__item--light':'')} to={path.link}>{path.title}</NavLink> )}
         </div>    
 }
 
