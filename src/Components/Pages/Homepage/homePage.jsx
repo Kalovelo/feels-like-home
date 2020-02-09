@@ -20,22 +20,34 @@ class HomePage extends Component {
       isOpen: false
     };
 
+    this.information = null;
     this.headtitle = null;
+    this.imageRefs=[];
+    this.timeline = null;
   }
 
-   timeline = null;
+
+informationAnimation(){
+return {
+    targets: '.homepage__introduction-text',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2000,
+    complete:()=>{this.animateImages();}
+  }}
 
   componentDidMount() {
     document.title = "Apostolos Kalovelonis | Design & Development enthusiast";
     this.timeline = anime.timeline();
     this.scatterAnimation();
+    this.timeline.add(this.informationAnimation());
   }
 
   scatterAnimation() {
     var textWrapper = document.querySelector(".homepage__headtitle");
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
     this.timeline
-    .add({
+    .add({    
       targets: ' .letter',
       opacity: [0, 1],
       easing: "easeInOutSine",
@@ -60,7 +72,21 @@ class HomePage extends Component {
     easing:'linear',
     color:"#fff",
   });
+}
 
+animateImages(){
+  anime(this.curveMovementAnimation(this.imageRefs[0],[-500,0],[500,0]));
+  anime(this.curveMovementAnimation(this.imageRefs[1],[800,0],[-700,0])) ;
+}
+
+curveMovementAnimation=(target,valueX,valueY)=>{
+  return {
+  targets:target,
+  translateX:{value:valueX,duration:6000},
+  opacity:{value:1,duration:7000},
+  translateY:{value:valueY,duration:7000},
+  easing:'easeInOutBack'
+}
 }
 
   resetCTAHoverAnimation=()=>{anime({
@@ -76,7 +102,7 @@ class HomePage extends Component {
   render() {
     const { photoIndex, isOpen } = this.state;
     return (
-      <div className="homepage homepage--darkMode" fluid="true">
+      <div className="homepage" fluid="true">
         <div className="homepage__title-wrapper">
           <h1 ref={h1 => (this.headtitle = h1)} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles.{" "}</span>
@@ -84,7 +110,7 @@ class HomePage extends Component {
           <h2 className="homepage__subtitle">Front-End Dev.</h2>
         </div>
         <div className="halfRow homepage__introduction-wrapper">
-          <div className="homepage__introduction-text">
+          <div ref={text => (this.information = text)}className="homepage__introduction-text">
             <h2 className="homepage__introduction-title">Greetings, stranger!</h2>
             <p>
               My name is Apostolos Kalovelonis, coming straight out of the
@@ -106,6 +132,7 @@ class HomePage extends Component {
                 alt="myself in side view, pointing at something, low angle"
                 src={apostoles1}
                 onClick={() => this.setState({ isOpen: true, photoIndex: 0 })}
+                ref={image => (this.imageRefs[0] = image)}
               />
             </div>
 
@@ -114,6 +141,7 @@ class HomePage extends Component {
                 alt="myself laying on the ground while laughing with eyes closed and my hand on chest"
                 src={apostoles2}
                 onClick={() => this.setState({ isOpen: true, photoIndex: 1 })}
+                ref={image => (this.imageRefs[1] = image)}
               />
             </div>
           </div>
