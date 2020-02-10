@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
+
+//! styles
 import './App.css';
+import './fonts/font.css'
 import './styles/styles.scss'
-import Header from './Components/header/header';
-import Homepage from './Components/Pages/Homepage/homePage';
+import './animations/animations.css';
+import 'react-image-lightbox/style.css'
+
+//! layout
 import Footer from './Components/Pages/Footer';
+import Header from './Components/header/header';
+
+//! pages
+import Homepage from './Components/Pages/Homepage/homePage';
 import Background from './Components/Pages/background';
 import Portal from './Components/Pages/portal';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import About from './Components/Pages/about';
-import './animations/animations.css';
-import Cookiefier from './Components/cookiefier';
 import ThankYou from './Components/Pages/thankYou';
 import NotFound404 from './Components/Pages/notFound404';
-import './fonts/font.css'
+import Cookiefier from './Components/cookiefier';
+
+//!store
+import { Provider } from 'react-redux';
+import store from './store'
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+
 class App extends Component {
     render(){
       return (
+        <Provider store={store}>
         <Router >
           <div id='App' className="App fade-in">
           <ScrollToTop />
@@ -37,7 +50,7 @@ class App extends Component {
           </div>
 
         </Router >
-
+        </Provider>
       );
     }
   }
