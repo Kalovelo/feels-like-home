@@ -4,17 +4,20 @@ import apostoles1 from "../../Images/apostoles1.png";
 import apostoles2 from "../../Images/apostoles2.jpg";
 import Lightbox from "react-image-lightbox";
 import anime from "animejs/lib/anime.es.js";
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { toggleTheme } from '../../../reducers/themeActions';
+
 const images = [apostoles1, apostoles2];
+
 const HomePage = () => {
   
+  const dispatch = useDispatch();
+
   const [state, setState] = useState({
     photoIndex: 0,
     isOpen: false,
     showParallax: Parallax
   });
-
-  const theme = useSelector(state => state.theme);
 
   const informationRef = useRef(null);
   const headtitleRef = useRef(null);
@@ -37,7 +40,8 @@ const HomePage = () => {
     document.title = "Apostolos Kalovelonis | Design & Development enthusiast";
     scatterAnimation();
     timeline.add(informationAnimation());
-  }, []);
+    // eslint-disable-next-line
+}, []);
 
   const scatterAnimation = () => {
     var textWrapper = document.querySelector(".homepage__headtitle");
@@ -63,15 +67,6 @@ const HomePage = () => {
       });
   };
 
-  const hoverCTAAnimation = () => {
-    anime({
-      targets: "body",
-      backgroundColor: "#232323",
-      duration: 1000,
-      easing: "linear",
-      color: "#fff"
-    });
-  };
 
   const animateImages = () => {
     console.log(imageRefs[0]);
@@ -89,19 +84,10 @@ const HomePage = () => {
     };
   };
 
-  const resetCTAHoverAnimation = () => {
-    anime({
-      targets: "body",
-      backgroundColor: "#fff",
-      duration: 1000,
-      easing: "linear",
-      color: "#4b4b4b"
-    });
-  };
 
   const { photoIndex, isOpen } = state;
   return (
-    <div className="homepage" fluid="true">
+    <div className="homepage layout">
       <div className="homepage__title-wrapper">
         <h1 ref={headtitleRef} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles. </span>
@@ -160,9 +146,9 @@ const HomePage = () => {
 
       <div className="homepage__cta-wrapper">
         <div
-          className="homepage__cta-innerWrapper"
-          onMouseOver={hoverCTAAnimation}
-          onMouseLeave={resetCTAHoverAnimation}
+          className="homepage__cta-innerWrapper "
+          onMouseEnter  ={()=>dispatch(toggleTheme())}
+          onMouseLeave={()=>  dispatch(toggleTheme())}
         >
           <span className="homepage__cta-title">Up for a walk?</span>
           <h3 className="homepage__cta">PROCEED</h3>

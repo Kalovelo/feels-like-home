@@ -5,6 +5,7 @@ const initial = {
 const themeReducer = (state=initial,action )=>
 {
     let newTheme;
+    console.log(action.type);
     switch(action.type)
     {
         case "TOGGLE_LIGHT" :

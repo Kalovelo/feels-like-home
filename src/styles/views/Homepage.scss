@@ -1,6 +1,6 @@
 .homepage {
   padding: $mobile-paddings;
-
+  
   @media (min-width: $desktop) {
     flex-direction: row;
     padding: $desktop-paddings;
@@ -46,8 +46,8 @@
     width: 100%;
     font-size: 14px;
 
-    .homepage--darkMode &{
-    color: $color__greyPale;
+    .homepage--darkMode & {
+      color: $color__greyPale;
     }
 
     p {
@@ -86,9 +86,9 @@
     height: 200px;
     border-radius: 50%;
     cursor: pointer;
-    
+
     img {
-      opacity:0;
+      opacity: 0;
       box-shadow: $boxShadow;
       object-fit: cover;
       width: 100%;
@@ -107,7 +107,7 @@
       height: 400px;
     }
 
-    .homepage--darkMode &{
+    .homepage--darkMode & {
       box-shadow: $boxShadowLight;
     }
     &--second {
@@ -137,7 +137,6 @@
   }
   &__cta-wrapper {
     margin-top: $desktop-content-margin;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;

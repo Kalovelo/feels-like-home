@@ -1,0 +1,107 @@
+@import './fonts/font.scss';
+@import './normalize/normalize.scss';
+@import './colors/colors.scss';
+
+.App{
+    color:$color__black;
+    z-index: -1;
+    transition: all 1s;
+    background: $color__white;
+
+    .layout{
+    transition: all 1s;
+
+    }
+    &--dark,&--dark .layout{
+      color:$color__white;
+      background: $color__black;
+    }
+
+    &--light,&--light .layout{
+      color:$color__black;
+      background: $color__white;
+    }
+  }
+  
+  @media only screen and (min-width: 700px) 
+  {
+      #topBar{ visibility: hidden; }
+      
+  }
+  
+  body
+  {
+    
+    scroll-behavior:smooth;
+    overflow: visible;
+    overflow-x:hidden!important; 
+  }
+  
+  
+  
+  @media (min-width:1000px)
+  {
+    .lightboxImg
+    {
+      width:1280px!important;
+      height:770px!important;
+    }
+  }
+  
+  @media (max-width:750px)
+  {
+    .lightboxImg
+    {
+      margin-top:25%!important;
+      width:300%!important;
+      height:50%!important;
+    }
+  }
+  h1,h2,h3,h4,p
+  {
+    font-family: 'maax';
+    font-weight:400;
+  }
+  
+  .btn:focus
+  {
+    box-shadow: none;
+    background-color: none!important;
+  }
+  
+  .btn:active
+  {
+    box-shadow: none!important;
+    background-color: none!important;
+  }
+  
+  a {
+    outline: 0;
+  }
+  
+  *::selection {
+    background: #000000; /* WebKit/Blink Browsers */
+    color: #ffffff
+  }
+  *::-moz-selection {
+    background: #000000; /* Gecko Browsers */
+    color:#ffffff
+  }
+  
+  
+  
+  @media (min-width:800px)
+  {
+  p.press::first-letter {
+    font-family: adobe-garamond-pro, serif;
+  font-weight: 300;
+  float: left;
+  font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+  }
+  
+  

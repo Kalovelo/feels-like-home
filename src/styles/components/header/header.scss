@@ -14,8 +14,8 @@
     }
 
     &__item{
-        color:$color__black;
-        padding:20px 30px;
+        color: inherit;
+            margin:20px 30px;
         font-family: $garamond;
         font-size:18px;
 
@@ -25,7 +25,7 @@
 
         &:hover{
             text-decoration: none;
-            color:initial;
+            color:inherit;
         }
     }
 }

@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 //! styles
-import './App.css';
 import './fonts/font.css'
 import './styles/styles.scss'
 import './animations/animations.css';
@@ -21,18 +20,16 @@ import NotFound404 from './Components/Pages/notFound404';
 import Cookiefier from './Components/cookiefier';
 
 //!store
-import { Provider } from 'react-redux';
-import store from './store'
+import { useSelector } from 'react-redux';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
 
-class App extends Component {
-    render(){
-      return (
-        <Provider store={store}>
-        <Router >
-          <div id='App' className="App fade-in">
+const App=()=>{
+
+  const theme = useSelector(state=>state.theme);
+  return <Router >
+          <div id='App' className={"App fade-in App--"+(theme)}>
           <ScrollToTop />
             <Header id='mynav' />
             <Cookiefier />
@@ -48,11 +45,7 @@ class App extends Component {
             </Switch>
             <Footer />
           </div>
-
         </Router >
-        </Provider>
-      );
-    }
   }
 
   export default App;
