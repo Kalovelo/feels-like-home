@@ -74,8 +74,9 @@ const HomePage = () => {
   };
 
   const animateImages = () => {
-    anime(curveMovementAnimation(imageRefs[0], [-500, 0], [500, 0]));
-    anime(curveMovementAnimation(imageRefs[1], [800, 0], [-700, 0]));
+    console.log(imageRefs[0]);
+    anime(curveMovementAnimation(imageRefs[0].current, [-500, 0], [500, 0]));
+    anime(curveMovementAnimation(imageRefs[1].current, [800, 0], [-700, 0]));
   };
 
   const curveMovementAnimation = (target, valueX, valueY) => {
