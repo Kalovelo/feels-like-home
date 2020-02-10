@@ -2,7 +2,7 @@ $particleSize: 5vmin;
 $animationDuration: 1.5s;
 $amount: 20;
 .floatingElement {
-  z-index: -1;
+  z-index: 0;
   width: $particleSize;
   height: $particleSize;
   border-radius: $particleSize;
@@ -13,9 +13,15 @@ $amount: 20;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   $colors: ($color__grey ,$color__blackTotal, $color__blackPale);
+  $darkModeColors: ($color__grey,$color__greyPale, $color__whiteTotal);
   @for $i from 1 through $amount {
     &:nth-child(#{$i}) {
       color: nth($colors, random(3));
+
+      &.floatingElement--darkMode{
+        color: nth($darkModeColors, random(3));
+      }
+
       top: random(85) * 2.5%  ;
       left: random(85) * 1%;
       animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;

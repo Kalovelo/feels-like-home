@@ -1,29 +1,39 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+
+//! styles
+import './fonts/font.css'
 import './styles/styles.scss'
-import NavBar from './Components/Navbars/NavBar';
-import Homepage from './Components/Pages/Homepage/homePage';
+import './animations/animations.css';
+import 'react-image-lightbox/style.css'
+
+//! layout
 import Footer from './Components/Pages/Footer';
+import Header from './Components/header/header';
+
+//! pages
+import Homepage from './Components/Pages/Homepage/homePage';
 import Background from './Components/Pages/background';
 import Portal from './Components/Pages/portal';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import About from './Components/Pages/about';
-import './animations/animations.css';
-import Cookiefier from './Components/cookiefier';
 import ThankYou from './Components/Pages/thankYou';
 import NotFound404 from './Components/Pages/notFound404';
-import './fonts/font.css'
+import Cookiefier from './Components/cookiefier';
+
+//!store
+import { useSelector } from 'react-redux';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
-class App extends Component {
-    render(){
-      return (
-        <Router >
-          <div id='App' className="App fade-in">
+
+const App=()=>{
+
+  const theme = useSelector(state=>state.theme);
+  return <Router >
+          <div id='App' className={"App fade-in App--"+(theme)}>
           <ScrollToTop />
-            <NavBar id='mynav' />
+            <Header id='mynav' />
             <Cookiefier />
-            {[...Array(3)].map((index)=><span key={index} className="floatingElement"></span>)}
+            {[...Array(3)].map((index)=><span key={index} className="floatingElement floatingElement--darkMode"></span>)}
 
             <Switch>
               <Route exact path='/' component={Homepage} />
@@ -35,11 +45,7 @@ class App extends Component {
             </Switch>
             <Footer />
           </div>
-
         </Router >
-
-      );
-    }
   }
 
   export default App;

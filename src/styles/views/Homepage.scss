@@ -1,6 +1,6 @@
 .homepage {
   padding: $mobile-paddings;
-
+  
   @media (min-width: $desktop) {
     flex-direction: row;
     padding: $desktop-paddings;
@@ -11,7 +11,6 @@
   }
 
   &__headtitle {
-    margin-top: 50px;
     font-family: $maax;
     font-size: 40px;
     font-weight: 900;
@@ -43,12 +42,13 @@
   }
 
   &__introduction-text {
-    background: $color__black;
-    color: #fff;
     padding: 50px;
     width: 100%;
     font-size: 14px;
-    box-shadow: $boxShadow;
+
+    .homepage--darkMode & {
+      color: $color__greyPale;
+    }
 
     p {
       padding: 20px 0;
@@ -84,11 +84,12 @@
   &__introduction-image {
     width: 200px;
     height: 200px;
-    box-shadow: $boxShadow;
     border-radius: 50%;
     cursor: pointer;
 
     img {
+      opacity: 0;
+      box-shadow: $boxShadow;
       object-fit: cover;
       width: 100%;
       height: 100%;
@@ -106,6 +107,9 @@
       height: 400px;
     }
 
+    .homepage--darkMode & {
+      box-shadow: $boxShadowLight;
+    }
     &--second {
       width: 150px;
       height: 150px;
@@ -126,10 +130,13 @@
   &__cta {
     display: flex;
     font-size: 100px;
-    font-family: $garamond;
+    font-family: $maax;
     text-align: center;
+    font-weight: 900;
+    cursor: pointer;
   }
   &__cta-wrapper {
+    margin-top: $desktop-content-margin;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -139,8 +146,8 @@
   &__cta-title {
     display: block;
     text-align: right;
-    font-family: $maax;
-    font-weight: 900;
+    font-family: $garamond;
     text-transform: uppercase;
+    font-size: 20px;
   }
 }

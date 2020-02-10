@@ -151,7 +151,7 @@ class Footer extends Component {
       }
     ];
     return (
-      <div className="footer">
+      <div className="footer layout">
         <div className="footer__divider" />
 
         <div className="footer__wrapper">
