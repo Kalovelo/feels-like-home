@@ -2,6 +2,7 @@ $particleSize: 5vmin;
 $animationDuration: 1.5s;
 $amount: 20;
 .floatingElement {
+  overflow: hidden;
   z-index: 0;
   width: $particleSize;
   height: $particleSize;
@@ -18,7 +19,7 @@ $amount: 20;
     &:nth-child(#{$i}) {
       color: nth($colors, random(3));
 
-      &.floatingElement--darkMode{
+      .App--dark &{
         color: nth($darkModeColors, random(3));
       }
 

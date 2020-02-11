@@ -24,18 +24,6 @@ const HomePage = () => {
   const imageRefs = [useRef(null), useRef(null)];
   const timeline = anime.timeline();
 
-  const informationAnimation = () => {
-    return {
-      targets: ".homepage__introduction-text",
-      opacity: [0, 1],
-      easing: "easeInOutQuad",
-      duration: 2000,
-      complete: () => {
-        animateImages();
-      }
-    };
-  };
-
   useEffect(() => {
     document.title = "Apostolos Kalovelonis | Design & Development enthusiast";
     scatterAnimation();
@@ -54,32 +42,41 @@ const HomePage = () => {
         targets: " .letter",
         opacity: [0, 1],
         easing: "easeInOutSine",
-        duration: 1500,
+        duration: 800,
         delay: function(el, i) {
-          return 150 * (i + 1);
+          return 50 * (i + 1);
         }
       })
       .add({
         targets: ".homepage__subtitle",
         opacity: [0, 1],
         easing: "easeInOutSine",
-        duration: 1500
+        duration: 800
       });
   };
 
 
+  const informationAnimation = () => {
+    return {
+      targets: ".homepage__introduction-text",
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 700  ,
+      begin:animateImages
+    };
+  };
+
   const animateImages = () => {
-    console.log(imageRefs[0]);
-    anime(curveMovementAnimation(imageRefs[0].current, [-500, 0], [500, 0]));
-    anime(curveMovementAnimation(imageRefs[1].current, [800, 0], [-700, 0]));
+    anime(curveMovementAnimation(imageRefs[0].current, [-100, 0], [300, 0]));
+    anime(curveMovementAnimation(imageRefs[1].current, [200, 0], [-300, 0]));
   };
 
   const curveMovementAnimation = (target, valueX, valueY) => {
     return {
       targets: target,
-      translateX: { value: valueX, duration: 6000 },
-      opacity: { value: 1, duration: 7000 },
-      translateY: { value: valueY, duration: 7000 },
+      translateX: { value: valueX, duration: 3000 },
+      opacity: { value: 1, duration: 4000  },
+      translateY: { value: valueY, duration: 4000 },
       easing: "easeInOutBack"
     };
   };

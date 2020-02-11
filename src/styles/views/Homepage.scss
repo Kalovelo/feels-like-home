@@ -129,11 +129,16 @@
   }
   &__cta {
     display: flex;
-    font-size: 100px;
+    font-size: 60px;
     font-family: $maax;
     text-align: center;
     font-weight: 900;
     cursor: pointer;
+
+    @media(min-width:$tablet){
+    font-size: 100px;
+
+    }
   }
   &__cta-wrapper {
     margin-top: $desktop-content-margin;

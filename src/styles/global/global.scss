@@ -6,7 +6,7 @@
     color:$color__black;
     z-index: -1;
     transition: all 1s;
-    background: $color__white;
+    background: $color__whiteTotal;
 
     .layout{
     transition: all 1s;
@@ -19,7 +19,7 @@
 
     &--light,&--light .layout{
       color:$color__black;
-      background: $color__white;
+      background: $color__whiteTotal;
     }
   }
   
