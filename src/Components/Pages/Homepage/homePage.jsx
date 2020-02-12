@@ -5,23 +5,24 @@ import apostoles2 from "../../Images/apostoles2.jpg";
 import Lightbox from "react-image-lightbox";
 import anime from "animejs/lib/anime.es.js";
 import { useDispatch } from "react-redux";
-import { toggleTheme } from '../../../reducers/themeActions';
+import { toggleTheme } from "../../../reducers/themeActions";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const images = [apostoles1, apostoles2];
 
 const HomePage = () => {
-  
   const dispatch = useDispatch();
 
   const [state, setState] = useState({
     photoIndex: 0,
     isOpen: false,
-    showParallax: Parallax
+    showParallax: Parallax,
   });
 
   const informationRef = useRef(null);
   const headtitleRef = useRef(null);
   const imageRefs = [useRef(null), useRef(null)];
+  const ctaRef = useRef(null);
   const timeline = anime.timeline();
 
   useEffect(() => {
@@ -29,7 +30,8 @@ const HomePage = () => {
     scatterAnimation();
     timeline.add(informationAnimation());
     // eslint-disable-next-line
-}, []);
+  }, []);   
+
 
   const scatterAnimation = () => {
     var textWrapper = document.querySelector(".homepage__headtitle");
@@ -55,14 +57,13 @@ const HomePage = () => {
       });
   };
 
-
   const informationAnimation = () => {
     return {
       targets: ".homepage__introduction-text",
       opacity: [0, 1],
       easing: "easeInOutQuad",
-      duration: 700  ,
-      begin:animateImages
+      duration: 700,
+      begin: animateImages
     };
   };
 
@@ -75,16 +76,15 @@ const HomePage = () => {
     return {
       targets: target,
       translateX: { value: valueX, duration: 3000 },
-      opacity: { value: 1, duration: 4000  },
+      opacity: { value: 1, duration: 4000 },
       translateY: { value: valueY, duration: 4000 },
       easing: "easeInOutBack"
     };
   };
 
-
   const { photoIndex, isOpen } = state;
   return (
-    <div className="homepage layout">
+    <div className="homepage layout" >
       <div className="homepage__title-wrapper">
         <h1 ref={headtitleRef} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles. </span>
@@ -141,15 +141,17 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="homepage__cta-wrapper">
+      <div ref={ctaRef} className="homepage__cta-wrapper">
+      <ScrollAnimation animateOnce duration={1.5} animateIn="fade-in">
         <div
           className="homepage__cta-innerWrapper "
-          onMouseEnter  ={()=>dispatch(toggleTheme())}
-          onMouseLeave={()=>  dispatch(toggleTheme())}
+          onMouseEnter={() => dispatch(toggleTheme())}
+          onMouseLeave={() => dispatch(toggleTheme())}
         >
           <span className="homepage__cta-title">Up for a walk?</span>
           <h3 className="homepage__cta">PROCEED</h3>
         </div>
+        </ScrollAnimation>
       </div>
 
       {isOpen && (
