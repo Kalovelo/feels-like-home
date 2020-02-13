@@ -4,6 +4,7 @@
   display: inline;
   cursor: pointer;
 
+
   a {
     font-family: $garamond;
   }
@@ -20,5 +21,30 @@
         color: $color__black;
       }
     }
+  }
+  &--portal{
+    font-family:roboto;
+    padding:5px 15px;
+    font-weight: 100;
+    display: inline-block ;
+    border-top:1px solid transparent;
+    border-bottom:1px solid transparent;
+    color:$color__black;
+
+    .portal__section--dark &{
+      color:$color__white;
+
+
+    &:hover{
+      border-top:1px solid $color__white;
+      border-bottom:1px solid $color__white;  
+    }
+    }
+
+    &:hover{
+      border-top:1px solid $color__black;
+      border-bottom:1px solid $color__black;  
+    }
+    font-size:2rem;
   }
 }

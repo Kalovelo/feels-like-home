@@ -3,7 +3,7 @@ $animationDuration: 1.5s;
 $amount: 20;
 .floatingElement {
   overflow: hidden;
-  z-index: 0;
+  z-index:1;
   width: $particleSize;
   height: $particleSize;
   border-radius: $particleSize;
@@ -23,7 +23,7 @@ $amount: 20;
         color: nth($darkModeColors, random(3));
       }
 
-      top: random(85) * 2.5%  ;
+      top: random(85) * 1%  ;
       left: random(85) * 1%;
       animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
       animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;

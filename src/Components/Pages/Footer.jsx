@@ -2,6 +2,7 @@ import React from "react";
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
 import anime from "animejs/lib/anime.es.js";
+import {withRouter} from 'react-router-dom';
 
 const ctaConcepts = ["philosophy", "books", "events", "a project","your idea"];
 class Footer extends Component {
@@ -13,15 +14,32 @@ class Footer extends Component {
       letterClass: ".footer-letter"
     };
     this.conceptText = null;
+    this.footer = null;
   }
 
   componentDidMount() {
+    if(this.props.location.pathname!='/portal')
    this.typewriterInterval =  setInterval(() => {this.typewriterAnimation()}, 3800);
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.typewriterInterval);
   }
 
   copyMailtoClipboard=()=>{
       this.copyToClipboard("opa@kalovelo.com")
       this.copyAnimation();
+  }
+
+  scrollAnimate=(visible)=>{
+    if(visible.onScreen)
+    {
+      anime({
+        targets:this.footer,
+        opacity:[0,1],
+        duration:3000
+      })
+    }
   }
 
  copyToClipboard(text) {
@@ -32,11 +50,6 @@ class Footer extends Component {
     document.execCommand('copy');
     document.body.removeChild(dummy);
 }
-
-  componentWillUnmount(){
-      clearInterval(this.typewriterInterval);
-  }
-
 
   typewriterAnimation() {
     if(document.hasFocus())
@@ -74,12 +87,13 @@ class Footer extends Component {
 
 
   conceptLetterReplace = () => {
+    if(this.conceptText){
     let textWrapper = this.conceptText;
     textWrapper.innerHTML = ctaConcepts[this.state.indexCTA].replace(
       // eslint-disable-next-line
         /([^\x00-\x80]|\w)/g,
       "<span class='footer-letter'>$&</span>"
-    );
+    );}
   };
 
   finishedHover = () => {
@@ -151,7 +165,8 @@ class Footer extends Component {
       }
     ];
     return (
-      <div className="footer layout">
+      this.props.location.pathname=='/portal'?'':
+      <div className="footer layout" ref={footer=>{this.footer = footer}}>
         <div className="footer__divider" />
 
         <div className="footer__wrapper">
@@ -228,4 +243,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default withRouter(Footer);

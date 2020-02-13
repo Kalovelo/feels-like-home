@@ -7,6 +7,7 @@ import anime from "animejs/lib/anime.es.js";
 import { useDispatch } from "react-redux";
 import { toggleTheme } from "../../../reducers/themeActions";
 import ScrollAnimation from 'react-animate-on-scroll';
+import { NavLink } from 'react-router-dom';
 
 const images = [apostoles1, apostoles2];
 
@@ -149,7 +150,7 @@ const HomePage = () => {
           onMouseLeave={() => dispatch(toggleTheme())}
         >
           <span className="homepage__cta-title">Up for a walk?</span>
-          <h3 className="homepage__cta">PROCEED</h3>
+          <NavLink to='/portal' onClick={() => dispatch(toggleTheme())} className="homepage__cta">PROCEED</NavLink>
         </div>
         </ScrollAnimation>
       </div>
