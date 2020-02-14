@@ -19,22 +19,23 @@ import ThankYou from './Components/Pages/thankYou';
 import NotFound404 from './Components/Pages/notFound404';
 import Cookiefier from './Components/cookiefier';
 
+
 //!store
 import { useSelector } from 'react-redux';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
+import withRouter from './Components/header/Desktop/header';
+import FloatingElements from './Components/components/floatingElements';
 
-const App=()=>{
-
+const App=(props)=>{
   const theme = useSelector(state=>state.theme);
   return <Router >
           <div id='App' className={"App fade-in App--"+(theme)}>
           <ScrollToTop />
             <Header id='mynav' />
             <Cookiefier />
-            {[...Array(3)].map((index)=><span key={index} className="floatingElement floatingElement--darkMode"></span>)}
-
+            <FloatingElements num={3}/>
             <Switch>
               <Route exact path='/' component={Homepage} />
               <Route path='/Background' component={Background} />

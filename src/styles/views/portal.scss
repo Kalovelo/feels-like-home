@@ -1,31 +1,34 @@
 .portal{
     display:flex;
     z-index: -3;
+    position: relative;
+    
     flex-direction: column;
-
+    
     @media(min-width:$tablet){
-    flex-direction: row;
+        flex-direction: row;
     }
-
-
+    
+    
     &__button-wrapper{
         margin-top:80px;
         display: flex;
     }
-
+    
     &__section{
         display: flex;
+        overflow: hidden ;
         flex-direction: column;
         z-index: 0;
         overflow: hidden;
         padding:0 20px;
-        height:100vh;
-        margin-top: -110px;
+        height: 100%;
+        background: $color__white;
         
         @media(min-width:$desktop){
-            margin-top: -120px;
             padding:0 100px;
-            height:110vh;
+            height:100vh;
+            overflow: hidden;
         }
 
         

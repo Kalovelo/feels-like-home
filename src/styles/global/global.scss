@@ -6,8 +6,7 @@
     color:$color__black;
     z-index: -1;
     transition: all 1s;
-    background: $color__whiteTotal;
-
+    background: $color__white;
     .layout{
     transition: all 1s;
 
@@ -19,7 +18,7 @@
 
     &--light,&--light .layout{
       color:$color__black;
-      background: $color__whiteTotal;
+      background: $color__white;
     }
   }
   
@@ -42,9 +41,9 @@
   }
   body
   {
-    
+    background: $color__white;
+    position: relative;
     scroll-behavior:smooth;
-    overflow: visible;
     overflow-x:hidden!important; 
   }
   

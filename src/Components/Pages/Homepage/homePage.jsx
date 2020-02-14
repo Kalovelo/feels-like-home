@@ -85,7 +85,7 @@ const HomePage = () => {
 
   const { photoIndex, isOpen } = state;
   return (
-    <div className="homepage layout" >
+    <div className="homepage layout fade-in" >
       <div className="homepage__title-wrapper">
         <h1 ref={headtitleRef} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles. </span>
