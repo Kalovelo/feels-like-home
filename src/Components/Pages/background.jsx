@@ -110,9 +110,6 @@ render(){
                         {volunteeringEvents.map((event,i)=><li><h6><a rel="noopener noreferrer" href={event.link} target="_blank">- {event.name}</a> | {event.role} </h6></li>)}
                     </ul>
                 </Col>
-                <Col>
-                    <h1 className="interestsContact">Contact me at<br/>apostoloskalovelonis@ieee.org</h1>
-                </Col>
             </Row>
         </Container>
     )

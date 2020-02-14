@@ -1,0 +1,93 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  &__pageTitle {
+    text-align: center;
+    font-family: adobe-garamond-pro, serif;
+    margin-bottom: 10%;
+    padding-top: 10%;
+    font-size: 45px;
+  }
+
+  &__container-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media(min-width:$tablet){
+        flex-direction: row;
+    }
+  }
+
+  &__container {
+      height: 500px;
+      padding: 5%;
+      width: 100%;
+      
+      @media(min-width:$tablet){
+        width: 50%;
+    }
+
+    &--left {
+      color: $color__black;
+
+      .App--dark & {
+        z-index: 3;
+        color: $color__whiteTotal;
+      }
+    }
+
+    &--big{
+        margin-top:$desktop-content-margin;
+        width:90%;
+    }
+
+    &--right {
+      z-index: 3;
+      background: $color__black;
+      color: $color__whiteTotal;
+
+      .App--dark & {
+        background: $color__white;
+        color: $color__black;
+      }
+    }
+  }
+
+  &__container-title {
+    text-align: center;
+    font-family: adobe-garamond-pro, serif;
+    margin-bottom: 50px;
+  }
+
+  &__container-content {
+      font-size:15px;
+
+      @media(min-width:$desktop){
+        font-size:18px;
+    }
+
+    &::first-letter {
+      font-family: adobe-garamond-pro, serif;
+      font-weight: 300;
+      float: left;
+      font-size: 75px;  
+      line-height: 60px;
+      padding-top: 4px;
+      padding-right: 8px;
+      padding-left: 3px;
+    }
+  }
+
+  &__quote{
+      font-family: $garamond;
+
+      &--last{
+          text-align: right;
+          display: block;
+      }
+  }
+}

@@ -22,10 +22,8 @@ import Cookiefier from './Components/cookiefier';
 
 //!store
 import { useSelector } from 'react-redux';
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
-import withRouter from './Components/header/Desktop/header';
 import FloatingElements from './Components/components/floatingElements';
 
 const App=(props)=>{
@@ -35,7 +33,6 @@ const App=(props)=>{
           <ScrollToTop />
             <Header id='mynav' />
             <Cookiefier />
-            <FloatingElements num={3}/>
             <Switch>
               <Route exact path='/' component={Homepage} />
               <Route path='/Background' component={Background} />

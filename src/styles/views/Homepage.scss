@@ -1,14 +1,4 @@
 .homepage {
-  padding: $mobile-paddings;
-  
-  @media (min-width: $desktop) {
-    flex-direction: row;
-    padding: $desktop-paddings;
-  }
-
-  @media (min-width: $desktop-large) {
-    padding: $desktop-large-paddings;
-  }
 
   &__headtitle {
     font-family: $maax;

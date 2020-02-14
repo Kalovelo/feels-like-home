@@ -1,38 +1,11 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import "./background.css";
 import { Component } from "react";
 import "../Images/lightbox.css";
-import "./about.css";
 import { Helmet } from "react-helmet";
-import toles_illustrator from "../Images/toles_illustrator.jpg";
-
-const illustration = () => {
-  return (
-    <Row className="hideonMob">
-      <Col md={{ span: 2, offset: 2 }}>
-        <img id="tolesIll" alt="dummy" src={toles_illustrator} />
-      </Col>
-      <Col md={{ span: 4 }}>
-        <p className="thanosCredits">
-          Illustration by my inspirational friend,{" "}
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.instagram.com/thanostryfonidis"
-          >
-            Thanos Tryfonidis
-          </a>
-        </p>
-      </Col>
-    </Row>
-  );
-};
+import FloatingElements from '../components/floatingElements'
 
 class About extends Component {
-  state = {
-    showIllu: illustration
-  };
 
   componentDidMount() {
     document.title = "The Ocean";
@@ -40,76 +13,55 @@ class About extends Component {
 
   render() {
     return (
-      <Container id="aboutContainer" fluid="true">
+      <div className="layout  fade-in about">
         <Helmet>
           <meta
             name="description"
             content=" Get to know me as a person ·
             Random facts, how i spend my free time or which hot liquid i prefer inside my cup."
           />
-          <meta
-            itemprop="description"
-            content=" Get to know me as a person ·
-            Random facts, how i spend my free time or which hot liquid i prefer inside my cup."
-          />
-
           <meta NAME="ROBOTS" CONTENT="noindex,follow" />
         </Helmet>
 
-        <h1 className="fade-in" id="pageTitle">
+        <FloatingElements num={3}/>
+
+        <h1 className="fade-in" className="about__pageTitle">
           FOOD TO KEEP PASSION FLOWING
         </h1>
-        <Row id="aboutBoxes">
-          <Col md={{ span: 6, offset: 1 }}>
-            <h1 className="fade-in slide-in-top" id="aboutTitle">
-              KAIZEN
-            </h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col id="SportsBox" md={{ span: 5, offset: 1 }}>
-            <h1 className="boxTitle">Athletics</h1>
-            <hr align="center" size="50" />
-            <p className="press">
+        <div className="about__container-wrapper">
+          <div className="about__container about__container--left">
+            <h3 className="about__container-title">Athletics</h3>
+            <p className="about__container-content"> 
               Spending an hour or two sweating is enough to lift a day's
-              weight.(puntastic). Extra points having a session in a more
-              natural environment than gym - seaside or inside a forest - for
-              working out both the body and spirit. What a combo!
-            </p>
-            <p>
+              weight. Extra points having a session in a more
+              natural environment than a gym - seaside or inside a forest - for
+              working out both the body and spirit. <i>What a combo!</i>
               Talking about physical and spiritual improvement, i have zeal for
               the martial artist's lifestyle, where courage, discipline &
               respect are the root elements of a fighter's spirit.
-              <i>
+              <br/><br/><i>
                 The story begins with a young kid having extra fat and a
                 hard-copy of Rocky. Passion forged from the italian stallion's
                 story.
               </i>
             </p>
-          </Col>
-          <Col className="slide-in-right" id="BooksBox" md={{ span: 5 }}>
-            <h1 className="boxTitle">Literature</h1>
-            <hr align="center" size="50" />
-            <p className="press">
+          </div>
+          <div className="slide-in-right about__container about__container--right">
+            <h3 className="about__container-title">Literature</h3>
+            <p className="about__container-content">
               {" "}
               Books here and there, full of notes. My cup of tea includes
               self-improvement, philosophy and classic literature books. By the
               way, the closer I am to nature, the more i appreciate a good poem.
-            </p>
-            <p>
-              I love trading books, so if you're up for some new suggestions and
+              <br/><br/>I love trading books, so if you're up for some new suggestions and
               long conversations, don't forget to say so!
             </p>
-            {/* //todo: CTA */}
-          </Col>
-        </Row>
+          </div>
+        </div>
 
-        <Row className="aboutRow" id="secondRowAbout">
-          <Col md={{ span: 8, offset: 2 }}>
-            <Col id="videogamesBox" md={{ span: 12 }}>
-              <h1 className="boxTitle">Entertainment</h1>
-              <hr align="center" size="50" />
-              <p className="press">
+        <div className="about__container about__container--big">
+              <h1 className="about__container-title">Entertainment</h1>
+              <p className="about__container-content">
                 My music preference ranges from the heaviest metal riffs to the
                 slowest, calming hip-hop beats. It always depends on the mood,
                 the situtation - and of course - the company. <br />
@@ -124,8 +76,8 @@ class About extends Component {
                   </a>
                 </i>
               </p>
-              <span className="gamesSpan">
-                <i>and if we're talking about...</i>
+              <span className="about__quote">
+                  and if we're talking about...
               </span>
               <p>
                 Videogames feel just like reading a good book but here you're in
@@ -146,11 +98,9 @@ class About extends Component {
                 </a>
                 , or you could simply hit me up with a friend request!{" "}
               </p>
-              <span className="quote">'Don't you dare go hollow.'</span>
-            </Col>
-          </Col>
-        </Row>
-      </Container>
+              <span className="about__quote about__quote--last">'Don't you dare go hollow.'</span>
+            </div>
+          </div>
     );
   }
 }

@@ -8,10 +8,10 @@ import { useDispatch } from "react-redux";
 import { toggleTheme } from "../../../reducers/themeActions";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { NavLink } from 'react-router-dom';
-
+import FloatingElements from '../../components/floatingElements'
 const images = [apostoles1, apostoles2];
 
-const HomePage = () => {
+const HomePage = (props) => {
   const dispatch = useDispatch();
 
   const [state, setState] = useState({
@@ -86,6 +86,7 @@ const HomePage = () => {
   const { photoIndex, isOpen } = state;
   return (
     <div className="homepage layout fade-in" >
+                  <FloatingElements num={3}/>
       <div className="homepage__title-wrapper">
         <h1 ref={headtitleRef} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles. </span>
