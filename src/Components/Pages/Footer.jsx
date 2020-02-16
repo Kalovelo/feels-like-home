@@ -18,7 +18,7 @@ class Footer extends Component {
   }
 
   componentDidMount() {
-    if(this.props.location.pathname!='/portal')
+    if(this.props.location.pathname!=='/portal')
    this.typewriterInterval =  setInterval(() => {this.typewriterAnimation()}, 3800);
   }
 
@@ -165,7 +165,7 @@ class Footer extends Component {
       }
     ];
     return (
-      this.props.location.pathname=='/portal'?'':
+      this.props.location.pathname==='/portal'?'':
       <div className="footer layout" ref={footer=>{this.footer = footer}}>
         <div className="footer__divider" />
 

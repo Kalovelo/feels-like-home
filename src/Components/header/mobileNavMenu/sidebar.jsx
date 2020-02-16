@@ -27,7 +27,7 @@ export default class Sidebar extends Component {
   return <div id="topbar">
       <Menu customBurgerIcon={ <img alt='' src={logo}/>} isOpen={ this.state.menuOpen }  onStateChange={(state) => this.handleStateChange(state)} width={ '100%' } className="mobile-hide">
         <div className='sideMenu'>
-        {this.props.links.map(path => <li><NavLink onClick={()=>this.closeMenu()} to={path.link}>{path.title}</NavLink></li> )}
+        {this.props.links.map((path,index) => <li><NavLink key={index} onClick={()=>this.closeMenu()} to={path.link}>{path.title}</NavLink></li> )}
         </div>
       </Menu>
     </div>

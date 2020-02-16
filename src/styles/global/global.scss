@@ -7,6 +7,7 @@
     z-index: -1;
     transition: all 1s;
     background: $color__white;
+    font-size:16px;
     &--dark,&--dark .layout{
       color:$color__white;
       background: $color__black;
@@ -38,7 +39,7 @@
     }
     &:hover{
       text-decoration: none;
-      transition: all .5s;
+      transition: all .2s;
     }
   }
   body

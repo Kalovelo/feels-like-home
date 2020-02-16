@@ -63,25 +63,6 @@
     margin-bottom: 50px;
   }
 
-  &__container-content {
-      font-size:15px;
-
-      @media(min-width:$desktop){
-        font-size:18px;
-    }
-
-    &::first-letter {
-      font-family: adobe-garamond-pro, serif;
-      font-weight: 300;
-      float: left;
-      font-size: 75px;  
-      line-height: 60px;
-      padding-top: 4px;
-      padding-right: 8px;
-      padding-left: 3px;
-    }
-  }
-
   &__quote{
       font-family: $garamond;
 

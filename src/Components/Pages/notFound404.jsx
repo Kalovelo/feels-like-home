@@ -2,7 +2,6 @@ import React from 'react';
 import {Container} from 'react-bootstrap';
 import { Component } from 'react';
 import './notFound404.css'
-import {Helmet} from "react-helmet";
 
 
 class NotFound404 extends Component
@@ -44,15 +43,9 @@ class NotFound404 extends Component
         
         
         return(
-            <Container id='notFoundBody' fluid='true'>
-
-                <Helmet>
-                <meta NAME="ROBOTS" CONTENT="noindex,nofollow"/>
-                </Helmet>
-
+            <div id='notFoundBody' fluid='true'>
             <p>{this.state.randomString1} <a href='/' id='notFoundT'>{this.props.location.pathname} wasn't found.<br/>Friend, you should go back.</a> {this.state.randomString2}</p>
-            
-            </Container>
+            </div>
         )
     }
 }

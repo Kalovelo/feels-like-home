@@ -2,7 +2,6 @@ import React from "react";
 import "./background.css";
 import { Component } from "react";
 import "../Images/lightbox.css";
-import { Helmet } from "react-helmet";
 import FloatingElements from '../components/floatingElements'
 
 class About extends Component {
@@ -14,24 +13,15 @@ class About extends Component {
   render() {
     return (
       <div className="layout  fade-in about">
-        <Helmet>
-          <meta
-            name="description"
-            content=" Get to know me as a person ·
-            Random facts, how i spend my free time or which hot liquid i prefer inside my cup."
-          />
-          <meta NAME="ROBOTS" CONTENT="noindex,follow" />
-        </Helmet>
-
         <FloatingElements num={3}/>
 
-        <h1 className="fade-in" className="about__pageTitle">
+        <h1 className="fade-in about__pageTitle">
           FOOD TO KEEP PASSION FLOWING
         </h1>
         <div className="about__container-wrapper">
           <div className="about__container about__container--left">
             <h3 className="about__container-title">Athletics</h3>
-            <p className="about__container-content"> 
+            <p className="layout__container-content"> 
               Spending an hour or two sweating is enough to lift a day's
               weight. Extra points having a session in a more
               natural environment than a gym - seaside or inside a forest - for

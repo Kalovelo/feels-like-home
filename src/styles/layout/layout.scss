@@ -1,19 +1,19 @@
-$desktop-large-paddings:50px 200px;
-$desktop-paddings:100px 50px;
+$desktop-large-paddings: 50px 200px;
+$desktop-paddings: 100px 50px;
 
-$mobile-paddings:100px 10px;
+$mobile-paddings: 100px 10px;
 
-$desktop-content-margin:10vh;
+$desktop-content-margin: 10vh;
 
-$mobile:460px;
-$tablet:720px;
-$desktop:1024px;
-$desktop-large:1350px;
-.layout{
-    z-index: -1;
-    transition: all 1s;
-    padding: $mobile-paddings;
-  
+$mobile: 460px;
+$tablet: 720px;
+$desktop: 1024px;
+$desktop-large: 1350px;
+.layout {
+  z-index: -1;
+  transition: all 1s;
+  padding: $mobile-paddings;
+
   @media (min-width: $desktop) {
     padding: $desktop-paddings;
   }
@@ -22,6 +22,24 @@ $desktop-large:1350px;
     padding: $desktop-large-paddings;
   }
 
+  &__container-content {
+    font-size: 1rem;
+
+    @media (min-width: $desktop) {
+      font-size: 1.2rem;
     }
 
-@import './footer.scss';
+    &::first-letter {
+      font-family: adobe-garamond-pro, serif;
+      font-weight: 300;
+      float: left;
+      font-size: 75px;
+      line-height: 60px;
+      padding-top: 4px;
+      padding-right: 8px;
+      padding-left: 3px;
+    }
+  }
+}
+
+@import "./footer.scss";

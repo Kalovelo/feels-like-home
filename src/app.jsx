@@ -24,7 +24,6 @@ import Cookiefier from './Components/cookiefier';
 import { useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
-import FloatingElements from './Components/components/floatingElements';
 
 const App=(props)=>{
   const theme = useSelector(state=>state.theme);

@@ -1,9 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import { Button } from '../components/button';
 
 class Portal extends React.Component {
+
   componentDidMount() {
     document.title = "Choose a Path";
   }
@@ -11,9 +10,6 @@ class Portal extends React.Component {
   render() {
     return (
       <div className="portal fade-in">
-        <Helmet>
-          <meta NAME="ROBOTS" CONTENT="noindex,nofollow" />
-        </Helmet>
         <div className="portal__section portal__section--light">
             <div className="portal__section-wrapper">
             <h1 className="portal__title">About</h1>
@@ -23,7 +19,7 @@ class Portal extends React.Component {
               Random facts, how i spend my free time or which hot liquid i
               prefer inside my cup.{" "}
             </p>
-            <div class="portal__button-wrapper">
+            <div className="portal__button-wrapper">
             <Button link="/about" text="Ocean Route ·" class="button--portal"/>
             </div>
             </div>
