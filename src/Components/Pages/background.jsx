@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import "../Images/lightbox.css";
 import { Wordpress, Ihu, Fosdem } from "../../content/communities.jsx";
 import anime from "animejs/lib/anime.es.js";
+import FloatingElements from '../components/floatingElements'
+
 
 const Background = () => {
   useEffect(() => {
@@ -39,20 +41,44 @@ const Background = () => {
   ];
 
   let communityTable = {
-    attributes: ["Emblem", "Title", "Role"],
-    data: [
-      [<Ihu class="background__svg" />, "IEEE IHU SKG Student Branch", "Member"],
-      [
-        <Wordpress class="background__svg" />,
-        "WordPress Greek Community",
-        "Volunteer"
-      ],
-      [<Fosdem class="background__svg" />, "Fosdem", "Volunteer"]
+    attributes: ["Title", "Role"],
+    content: [
+      {
+        link: "https://www.facebook.com/ieee.ihuthess",
+        data: [
+          <span>
+            <Ihu class="background__svg" />
+            IEEE IHU SKG Student Branch
+          </span>,
+          "Member"
+        ]
+      },
+      {
+        link: "https://wpgreece.org/",
+        data: [
+          <span>
+            <Wordpress class="background__svg" />
+            WordPress Greek Community
+          </span>,
+          "Volunteer"
+        ]
+      },
+      {
+        link: "https://fosdem.org",
+        data: [
+          <span>
+            <Fosdem class="background__svg" />
+            Fosdem
+          </span>,
+          "Volunteer"
+        ]
+      }
     ]
   };
 
   return (
     <div fluid="true" className="background layout">
+        <FloatingElements num={3}/>
       <h1 className="background__title">Background</h1>
       <p className="layout__container-content background__content">
         {/* //todo: refactor */}I admire creations that try to show their
@@ -64,6 +90,7 @@ const Background = () => {
         My experience involves working as a WordPress freelancer and in-house
         Front / React Developer.
       </p>
+      <h2 className="background__subtitle">Communities</h2>
       <table className="background__communities">
         <thead>
           <tr className="background__community-row">
@@ -79,12 +106,12 @@ const Background = () => {
           </tr>
         </thead>
         <tbody>
-          {communityTable.data.map((element, index) => (
+          {communityTable.content.map((element, index) => (
             <tr
               key={index}
               className="background__community-row background__community-row--content"
             >
-              {element.map((dataItem, index) => (
+              {element.data.map((dataItem, index) => (
                 <td
                   style={{ opacity: 0 }}
                   className="background__community-item"
@@ -93,6 +120,7 @@ const Background = () => {
                   {dataItem}
                 </td>
               ))}
+              <td><a className="background__community-item background__community-item--cta" href={element.link} target="_blank">Go!</a></td>
             </tr>
           ))}
         </tbody>
