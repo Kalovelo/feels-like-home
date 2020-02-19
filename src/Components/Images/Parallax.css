@@ -1,78 +1,67 @@
 .paral {
-    margin-top:7%;
-    height:700px;
-    background-attachment: fixed;
-    background-size: auto;
-    background-position: 100% 10%;
-    width:100%;
-    -webkit-box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
-    -moz-box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
-    box-shadow: -5px 33px 53px -32px rgba(0,0,0,0.37);
-    
-    }
-.jumbotron
-{
-    border-radius: 0%;
+  margin-top: 7%;
+  height: 700px;
+  background-attachment: fixed;
+  background-size: auto;
+  background-position: 100% 10%;
+  width: 100%;
+  -webkit-box-shadow: -5px 33px 53px -32px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: -5px 33px 53px -32px rgba(0, 0, 0, 0.37);
+  box-shadow: -5px 33px 53px -32px rgba(0, 0, 0, 0.37);
 }
-    
-        
+.jumbotron {
+  border-radius: 0%;
+}
 
-/* Paragraph for Parallax Section */ 
+/* Paragraph for Parallax Section */
 .paral p {
-    font-size: 24px;
-    color:red;
-    text-align: center;
-    line-height: 60px;
-    
-    }
-     
-    /* Heading for Parallax Section */ 
-    .paralsec h1 {
-    color: #000000;
-    font-size: 23px;
-    text-align: center;
-    font-family: adobe-garamond-pro, serif;
-    }
+  font-size: 24px;
+  color: red;
+  text-align: center;
+  line-height: 60px;
+}
 
-    .paralh1trans
-    {
-        -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-        filter: blur(5px);
-        transition: 0.3s;
-    }
+/* Heading for Parallax Section */
+.paralsec h1 {
+  color: #000000;
+  font-size: 23px;
+  text-align: center;
+  font-family: adobe-garamond-pro, serif;
+}
 
-    @media (max-width:1000px)
-    {
-        .paralh1trans
-        {
-            -webkit-filter:none!important; /* Safari 6.0 - 9.0 */
-            filter: none!important;
-        }
+.paralh1trans {
+  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(5px);
+  transition: 0.3s;
+}
 
-        .paral
-        {
-            height:500px;
-            font-size: 20px;
-        }
+@media (max-width: 1000px) {
+  .paralh1trans {
+    -webkit-filter: none !important; /* Safari 6.0 - 9.0 */
+    filter: none !important;
+  }
 
-        .paral h1
-        {
-            font-size: 20px!important;
-            color:#fff
-        }
-    }
+  .paral {
+    height: 500px;
+    font-size: 20px;
+  }
 
-    .paralh1trans:hover{
-        -webkit-filter:none!important; /* Safari 6.0 - 9.0 */
-    filter: none!important;
-    transition: 0.3s;
-    }
+  .paral h1 {
+    font-size: 20px !important;
+    color: #fff;
+  }
+}
 
+.paralh1trans:hover {
+  -webkit-filter: none !important; /* Safari 6.0 - 9.0 */
+  filter: none !important;
+  transition: 0.3s;
+}
 
-    .paralsec {
-        background-image: url("./mountain.jpg");
-        }
-    
+.paralsec {
+  background-image: url("./mountain.jpg");
+}
 
-        .jumbotron{margin-bottom: 0;}
-         
+.jumbotron {
+  margin-bottom: 0;
+}

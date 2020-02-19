@@ -1,8 +1,7 @@
 import React from "react";
-import { Button } from '../components/button';
+import { Button } from "../components/button";
 
 class Portal extends React.Component {
-
   componentDidMount() {
     document.title = "Choose a Path";
   }
@@ -11,7 +10,7 @@ class Portal extends React.Component {
     return (
       <div className="portal fade-in">
         <div className="portal__section portal__section--light">
-            <div className="portal__section-wrapper">
+          <div className="portal__section-wrapper">
             <h1 className="portal__title">About</h1>
             <p className="portal__description">
               {" "}
@@ -20,9 +19,13 @@ class Portal extends React.Component {
               prefer inside my cup.{" "}
             </p>
             <div className="portal__button-wrapper">
-            <Button link="/about" text="Ocean Route ·" class="button--portal"/>
+              <Button
+                link="/about"
+                text="Ocean Route ·"
+                class="button--portal"
+              />
             </div>
-            </div>
+          </div>
         </div>
         <div className="portal__section portal__section--dark">
           <h1 className="portal__title">Background</h1>
@@ -32,7 +35,11 @@ class Portal extends React.Component {
             plans.
           </p>
           <div class="portal__button-wrapper">
-            <Button link="/background" text="· Earth Route" class="button--portal"/>
+            <Button
+              link="/background"
+              text="· Earth Route"
+              class="button--portal"
+            />
           </div>
         </div>
       </div>

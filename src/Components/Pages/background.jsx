@@ -3,8 +3,7 @@ import React, { useEffect } from "react";
 import "../Images/lightbox.css";
 import { Wordpress, Ihu, Fosdem } from "../../content/communities.jsx";
 import anime from "animejs/lib/anime.es.js";
-import FloatingElements from '../components/floatingElements'
-
+import FloatingElements from "../components/floatingElements";
 
 const Background = () => {
   useEffect(() => {
@@ -78,7 +77,7 @@ const Background = () => {
 
   return (
     <div fluid="true" className="background layout">
-        <FloatingElements num={3}/>
+      <FloatingElements num={3} />
       <h1 className="background__title">Background</h1>
       <p className="layout__container-content background__content">
         {/* //todo: refactor */}I admire creations that try to show their
@@ -120,7 +119,15 @@ const Background = () => {
                   {dataItem}
                 </td>
               ))}
-              <td><a className="background__community-item background__community-item--cta" href={element.link} target="_blank">Go!</a></td>
+              <td>
+                <a
+                  className="background__community-item background__community-item--cta"
+                  href={element.link}
+                  target="_blank"
+                >
+                  Go!
+                </a>
+              </td>
             </tr>
           ))}
         </tbody>

@@ -7,7 +7,11 @@ class Header extends React.Component {
     nav: HeaderDesktop
   };
 
-  links = [{ title: "About", link: "/about" },{ title: "Background", link: "/background" },{ title: "Home", link: "/" },];
+  links = [
+    { title: "About", link: "/about" },
+    { title: "Background", link: "/background" },
+    { title: "Home", link: "/" }
+  ];
 
   componentDidMount = () => {
     window.addEventListener("resize", this.resize.bind(this));
@@ -22,7 +26,7 @@ class Header extends React.Component {
   };
 
   render() {
-    return <this.state.nav links={this.links}/>;
+    return <this.state.nav links={this.links} />;
   }
 }
 

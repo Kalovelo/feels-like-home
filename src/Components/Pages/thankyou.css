@@ -1,74 +1,61 @@
-#thankYouNames a
-{
-    color:#424242;
+#thankYouNames a {
+  color: #424242;
 }
 
-#thankYouNames a:hover
-{
-    color:#cccccc!important;
+#thankYouNames a:hover {
+  color: #cccccc !important;
 }
-#thankYou
-{
-    text-align: center;
+#thankYou {
+  text-align: center;
 }
-#thankYouNames
-{
-    margin-bottom:20%;
+#thankYouNames {
+  margin-bottom: 20%;
 }
 
-
-.thankYouLeft
-{
-    text-align: left;
-   
+.thankYouLeft {
+  text-align: left;
 }
 
-.thankYouLeft,.thankYouRight
-{
-    margin-top:5%;
-    font-size:20px;
-
+.thankYouLeft,
+.thankYouRight {
+  margin-top: 5%;
+  font-size: 20px;
 }
 
-@media (max-width:1000px)
-{ 
-    .thankYouLeft, .thankYouRight
-    {
-        margin-top:20%;
-        font-size:15px;
-    }
+@media (max-width: 1000px) {
+  .thankYouLeft,
+  .thankYouRight {
+    margin-top: 20%;
+    font-size: 15px;
+  }
 
-    #ofCourse
-    {
-        font-size:18px;
-    }
+  #ofCourse {
+    font-size: 18px;
+  }
 
-    #youHere
-    {
-        font-size:22px;
-    }
+  #youHere {
+    font-size: 22px;
+  }
 }
-#ofCourse
-{
-    margin-top:20%;
+#ofCourse {
+  margin-top: 20%;
 }
-#youHere,#ofCourse
-{
-    
-    text-align: center;
+#youHere,
+#ofCourse {
+  text-align: center;
 }
 
-#youHere,#ofCourse,.thankYouLeft,.thankYouRight,#thankYouNames a
-{
-    font-family: adobe-garamond-pro, serif; 
+#youHere,
+#ofCourse,
+.thankYouLeft,
+.thankYouRight,
+#thankYouNames a {
+  font-family: adobe-garamond-pro, serif;
 }
-.thankYouRight
-{
-    text-align: right;
-    
+.thankYouRight {
+  text-align: right;
 }
 
-#thankYouCol
-{
-    margin-bottom:8%;
+#thankYouCol {
+  margin-bottom: 8%;
 }

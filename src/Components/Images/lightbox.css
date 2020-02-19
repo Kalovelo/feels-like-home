@@ -1,46 +1,44 @@
-  
-  .italic { font-style: italic; }
-  .small { font-size: 0.8em; }
-  
-  /** LIGHTBOX MARKUP **/
-  
-  .lightbox {
-      /** Default lightbox to hidden */
-      visibility: hidden;
-      opacity: 0;
-      
+.italic {
+  font-style: italic;
+}
+.small {
+  font-size: 0.8em;
+}
 
-      /** Position and style */
-      position: fixed;
-      z-index: 999;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      top: 0;
-      left: 0;
-      background: rgba(0,0,0,0.8);
-  }
-  
-  .lightbox img {
-      /** Pad the lightbox image */
-      max-width: 100%;
-      max-height: 100%;
-      margin-top: 5%;
-      
-  }
+/** LIGHTBOX MARKUP **/
 
-  @media (min-width:1200px)
-  {
-  }
-  
+.lightbox {
+  /** Default lightbox to hidden */
+  visibility: hidden;
+  opacity: 0;
 
-  .lightbox:target {
-    /** Remove default browser outline */
-    outline: none;
+  /** Position and style */
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
 
-    /** Unhide lightbox **/
-    visibility: visible;
-    opacity: 1;
+.lightbox img {
+  /** Pad the lightbox image */
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 5%;
+}
+
+@media (min-width: 1200px) {
+}
+
+.lightbox:target {
+  /** Remove default browser outline */
+  outline: none;
+
+  /** Unhide lightbox **/
+  visibility: visible;
+  opacity: 1;
   transition: visibility 0s, opacity 0.1s linear;
-
 }

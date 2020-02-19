@@ -1,135 +1,115 @@
-#portal
-{
-    margin-top:-5%!important;
-    overflow-y: hidden!important;
+#portal {
+  margin-top: -5% !important;
+  overflow-y: hidden !important;
 }
 
-#darkSection 
-{
-    background-color:#242323;
-    color:#FFFFFF;
+#darkSection {
+  background-color: #242323;
+  color: #ffffff;
 }
 
-#darkSection,#lightSection
-{
-   
-    padding-top:15%!important;
-    padding-left:3%;
-    padding-right:3%;
-  
+#darkSection,
+#lightSection {
+  padding-top: 15% !important;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
-
-#darkSection *::selection ,#transNavbar *::selection{
-    background:  #ffffff; /* WebKit/Blink Browsers */
-    color: #000000;
-  }
-  #darkSection *::-moz-selection, #transNavbar *::selection {
-      background:  #ffffff; /* WebKit/Blink Browsers */
-    color: #000000;
-  }
-
-
-.darkButton
-{
-    margin-top:20%;
-    margin-right:55%;
-  
-    border: none;
-    font-size: 28px;
-    font-family: roboto;
-    font-weight: 100;
-    border-bottom: 0.5px solid transparent; /* <- here */ 
-    border-top: 0.5px solid transparent;  
-
+#darkSection *::selection,
+#transNavbar *::selection {
+  background: #ffffff; /* WebKit/Blink Browsers */
+  color: #000000;
+}
+#darkSection *::-moz-selection,
+#transNavbar *::selection {
+  background: #ffffff; /* WebKit/Blink Browsers */
+  color: #000000;
 }
 
-.darkButton:hover
-{   
-    color:rgb(190, 190, 190);
-    border-color:#979797; 
+.darkButton {
+  margin-top: 20%;
+  margin-right: 55%;
+
+  border: none;
+  font-size: 28px;
+  font-family: roboto;
+  font-weight: 100;
+  border-bottom: 0.5px solid transparent; /* <- here */
+  border-top: 0.5px solid transparent;
 }
 
-.darkButton:hover,.lightButton:hover
-{
-    transition: border-bottom 1s;
-    background-color: transparent!important;
+.darkButton:hover {
+  color: rgb(190, 190, 190);
+  border-color: #979797;
+}
 
-    transition:   1s;
-    border-width:10%;
+.darkButton:hover,
+.lightButton:hover {
+  transition: border-bottom 1s;
+  background-color: transparent !important;
 
+  transition: 1s;
+  border-width: 10%;
 }
 
 .darkButton:hover:before {
-    border-width:50px!important;
+  border-width: 50px !important;
 }
 
-.lightButton:hover
-{
-    color: #747474;
+.lightButton:hover {
+  color: #747474;
+  border-color: #979797;
+}
+
+.lightButton {
+  margin-top: 20%;
+  margin-left: 55%;
+  text-align: left !important;
+  border: none;
+  font-size: 28px;
+  font-family: roboto;
+  font-weight: 100;
+  color: #000000;
+  border-bottom: 0.5px solid transparent;
+  border-top: 0.5px solid transparent;
+}
+
+.lightButton a {
+  color: #000000;
+}
+
+#darkSection,
+#darkSection p {
+  text-align: right !important;
+}
+#lightSection p {
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .darkButton,
+  .lightButton {
     border-color: #979797;
+  }
+  .lightButton,
+  .darkButton {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 5%;
+  }
+  #darkSection,
+  #lightSection {
+    padding-bottom: 20%;
+  }
+
+  #portal h1 {
+    margin-top: 20%;
+  }
 }
 
-.lightButton
-{
-    margin-top:20%;
-    margin-left:55%;
-    text-align: left!important;
-    border: none;
-    font-size: 28px;
-    font-family: roboto;
-    font-weight: 100;
-    color:#000000;
-    border-bottom: 0.5px solid transparent;
-    border-top: 0.5px solid transparent;
+@media (min-width: 1000px) {
+  #darkSection,
+  #lightSection {
+    padding-bottom: 20% !important;
+  }
 }
-
-.lightButton a
-{
-  color:#000000;
-}
-
-#darkSection,#darkSection p
-{
-    text-align: right!important;
-}
-#lightSection p
-{
-    text-align: left;
-}
-
-@media (max-width:1000px)
-{
-    .darkButton , .lightButton
-    {
-        border-color:#979797; 
-    }
-    .lightButton,.darkButton
-    {
-        margin-left:0%;
-        margin-right:0%;
-        margin-top:5%;
-    }
-    #darkSection ,#lightSection
-    {
-    padding-bottom:20%;
-}
-
-#portal h1
-{
-    margin-top:20%;
-}
-  
-}
-
-
-@media (min-width:1000px)
-{
-    #darkSection ,#lightSection
-{
-
-    padding-bottom: 20%!important;
-}
-
-}
-

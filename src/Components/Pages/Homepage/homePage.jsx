@@ -6,18 +6,18 @@ import Lightbox from "react-image-lightbox";
 import anime from "animejs/lib/anime.es.js";
 import { useDispatch } from "react-redux";
 import { toggleTheme } from "../../../reducers/themeActions";
-import ScrollAnimation from 'react-animate-on-scroll';
-import { NavLink } from 'react-router-dom';
-import FloatingElements from '../../components/floatingElements'
+import ScrollAnimation from "react-animate-on-scroll";
+import { NavLink } from "react-router-dom";
+import FloatingElements from "../../components/floatingElements";
 const images = [apostoles1, apostoles2];
 
-const HomePage = (props) => {
+const HomePage = props => {
   const dispatch = useDispatch();
 
   const [state, setState] = useState({
     photoIndex: 0,
     isOpen: false,
-    showParallax: Parallax,
+    showParallax: Parallax
   });
 
   const informationRef = useRef(null);
@@ -31,8 +31,7 @@ const HomePage = (props) => {
     scatterAnimation();
     timeline.add(informationAnimation());
     // eslint-disable-next-line
-  }, []);   
-
+  }, []);
 
   const scatterAnimation = () => {
     var textWrapper = document.querySelector(".homepage__headtitle");
@@ -85,8 +84,8 @@ const HomePage = (props) => {
 
   const { photoIndex, isOpen } = state;
   return (
-    <div className="homepage layout fade-in" >
-                  <FloatingElements num={3}/>
+    <div className="homepage layout fade-in">
+      <FloatingElements num={3} />
       <div className="homepage__title-wrapper">
         <h1 ref={headtitleRef} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles. </span>
@@ -144,15 +143,21 @@ const HomePage = (props) => {
       </div>
 
       <div ref={ctaRef} className="homepage__cta-wrapper">
-      <ScrollAnimation animateOnce duration={1.5} animateIn="fade-in">
-        <div
-          className="homepage__cta-innerWrapper "
-          onMouseEnter={() => dispatch(toggleTheme())}
-          onMouseLeave={() => dispatch(toggleTheme())}
-        >
-          <span className="homepage__cta-title">Up for a walk?</span>
-          <NavLink to='/portal' onClick={() => dispatch(toggleTheme())} className="homepage__cta">PROCEED</NavLink>
-        </div>
+        <ScrollAnimation animateOnce duration={1.5} animateIn="fade-in">
+          <div
+            className="homepage__cta-innerWrapper "
+            onMouseEnter={() => dispatch(toggleTheme())}
+            onMouseLeave={() => dispatch(toggleTheme())}
+          >
+            <span className="homepage__cta-title">Up for a walk?</span>
+            <NavLink
+              to="/portal"
+              onClick={() => dispatch(toggleTheme())}
+              className="homepage__cta"
+            >
+              PROCEED
+            </NavLink>
+          </div>
         </ScrollAnimation>
       </div>
 

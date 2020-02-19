@@ -1,57 +1,48 @@
-
-
-#transNavbar
-{
-    position: absolute;
-    width:100%;
-    z-index: 100;
-    padding-top:5.5%;
+#transNavbar {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  padding-top: 5.5%;
 }
 
-#transNavbar a
-{
-    color:#FFFFFF;
+#transNavbar a {
+  color: #ffffff;
 }
-#transNavbar a:hover
-{   color:#919191;
-    transition: color 0.8s;
-}
-
-
-
-#solidNavbar 
-{
-    width:100%;
-    z-index: 100;   
+#transNavbar a:hover {
+  color: #919191;
+  transition: color 0.8s;
 }
 
-#solidNavbar a
-{
-    color:#000000;
+#solidNavbar {
+  width: 100%;
+  z-index: 100;
 }
 
-#solidNavbar a:hover
-{
-    color:#7a7a7a;
-    transition: color 0.8s;
+#solidNavbar a {
+  color: #000000;
 }
 
-#solidNavbar *, #transNavbar *
-{
-    margin-right:8%;
+#solidNavbar a:hover {
+  color: #7a7a7a;
+  transition: color 0.8s;
 }
 
-#transNavbar a,#solidNavbar a{
-    padding:4%;
-    font-family: adobe-garamond-pro;
-    font-weight: 400;
-    font-size:16px!important;
+#solidNavbar *,
+#transNavbar * {
+  margin-right: 8%;
 }
- 
+
+#transNavbar a,
+#solidNavbar a {
+  padding: 4%;
+  font-family: adobe-garamond-pro;
+  font-weight: 400;
+  font-size: 16px !important;
+}
+
 /*hide navbar on mobile */
 @media (max-width: 768px) {
-    #apostolesNavbar 
-    {
-       display: none!important;
-    }
- }
+  #apostolesNavbar {
+    display: none !important;
+  }
+}

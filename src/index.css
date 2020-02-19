@@ -8,11 +8,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-body
-{
-   font-family: "Fira Sans";
-   font-weight:thin!important;
+body {
+  font-family: "Fira Sans";
+  font-weight: thin !important;
 }
 
 code {
@@ -20,9 +18,8 @@ code {
     monospace;
 }
 
-#apostolesNavbar a
-{
-  font-family:'Roboto', sans-serif;
-  font-weight:thin!important;
-  font-size:20px!important;
+#apostolesNavbar a {
+  font-family: "Roboto", sans-serif;
+  font-weight: thin !important;
+  font-size: 20px !important;
 }
