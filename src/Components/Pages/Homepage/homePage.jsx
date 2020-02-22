@@ -1,44 +1,44 @@
-import React, { useRef, useEffect, useState } from "react";
-import Parallax from "../../Images/Parallax";
-import apostoles1 from "../../Images/apostoles1.png";
-import apostoles2 from "../../Images/apostoles2.jpg";
-import Lightbox from "react-image-lightbox";
-import anime from "animejs/lib/anime.es.js";
-import { useDispatch } from "react-redux";
-import { toggleTheme } from "../../../reducers/themeActions";
-import ScrollAnimation from "react-animate-on-scroll";
-import { NavLink } from "react-router-dom";
-import FloatingElements from "../../components/floatingElements";
-const images = [apostoles1, apostoles2];
+import React, { useRef, useEffect, useState } from "react"
+import Parallax from "../../Images/Parallax"
+import apostoles1 from "../../Images/apostoles1.png"
+import apostoles2 from "../../Images/apostoles2.jpg"
+import Lightbox from "react-image-lightbox"
+import anime from "animejs/lib/anime.es.js"
+import { useDispatch } from "react-redux"
+import { toggleTheme } from "../../../reducers/themeActions"
+import ScrollAnimation from "react-animate-on-scroll"
+import { NavLink } from "react-router-dom"
+import FloatingElements from "../../components/floatingElements"
+const images = [apostoles1, apostoles2]
 
 const HomePage = props => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   const [state, setState] = useState({
     photoIndex: 0,
     isOpen: false,
     showParallax: Parallax
-  });
+  })
 
-  const informationRef = useRef(null);
-  const headtitleRef = useRef(null);
-  const imageRefs = [useRef(null), useRef(null)];
-  const ctaRef = useRef(null);
-  const timeline = anime.timeline();
+  const informationRef = useRef(null)
+  const headtitleRef = useRef(null)
+  const imageRefs = [useRef(null), useRef(null)]
+  const ctaRef = useRef(null)
+  const timeline = anime.timeline()
 
   useEffect(() => {
-    document.title = "Apostolos Kalovelonis | Design & Development enthusiast";
-    scatterAnimation();
-    timeline.add(informationAnimation());
+    document.title = "Apostolos Kalovelonis | Design & Development enthusiast"
+    scatterAnimation()
+    timeline.add(informationAnimation())
     // eslint-disable-next-line
-  }, []);
+  }, [])
 
   const scatterAnimation = () => {
-    var textWrapper = document.querySelector(".homepage__headtitle");
+    var textWrapper = document.querySelector(".homepage__headtitle")
     textWrapper.innerHTML = textWrapper.textContent.replace(
       /\S/g,
       "<span class='letter'>$&</span>"
-    );
+    )
     timeline
       .add({
         targets: " .letter",
@@ -46,7 +46,7 @@ const HomePage = props => {
         easing: "easeInOutSine",
         duration: 800,
         delay: function(el, i) {
-          return 50 * (i + 1);
+          return 50 * (i + 1)
         }
       })
       .add({
@@ -54,8 +54,8 @@ const HomePage = props => {
         opacity: [0, 1],
         easing: "easeInOutSine",
         duration: 800
-      });
-  };
+      })
+  }
 
   const informationAnimation = () => {
     return {
@@ -64,13 +64,13 @@ const HomePage = props => {
       easing: "easeInOutQuad",
       duration: 700,
       begin: animateImages
-    };
-  };
+    }
+  }
 
   const animateImages = () => {
-    anime(curveMovementAnimation(imageRefs[0].current, [-100, 0], [300, 0]));
-    anime(curveMovementAnimation(imageRefs[1].current, [200, 0], [-300, 0]));
-  };
+    anime(curveMovementAnimation(imageRefs[0].current, [-100, 0], [300, 0]))
+    anime(curveMovementAnimation(imageRefs[1].current, [200, 0], [-300, 0]))
+  }
 
   const curveMovementAnimation = (target, valueX, valueY) => {
     return {
@@ -79,10 +79,10 @@ const HomePage = props => {
       opacity: { value: 1, duration: 4000 },
       translateY: { value: valueY, duration: 4000 },
       easing: "easeInOutBack"
-    };
-  };
+    }
+  }
 
-  const { photoIndex, isOpen } = state;
+  const { photoIndex, isOpen } = state
   return (
     <div className="homepage layout fade-in">
       <FloatingElements num={3} />
@@ -96,16 +96,15 @@ const HomePage = props => {
         <div ref={informationRef} className="homepage__introduction-text">
           <h2 className="homepage__introduction-title">Greetings, stranger!</h2>
           <p>
-            My name is Apostolos Kalovelonis, coming straight out of the olives
-            and oregano country, <b>Greece</b>. I am keen on clean interfaces,
-            high score numbers & self - improvement.
+            My name is Apostolos Kalovelonis, coming straight out of the olives and
+            oregano country, <b>Greece</b>. I am keen on clean interfaces, high score
+            numbers & self - improvement.
           </p>
           <p>
-            Currently studying for Google Summer of Code and working as a
-            freelancer. You can find me at
-            <b> local meetups</b> about content - marketing or development,
-            reading peacefully a book on public transport, or jogging by the
-            sea.
+            Currently studying for Google Summer of Code and working as a freelancer.
+            You can find me at
+            <b> local meetups</b> about content - marketing or development, reading
+            peacefully a book on public transport, or jogging by the sea.
           </p>
         </div>
 
@@ -141,7 +140,7 @@ const HomePage = props => {
           </div>
         </div>
       </div>
-
+      me
       <div ref={ctaRef} className="homepage__cta-wrapper">
         <ScrollAnimation animateOnce duration={1.5} animateIn="fade-in">
           <div
@@ -160,7 +159,6 @@ const HomePage = props => {
           </div>
         </ScrollAnimation>
       </div>
-
       {isOpen && (
         <Lightbox
           mainSrc={images[photoIndex]}
@@ -184,7 +182,7 @@ const HomePage = props => {
         />
       )}
     </div>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

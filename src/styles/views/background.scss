@@ -68,6 +68,47 @@
     }
   }
 
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__skill-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 100px;
+  }
+
+  &__skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 230px;
+  }
+
+  &__skill-title {
+    margin: 20px 0;
+    font-family: $maax;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  &__skill {
+    z-index: 1;
+    margin: 30px 20px;
+    flex-basis: 50px;
+    &:nth-child(3n) {
+      text-align: center;
+      flex-basis: 100%;
+    }
+    svg {
+      margin: 10px 0;
+      height: 50px;
+      stroke: white;
+    }
+  }
+
   &__svg {
     fill: $color__blackPale;
     width: 20px;
@@ -80,6 +121,7 @@
 
     .App--dark & {
       fill: $color__greyPale;
+      stroke: $color__greyPale;
     }
   }
 }

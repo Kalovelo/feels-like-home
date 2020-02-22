@@ -1,108 +1,122 @@
-@import './fonts/font.scss';
-@import './normalize/normalize.scss';
-@import './colors/colors.scss';
+@import "./fonts/font.scss";
+@import "./normalize/normalize.scss";
+@import "./colors/colors.scss";
 
-.App{
-    color:$color__black;
-    z-index: -1;
-    transition: all 1s;
+.App {
+  color: $color__black;
+  z-index: -1;
+  transition: all 1s;
+  background: $color__white;
+  font-size: 16px;
+  &--dark,
+  &--dark .layout {
+    color: $color__white;
+    background: $color__black;
+    * {
+      border-color: $color__white;
+    }
+  }
+
+  &--light,
+  &--light .layout {
+    color: $color__black;
     background: $color__white;
-    font-size:16px;
-    &--dark,&--dark .layout{
-      color:$color__white;
-      background: $color__black;
-      *{
-        border-color: $color__white;
-      }
-    }
 
-    &--light,&--light .layout{
-      color:$color__black;
-      background: $color__white;
-
-      *{
-        border-color: $color__black;
-      }
+    * {
+      border-color: $color__black;
     }
   }
-  
-  @media only screen and (min-width: 700px) 
-  {
-      #topBar{ visibility: hidden; }    
-  }
-  
+}
 
-  h1,h2,h3,h4,h5,p,a,span{
+@media only screen and (min-width: 700px) {
+  #topBar {
+    visibility: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span {
   position: relative;
-  }
-  
-  a { text-decoration: none;
-    color:inherit;
-    font-weight: 500;
+}
 
-    &:hover,&:focus{
-      color:$color__accent;
-    }
-    &:hover{
-      text-decoration: none;
-      transition: all .2s;
-    }
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    color: $color__accent;
   }
-  body
-  {
+  &:hover {
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+}
+body {
+  background: $color__white;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+
+@media (min-width: 1000px) {
+  .lightboxImg {
+    width: 1280px !important;
+    height: 770px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .lightboxImg {
+    margin-top: 25% !important;
+    width: 300% !important;
+    height: 50% !important;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "maax";
+  font-weight: 400;
+}
+
+.btn:focus {
+  box-shadow: none;
+  background-color: none !important;
+}
+
+.btn:active {
+  box-shadow: none !important;
+  background-color: none !important;
+}
+
+a {
+  outline: 0;
+}
+*::selection {
+  background: #000000; /* WebKit/Blink Browsers */
+  color: #ffffff;
+}
+*::-moz-selection {
+  background: #000000; /* Gecko Browsers */
+  color: #ffffff;
+}
+
+.__react_component_tooltip.type-dark {
+  font-family: $maax;
+  font-weight: 500;
+
+  .App--dark & {
     background: $color__white;
-    position: relative;
-    scroll-behavior:smooth;
-    overflow-x:hidden!important; 
+    color: $color__black;
   }
-  
-  
-  
-  @media (min-width:1000px)
-  {
-    .lightboxImg
-    {
-      width:1280px!important;
-      height:770px!important;
-    }
-  }
-  
-  @media (max-width:750px)
-  {
-    .lightboxImg
-    {
-      margin-top:25%!important;
-      width:300%!important;
-      height:50%!important;
-    }
-  }
-  h1,h2,h3,h4,p
-  {
-    font-family: 'maax';
-    font-weight:400;
-  }
-  
-  .btn:focus
-  {
-    box-shadow: none;
-    background-color: none!important;
-  }
-  
-  .btn:active
-  {
-    box-shadow: none!important;
-    background-color: none!important;
-  }
-  
-  a {
-    outline: 0;
-  }
-  *::selection {
-    background: #000000; /* WebKit/Blink Browsers */
-    color: #ffffff
-  }
-  *::-moz-selection {
-    background: #000000; /* Gecko Browsers */
-    color:#ffffff
-  }
-  
+}

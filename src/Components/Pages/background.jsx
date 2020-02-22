@@ -1,15 +1,30 @@
-import "./background.css";
-import React, { useEffect } from "react";
-import "../Images/lightbox.css";
-import { Wordpress, Ihu, Fosdem } from "../../content/communities.jsx";
-import anime from "animejs/lib/anime.es.js";
-import FloatingElements from "../components/floatingElements";
+import "./background.css"
+import React, { useEffect } from "react"
+import "../Images/lightbox.css"
+import { Wordpress, Ihu, Fosdem } from "../../content/communities.jsx"
+import anime from "animejs/lib/anime.es.js"
+import FloatingElements from "../components/floatingElements"
+import ReactTooltip from "react-tooltip"
+import {
+  Python,
+  Java,
+  Javascript,
+  ReactJS,
+  Vue,
+  Sass,
+  MongoDB,
+  PostgressDB,
+  Jest,
+  TypeScript,
+  Figma,
+  SocketIO
+} from "../../content/skills"
 
 const Background = () => {
   useEffect(() => {
-    document.title = "Earth Herself";
-    tableAnimation();
-  }, []);
+    document.title = "Earth Herself"
+    tableAnimation()
+  }, [])
 
   const tableAnimation = () =>
     anime({
@@ -25,19 +40,87 @@ const Background = () => {
           easing: "linear",
           duration: 2000
         })
-    });
+    })
 
-  var skills = [
-    "HTML",
-    "CSS / SASS",
-    "JavaScript",
-    "ReactJS",
-    "Socket.io",
-    "Java",
-    "UI/UX",
-    "Python",
-    "Git"
-  ];
+  let skills = [
+    {
+      Title: "Languages",
+      elements: [
+        {
+          tooltip: "JavaScript",
+          component: <Javascript />
+        },
+        {
+          tooltip: "TypeScript",
+          component: <TypeScript />
+        },
+        {
+          tooltip: "Java",
+          component: <Java />
+        },
+        {
+          tooltip: "Python",
+          component: <Python />
+        }
+      ]
+    },
+    {
+      Title: "Frameworks",
+      elements: [
+        {
+          tooltip: "ReactJS",
+          component: <ReactJS />
+        },
+        {
+          tooltip: "VueJS",
+          component: <Vue />
+        },
+        {
+          tooltip: "Sass",
+          component: <Sass />
+        },
+        {
+          tooltip: "SocketIO",
+          component: <SocketIO />
+        }
+      ]
+    },
+    {
+      Title: "Databases",
+      elements: [
+        {
+          tooltip: "MongoDB",
+          component: <MongoDB />
+        },
+        {
+          tooltip: "PostgresSQL",
+          component: <PostgressDB />
+        }
+      ]
+    },
+    {
+      Title: "Testing",
+      elements: [
+        {
+          tooltip: "Jest",
+          component: <Jest />
+        }
+      ]
+    },
+    {
+      Title: "Technologies & Tools",
+      elements: [
+        {
+          tooltip: "WordPress",
+          component: <Wordpress />
+        },
+        {
+          tooltip: "Figma",
+          component: <Figma />
+        }
+      ]
+    }
+  ]
 
   let communityTable = {
     attributes: ["Title", "Role"],
@@ -73,22 +156,42 @@ const Background = () => {
         ]
       }
     ]
-  };
+  }
 
   return (
-    <div fluid="true" className="background layout">
+    <div className="background layout">
       <FloatingElements num={3} />
       <h1 className="background__title">Background</h1>
       <p className="layout__container-content background__content">
-        {/* //todo: refactor */}I admire creations that try to show their
-        flavour to the world, creations whose main goal is to have an impact by
-        expressing their own philosophy, <b>their own story.</b> I see the world
-        of Design as complex yet based on simple principles that guide you, but
-        don't cut down your own determination to apply your personal touches.
+        {/* //todo: refactor */}I admire creations that try to show their flavour to
+        the world, creations whose main goal is to have an impact by expressing their
+        own philosophy, <b>their own story.</b> I see the world of Design as complex
+        yet based on simple principles that guide you, but don't cut down your own
+        determination to apply your personal touches.
         <br />
-        My experience involves working as a WordPress freelancer and in-house
-        Front / React Developer.
+        My experience involves working as a WordPress freelancer and in-house Front /
+        React Developer.
       </p>
+
+      <h2 className="background__subtitle">Skills</h2>
+      <div className="background__skills">
+        {skills.map(skillContainer => (
+          <div className="background__skill-wrapper">
+            <h5 className="background__skill-title">{skillContainer.Title}</h5>
+            <div className="background__skill-container">
+              {skillContainer.elements.map(skill => (
+                <div
+                  data-tip={skill.tooltip}
+                  className="background__skill background__svg"
+                >
+                  {skill.component}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
       <h2 className="background__subtitle">Communities</h2>
       <table className="background__communities">
         <thead>
@@ -132,8 +235,10 @@ const Background = () => {
           ))}
         </tbody>
       </table>
-    </div>
-  );
-};
 
-export default Background;
+      <ReactTooltip effect="solid" place="bottom" />
+    </div>
+  )
+}
+
+export default Background
