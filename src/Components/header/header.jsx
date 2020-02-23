@@ -9,6 +9,7 @@ class Header extends React.Component {
 
   links = [
     { title: "Home", link: "/" },
+    { title: "Projects", link: "/Projects" },
     { title: "Background", link: "/background" },
     { title: "About", link: "/about" }
   ]

@@ -1,4 +1,3 @@
-import "./background.css"
 import React, { useEffect } from "react"
 import "../Images/lightbox.css"
 import { Wordpress, Ihu, Fosdem, OpenSCN } from "../../content/communities.jsx"
@@ -263,6 +262,7 @@ const Background = () => {
                     className="background__community-item background__community-item--cta"
                     href={element.link}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Go!
                   </a>

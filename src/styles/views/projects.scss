@@ -1,0 +1,36 @@
+.Projects {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    background: red;
+    width: 150px;
+    height: 150px;
+  }
+  &__wrapper {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-weight: 900;
+  }
+
+  &__description {
+    text-align: left;
+    font-family: $maax;
+    max-width: 300px;
+  }
+
+  &__tags {
+    font-weight: 500;
+  }
+}
