@@ -1,5 +1,4 @@
 .homepage {
-
   &__headtitle {
     font-family: $maax;
     font-size: 40px;
@@ -119,20 +118,23 @@
   }
   &__cta {
     display: flex;
+    padding: 20px;
     font-size: 60px;
     font-family: $maax;
     text-align: center;
     font-weight: 900;
     cursor: pointer;
-    color:inherit;
+    color: inherit;
 
-    &:hover{
-      color:inherit;
+    &:hover {
+      color: $color__black;
+      .App--dark & {
+        color: $color__white;
+      }
       text-decoration: none;
     }
-    @media(min-width:$tablet){
-    font-size: 100px;
-
+    @media (min-width: $tablet) {
+      font-size: 100px;
     }
   }
   &__cta-wrapper {
@@ -149,5 +151,6 @@
     font-family: $garamond;
     text-transform: uppercase;
     font-size: 20px;
+    margin-right: 20px;
   }
 }

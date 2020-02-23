@@ -1,10 +1,12 @@
 import "./background.css"
 import React, { useEffect } from "react"
 import "../Images/lightbox.css"
-import { Wordpress, Ihu, Fosdem } from "../../content/communities.jsx"
+import { Wordpress, Ihu, Fosdem, OpenSCN } from "../../content/communities.jsx"
 import anime from "animejs/lib/anime.es.js"
 import FloatingElements from "../components/floatingElements"
 import ReactTooltip from "react-tooltip"
+import ScrollAnimation from "react-animate-on-scroll"
+import { useSelector } from "react-redux"
 import {
   Python,
   Java,
@@ -17,29 +19,44 @@ import {
   Jest,
   TypeScript,
   Figma,
-  SocketIO
-} from "../../content/skills"
+  SocketIO,
+  Git
+} from "../../content/skills.jsx"
 
 const Background = () => {
+  const theme = useSelector(state => state.theme)
+
   useEffect(() => {
     document.title = "Earth Herself"
-    tableAnimation()
+    skillsAnimation()
   }, [])
 
-  const tableAnimation = () =>
-    anime({
-      targets: ".background__community-row",
-      borderColor: "#000",
-      easing: "linear",
-      duration: 1000,
-      delay: 1000,
-      complete: () =>
-        anime({
-          targets: ".background__community-item",
-          opacity: 1,
+  const tableAnimation = visible =>
+    visible
+      ? anime({
+          targets: ".background__community-row",
+          borderColor: theme === "light" ? "#000" : "#fff",
           easing: "linear",
-          duration: 2000
+          duration: 300,
+          complete: () => {
+            anime({
+              targets: ".background__community-item",
+              opacity: 1,
+              easing: "linear",
+              duration: 1000
+            })
+          }
         })
+      : ""
+
+  const skillsAnimation = () =>
+    anime({
+      targets: ".background__skill",
+      opacity: [0, 1],
+      scale: [0.8, 1],
+      delay: (el, i) => 150 * (i + 1),
+      duration: 1000,
+      easing: "linear"
     })
 
   let skills = [
@@ -117,6 +134,10 @@ const Background = () => {
         {
           tooltip: "Figma",
           component: <Figma />
+        },
+        {
+          tooltip: "Git",
+          component: <Git />
         }
       ]
     }
@@ -125,6 +146,16 @@ const Background = () => {
   let communityTable = {
     attributes: ["Title", "Role"],
     content: [
+      {
+        link: "https://openscn.gitlab.io/documentation/",
+        data: [
+          <span>
+            <OpenSCN class="background__svg" />
+            OpenSCN
+          </span>,
+          "Dev"
+        ]
+      },
       {
         link: "https://www.facebook.com/ieee.ihuthess",
         data: [
@@ -159,15 +190,13 @@ const Background = () => {
   }
 
   return (
-    <div className="background layout">
+    <div className="background layout fade-in">
       <FloatingElements num={3} />
       <h1 className="background__title">Background</h1>
       <p className="layout__container-content background__content">
-        {/* //todo: refactor */}I admire creations that try to show their flavour to
-        the world, creations whose main goal is to have an impact by expressing their
-        own philosophy, <b>their own story.</b> I see the world of Design as complex
-        yet based on simple principles that guide you, but don't cut down your own
-        determination to apply your personal touches.
+        I admire creations that try to show their flavour to the world, creations
+        whose main goal is to have an impact by expressing their own philosophy,{" "}
+        <b>their own story.</b>
         <br />
         My experience involves working as a WordPress freelancer and in-house Front /
         React Developer.
@@ -175,14 +204,16 @@ const Background = () => {
 
       <h2 className="background__subtitle">Skills</h2>
       <div className="background__skills">
-        {skills.map(skillContainer => (
-          <div className="background__skill-wrapper">
+        {skills.map((skillContainer, index) => (
+          <div key={index} className="background__skill-wrapper">
             <h5 className="background__skill-title">{skillContainer.Title}</h5>
             <div className="background__skill-container">
-              {skillContainer.elements.map(skill => (
+              {skillContainer.elements.map((skill, index) => (
                 <div
                   data-tip={skill.tooltip}
-                  className="background__skill background__svg"
+                  key={index}
+                  style={{ opacity: 0 }}
+                  className="background__skill background__svg float-infinite"
                 >
                   {skill.component}
                 </div>
@@ -193,48 +224,54 @@ const Background = () => {
       </div>
 
       <h2 className="background__subtitle">Communities</h2>
-      <table className="background__communities">
-        <thead>
-          <tr className="background__community-row">
-            {communityTable.attributes.map((attribute, index) => (
-              <th
-                style={{ opacity: 0 }}
-                className="background__community-item background__community-item--head"
-                key={index}
-              >
-                {attribute}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {communityTable.content.map((element, index) => (
-            <tr
-              key={index}
-              className="background__community-row background__community-row--content"
-            >
-              {element.data.map((dataItem, index) => (
-                <td
-                  style={{ opacity: 0 }}
-                  className="background__community-item"
+      <ScrollAnimation
+        animateOnce
+        animateIn="fadeIn"
+        afterAnimatedIn={tableAnimation}
+      >
+        <table className="background__communities">
+          <thead>
+            <tr className="background__community-row">
+              {communityTable.attributes.map((attribute, index) => (
+                <th
+                  style={{ opacity: 0 }} //default vaules for animation
+                  className="background__community-item background__community-item--head"
                   key={index}
                 >
-                  {dataItem}
-                </td>
+                  {attribute}
+                </th>
               ))}
-              <td>
-                <a
-                  className="background__community-item background__community-item--cta"
-                  href={element.link}
-                  target="_blank"
-                >
-                  Go!
-                </a>
-              </td>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {communityTable.content.map((element, index) => (
+              <tr
+                key={index}
+                className="background__community-row background__community-row--content"
+              >
+                {element.data.map((dataItem, index) => (
+                  <td
+                    style={{ opacity: 0 }}
+                    className="background__community-item"
+                    key={index}
+                  >
+                    {dataItem}
+                  </td>
+                ))}
+                <td>
+                  <a
+                    className="background__community-item background__community-item--cta"
+                    href={element.link}
+                    target="_blank"
+                  >
+                    Go!
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </ScrollAnimation>
 
       <ReactTooltip effect="solid" place="bottom" />
     </div>

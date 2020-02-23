@@ -12,19 +12,12 @@
   &--dark .layout {
     color: $color__white;
     background: $color__black;
-    * {
-      border-color: $color__white;
-    }
   }
 
   &--light,
   &--light .layout {
     color: $color__black;
     background: $color__white;
-
-    * {
-      border-color: $color__black;
-    }
   }
 }
 

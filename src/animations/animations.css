@@ -29,8 +29,7 @@
 }
 
 .slide-in-left {
-  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
+  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -59,8 +58,7 @@
   }
 }
 .slide-in-left {
-  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
+  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -78,14 +76,12 @@
 }
 
 .slide-in-right {
-  -webkit-animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
+  -webkit-animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .puff-in-center {
-  -webkit-animation: puff-in-center 0.4s cubic-bezier(0.47, 0, 0.745, 0.715)
-    both;
+  -webkit-animation: puff-in-center 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   animation: puff-in-center 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
@@ -200,8 +196,7 @@
 }
 
 .slideleft {
-  -webkit-animation: scale-up-hor-left 2.4s cubic-bezier(0.39, 0.575, 0.565, 1)
-    both;
+  -webkit-animation: scale-up-hor-left 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-hor-left 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -272,8 +267,7 @@
 }
 
 .slide-in-top {
-  -webkit-animation: slide-in-top 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-    both;
+  -webkit-animation: slide-in-top 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   animation: slide-in-top 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 @-webkit-keyframes slide-in-top {

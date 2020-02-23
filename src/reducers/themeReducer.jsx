@@ -1,32 +1,31 @@
 const initial = {
   theme: "light"
-};
+}
 
 const themeReducer = (state = initial, action) => {
-  let newTheme;
-  console.log(action.type);
+  let newTheme
   switch (action.type) {
     case "TOGGLE_LIGHT":
       newTheme = {
         ...state,
         theme: "light"
-      };
-      return newTheme;
+      }
+      return newTheme
     case "TOGGLE_DARK":
       newTheme = {
         ...state,
         theme: "dark"
-      };
-      return newTheme;
+      }
+      return newTheme
     case "TOGGLE":
       newTheme = {
         ...state,
         theme: state.theme === "light" ? "dark" : "light"
-      };
-      return newTheme;
+      }
+      return newTheme
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default themeReducer;
+export default themeReducer

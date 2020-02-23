@@ -140,7 +140,6 @@ const HomePage = props => {
           </div>
         </div>
       </div>
-      me
       <div ref={ctaRef} className="homepage__cta-wrapper">
         <ScrollAnimation animateOnce duration={1.5} animateIn="fade-in">
           <div
