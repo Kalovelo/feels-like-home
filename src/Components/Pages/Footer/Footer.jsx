@@ -1,10 +1,16 @@
 import React from "react"
 import { Component } from "react"
 import { NavLink } from "react-router-dom"
-import anime from "animejs/lib/anime.es.js"
 import { withRouter } from "react-router-dom"
+import {
+  copyAnimation,
+  typewriterAnimation,
+  conceptLetterReplace
+} from "./animations"
 
-const ctaConcepts = ["philosophy", "books", "events", "a project", "your idea"]
+//Data
+const data = require("./data.json")
+
 class Footer extends Component {
   constructor() {
     super()
@@ -20,7 +26,7 @@ class Footer extends Component {
   componentDidMount() {
     if (this.props.location.pathname !== "/portal")
       this.typewriterInterval = setInterval(() => {
-        this.typewriterAnimation()
+        typewriterAnimation(this.updateIndex)
       }, 3800)
   }
 
@@ -30,17 +36,7 @@ class Footer extends Component {
 
   copyMailtoClipboard = () => {
     this.copyToClipboard("opa@kalovelo.com")
-    this.copyAnimation()
-  }
-
-  scrollAnimate = visible => {
-    if (visible.onScreen) {
-      anime({
-        targets: this.footer,
-        opacity: [0, 1],
-        duration: 3000
-      })
-    }
+    copyAnimation()
   }
 
   copyToClipboard(text) {
@@ -52,122 +48,22 @@ class Footer extends Component {
     document.body.removeChild(dummy)
   }
 
-  typewriterAnimation() {
-    if (document.hasFocus())
-      new anime.timeline()
-        .add({
-          targets: ".footer__CTA-concept-text",
-          opacity: 1,
-          duration: 300,
-          easing: "easeOutExpo"
-        })
-        .add({
-          targets: ".footer-letter",
-          opacity: [0, 1],
-          easing: "easeOutExpo",
-          duration: 1500,
-          offset: "-=775",
-          delay: (el, i) => 45 * (i + 1)
-        })
-        .add({
-          targets: ".footer__CTA-concept-text",
-          opacity: 0,
-          duration: 700,
-          easing: "easeOutExpo",
-          delay: 400
-        })
-        .finished.then(this.updateIndex)
-  }
   updateIndex = () => {
     let prevIndex = this.state.indexCTA
     this.setState(
       {
-        indexCTA: ctaConcepts.length > prevIndex + 1 ? prevIndex + 1 : 0,
+        indexCTA: data.ctaConcepts.length > prevIndex + 1 ? prevIndex + 1 : 0,
         letterClass: ".footer-letter"
       },
-      this.conceptLetterReplace
+      conceptLetterReplace(this.conceptText, data.ctaConcepts[this.state.indexCTA])
     )
-  }
-
-  conceptLetterReplace = () => {
-    if (this.conceptText) {
-      let textWrapper = this.conceptText
-      textWrapper.innerHTML = ctaConcepts[this.state.indexCTA].replace(
-        // eslint-disable-next-line
-        /([^\x00-\x80]|\w)/g,
-        "<span class='footer-letter'>$&</span>"
-      )
-    }
   }
 
   finishedHover = () => {
     this.setState(prevState => ({ finished: !prevState.finished }))
   }
 
-  copyAnimation = () =>
-    anime
-      .timeline()
-      .add({
-        targets: ".footer__copied",
-        opacity: [0, 1],
-        translateY: [200, 0],
-        duration: 600,
-        easing: "easeInOutSine"
-      })
-      .add({
-        targets: ".footer__copied",
-        opacity: 0,
-        duration: 1000,
-        easing: "easeInOutSine"
-      })
-
   render() {
-    var menu = [
-      {
-        link: "/",
-        title: "Home"
-      },
-      {
-        link: "/background",
-        title: "Background"
-      },
-      {
-        link: "/about",
-        title: "About"
-      },
-      {
-        link: "/projects",
-        title: "Projects"
-      },
-      {
-        link: "/communities",
-        title: "Communities"
-      },
-
-      {
-        link: "/thankYou",
-        title: "Thank you"
-      }
-    ]
-
-    var social = [
-      {
-        link: "https://www.facebook.com/kalovelo",
-        title: "Facebook"
-      },
-      {
-        link: "https://linkedin.com/in/apostolos-kalovelonis-0b886116a",
-        title: "LinkedIn"
-      },
-      {
-        link: "https://sourcerer.io/kalovelo",
-        title: "Sourcerer"
-      },
-      {
-        link: "https://github.com/ApostolosKalovelo",
-        title: "Github"
-      }
-    ]
     return this.props.location.pathname === "/portal" ? (
       ""
     ) : (
@@ -216,7 +112,7 @@ class Footer extends Component {
                   window.scrollTo(1, 1)
                 }}
               >
-                {menu.map((menuLink, i) => (
+                {data.menu.map((menuLink, i) => (
                   <li key={i}>
                     <NavLink to={menuLink.link}>{menuLink.title}</NavLink>
                   </li>
@@ -226,7 +122,7 @@ class Footer extends Component {
 
             <div>
               <ul>
-                {social.map((smedia, i) => (
+                {data.social.map((smedia, i) => (
                   <li key={i}>
                     <a
                       target="_blank"

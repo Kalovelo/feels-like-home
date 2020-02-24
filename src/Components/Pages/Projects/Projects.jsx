@@ -1,13 +1,14 @@
 import React, { useEffect } from "react"
 import { useState, useRef } from "react"
 import anime from "animejs/lib/anime.es.js"
-import FloatingElements from "../components/floatingElements"
+import FloatingElements from "../../components/floatingElements"
 import { debounce } from "lodash"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faChevronLeft as faAngleLeft,
   faChevronRight as faAngleRight
 } from "@fortawesome/free-solid-svg-icons"
+import { animateSpawn, animateFadeAway } from "./animations"
 
 const Projects = () => {
   useEffect(() => {
@@ -15,81 +16,32 @@ const Projects = () => {
   }, [])
 
   useEffect(() => {
-    animateSpawn()
+    animateSpawn(getCurrentAnimationTargets())
   })
 
+  //Refs
   const imageRef = useRef(null)
   const contentRef = useRef(null)
+  const getCurrentAnimationTargets = () => [imageRef.current, contentRef.current]
+
+  //animation
   const animationTimeline = anime.timeline()
 
-  const projects = [
-    {
-      title: "Cards Against Humanity",
-      description:
-        "A University project based on the ice-breaker board game made by my colleagues Joj0s, Giapa and me. Stay tuned for its up and running online deployment.",
-      tags: ["VueJS", "SocketIO", "Flask"],
-      link: "https://github.com/iee-ihu-gr-course1941/ADISE19_ieeediots"
-    },
-    {
-      title: "LOLOLO",
-      description:
-        "A University project based on the ice-breaker board game made by my colleagues Joj0s, Giapa and me. Stay tuned for its up and running online deployment.",
-      tags: ["VueJS", "SocketIO", "Flask"],
-      link: "https://github.com/iee-ihu-gr-course1941/ADISE19_ieeediots"
-    }
-  ]
-
-  const animateSpawn = () => {
-    anime({
-      targets: imageRef.current,
-      opacity: {
-        value: [0, 1],
-        duration: 150
-      },
-      translateY: [-400, 0],
-      delay: 200,
-      duration: 100,
-      easing: "spring(1, 80, 10, 0)",
-      begin: () =>
-        anime({
-          targets: contentRef.current,
-          translateX: [200, 0],
-          delay: 250,
-          opacity: {
-            value: [0, 1],
-            duration: 800
-          },
-          duration: 300,
-          easing: "linear"
-        })
-    })
-  }
-
-  const animateFadeAway = () =>
-    animationTimeline
-      .add({
-        targets: imageRef.current,
-        translateY: -500,
-        duration: 300,
-        easing: "linear"
-      })
-      .add({
-        targets: contentRef.current,
-        translateX: 200,
-        opacity: {
-          value: 0,
-          duration: 400
-        },
-        duration: 400,
-        easing: "linear"
-      })
+  //Data
+  const projects = require("./data.json")
 
   const nextProject = () => {
-    animateFadeAway().finished.then(() => updateIndex("next"))
+    animateFadeAway(
+      animationTimeline,
+      getCurrentAnimationTargets()
+    ).finished.then(() => updateIndex("next"))
   }
 
   const previousProject = () => {
-    animateFadeAway().finished.then(() => updateIndex("previous"))
+    animateFadeAway(
+      animationTimeline,
+      getCurrentAnimationTargets()
+    ).finished.then(() => updateIndex("previous"))
   }
 
   const updateIndex = type => {

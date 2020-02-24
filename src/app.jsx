@@ -7,18 +7,18 @@ import "./animations/animations.css"
 import "react-image-lightbox/style.css"
 
 //! layout
-import Footer from "./Components/Pages/Footer"
+import Footer from "./Components/Pages/Footer/Footer"
 import Header from "./Components/header/header"
 
 //! pages
 import Homepage from "./Components/Pages/Homepage/homePage"
-import Background from "./Components/Pages/background"
+import Background from "./Components/Pages/Background/background"
 import Portal from "./Components/Pages/portal"
-import About from "./Components/Pages/about"
+import About from "./Components/Pages/About/about"
 import ThankYou from "./Components/Pages/thankYou"
 import NotFound404 from "./Components/Pages/notFound404"
 import Cookiefier from "./Components/cookiefier"
-import Projects from "./Components/Pages/Projects"
+import Projects from "./Components/Pages/Projects/Projects.jsx"
 
 //!store
 import { useSelector } from "react-redux"

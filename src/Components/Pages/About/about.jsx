@@ -1,7 +1,7 @@
 import React from "react"
 import { Component } from "react"
-import "../Images/lightbox.css"
-import FloatingElements from "../components/floatingElements"
+import "../../Images/lightbox.css"
+import FloatingElements from "../../components/floatingElements"
 
 class About extends Component {
   componentDidMount() {

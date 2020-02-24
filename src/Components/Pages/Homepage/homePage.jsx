@@ -1,25 +1,31 @@
 import React, { useRef, useEffect, useState } from "react"
-import Parallax from "../../Images/Parallax"
+import { NavLink } from "react-router-dom"
+//images
 import apostoles1 from "../../Images/apostoles1.png"
 import apostoles2 from "../../Images/apostoles2.jpg"
-import Lightbox from "react-image-lightbox"
-import anime from "animejs/lib/anime.es.js"
+
+//store
 import { useDispatch } from "react-redux"
 import { toggleTheme } from "../../../reducers/themeActions"
+
+//animations
 import ScrollAnimation from "react-animate-on-scroll"
-import { NavLink } from "react-router-dom"
+import { scatterAnimation, informationAnimation, animateImages } from "./animations"
+
+//components
 import FloatingElements from "../../components/floatingElements"
-const images = [apostoles1, apostoles2]
+import anime from "animejs/lib/anime.es.js"
+import Lightbox from "react-image-lightbox"
 
 const HomePage = props => {
   const dispatch = useDispatch()
 
   const [state, setState] = useState({
     photoIndex: 0,
-    isOpen: false,
-    showParallax: Parallax
+    isOpen: false
   })
 
+  const images = [apostoles1, apostoles2]
   const informationRef = useRef(null)
   const headtitleRef = useRef(null)
   const imageRefs = [useRef(null), useRef(null)]
@@ -28,59 +34,10 @@ const HomePage = props => {
 
   useEffect(() => {
     document.title = "Apostolos Kalovelonis | Design & Development enthusiast"
-    scatterAnimation()
-    timeline.add(informationAnimation())
+    scatterAnimation(timeline)
+    timeline.add(informationAnimation(() => animateImages(imageRefs)))
     // eslint-disable-next-line
   }, [])
-
-  const scatterAnimation = () => {
-    var textWrapper = document.querySelector(".homepage__headtitle")
-    textWrapper.innerHTML = textWrapper.textContent.replace(
-      /\S/g,
-      "<span class='letter'>$&</span>"
-    )
-    timeline
-      .add({
-        targets: " .letter",
-        opacity: [0, 1],
-        easing: "easeInOutSine",
-        duration: 800,
-        delay: function(el, i) {
-          return 50 * (i + 1)
-        }
-      })
-      .add({
-        targets: ".homepage__subtitle",
-        opacity: [0, 1],
-        easing: "easeInOutSine",
-        duration: 800
-      })
-  }
-
-  const informationAnimation = () => {
-    return {
-      targets: ".homepage__introduction-text",
-      opacity: [0, 1],
-      easing: "easeInOutQuad",
-      duration: 700,
-      begin: animateImages
-    }
-  }
-
-  const animateImages = () => {
-    anime(curveMovementAnimation(imageRefs[0].current, [-100, 0], [300, 0]))
-    anime(curveMovementAnimation(imageRefs[1].current, [200, 0], [-300, 0]))
-  }
-
-  const curveMovementAnimation = (target, valueX, valueY) => {
-    return {
-      targets: target,
-      translateX: { value: valueX, duration: 3000 },
-      opacity: { value: 1, duration: 4000 },
-      translateY: { value: valueY, duration: 4000 },
-      easing: "easeInOutBack"
-    }
-  }
 
   const { photoIndex, isOpen } = state
   return (
