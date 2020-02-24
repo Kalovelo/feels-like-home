@@ -10,11 +10,26 @@
     background: red;
     width: 150px;
     height: 150px;
+    margin-bottom: 50px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 0;
+    }
   }
   &__wrapper {
     display: flex;
-    width: 50%;
-    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media (min-width: $desktop) {
+      width: 50%;
+      text-align: initial;
+      align-items: initial;
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
 
   &__content {
@@ -25,12 +40,45 @@
   }
 
   &__description {
-    text-align: left;
     font-family: $maax;
     max-width: 300px;
   }
 
   &__tags {
     font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  &__controller-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__controller {
+    text-transform: uppercase;
+    font-family: $maax;
+    font-weight: 500;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+
+  &__cta {
+    padding: 10px 20px;
+    font-family: $maax;
+    font-weight: 100;
+    color: $color__white;
+    background: $color__black;
+    .App--dark & {
+      color: $color__black;
+      background: $color__white;
+      &:hover {
+        color: $color__accent;
+      }
+    }
+  }
+
+  &__controller-text {
+    padding: 0 10px;
   }
 }

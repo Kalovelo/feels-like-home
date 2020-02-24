@@ -1,37 +1,37 @@
-import React from "react";
-import { Component } from "react";
-import { NavLink } from "react-router-dom";
-import anime from "animejs/lib/anime.es.js";
-import { withRouter } from "react-router-dom";
+import React from "react"
+import { Component } from "react"
+import { NavLink } from "react-router-dom"
+import anime from "animejs/lib/anime.es.js"
+import { withRouter } from "react-router-dom"
 
-const ctaConcepts = ["philosophy", "books", "events", "a project", "your idea"];
+const ctaConcepts = ["philosophy", "books", "events", "a project", "your idea"]
 class Footer extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       finished: false,
       indexCTA: 0,
       letterClass: ".footer-letter"
-    };
-    this.conceptText = null;
-    this.footer = null;
+    }
+    this.conceptText = null
+    this.footer = null
   }
 
   componentDidMount() {
     if (this.props.location.pathname !== "/portal")
       this.typewriterInterval = setInterval(() => {
-        this.typewriterAnimation();
-      }, 3800);
+        this.typewriterAnimation()
+      }, 3800)
   }
 
   componentWillUnmount() {
-    clearInterval(this.typewriterInterval);
+    clearInterval(this.typewriterInterval)
   }
 
   copyMailtoClipboard = () => {
-    this.copyToClipboard("opa@kalovelo.com");
-    this.copyAnimation();
-  };
+    this.copyToClipboard("opa@kalovelo.com")
+    this.copyAnimation()
+  }
 
   scrollAnimate = visible => {
     if (visible.onScreen) {
@@ -39,17 +39,17 @@ class Footer extends Component {
         targets: this.footer,
         opacity: [0, 1],
         duration: 3000
-      });
+      })
     }
-  };
+  }
 
   copyToClipboard(text) {
-    var dummy = document.createElement("input");
-    document.body.appendChild(dummy);
-    dummy.setAttribute("value", text);
-    dummy.select();
-    document.execCommand("copy");
-    document.body.removeChild(dummy);
+    var dummy = document.createElement("input")
+    document.body.appendChild(dummy)
+    dummy.setAttribute("value", text)
+    dummy.select()
+    document.execCommand("copy")
+    document.body.removeChild(dummy)
   }
 
   typewriterAnimation() {
@@ -76,33 +76,33 @@ class Footer extends Component {
           easing: "easeOutExpo",
           delay: 400
         })
-        .finished.then(this.updateIndex);
+        .finished.then(this.updateIndex)
   }
   updateIndex = () => {
-    let prevIndex = this.state.indexCTA;
+    let prevIndex = this.state.indexCTA
     this.setState(
       {
         indexCTA: ctaConcepts.length > prevIndex + 1 ? prevIndex + 1 : 0,
         letterClass: ".footer-letter"
       },
       this.conceptLetterReplace
-    );
-  };
+    )
+  }
 
   conceptLetterReplace = () => {
     if (this.conceptText) {
-      let textWrapper = this.conceptText;
+      let textWrapper = this.conceptText
       textWrapper.innerHTML = ctaConcepts[this.state.indexCTA].replace(
         // eslint-disable-next-line
         /([^\x00-\x80]|\w)/g,
         "<span class='footer-letter'>$&</span>"
-      );
+      )
     }
-  };
+  }
 
   finishedHover = () => {
-    this.setState(prevState => ({ finished: !prevState.finished }));
-  };
+    this.setState(prevState => ({ finished: !prevState.finished }))
+  }
 
   copyAnimation = () =>
     anime
@@ -119,7 +119,7 @@ class Footer extends Component {
         opacity: 0,
         duration: 1000,
         easing: "easeInOutSine"
-      });
+      })
 
   render() {
     var menu = [
@@ -148,7 +148,7 @@ class Footer extends Component {
         link: "/thankYou",
         title: "Thank you"
       }
-    ];
+    ]
 
     var social = [
       {
@@ -167,14 +167,14 @@ class Footer extends Component {
         link: "https://github.com/ApostolosKalovelo",
         title: "Github"
       }
-    ];
+    ]
     return this.props.location.pathname === "/portal" ? (
       ""
     ) : (
       <div
         className="footer layout"
         ref={footer => {
-          this.footer = footer;
+          this.footer = footer
         }}
       >
         <div className="footer__divider" />
@@ -203,7 +203,7 @@ class Footer extends Component {
               id="copyText"
               value="opa@kalovelo.com"
               ref={input => {
-                this.mailElement = input;
+                this.mailElement = input
               }}
             />
             <span className="footer__copied">copied!</span>
@@ -213,7 +213,7 @@ class Footer extends Component {
             <div>
               <ul
                 onClick={() => {
-                  window.scrollTo(1, 1);
+                  window.scrollTo(1, 1)
                 }}
               >
                 {menu.map((menuLink, i) => (
@@ -229,9 +229,9 @@ class Footer extends Component {
                 {social.map((smedia, i) => (
                   <li key={i}>
                     <a
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="footer__socialMedia"
-                      target="_blank"
                       href={smedia.link}
                     >
                       {smedia.title}
@@ -258,8 +258,8 @@ class Footer extends Component {
         </div>
         <div className="footer__divider" />
       </div>
-    );
+    )
   }
 }
 
-export default withRouter(Footer);
+export default withRouter(Footer)

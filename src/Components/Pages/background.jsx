@@ -272,7 +272,6 @@ const Background = () => {
           </tbody>
         </table>
       </ScrollAnimation>
-
       <ReactTooltip effect="solid" place="bottom" />
     </div>
   )

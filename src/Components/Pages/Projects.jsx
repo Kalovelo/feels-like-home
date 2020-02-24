@@ -3,6 +3,11 @@ import { useState, useRef } from "react"
 import anime from "animejs/lib/anime.es.js"
 import FloatingElements from "../components/floatingElements"
 import { debounce } from "lodash"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faChevronLeft as faAngleLeft,
+  faChevronRight as faAngleRight
+} from "@fortawesome/free-solid-svg-icons"
 
 const Projects = () => {
   useEffect(() => {
@@ -39,19 +44,20 @@ const Projects = () => {
       targets: imageRef.current,
       opacity: {
         value: [0, 1],
-        duration: 300
+        duration: 150
       },
       translateY: [-400, 0],
       delay: 200,
-      duration: 200,
+      duration: 100,
       easing: "spring(1, 80, 10, 0)",
-      complete: () =>
+      begin: () =>
         anime({
           targets: contentRef.current,
           translateX: [200, 0],
+          delay: 250,
           opacity: {
             value: [0, 1],
-            duration: 300
+            duration: 800
           },
           duration: 300,
           easing: "linear"
@@ -74,7 +80,7 @@ const Projects = () => {
           value: 0,
           duration: 400
         },
-        duration: 800,
+        duration: 400,
         easing: "linear"
       })
 
@@ -117,11 +123,33 @@ const Projects = () => {
             ))}
           </p>
           <div>
-            <a href={currentProjectState.link}>Go</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={currentProjectState.link}
+              className="Projects__cta"
+            >
+              Github
+            </a>
           </div>
-          <div>
-            <span onClick={debounce(previousProject, 500)}>Previous</span>
-            <span onClick={debounce(nextProject, 500)}>Next </span>
+          <div className="Projects__controller-wrapper">
+            <span
+              className="Projects__controller"
+              onClick={debounce(previousProject, 500)}
+            >
+              <FontAwesomeIcon className="Projects__fa" icon={faAngleLeft} />
+              <span className="Projects__controller-text">Previous</span>
+            </span>
+            <span
+              className="Projects__controller"
+              onClick={debounce(nextProject, 500)}
+            >
+              <span className="Projects__controller-text">Next</span>
+              <FontAwesomeIcon
+                className="Projects__controller-icon"
+                icon={faAngleRight}
+              />
+            </span>
           </div>
         </div>
       </div>
