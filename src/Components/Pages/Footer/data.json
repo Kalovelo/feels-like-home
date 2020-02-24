@@ -23,6 +23,10 @@
       "title": "Home"
     },
     {
+      "link": "/projects",
+      "title": "Projects"
+    },
+    {
       "link": "/background",
       "title": "Background"
     },
@@ -34,11 +38,6 @@
       "link": "/projects",
       "title": "Projects"
     },
-    {
-      "link": "/communities",
-      "title": "Communities"
-    },
-
     {
       "link": "/thankYou",
       "title": "Thank you"

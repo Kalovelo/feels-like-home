@@ -15,8 +15,7 @@ import Homepage from "./Components/Pages/Homepage/homePage"
 import Background from "./Components/Pages/Background/background"
 import Portal from "./Components/Pages/portal"
 import About from "./Components/Pages/About/about"
-import ThankYou from "./Components/Pages/thankYou"
-import NotFound404 from "./Components/Pages/notFound404"
+import NotFound404 from "./Components/Pages/notFound404/notFound404"
 import Cookiefier from "./Components/cookiefier"
 import Projects from "./Components/Pages/Projects/Projects.jsx"
 
@@ -37,7 +36,6 @@ const App = props => {
           <Route exact path="/" component={Homepage} />
           <Route path="/Background" component={Background} />
           <Route path="/about" component={About} />
-          <Route path="/thankYou" component={ThankYou} />
           <Route path="/portal" component={Portal} />
           <Route path="/projects" component={Projects} />
           <Route path="" component={NotFound404} />
