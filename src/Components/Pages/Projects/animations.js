@@ -7,7 +7,7 @@ const animateSpawn = targets => {
       value: [0, 1],
       duration: 150
     },
-    translateY: [-400, 0],
+    translateY: ["-60vh", 0],
     delay: 200,
     duration: 100,
     easing: "spring(1, 80, 10, 0)",
@@ -30,7 +30,7 @@ const animateFadeAway = (timeline, targets) =>
   timeline
     .add({
       targets: targets[0],
-      translateY: -500,
+      translateY: "-60vh",
       duration: 300,
       easing: "linear"
     })

@@ -1,11 +1,10 @@
 import React from "react"
 import { NavLink, withRouter } from "react-router-dom"
-import "./NavBar.css"
 
 const HeaderDesktop = props => {
   return (
     <div className="header">
-      <div className="header-wrapper">
+      <div className="header__wrapper">
         {props.links.map((path, index) => (
           <NavLink
             key={index}

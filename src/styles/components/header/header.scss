@@ -1,19 +1,25 @@
 .header {
   display: flex;
   flex-direction: row-reverse;
-  padding: 20px 10px;
-  z-index: 2000;
-  width: 100%;
+  right: 10px;
+  padding: 20px 0px;
+  z-index: 2;
   position: absolute;
+  width: 100%;
 
   @media (min-width: $desktop) {
-    padding: 20px 50px;
+    padding: 20px 0;
+    right: 50px;
   }
 
   @media (min-width: $desktop-large) {
-    padding: 20px 200px;
+    right: 200px;
+    padding: 20px 0;
   }
 
+  &__wrapper {
+    display: flex;
+  }
   &__item {
     color: inherit;
     margin: 20px 30px;
@@ -23,6 +29,10 @@
 
     &--light {
       color: $color__greyPale;
+
+      .App--dark & {
+        color: $color__black;
+      }
     }
 
     &:hover {

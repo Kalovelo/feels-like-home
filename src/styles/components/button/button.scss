@@ -4,7 +4,6 @@
   display: inline;
   cursor: pointer;
 
-
   a {
     font-family: $garamond;
   }
@@ -22,29 +21,43 @@
       }
     }
   }
-  &--portal{
-    font-family:roboto;
-    padding:5px 15px;
+  &--portal {
+    font-family: roboto;
+    padding: 5px 15px;
     font-weight: 100;
-    display: inline-block ;
-    border-top:1px solid transparent;
-    border-bottom:1px solid transparent;
-    color:$color__black;
-
-    .portal__section--dark &{
-      color:$color__white;
-
-
-    &:hover{
-      border-top:1px solid $color__white;
-      border-bottom:1px solid $color__white;  
-    }
+    display: inline-block;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    color: $color__black;
+    &:hover {
+      border-top: 1px solid $color__black;
+      border-bottom: 1px solid $color__black;
     }
 
-    &:hover{
-      border-top:1px solid $color__black;
-      border-bottom:1px solid $color__black;  
+    .App--dark & {
+      color: $color__white;
+      &:hover {
+        border-top: 1px solid $color__white;
+        border-bottom: 1px solid $color__white;
+      }
     }
-    font-size:2rem;
+
+    &-dark {
+      color: $color__white;
+      &:hover {
+        border-top: 1px solid $color__white;
+        border-bottom: 1px solid $color__white;
+      }
+
+      .App--dark & {
+        color: $color__black;
+        &:hover {
+          border-top: 1px solid $color__black;
+          border-bottom: 1px solid $color__black;
+        }
+      }
+    }
+
+    font-size: 2rem;
   }
 }
