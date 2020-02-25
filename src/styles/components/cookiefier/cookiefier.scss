@@ -1,0 +1,38 @@
+.cookiefier {
+  display: flex;
+  z-index: 2;
+  position: fixed;
+  margin-top: 20%;
+  margin-left: 100px;
+  padding: 10px;
+  flex-direction: column;
+  background: $color__black;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: $color__white;
+  text-align: center;
+  &__title {
+    font-size: 1rem;
+    display: inline;
+    font-family: $maax;
+    font-weight: 900;
+  }
+  &__information {
+    font-size: 0.9rem;
+  }
+  &__cta {
+    font-family: $garamond;
+    padding: 10px;
+    border: 1px solid $color__white;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      border-color: $color__accent;
+      color: $color__accent;
+    }
+  }
+}
