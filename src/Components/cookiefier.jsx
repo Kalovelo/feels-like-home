@@ -40,8 +40,8 @@ const Cookiefier = () => {
     <div className="cookiefier" ref={cookiefierRef}>
       <h5 className="cookiefier__title">Tea is served with cookies!</h5>
       <p className="cookiefier__information">
-        In order to keep a functionality and fondness score, I am using Matomo
-        Analytics to track visitor navigation. Worry not, Matomo is open source!{" "}
+        In order to keep a functionality and fondness score, I am using GoSquared
+        Analytics to track visitor navigation. Worry not, GoSquared is open source!{" "}
       </p>
       <span onClick={fadeOut} className="cookiefier__cta">
         Alright!

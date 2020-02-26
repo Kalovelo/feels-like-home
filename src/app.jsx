@@ -23,6 +23,8 @@ import Projects from "./Components/Pages/Projects/Projects.jsx"
 import { useSelector } from "react-redux"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import ScrollToTop from "./ScrollToTop"
+//! Middleware
+// import { analytics } from "./middleware/analytics"
 
 const App = props => {
   const theme = useSelector(state => state.theme)
