@@ -1,7 +1,5 @@
 import React from "react"
 import { Component } from "react"
-import { NavLink } from "react-router-dom"
-import { withRouter } from "react-router-dom"
 import {
   copyAnimation,
   typewriterAnimation,
@@ -24,7 +22,7 @@ class Footer extends Component {
   }
 
   componentDidMount() {
-    if (this.props.location.pathname !== "/portal")
+    if (true)
       this.typewriterInterval = setInterval(() => {
         typewriterAnimation(this.updateIndex)
       }, 3800)
@@ -64,9 +62,7 @@ class Footer extends Component {
   }
 
   render() {
-    return this.props.location.pathname === "/portal" ? (
-      ""
-    ) : (
+    return (
       <div
         className="footer layout"
         ref={footer => {
@@ -114,7 +110,7 @@ class Footer extends Component {
               >
                 {data.menu.map((menuLink, i) => (
                   <li key={i}>
-                    <NavLink to={menuLink.link}>{menuLink.title}</NavLink>
+                    <a to={menuLink.link}>{menuLink.title}</a>
                   </li>
                 ))}
               </ul>
@@ -158,4 +154,4 @@ class Footer extends Component {
   }
 }
 
-export default withRouter(Footer)
+export default Footer

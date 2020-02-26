@@ -1,7 +1,8 @@
 import React from "react"
-import { withRouter } from "react-router-dom"
 const FloatingElements = props =>
-  props.location.pathname !== "/portal" ? (
+  props.hideElements ? (
+    ""
+  ) : (
     <div>
       {[...Array(props.num)].map((elem, index) => (
         <span
@@ -12,7 +13,5 @@ const FloatingElements = props =>
         ></span>
       ))}
     </div>
-  ) : (
-    ""
   )
-export default withRouter(FloatingElements)
+export default FloatingElements

@@ -11,6 +11,7 @@ $desktop: 1024px;
 $desktop-large: 1350px;
 .layout {
   z-index: -1;
+  overflow-x: hidden;
   transition: all 1s;
   padding: $mobile-paddings;
 

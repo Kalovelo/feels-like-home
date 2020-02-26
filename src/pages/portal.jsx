@@ -1,7 +1,7 @@
 import React from "react"
-import { Button } from "../../Components/components/button"
-
-class Portal extends React.Component {
+import { Button } from "../Components/components/button"
+import { Layout } from "../Components/layout"
+class PortalComponent extends React.Component {
   componentDidMount() {
     document.title = "Choose a Path"
   }
@@ -31,7 +31,7 @@ class Portal extends React.Component {
           </p>
           <div class="portal__button-wrapper">
             <Button
-              link="/background"
+              link="/background/"
               text="· Earth Route"
               class="button--portal button--portal-dark"
             />
@@ -41,5 +41,11 @@ class Portal extends React.Component {
     )
   }
 }
+
+const Portal = () => (
+  <Layout noFooter isPortal>
+    <PortalComponent />
+  </Layout>
+)
 
 export default Portal

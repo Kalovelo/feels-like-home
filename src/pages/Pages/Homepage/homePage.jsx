@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react"
-import { NavLink } from "react-router-dom"
 //images
 import apostoles1 from "../../../Components/Images/apostoles1.png"
 import apostoles2 from "../../../Components/Images/apostoles2.jpg"
@@ -16,6 +15,7 @@ import { scatterAnimation, informationAnimation, animateImages } from "./animati
 import FloatingElements from "../../../Components/components/floatingElements"
 import anime from "animejs/lib/anime.es.js"
 import Lightbox from "react-image-lightbox"
+import { Link } from "gatsby"
 
 const HomePage = props => {
   const dispatch = useDispatch()
@@ -105,13 +105,13 @@ const HomePage = props => {
             onMouseLeave={() => dispatch(toggleTheme())}
           >
             <span className="homepage__cta-title">Up for a walk?</span>
-            <NavLink
+            <Link
               to="/portal"
               onClick={() => dispatch(toggleTheme())}
               className="homepage__cta"
             >
               PROCEED
-            </NavLink>
+            </Link>
           </div>
         </ScrollAnimation>
       </div>

@@ -1,7 +1,7 @@
 import React from "react"
 import HeaderDesktop from "./Desktop/header"
 import Sidebar from "./mobileNavMenu/sidebar"
-
+import { withRouter } from "react-router-dom"
 class Header extends React.Component {
   state = {
     nav: HeaderDesktop
@@ -27,7 +27,7 @@ class Header extends React.Component {
   }
 
   render() {
-    return <this.state.nav links={this.links} />
+    return <this.state.nav isPortal={this.props.isPortal} links={this.links} />
   }
 }
 

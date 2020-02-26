@@ -1,23 +1,23 @@
-import React, { Component } from "react";
-import { slide as Menu } from "react-burger-menu";
-import "./styles.css";
-import { NavLink } from "react-router-dom";
-import logo from "../../Images/logo.jpg";
+import React, { Component } from "react"
+import { slide as Menu } from "react-burger-menu"
+import "./styles.css"
+import logo from "../../Images/logo.jpg"
+import { Link } from "gatsby"
 
 export default class Sidebar extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       menuOpen: false
-    };
+    }
   }
 
   handleStateChange(state) {
-    this.setState({ menuOpen: state.isOpen });
+    this.setState({ menuOpen: state.isOpen })
   }
 
   closeMenu() {
-    this.setState({ menuOpen: false });
+    this.setState({ menuOpen: false })
   }
 
   render() {
@@ -33,18 +33,14 @@ export default class Sidebar extends Component {
           <div className="sideMenu">
             {this.props.links.map((path, index) => (
               <li>
-                <NavLink
-                  key={index}
-                  onClick={() => this.closeMenu()}
-                  to={path.link}
-                >
+                <Link key={index} onClick={() => this.closeMenu()} to={path.link}>
                   {path.title}
-                </NavLink>
+                </Link>
               </li>
             ))}
           </div>
         </Menu>
       </div>
-    );
+    )
   }
 }

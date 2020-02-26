@@ -1,25 +1,23 @@
 import React from "react"
-import { NavLink, withRouter } from "react-router-dom"
-
+import { Link } from "gatsby"
 const HeaderDesktop = props => {
   return (
     <div className="header">
       <div className="header__wrapper">
         {props.links.map((path, index) => (
-          <NavLink
+          <Link
             key={index}
             className={
-              "header__item " +
-              (props.location.pathname === "/portal" ? "header__item--light" : "")
+              "header__item " + (props.isPortal ? "header__item--light" : "")
             }
             to={path.link}
           >
             {path.title}
-          </NavLink>
+          </Link>
         ))}
       </div>
     </div>
   )
 }
 
-export default withRouter(HeaderDesktop)
+export default HeaderDesktop
