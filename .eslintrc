@@ -7,8 +7,11 @@
   "plugins": ["import"],
   "extends": ["plugin:prettier/recommended"],
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "rules": {
     "no-console": "warn",

@@ -32,7 +32,7 @@ class Footer extends Component {
     clearInterval(this.typewriterInterval)
   }
 
-  copyMailtoClipboard = () => {
+  copyMailtoClipboard() {
     this.copyToClipboard("opa@kalovelo.com")
     copyAnimation()
   }
@@ -46,7 +46,7 @@ class Footer extends Component {
     document.body.removeChild(dummy)
   }
 
-  updateIndex = () => {
+  updateIndex() {
     let prevIndex = this.state.indexCTA
     this.setState(
       {
@@ -57,7 +57,7 @@ class Footer extends Component {
     )
   }
 
-  finishedHover = () => {
+  finishedHover() {
     this.setState(prevState => ({ finished: !prevState.finished }))
   }
 
