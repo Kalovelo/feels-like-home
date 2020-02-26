@@ -9,6 +9,8 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "animejs": "^3.1.0",
     "delayed-scroll-restoration-polyfill": "^0.1.1",
+    "gatsby": "^2.19.22",
+    "gatsby-plugin-sass": "^2.1.29",
     "history": "^4.10.1",
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.13.1",
@@ -28,6 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "gatsby   develop -p 3333 -o",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
