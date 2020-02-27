@@ -29,7 +29,7 @@ const Background = () => {
           / React Developer.
         </p>
 
-        <h2 className="background__subtitle">Skills</h2>
+        <h2 className="background__subtitle">Working & Forging on</h2>
         <div className="background__skills">
           {skills.map((skillContainer, index) => (
             <div key={index} className="background__skill-wrapper">

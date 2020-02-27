@@ -101,7 +101,7 @@ const skills = [
 ]
 
 const communityTable = {
-  attributes: ["Title", "Role"],
+  attributes: ["Title", "Role", "Link"],
   content: [
     {
       link: "https://openscn.gitlab.io/documentation/",

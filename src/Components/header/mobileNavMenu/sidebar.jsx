@@ -28,7 +28,6 @@ export default class Sidebar extends Component {
           isOpen={this.state.menuOpen}
           onStateChange={state => this.handleStateChange(state)}
           width={"100%"}
-          className="mobile-hide"
         >
           <div className="sideMenu">
             {this.props.links.map((path, index) => (

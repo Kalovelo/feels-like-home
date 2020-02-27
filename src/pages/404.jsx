@@ -12,7 +12,7 @@ const NotFound404 = () => {
   return (
     <Layout>
       <div className="notFound layout fade-in">
-        {[...Array(ufoNum)].map(index => (
+        {[...Array(ufoNum)].map((el, index) => (
           <span
             key={index}
             className="notFound__ufo floatingElement floatingElement--ufo"

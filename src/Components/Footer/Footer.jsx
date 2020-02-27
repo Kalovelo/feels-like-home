@@ -1,5 +1,6 @@
 import React from "react"
 import { Component } from "react"
+import { Link } from "gatsby"
 import {
   copyAnimation,
   typewriterAnimation,
@@ -32,7 +33,7 @@ class Footer extends Component {
     clearInterval(this.typewriterInterval)
   }
 
-  copyMailtoClipboard() {
+  copyMailtoClipboard = () => {
     this.copyToClipboard("opa@kalovelo.com")
     copyAnimation()
   }
@@ -46,7 +47,7 @@ class Footer extends Component {
     document.body.removeChild(dummy)
   }
 
-  updateIndex() {
+  updateIndex = () => {
     let prevIndex = this.state.indexCTA
     this.setState(
       {
@@ -57,7 +58,7 @@ class Footer extends Component {
     )
   }
 
-  finishedHover() {
+  finishedHover = () => {
     this.setState(prevState => ({ finished: !prevState.finished }))
   }
 
@@ -110,7 +111,7 @@ class Footer extends Component {
               >
                 {data.menu.map((menuLink, i) => (
                   <li key={i}>
-                    <a to={menuLink.link}>{menuLink.title}</a>
+                    <Link to={menuLink.link}>{menuLink.title}</Link>
                   </li>
                 ))}
               </ul>

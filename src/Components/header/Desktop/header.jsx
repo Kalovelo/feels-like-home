@@ -1,8 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Moon } from "../../../svg/themeIcons"
+import { ThemeToggler } from "../themeToggler"
 const HeaderDesktop = props => {
   return (
     <div className="header">
+      <span className="header__icon">
+        <ThemeToggler />
+      </span>
       <div className="header__wrapper">
         {props.links.map((path, index) => (
           <Link

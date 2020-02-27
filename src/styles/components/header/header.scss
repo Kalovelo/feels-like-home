@@ -1,24 +1,22 @@
 .header {
   display: flex;
-  flex-direction: row-reverse;
   right: 10px;
-  padding: 20px 0px;
+  justify-content: space-between;
+  align-items: center;
   z-index: 2;
   position: absolute;
   width: 100%;
   overflow-x: hidden;
-  @media (min-width: $desktop) {
-    padding: 20px 0;
-    right: 50px;
-  }
-
-  @media (min-width: $desktop-large) {
-    right: 200px;
-    padding: 20px 0;
-  }
-
   &__wrapper {
     display: flex;
+
+    @media (min-width: $desktop) {
+      margin-right: 50px;
+    }
+
+    @media (min-width: $desktop-large) {
+      margin-right: 200px;
+    }
   }
   &__item {
     color: inherit;
@@ -38,6 +36,32 @@
     &:hover {
       text-decoration: none;
       color: $color__accent;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    svg * {
+      transition: all 0.5s;
+      box-shadow: 4px 9px 31px -19px $color__black;
+      .App--dark & {
+        fill: $color__white;
+        box-shadow: 4px 9px 31px -19px $color__white;
+      }
+    }
+
+    &:hover {
+      svg * {
+        fill: $color__accent;
+      }
+    }
+    @media (min-width: $desktop) {
+      margin-left: 50px;
+    }
+    @media (min-width: $desktop-large) {
+      margin-left: 210px;
     }
   }
 }

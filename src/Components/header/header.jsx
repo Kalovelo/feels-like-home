@@ -11,7 +11,7 @@ const links = [
 class Header extends React.Component {
   constructor(props) {
     super(props)
-    state = {
+    this.state = {
       nav: HeaderDesktop
     }
   }

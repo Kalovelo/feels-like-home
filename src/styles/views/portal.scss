@@ -23,6 +23,7 @@
     padding: 0 20px;
     height: 100%;
     background: $color__white;
+    transition: all 0.5s;
     .App--dark & {
       background: $color__black;
     }
