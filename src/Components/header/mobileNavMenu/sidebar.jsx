@@ -39,6 +39,7 @@ export default class Sidebar extends Component {
             ))}
           </div>
         </Menu>
+        <span>test</span>
       </div>
     )
   }

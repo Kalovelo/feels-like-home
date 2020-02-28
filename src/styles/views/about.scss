@@ -1,8 +1,8 @@
 .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &__pageTitle {
     text-align: center;
@@ -17,18 +17,18 @@
     justify-content: center;
     flex-direction: column;
 
-    @media(min-width:$tablet){
-        flex-direction: row;
+    @media (min-width: $tablet) {
+      flex-direction: row;
     }
   }
 
   &__container {
-      height: 500px;
-      padding: 5%;
-      width: 100%;
-      
-      @media(min-width:$tablet){
-        width: 50%;
+    height: 500px;
+    padding: 5%;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      width: 50%;
     }
 
     &--left {
@@ -40,9 +40,9 @@
       }
     }
 
-    &--big{
-        margin-top:$desktop-content-margin;
-        width:90%;
+    &--big {
+      margin-top: $desktop-content-margin;
+      width: 90%;
     }
 
     &--right {
@@ -59,16 +59,17 @@
 
   &__container-title {
     text-align: center;
+    font-size: 2rem;
     font-family: adobe-garamond-pro, serif;
     margin-bottom: 50px;
   }
 
-  &__quote{
-      font-family: $garamond;
+  &__quote {
+    font-family: $garamond;
 
-      &--last{
-          text-align: right;
-          display: block;
-      }
+    &--last {
+      text-align: right;
+      display: block;
+    }
   }
 }

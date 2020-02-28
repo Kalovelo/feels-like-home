@@ -19,15 +19,15 @@ const Background = () => {
     <Layout>
       <div className="background layout fade-in">
         <FloatingElements num={3} />
-        <h1 className="b  ackground__title">Background</h1>
-        <p className="layout__container-content background__content">
-          I admire creations that try to show their flavour to the world, creations
-          whose main goal is to have an impact by expressing their own philosophy,{" "}
-          <b>their own story.</b>
-          <br />
-          My experience involves working as a WordPress freelancer and in-house Front
-          / React Developer.
-        </p>
+        <h1 className="background__content">
+          Code like interfaces, <span className="layout__bold">clean</span> and{" "}
+          <span className="layout__bold">
+            <span className="background__word-bundle">
+              meaningful
+              <span className="background__title">a continuous goal</span>
+            </span>
+          </span>
+        </h1>
 
         <h2 className="background__subtitle">Working & Forging on</h2>
         <div className="background__skills">

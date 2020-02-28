@@ -22,7 +22,6 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    margin-top: $desktop-content-margin;
     align-items: center;
 
     @media (min-width: $desktop) {
@@ -35,14 +34,6 @@
     width: 100%;
     font-size: 14px;
 
-    .homepage--darkMode & {
-      color: $color__greyPale;
-    }
-
-    p {
-      padding: 20px 0;
-    }
-
     @media (min-width: $desktop) {
       width: 600px;
       font-size: 17px;
@@ -52,6 +43,11 @@
   &__introduction-title {
     font-family: $maax;
     font-weight: bold;
+    font-size: 2rem;
+  }
+
+  &__paragraph {
+    font-size: 1.3rem;
   }
 
   &__button-wrapper {

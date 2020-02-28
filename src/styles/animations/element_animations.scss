@@ -25,8 +25,8 @@ $amount: 20;
         fill: nth($darkModeColors, random(3));
       }
 
-      top: random(85) * 1%;
-      left: random(85) * 1%;
+      top: random(60) * 1%;
+      left: random(100) * 1%;
       animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
       animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
       transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;

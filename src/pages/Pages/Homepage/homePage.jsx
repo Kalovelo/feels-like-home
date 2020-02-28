@@ -52,16 +52,16 @@ const HomePage = props => {
       <div className="halfRow homepage__introduction-wrapper">
         <div ref={informationRef} className="homepage__introduction-text">
           <h2 className="homepage__introduction-title">Greetings, stranger!</h2>
-          <p>
+          <p className="homepage__paragraph">
             My name is Apostolos Kalovelonis, coming straight out of the olives and
             oregano country, <b>Greece</b>. I am keen on clean interfaces, high score
             numbers & self - improvement.
           </p>
-          <p>
+          <p className="homepage__paragraph">
             Currently studying for Google Summer of Code and working as a freelancer.
-            You can find me at
-            <b> local meetups</b> about content - marketing or development, reading
-            peacefully a book on public transport, or jogging by the sea.
+            You can find me at <b> local meetups</b> about content - marketing or
+            development, reading peacefully a book on public transport, or jogging by
+            the sea.
           </p>
         </div>
 

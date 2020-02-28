@@ -36,7 +36,7 @@ class About extends Component {
             </div>
             <div className="slide-in-right about__container about__container--right">
               <h3 className="about__container-title">Literature</h3>
-              <p className="about__container-content">
+              <p className="layout__container-content">
                 {" "}
                 Books here and there, full of notes. My cup of tea includes
                 self-improvement, philosophy and classic literature books. By the
@@ -50,7 +50,7 @@ class About extends Component {
 
           <div className="about__container about__container--big">
             <h1 className="about__container-title">Entertainment</h1>
-            <p className="about__container-content">
+            <p className="layout__container-content">
               My music preference ranges from the heaviest metal riffs to the
               slowest, calming hip-hop beats. It always depends on the mood, the
               situtation - and of course - the company. <br />
