@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Moon } from "../../../svg/themeIcons"
 import { ThemeToggler } from "../themeToggler"
 const HeaderDesktop = props => {
   return (

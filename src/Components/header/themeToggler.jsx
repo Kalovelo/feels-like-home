@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { toggleTheme } from "../../reducers/themeActions"
-import { Moon, Sun } from "../../svg/themeIcons"
+import { Moon, Sun } from "../../content/svg/themeIcons"
 import anime from "animejs/lib/anime.es.js"
 import { useRef } from "react"
 

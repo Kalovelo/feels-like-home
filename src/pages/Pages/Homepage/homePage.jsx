@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 //images
-import apostoles1 from "../../../Components/Images/apostoles1.png"
-import apostoles2 from "../../../Components/Images/apostoles2.jpg"
+import apostoles1 from "../../../content/Images/apostoles1.png"
+import apostoles2 from "../../../content/Images/apostoles2.jpg"
 
 //store
 import { useDispatch } from "react-redux"

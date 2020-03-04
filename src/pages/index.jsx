@@ -1,7 +1,7 @@
 import React from "react"
 
 //! styles
-import "../fonts/font.css"
+import "../content/fonts/font.css"
 import "../styles/styles.scss"
 import "../animations/animations.css"
 import "react-image-lightbox/style.css"

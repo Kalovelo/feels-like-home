@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { slide as Menu } from "react-burger-menu"
 import "./styles.css"
-import logo from "../../Images/logo.jpg"
 import { Link } from "gatsby"
 
 export default class Sidebar extends Component {
@@ -24,7 +23,7 @@ export default class Sidebar extends Component {
     return (
       <div id="topbar">
         <Menu
-          customBurgerIcon={<img alt="" src={logo} />}
+          customBurgerIcon={<h1>s</h1>}
           isOpen={this.state.menuOpen}
           onStateChange={state => this.handleStateChange(state)}
           width={"100%"}
