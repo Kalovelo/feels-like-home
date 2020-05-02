@@ -1,5 +1,5 @@
-1. setup 404.
+1. OpenSCN darkmode color
 2. error
 3. GoSquared responsiveness & colours
-4. communities border colours
 5. setup Projects
+7. Text Selection Colours

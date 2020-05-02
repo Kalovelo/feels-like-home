@@ -24,7 +24,7 @@
   border: none;
 }
 
-.App--dark li {
+.App--dark .sideMenu li {
   border-bottom: 1px solid black;
 }
 html,

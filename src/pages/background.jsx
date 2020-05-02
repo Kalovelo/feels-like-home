@@ -85,16 +85,6 @@ const Background = () => {
                       {dataItem}
                     </td>
                   ))}
-                  <td>
-                    <a
-                      className="background__community-item background__community-item--cta"
-                      href={element.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Go!
-                    </a>
-                  </td>
                 </tr>
               ))}
             </tbody>

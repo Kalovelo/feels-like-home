@@ -4,7 +4,6 @@ const tableAnimation = (visible, theme) =>
   visible
     ? anime({
         targets: ".background__community-row",
-        borderColor: theme === "light" ? "#000" : "#fff",
         easing: "linear",
         duration: 100,
         complete: () => {

@@ -89,7 +89,7 @@ class Footer extends Component {
             </h3>
             <h3 className="footer__CTA" onClick={this.copyMailtoClipboard}>
               {" "}
-              opa@kalovelo.com
+              hey@kalovelo.com
             </h3>
             <input
               type="hidden"

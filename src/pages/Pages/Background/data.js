@@ -101,45 +101,41 @@ const skills = [
 ]
 
 const communityTable = {
-  attributes: ["Title", "Role", "Link"],
+  attributes: ["Title", "Role"],
   content: [
     {
-      link: "https://openscn.gitlab.io/documentation/",
       data: [
-        <span>
+        <a href="https://openscn.gitlab.io/documentation/">
           <OpenSCN class="background__svg" />
           OpenSCN
-        </span>,
+        </a>,
         "Dev"
       ]
     },
     {
-      link: "https://www.facebook.com/ieee.ihuthess",
       data: [
-        <span>
+        <a href="https://www.facebook.com/ieee.ihuthess">
           <Ihu class="background__svg" />
           IEEE IHU SKG Student Branch
-        </span>,
+        </a>,
         "Member"
       ]
     },
     {
-      link: "https://wpgreece.org/",
       data: [
-        <span>
+        <a href="https://wpgreece.org/">
           <Wordpress class="background__svg" />
           WordPress Greek Community
-        </span>,
+        </a>,
         "Volunteer"
       ]
     },
     {
-      link: "https://fosdem.org",
       data: [
-        <span>
+        <a href="https://fosdem.org">
           <Fosdem class="background__svg" />
           Fosdem
-        </span>,
+        </a>,
         "Volunteer"
       ]
     }

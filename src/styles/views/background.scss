@@ -73,7 +73,11 @@
   }
 
   &__community-row {
-    border-bottom: 2px solid transparent;
+    border-bottom: 2px solid $color__blackPale;
+
+    .App--dark & {
+      border-bottom: 2px solid $color__greyPale;
+    }
 
     &--content {
       &:last-child {
