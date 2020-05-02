@@ -1,0 +1,5 @@
+1. setup 404.
+2. error
+3. GoSquared responsiveness & colours
+4. communities border colours
+5. setup Projects

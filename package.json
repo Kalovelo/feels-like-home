@@ -31,7 +31,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "gatsby   develop -p 3333 -o",
+    "dev": "gatsby develop -p 3333 -o",
+    "dev-m": "gatsby develop -H 0.0.0.0 -p 8000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

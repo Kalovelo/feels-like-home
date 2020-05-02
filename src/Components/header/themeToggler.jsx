@@ -22,7 +22,6 @@ export const ThemeToggler = props => {
           opacity: 1,
           begin: updateStore,
           targets: togglerRef.current,
-          translateY: "100px",
           easing: "linear",
           duration: 300
         })

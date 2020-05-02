@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { slide as Menu } from "react-burger-menu"
 import "./styles.css"
 import { Link } from "gatsby"
+import { ThemeToggler } from "../themeToggler"
 
 export default class Sidebar extends Component {
   constructor(props) {
@@ -22,23 +23,32 @@ export default class Sidebar extends Component {
   render() {
     return (
       <div id="topbar">
-        <Menu
-          customBurgerIcon={<h1>s</h1>}
-          isOpen={this.state.menuOpen}
-          onStateChange={state => this.handleStateChange(state)}
-          width={"100%"}
-        >
-          <div className="sideMenu">
-            {this.props.links.map((path, index) => (
-              <li>
-                <Link key={index} onClick={() => this.closeMenu()} to={path.link}>
-                  {path.title}
-                </Link>
-              </li>
-            ))}
-          </div>
-        </Menu>
-        <span>test</span>
+        <div className="topbar__icons-wrapper">
+          <Menu
+            isOpen={this.state.menuOpen}
+            onStateChange={state => this.handleStateChange(state)}
+            width="100%"
+          >
+            <div className="sideMenu">
+              {this.props.links.map((path, index) => (
+                <li>
+                  <Link key={index} onClick={() => this.closeMenu()} to={path.link}>
+                    {path.title}
+                  </Link>
+                </li>
+              ))}
+            </div>
+          </Menu>
+        </div>
+        <div className="topbar__right-mode-toggle">
+          <Menu
+            disableOverlayClick
+            customBurgerIcon={<ThemeToggler />}
+            // isOpen={this.state.menuOpen}
+            // onStateChange={state => this.handleStateChange(state)}
+            right
+          ></Menu>
+        </div>
       </div>
     )
   }

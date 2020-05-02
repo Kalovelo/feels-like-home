@@ -21,6 +21,17 @@
   }
 }
 
+#topbar {
+  svg * {
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 4px 9px 31px -19px $color__black;
+    .App--dark & {
+      fill: $color__white;
+      box-shadow: 4px 9px 31px -19px $color__white;
+    }
+  }
+}
 @media only screen and (min-width: 700px) {
   #topBar {
     visibility: hidden;

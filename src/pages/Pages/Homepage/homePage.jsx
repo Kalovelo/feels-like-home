@@ -58,10 +58,9 @@ const HomePage = props => {
             numbers & self - improvement.
           </p>
           <p className="homepage__paragraph">
-            Currently studying for Google Summer of Code and working as a freelancer.
-            You can find me at <b> local meetups</b> about content - marketing or
-            development, reading peacefully a book on public transport, or jogging by
-            the sea.
+            Currently an IT student and working as a freelancer. You can find me at{" "}
+            <b> local meetups</b> about content - marketing or development, reading
+            peacefully a book on public transport, or jogging by the sea.
           </p>
         </div>
 
