@@ -30,6 +30,7 @@ const Cookiefier = () => {
   const fadeOut = () =>
     anime({
       targets: cookiefierRef.current,
+      translateY: -400,
       opacity: 0,
       duration: 2000,
       easing: "linear",

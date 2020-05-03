@@ -105,7 +105,7 @@ const communityTable = {
   content: [
     {
       data: [
-        <a href="https://openscn.gitlab.io/documentation/">
+        <a target="_blank" href="https://openscn.gitlab.io/documentation/">
           <OpenSCN class="background__svg" />
           OpenSCN
         </a>,
@@ -114,7 +114,7 @@ const communityTable = {
     },
     {
       data: [
-        <a href="https://www.facebook.com/ieee.ihuthess">
+        <a target="_blank" href="https://www.facebook.com/ieee.ihuthess">
           <Ihu class="background__svg" />
           IEEE IHU SKG Student Branch
         </a>,
@@ -123,7 +123,7 @@ const communityTable = {
     },
     {
       data: [
-        <a href="https://wpgreece.org/">
+        <a target="_blank" href="https://wpgreece.org/">
           <Wordpress class="background__svg" />
           WordPress Greek Community
         </a>,
@@ -132,7 +132,7 @@ const communityTable = {
     },
     {
       data: [
-        <a href="https://fosdem.org">
+        <a target="_blank" href="https://fosdem.org">
           <Fosdem class="background__svg" />
           Fosdem
         </a>,

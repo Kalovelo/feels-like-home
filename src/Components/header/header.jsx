@@ -17,8 +17,11 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this))
+    window.addEventListener("resize", this.resize.bind(this), true)
     this.resize()
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resize.bind(this), true)
   }
 
   resize() {

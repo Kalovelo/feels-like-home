@@ -31,8 +31,8 @@ export default class Sidebar extends Component {
           >
             <div className="sideMenu">
               {this.props.links.map((path, index) => (
-                <li>
-                  <Link key={index} onClick={() => this.closeMenu()} to={path.link}>
+                <li key={index}>
+                  <Link onClick={() => this.closeMenu()} to={path.link}>
                     {path.title}
                   </Link>
                 </li>

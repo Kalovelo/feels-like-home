@@ -107,12 +107,8 @@ a {
   outline: 0;
 }
 *::selection {
-  background: #000000; /* WebKit/Blink Browsers */
-  color: #ffffff;
-}
-*::-moz-selection {
-  background: #000000; /* Gecko Browsers */
-  color: #ffffff;
+  background: $color__grey; /* WebKit/Blink Browsers */
+  color: $color__white;
 }
 
 .__react_component_tooltip.type-dark {
