@@ -16,6 +16,7 @@ exports.components = {
   "component---src-pages-pages-homepage-home-page-jsx": hot(preferDefault(require("/home/apostoles/projects/feels-like-home/src/pages/Pages/Homepage/homePage.jsx"))),
   "component---src-pages-pages-not-found-404-alien-js": hot(preferDefault(require("/home/apostoles/projects/feels-like-home/src/pages/Pages/notFound404/alien.js"))),
   "component---src-pages-pages-projects-animations-js": hot(preferDefault(require("/home/apostoles/projects/feels-like-home/src/pages/Pages/Projects/animations.js"))),
+  "component---src-pages-pages-projects-data-js": hot(preferDefault(require("/home/apostoles/projects/feels-like-home/src/pages/Pages/Projects/data.js"))),
   "component---src-pages-portal-jsx": hot(preferDefault(require("/home/apostoles/projects/feels-like-home/src/pages/portal.jsx"))),
   "component---src-pages-projects-jsx": hot(preferDefault(require("/home/apostoles/projects/feels-like-home/src/pages/Projects.jsx"))),
   "component---src-pages-scroll-to-top-jsx": hot(preferDefault(require("/home/apostoles/projects/feels-like-home/src/pages/ScrollToTop.jsx")))

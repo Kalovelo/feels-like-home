@@ -33,14 +33,6 @@
     {
       "link": "/about",
       "title": "About"
-    },
-    {
-      "link": "/projects",
-      "title": "Projects"
-    },
-    {
-      "link": "/thankYou",
-      "title": "Thank you"
     }
   ],
   "ctaConcepts": ["philosophy", "books", "events", "a project", "your idea"]

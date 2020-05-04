@@ -1,3 +1,2 @@
 1. OpenSCN darkmode color
 3. GoSquared responsiveness & colours
-5. setup Projects

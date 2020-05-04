@@ -11,6 +11,8 @@ import {
 import { animateSpawn, animateFadeAway } from "./Pages/Projects/animations"
 import { Layout } from "../Components/layout"
 
+import { projects } from "./Pages/Projects/data"
+
 const Projects = () => {
   useEffect(() => {
     document.title = "Notable Creations"
@@ -29,7 +31,6 @@ const Projects = () => {
   const animationTimeline = anime.timeline()
 
   //Data
-  const projects = require("./Pages/Projects/data.json")
 
   const nextProject = () => {
     animateFadeAway(
@@ -67,7 +68,9 @@ const Projects = () => {
       <div className="Projects layout fade-in">
         <FloatingElements num={3} />
         <div className="Projects__wrapper">
-          <div className="Projects__image" ref={imageRef}></div>
+          <div className="Projects__image" ref={imageRef}>
+            {currentProjectState.logo}
+          </div>
           <div className="Projects__content" ref={contentRef} style={{ opacity: 0 }}>
             <h3 className="Projects__title">{currentProjectState.title}</h3>
             <p className="Projects__description">
@@ -79,26 +82,29 @@ const Projects = () => {
               ))}
             </p>
             <div>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={currentProjectState.link}
-                className="Projects__cta"
-              >
-                Github
-              </a>
+              {currentProjectState.links?.map((link, index) => (
+                <a
+                  key={index}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={link.url}
+                  className="Projects__cta"
+                >
+                  {link.text}
+                </a>
+              ))}
             </div>
             <div className="Projects__controller-wrapper">
               <span
                 className="Projects__controller"
-                onClick={debounce(previousProject, 500)}
+                onClick={debounce(previousProject, 1000)}
               >
                 <FontAwesomeIcon className="Projects__fa" icon={faAngleLeft} />
                 <span className="Projects__controller-text">Previous</span>
               </span>
               <span
                 className="Projects__controller"
-                onClick={debounce(nextProject, 500)}
+                onClick={debounce(nextProject, 1000)}
               >
                 <span className="Projects__controller-text">Next</span>
                 <FontAwesomeIcon

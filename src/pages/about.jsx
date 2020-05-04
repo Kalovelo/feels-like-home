@@ -53,17 +53,7 @@ class About extends Component {
             <p className="layout__container-content">
               My music preference ranges from the heaviest metal riffs to the
               slowest, calming hip-hop beats. It always depends on the mood, the
-              situtation - and of course - the company. <br />
-              <i>
-                the design of this website was influenced by Evidence's album,{" "}
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://www.youtube.com/watch?v=APStAKRV8yE"
-                >
-                  Weather or not.
-                </a>
-              </i>
+              situtation - and of course - the company.
             </p>
             <span className="about__quote">and if we're talking about...</span>
             <p>

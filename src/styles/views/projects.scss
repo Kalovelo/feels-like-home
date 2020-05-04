@@ -1,19 +1,30 @@
 .Projects {
   height: 100vh;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  @media (min-width: $tablet) {
+    align-items: center;
+    justify-content: center;
+  }
 
   &__image {
-    background: red;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
 
+    position: relative;
     @media (min-width: $desktop) {
       margin-bottom: 0;
+    }
+
+    svg,
+    path {
+      margin-bottom: 50px;
+
+      .App--dark & {
+        fill: $color__white;
+      }
     }
   }
   &__wrapper {
@@ -30,9 +41,6 @@
       flex-direction: row;
       justify-content: space-around;
     }
-  }
-
-  &__content {
   }
 
   &__title {
@@ -52,6 +60,7 @@
   &__controller-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
   }
 
   &__controller {
@@ -64,6 +73,7 @@
   }
 
   &__cta {
+    margin: 10px 10px 10px 0;
     padding: 10px 20px;
     font-family: $maax;
     font-weight: 100;
@@ -79,6 +89,43 @@
   }
 
   &__controller-text {
-    padding: 0 10px;
+    padding: 20px 10px;
   }
+}
+
+//fugly
+
+.st0,
+.st1,
+.st2,
+svg {
+  transition: all 0.5s !important;
+}
+.st0 {
+  stroke: #231f20;
+  stroke-miterlimit: 10;
+
+  .App--dark & {
+    stroke: $color__black !important;
+    fill: $color__black !important;
+  }
+}
+.st1 {
+  fill: $color__white;
+
+  .App--dark & {
+    fill: $color__black !important;
+  }
+}
+.st2 {
+  fill: $color__white;
+  stroke: $color__white;
+
+  .App--dark & {
+    stroke: $color__black !important;
+    fill: $color__black !important;
+  }
+
+  stroke-width: 2;
+  stroke-miterlimit: 10;
 }

@@ -17,14 +17,14 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this), true)
+    window.addEventListener("resize", this.resize)
     this.resize()
   }
   componentWillUnmount() {
-    window.removeEventListener("resize", this.resize.bind(this), true)
+    window.removeEventListener("resize", this.resize)
   }
 
-  resize() {
+  resize = () => {
     let currentHideNav = window.innerWidth <= 760
     if (currentHideNav) {
       this.setState({ nav: Sidebar })

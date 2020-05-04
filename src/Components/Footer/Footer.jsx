@@ -1,11 +1,8 @@
 import React from "react"
+import Typewriter from "typewriter-effect"
 import { Component } from "react"
 import { Link } from "gatsby"
-import {
-  copyAnimation,
-  typewriterAnimation,
-  conceptLetterReplace
-} from "./animations"
+import { copyAnimation } from "./animations"
 
 //Data
 const data = require("./data.json")
@@ -20,17 +17,6 @@ class Footer extends Component {
     }
     this.conceptText = null
     this.footer = null
-  }
-
-  componentDidMount() {
-    if (true)
-      this.typewriterInterval = setInterval(() => {
-        typewriterAnimation(this.updateIndex)
-      }, 3800)
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.typewriterInterval)
   }
 
   copyMailtoClipboard = () => {
@@ -82,7 +68,16 @@ class Footer extends Component {
                     ref={span => (this.conceptText = span)}
                     className="footer__CTA-concept-text"
                   >
-                    philosophy
+                    <Typewriter
+                      options={{
+                        strings: data.ctaConcepts,
+                        autoStart: true,
+                        loop: true,
+                        cursor: "",
+                        delay: 60,
+                        deleteSpeed: 50
+                      }}
+                    />
                   </span>
                 </span>
               </div>
