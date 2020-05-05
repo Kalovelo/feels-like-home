@@ -157,7 +157,11 @@
 
     .App--dark & {
       fill: $color__greyPale;
-      stroke: $color__greyPale;
+      stroke: $color__greyPale !important;
+
+      .background__svg--outline {
+        stroke: $color__greyPale !important;
+      }
     }
   }
 }
