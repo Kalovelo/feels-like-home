@@ -23,7 +23,7 @@ class About extends Component {
                 Extra points having a session in a more natural environment than a
                 gym - seaside or inside a forest - for working out both the body and
                 spirit. <i>What a combo!</i>
-                Talking about physical and spiritual improvement, i have zeal for the
+                Talking about physical and spiritual improvement, I have zeal for the
                 martial artist's lifestyle, where courage, discipline & respect are
                 the root elements of a fighter's spirit.
                 <br />
@@ -40,7 +40,7 @@ class About extends Component {
                 {" "}
                 Books here and there, full of notes. My cup of tea includes
                 self-improvement, philosophy and classic literature books. By the
-                way, the closer I am to nature, the more i appreciate a good poem.
+                way, the closer I am to nature, the more I appreciate a good poem.
                 <br />
                 <br />I love trading books, so if you're up for some new suggestions
                 and long conversations, don't forget to say so!
@@ -56,7 +56,7 @@ class About extends Component {
               situtation - and of course - the company.
             </p>
             <span className="about__quote">and if we're talking about...</span>
-            <p>
+            <p className="about__container-content-simple">
               Videogames feel just like reading a good book but here you're in the
               protagonist's shoes. I used to game on since i can remember, and in
               exchange i got some extra passion for challenges and exploration. Grew

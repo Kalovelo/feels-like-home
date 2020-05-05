@@ -18,7 +18,7 @@ export const projects = [
   {
     title: "Biznames",
     description:
-      "A really simple username generator given a name for enumeration & pentesting.",
+      "A really simple username dictionary generator given a name for enumeration & pentesting.",
     tags: ["python", "enumeration", "pentest"],
     links: [
       {

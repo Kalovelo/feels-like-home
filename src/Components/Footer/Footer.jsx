@@ -20,7 +20,7 @@ class Footer extends Component {
   }
 
   copyMailtoClipboard = () => {
-    this.copyToClipboard("opa@kalovelo.com")
+    this.copyToClipboard("hello@kalovelo.com")
     copyAnimation()
   }
 
@@ -84,12 +84,12 @@ class Footer extends Component {
             </h3>
             <h3 className="footer__CTA" onClick={this.copyMailtoClipboard}>
               {" "}
-              hey@kalovelo.com
+              hello@kalovelo.com
             </h3>
             <input
               type="hidden"
               id="copyText"
-              value="opa@kalovelo.com"
+              value="hello@kalovelo.com"
               ref={input => {
                 this.mailElement = input
               }}

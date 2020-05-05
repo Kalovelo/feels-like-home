@@ -14,32 +14,56 @@ import { Layout } from "../Components/layout"
 import { projects } from "./Pages/Projects/data"
 
 const Projects = () => {
+  //Mount
   useEffect(() => {
     document.title = "Notable Creations"
+    return () => clearTimeout(clickRef.current)
   }, [])
 
+  //Update
   useEffect(() => {
     animateSpawn(getCurrentAnimationTargets())
+  })
+
+  //State
+  const [currentProjectState, updateState] = useState({
+    ...projects[0],
+    index: 0
   })
 
   //Refs
   const imageRef = useRef(null)
   const contentRef = useRef(null)
+  const controllersRef = [useRef(null), useRef(null)]
+  const clickRef = useRef(null)
+
   const getCurrentAnimationTargets = () => [imageRef.current, contentRef.current]
 
   //animation
   const animationTimeline = anime.timeline()
 
-  //Data
-
   const nextProject = () => {
+    //do not allow any more click events for 2 secs
+    clickDelay()
+
     animateFadeAway(
       animationTimeline,
       getCurrentAnimationTargets()
     ).finished.then(() => updateIndex("next"))
   }
 
+  const clickDelay = () => {
+    controllersRef[0].current.style.pointerEvents = "none"
+    controllersRef[1].current.style.pointerEvents = "none"
+
+    clickRef.current = window.setTimeout(() => {
+      controllersRef[0].current.style.pointerEvents = "initial"
+      controllersRef[1].current.style.pointerEvents = "initial"
+    }, 2000)
+  }
+
   const previousProject = () => {
+    clickDelay()
     animateFadeAway(
       animationTimeline,
       getCurrentAnimationTargets()
@@ -57,12 +81,6 @@ const Projects = () => {
       index: newIndex
     })
   }
-
-  const [currentProjectState, updateState] = useState({
-    ...projects[0],
-    index: 0
-  })
-
   return (
     <Layout>
       <div className="Projects layout fade-in">
@@ -97,14 +115,16 @@ const Projects = () => {
             <div className="Projects__controller-wrapper">
               <span
                 className="Projects__controller"
-                onClick={debounce(previousProject, 1000)}
+                ref={controllersRef[0]}
+                onClick={debounce(previousProject, 300)}
               >
                 <FontAwesomeIcon className="Projects__fa" icon={faAngleLeft} />
                 <span className="Projects__controller-text">Previous</span>
               </span>
               <span
                 className="Projects__controller"
-                onClick={debounce(nextProject, 1000)}
+                ref={controllersRef[1]}
+                onClick={debounce(nextProject, 300)}
               >
                 <span className="Projects__controller-text">Next</span>
                 <FontAwesomeIcon

@@ -57,10 +57,18 @@
       border-color: $color__accent;
       color: $color__accent;
     }
-  }
-}
 
-.App--Dark .cookiefier {
-  color: #fff;
-  background: #fff;
+    .App--dark & {
+      border-color: $color__black;
+
+      &:hover {
+        border-color: inherit;
+      }
+    }
+  }
+
+  .App--dark & {
+    color: $color__black;
+    background: $color__white;
+  }
 }
