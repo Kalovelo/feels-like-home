@@ -1,16 +1,23 @@
 import React from "react"
 import { Component } from "react"
-import FloatingElements from "../Components/components/floatingElements"
-import { Layout } from "../Components/layout"
-
+import FloatingElements from "../components/components/floatingElements"
+import { Layout } from "../components/layout"
+import { Helmet } from "react-helmet"
+const SEO = () => (
+  <Helmet>
+    <meta charSet="utf-8" />
+    <title>The Ocean</title>
+    <meta name="description" content="Facts about me as a non-techy person." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kalovelo.com/about" />
+  </Helmet>
+)
 class About extends Component {
-  componentDidMount() {
-    document.title = "The Ocean"
-  }
 
   render() {
     return (
       <Layout>
+        <SEO />
         <div className="layout  fade-in about">
           <FloatingElements num={3} />
 
@@ -18,7 +25,7 @@ class About extends Component {
           <div className="about__container-wrapper">
             <div className="about__container about__container--left">
               <h3 className="about__container-title">Athletics</h3>
-              <p className="layout__container-content">
+              <p className="about__container-content">
                 Spending an hour or two sweating is enough to lift a day's weight.
                 Extra points having a session in a more natural environment than a
                 gym - seaside or inside a forest - for working out both the body and
@@ -36,7 +43,7 @@ class About extends Component {
             </div>
             <div className="slide-in-right about__container about__container--right">
               <h3 className="about__container-title">Literature</h3>
-              <p className="layout__container-content">
+              <p className="about__container-content">
                 {" "}
                 Books here and there, full of notes. My cup of tea includes
                 self-improvement, philosophy and classic literature books. By the

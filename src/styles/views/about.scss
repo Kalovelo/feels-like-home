@@ -23,16 +23,25 @@
   }
 
   &__container-content-simple {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height:1.2rem;
+
+    @media(min-width:$desktop){
+      font-size:1.2rem;
+      line-height:1.2rem;
+    }
   }
 
   &__container {
+    margin:-20px;
     height: 500px;
-    padding: 5%;
     width: 100%;
+    padding: 5%;
 
     @media (min-width: $tablet) {
       width: 50%;
+    margin:0;
+
     }
 
     &--left {

@@ -20,10 +20,11 @@
     flex-direction: column;
     z-index: 0;
     overflow: hidden;
-    padding: 0 20px;
-    height: 100%;
+    padding: 0vh 20px;
+    height: 100vh;
     background: $color__white;
     transition: all 0.5s;
+
     .App--dark & {
       background: $color__black;
     }

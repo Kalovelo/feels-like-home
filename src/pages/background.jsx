@@ -1,22 +1,40 @@
 import React, { useEffect } from "react"
-import FloatingElements from "../Components/components/floatingElements"
+import FloatingElements from "../components/components/floatingElements"
 import ReactTooltip from "react-tooltip"
 import ScrollAnimation from "react-animate-on-scroll"
 import { useSelector } from "react-redux"
+import { Helmet } from "react-helmet"
 
-import { communityTable, skills } from "./Pages/Background/data"
-import { tableAnimation, skillsAnimation } from "./Pages/Background/animations"
-import { Layout } from "../Components/layout"
+import { communityTable, skills } from "../content/pages/Background/data"
+import {
+  tableAnimation,
+  skillsAnimation
+} from "../content/pages/Background/animations"
+import { Layout } from "../components/layout"
+
 const Background = () => {
   const theme = useSelector(state => state.theme)
 
   useEffect(() => {
-    document.title = "Earth Herself"
     skillsAnimation()
   }, [])
 
+  const SEO = () => (
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Earth Herself</title>
+      <meta
+        name="description"
+        content="Information about the technologies I use and the communities I am part of"
+      />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://kalovelo.com/background" />
+    </Helmet>
+  )
+
   return (
     <Layout>
+      <SEO />
       <div className="background layout fade-in">
         <FloatingElements num={3} />
         <h1 className="background__content">

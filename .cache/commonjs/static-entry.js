@@ -38,6 +38,10 @@ const {
   memoize
 } = require(`lodash`);
 
+const {
+  RouteAnnouncerProps
+} = require(`./route-announcer-props`);
+
 const apiRunner = require(`./api-runner-ssr`);
 
 const syncRequires = require(`./sync-requires`);
@@ -223,10 +227,11 @@ var _default = (pagePath, callback) => {
 
   class RouteHandler extends React.Component {
     render() {
-      const props = Object.assign({}, this.props, {}, pageData.result, {
+      const props = { ...this.props,
+        ...pageData.result,
         // pathContext was deprecated in v2. Renamed to pageContext
         pathContext: pageData.result ? pageData.result.pageContext : undefined
-      });
+      };
       const pageElement = createElement(syncRequires.components[componentChunkName], props);
       const wrappedPage = apiRunner(`wrapPageElement`, {
         element: pageElement,
@@ -244,14 +249,14 @@ var _default = (pagePath, callback) => {
 
   }
 
-  const routerElement = createElement(ServerLocation, {
+  const routerElement = React.createElement(ServerLocation, {
     url: `${__BASE_PATH__}${pagePath}`
-  }, createElement(Router, {
-    id: `gatsby-focus-wrapper`,
-    baseuri: `${__BASE_PATH__}`
-  }, createElement(RouteHandler, {
-    path: `/*`
-  })));
+  }, React.createElement(Router, {
+    id: "gatsby-focus-wrapper",
+    baseuri: __BASE_PATH__
+  }, React.createElement(RouteHandler, {
+    path: "/*"
+  })), React.createElement("div", RouteAnnouncerProps));
   const bodyComponent = apiRunner(`wrapRootElement`, {
     element: routerElement,
     pathname: pagePath

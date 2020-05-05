@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('/home/apostoles/projects/feels-like-home/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/home/apostoles/projects/feels-like-home/gatsby-ssr'),
       options: {"plugins":[]},
     }]

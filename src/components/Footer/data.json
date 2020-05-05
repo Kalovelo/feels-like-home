@@ -1,0 +1,39 @@
+{
+  "social": [
+    {
+      "link": "https://www.facebook.com/kalovelo",
+      "title": "Facebook"
+    },
+    {
+      "link": "https://linkedin.com/in/apostolos-kalovelonis-0b886116a",
+      "title": "LinkedIn"
+    },
+    {
+      "link": "https://sourcerer.io/kalovelo",
+      "title": "Sourcerer"
+    },
+    {
+      "link": "https://github.com/kalovelo",
+      "title": "Github"
+    }
+  ],
+  "menu": [
+    {
+      "link": "/",
+      "title": "Home"
+    },
+    {
+      "link": "/projects",
+      "title": "Projects"
+    },
+    {
+      "link": "/background",
+      "title": "Background"
+    },
+    {
+      "link": "/about",
+      "title": "About"
+    }
+  ],
+  "ctaConcepts": ["philosophy", "books", "conferences", "your idea"]
+}
