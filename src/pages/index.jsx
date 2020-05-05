@@ -23,7 +23,7 @@ export default () => {
         content="Apostolos Kalovelonis, front end developer and IT student. Check out my portfolio, find me on social media or share a beer with me discussing your project idea."
       />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="http://mysite.com/example" />
+      <link rel="canonical" href="https://kalovelo/" />
     </Helmet>
   )
   return (

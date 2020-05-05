@@ -3,6 +3,7 @@
     font-family: $maax;
     font-size: 40px;
     font-weight: 900;
+    opacity: 0;
 
     @media (min-width: $desktop) {
       font-size: 90px;

@@ -28,21 +28,26 @@ const HomePage = props => {
   const images = [apostoles1, apostoles2]
   const informationRef = useRef(null)
   const headtitleRef = useRef(null)
+  const subtitleRef = useRef(null)
   const imageRefs = [useRef(null), useRef(null)]
   const ctaRef = useRef(null)
 
   const windowExists = () => {
-    if (typeof window !== "undefined") return true
-    else {
+    if (typeof window !== "undefined") {
+      return true
+    } else {
       return false
     }
   }
   const timeline = windowExists() ? anime.timeline() : ""
 
   useEffect(() => {
-    scatterAnimation(timeline)
-    timeline.add(informationAnimation(() => animateImages(imageRefs)))
-    // eslint-disable-next-line
+    if (typeof window !== "undefined") {
+      scatterAnimation(timeline, headtitleRef.current, subtitleRef.current)
+      timeline.add(
+        informationAnimation(() => animateImages(imageRefs), informationRef.current)
+      )
+    }
   }, [])
 
   const { photoIndex, isOpen } = state
@@ -53,10 +58,16 @@ const HomePage = props => {
         <h1 ref={headtitleRef} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles. </span>
         </h1>
-        <h2 className="homepage__subtitle">Front-End Dev.</h2>
+        <h2 ref={subtitleRef} style={{ opacity: 0 }} className="homepage__subtitle">
+          Front-End Dev.
+        </h2>
       </div>
       <div className="halfRow homepage__introduction-wrapper">
-        <div ref={informationRef} className="homepage__introduction-text">
+        <div
+          ref={informationRef}
+          className="homepage__introduction-text"
+          style={{ opacity: 0 }}
+        >
           <h2 className="homepage__introduction-title">Greetings, stranger!</h2>
           <p className="homepage__paragraph">
             My name is Apostolos Kalovelonis, coming straight out of the olives and

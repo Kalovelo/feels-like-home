@@ -5,10 +5,11 @@ import { useRef } from "react"
 const cookie = new Cookies()
 
 const Cookiefier = () => {
-  const [cookieState, setState] = useState(cookie.get("hideCookie"))
+  const [cookieState, setState] = useState(false)
 
   useEffect(() => {
-    floatAnimate()
+    setState(cookie.get("hideCookie"))
+    if (!cookie.get("hideCookie")) fadeAnimate()
   }, [])
 
   const setCookie = () => {
@@ -16,6 +17,15 @@ const Cookiefier = () => {
     setState(true)
   }
   const cookiefierRef = useRef(null)
+
+  const fadeAnimate = () =>
+    anime({
+      targets: cookiefierRef.current,
+      opacity: 1,
+      duration: 500,
+      easing: "linear",
+      complete: floatAnimate
+    })
 
   const floatAnimate = () =>
     anime({
@@ -32,24 +42,29 @@ const Cookiefier = () => {
       targets: cookiefierRef.current,
       translateY: -400,
       opacity: 0,
-      duration: 2000,
+      duration: 450,
       easing: "linear",
       complete: setCookie
     })
 
-  return !cookieState ? (
-    <div className="cookiefier" ref={cookiefierRef}>
-      <h5 className="cookiefier__title">Tea is served with cookies!</h5>
-      <p className="cookiefier__information">
-        In order to keep a functionality and fondness score, I am using GoSquared
-        Analytics to track visitor navigation. Worry not, GoSquared is open source!{" "}
-      </p>
-      <span onClick={fadeOut} className="cookiefier__cta">
-        Alright!
-      </span>
-    </div>
-  ) : (
-    ""
+  return (
+    <span>
+      {cookieState ? (
+        <span></span>
+      ) : (
+        <div className="cookiefier" ref={cookiefierRef}>
+          <h5 className="cookiefier__title">Tea is served with cookies!</h5>
+          <p className="cookiefier__information">
+            In order to keep a functionality and fondness score, I am using GoSquared
+            Analytics to track visitor navigation. Worry not, GoSquared is open
+            source!{" "}
+          </p>
+          <span onClick={fadeOut} className="cookiefier__cta">
+            Alright!
+          </span>
+        </div>
+      )}
+    </span>
   )
 }
 

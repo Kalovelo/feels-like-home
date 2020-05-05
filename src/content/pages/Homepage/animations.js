@@ -1,7 +1,8 @@
 import anime from "animejs/lib/anime.es.js"
 
-const scatterAnimation = timeline => {
-  var textWrapper = document.querySelector(".homepage__headtitle")
+const scatterAnimation = (timeline, title, subtitle) => {
+  var textWrapper = title
+  title.style.opacity = 1
   textWrapper.innerHTML = textWrapper.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
@@ -17,7 +18,7 @@ const scatterAnimation = timeline => {
       }
     })
     .add({
-      targets: ".homepage__subtitle",
+      targets: subtitle,
       opacity: [0, 1],
       easing: "easeInOutSine",
       duration: 800
@@ -39,10 +40,10 @@ const curveMovementAnimation = (target, valueX, valueY) => {
   }
 }
 
-const informationAnimation = callback => {
+const informationAnimation = (callback, information) => {
   return {
-    targets: ".homepage__introduction-text",
-    opacity: [0, 1],
+    targets: information,
+    opacity: 1,
     easing: "easeInOutQuad",
     duration: 700,
     begin: callback

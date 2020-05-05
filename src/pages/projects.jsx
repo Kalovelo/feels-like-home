@@ -103,7 +103,7 @@ const Projects = () => {
       <div className="Projects layout fade-in">
         <FloatingElements num={3} />
         <div className="Projects__wrapper">
-          <div className="Projects__image" ref={imageRef}>
+          <div className="Projects__image" ref={imageRef} style={{ opacity: 0 }}>
             {currentProjectState.logo}
           </div>
           <div className="Projects__content" ref={contentRef} style={{ opacity: 0 }}>

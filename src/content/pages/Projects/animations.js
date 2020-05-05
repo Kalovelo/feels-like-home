@@ -4,7 +4,7 @@ const animateSpawn = targets => {
   anime({
     targets: targets[0],
     opacity: {
-      value: [0, 1],
+      value: 1,
       duration: 150
     },
     translateY: ["-70vh", 0],

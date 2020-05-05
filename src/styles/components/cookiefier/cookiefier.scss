@@ -2,19 +2,21 @@
   display: flex;
   z-index: 2;
   position: fixed;
+  opacity: 0;
   padding: 10px;
   flex-direction: column;
   background: $color__black;
   color: $color__white;
   width: 220px;
   height: 220px;
-  margin: 60% 10%;
   border-radius: 50%;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
   box-shadow: $boxShadow;
   transition: background 0.5s;
+  left: 10%;
+  top: 40%;
 
   @media (min-width: $tablet) {
     justify-content: center;
@@ -22,6 +24,8 @@
     height: 300px;
     margin-top: 20%;
     margin-left: 100px;
+    left: 10%;
+    top: 10%;
   }
   &__title {
     max-width: 140px;
