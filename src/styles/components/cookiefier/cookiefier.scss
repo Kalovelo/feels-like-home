@@ -13,6 +13,8 @@
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  box-shadow: $boxShadow;
+  transition: background 0.5s;
 
   @media (min-width: $tablet) {
     justify-content: center;
@@ -70,5 +72,6 @@
   .App--dark & {
     color: $color__black;
     background: $color__white;
+    box-shadow: $boxShadowLight;
   }
 }
