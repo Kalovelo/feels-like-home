@@ -73,9 +73,8 @@ class Footer extends Component {
                         strings: data.ctaConcepts,
                         autoStart: true,
                         loop: true,
-                        cursor: "",
-                        delay: 60,
-                        deleteSpeed: 50
+                        delay: 30,
+                        deleteSpeed: 30
                       }}
                     />
                   </span>

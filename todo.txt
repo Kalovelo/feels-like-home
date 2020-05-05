@@ -1,3 +1,3 @@
 1. OpenSCN darkmode color
-2. Projects click fix
 3. SEO and other not-so-fun-stuff
+2. add shadow to cookie

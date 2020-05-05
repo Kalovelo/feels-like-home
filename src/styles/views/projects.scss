@@ -34,12 +34,17 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     @media (min-width: $desktop) {
-      width: 50%;
+      width: 70%;
       text-align: initial;
       align-items: initial;
       flex-direction: row;
       justify-content: space-around;
+    }
+
+    @media (min-width: $desktop-large) {
+      width: 50%;
     }
   }
 
