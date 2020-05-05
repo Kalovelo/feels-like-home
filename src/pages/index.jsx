@@ -29,6 +29,7 @@ export default () => {
   return (
     <React.StrictMode>
       <Layout>
+        <SEO />
         <Homepage />
       </Layout>
     </React.StrictMode>
