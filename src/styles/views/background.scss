@@ -65,11 +65,12 @@
       }
     }
 
-    &--cta {
-      font-size: 1rem;
-      opacity: 0;
-      @media (min-width: $tablet) {
-        font-size: 2rem;
+    a {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin: 0 20px;
       }
     }
   }
@@ -153,7 +154,6 @@
     margin: 0;
 
     @media (min-width: $desktop) {
-      margin: 0 20px;
       width: 50px;
     }
 

@@ -7,8 +7,7 @@ import { useDispatch } from "react-redux"
 import { getTheme } from "../store/store"
 
 export const Layout = props => {
-  useSelector(state => state.theme)
-  const theme = getTheme()
+  const theme = useSelector(state => state.theme)
 
   return (
     <React.Fragment>

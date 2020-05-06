@@ -57,6 +57,8 @@ const Projects = () => {
       <link rel="canonical" href="https://kalovelo.com/projects" />
       <script>{analytics}</script>
       <meta property="og:image" content="https://kalovelo.com/SEO/meta_img.jpg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="628" />{" "}
     </Helmet>
   )
   //animation

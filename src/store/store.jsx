@@ -1,5 +1,6 @@
 import { createStore } from "redux"
 import themeReducer from "../reducers/themeReducer"
+import { graphql, useStaticQuery } from "gatsby"
 
 export const getTheme = () => {
   let currentHours = new Date().getHours()
@@ -7,7 +8,7 @@ export const getTheme = () => {
 }
 
 const initialState = {
-  theme: getTheme()
+  theme: "light"
 }
 
 const store = createStore(themeReducer, initialState)
