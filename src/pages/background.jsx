@@ -30,6 +30,7 @@ const Background = () => {
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://kalovelo.com/background" />
       <script>{analytics}</script>
+      <meta property="og:image" content="https://kalovelo.com/SEO/meta_img.jpg" />
     </Helmet>
   )
 

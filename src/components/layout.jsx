@@ -3,9 +3,12 @@ import Header from "./header/header"
 import React from "react"
 import Cookiefier from "./cookiefier"
 import { useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
+import { getTheme } from "../store/store"
 
 export const Layout = props => {
-  const theme = useSelector(state => state.theme)
+  useSelector(state => state.theme)
+  const theme = getTheme()
 
   return (
     <React.Fragment>

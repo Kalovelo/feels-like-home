@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 //images
-import apostoles1 from "../../../content/Images/apostoles1.png"
+import apostoles1 from "../../../content/Images/apostoles1.jpg"
 import apostoles2 from "../../../content/Images/apostoles2.jpg"
 
 //store
@@ -56,7 +56,7 @@ const HomePage = props => {
       <FloatingElements num={3} />
       <div className="homepage__title-wrapper">
         <h1 ref={headtitleRef} className="homepage__headtitle">
-          <span className="letters">Hey there, it's Apostoles. </span>
+          <span className="letters">Hey there, it's Kalovelo. </span>
         </h1>
         <h2 ref={subtitleRef} style={{ opacity: 0 }} className="homepage__subtitle">
           Front-End Dev.

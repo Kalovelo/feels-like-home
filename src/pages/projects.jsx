@@ -4,19 +4,20 @@ import anime from "animejs/lib/anime.es.js"
 import FloatingElements from "../components/components/floatingElements"
 import { debounce } from "lodash"
 
-//Fontawesome
+//!Fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faChevronLeft as faAngleLeft,
   faChevronRight as faAngleRight
 } from "@fortawesome/free-solid-svg-icons"
 
+//!SEO
 import { Helmet } from "react-helmet"
+import { analytics } from "../components/helmet/analytics"
 
 import { animateSpawn, animateFadeAway } from "../content/pages/Projects/animations"
 import { Layout } from "../components/layout"
 import { projects } from "../content/pages/Projects/data"
-import { analytics } from "../components/helmet/analytics"
 
 const Projects = () => {
   //Mount
@@ -55,6 +56,7 @@ const Projects = () => {
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://kalovelo.com/projects" />
       <script>{analytics}</script>
+      <meta property="og:image" content="https://kalovelo.com/SEO/meta_img.jpg" />
     </Helmet>
   )
   //animation

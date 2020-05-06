@@ -1,7 +1,7 @@
 import { createStore } from "redux"
 import themeReducer from "../reducers/themeReducer"
 
-const getTheme = () => {
+export const getTheme = () => {
   let currentHours = new Date().getHours()
   return currentHours >= 7 && currentHours <= 19 ? "light" : "dark"
 }

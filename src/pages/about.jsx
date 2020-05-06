@@ -13,6 +13,7 @@ const SEO = () => (
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://kalovelo.com/about" />
     <script>{analytics}</script>
+    <meta property="og:image" content="https://kalovelo.com/SEO/meta_img.jpg" />
   </Helmet>
 )
 class About extends Component {

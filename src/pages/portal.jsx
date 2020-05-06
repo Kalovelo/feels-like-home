@@ -1,8 +1,11 @@
 import React from "react"
 import { Button } from "../components/components/button"
 import { Layout } from "../components/layout"
+
+//!SEO
 import { Helmet } from "react-helmet"
 import { analytics } from "../components/helmet/analytics"
+
 const SEO = () => (
   <Helmet>
     <meta charSet="utf-8" />
@@ -11,6 +14,7 @@ const SEO = () => (
     <meta name="robots" content="noindex, nofollow" />
     <link rel="canonical" href="https://kalovelo.com/portal" />
     <script>{analytics}</script>
+    <meta property="og:image" content="https://kalovelo.com/SEO/meta_img.jpg" />
   </Helmet>
 )
 class PortalComponent extends React.Component {
