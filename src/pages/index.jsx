@@ -1,12 +1,13 @@
 import React from "react"
+
 import { Helmet } from "react-helmet"
+import { analytics } from "../components/helmet/analytics"
 
 //! styles
 import "../content/fonts/font.css"
 import "../styles/styles.scss"
 import "../animations/animations.css"
 import "react-image-lightbox/style.css"
-
 //! pages
 import Homepage from "../content/pages/Homepage/homePage"
 
@@ -24,8 +25,10 @@ export default () => {
       />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://kalovelo/" />
+      <script>{analytics}</script>
     </Helmet>
   )
+
   return (
     <React.StrictMode>
       <Layout>

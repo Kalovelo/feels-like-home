@@ -3,6 +3,8 @@ import { Component } from "react"
 import FloatingElements from "../components/components/floatingElements"
 import { Layout } from "../components/layout"
 import { Helmet } from "react-helmet"
+import { analytics } from "../components/helmet/analytics"
+
 const SEO = () => (
   <Helmet>
     <meta charSet="utf-8" />
@@ -10,10 +12,10 @@ const SEO = () => (
     <meta name="description" content="Facts about me as a non-techy person." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://kalovelo.com/about" />
+    <script>{analytics}</script>
   </Helmet>
 )
 class About extends Component {
-
   render() {
     return (
       <Layout>

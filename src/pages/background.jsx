@@ -4,13 +4,13 @@ import ReactTooltip from "react-tooltip"
 import ScrollAnimation from "react-animate-on-scroll"
 import { useSelector } from "react-redux"
 import { Helmet } from "react-helmet"
-
 import { communityTable, skills } from "../content/pages/Background/data"
 import {
   tableAnimation,
   skillsAnimation
 } from "../content/pages/Background/animations"
 import { Layout } from "../components/layout"
+import { analytics } from "../components/helmet/analytics"
 
 const Background = () => {
   const theme = useSelector(state => state.theme)
@@ -29,6 +29,7 @@ const Background = () => {
       />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://kalovelo.com/background" />
+      <script>{analytics}</script>
     </Helmet>
   )
 

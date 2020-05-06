@@ -16,6 +16,7 @@ import { Helmet } from "react-helmet"
 import { animateSpawn, animateFadeAway } from "../content/pages/Projects/animations"
 import { Layout } from "../components/layout"
 import { projects } from "../content/pages/Projects/data"
+import { analytics } from "../components/helmet/analytics"
 
 const Projects = () => {
   //Mount
@@ -53,6 +54,7 @@ const Projects = () => {
       />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://kalovelo.com/projects" />
+      <script>{analytics}</script>
     </Helmet>
   )
   //animation

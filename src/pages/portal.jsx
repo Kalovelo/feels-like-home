@@ -2,7 +2,7 @@ import React from "react"
 import { Button } from "../components/components/button"
 import { Layout } from "../components/layout"
 import { Helmet } from "react-helmet"
-
+import { analytics } from "../components/helmet/analytics"
 const SEO = () => (
   <Helmet>
     <meta charSet="utf-8" />
@@ -10,6 +10,7 @@ const SEO = () => (
     <meta name="description" content="Choose your path." />
     <meta name="robots" content="noindex, nofollow" />
     <link rel="canonical" href="https://kalovelo.com/portal" />
+    <script>{analytics}</script>
   </Helmet>
 )
 class PortalComponent extends React.Component {

@@ -5,6 +5,7 @@ const getTheme = () => {
   let currentHours = new Date().getHours()
   return currentHours >= 7 && currentHours <= 19 ? "light" : "dark"
 }
+
 const initialState = {
   theme: getTheme()
 }

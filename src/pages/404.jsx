@@ -2,9 +2,8 @@ import React, { useEffect } from "react"
 import { UFO } from "../content/pages/notFound404/alien"
 import { Layout } from "../components/layout"
 import { Helmet } from "react-helmet"
-
+import { analytics } from "../components/helmet/analytics"
 const NotFound404 = () => {
-
   const ufoNum = 3
 
   const SEO = () => (
@@ -14,6 +13,7 @@ const NotFound404 = () => {
       <meta name="description" content="That's a 404 Dead end!" />
       <meta name="robots" content="noindex, nofollow" />
       <link rel="canonical" href="https://kalovelo.com/404" />
+      <script>{analytics}</script>
     </Helmet>
   )
 
