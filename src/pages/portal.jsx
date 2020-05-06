@@ -29,11 +29,7 @@ class PortalComponent extends React.Component {
                 inside my cup.{" "}
               </p>
               <div className="portal__button-wrapper">
-                <Button
-                  link="/about"
-                  text="Ocean Route ·"
-                  className="button--portal"
-                />
+                <Button link="/about" text="Ocean Route ·" class="button--portal" />
               </div>
             </div>
           </div>
@@ -47,7 +43,7 @@ class PortalComponent extends React.Component {
               <Button
                 link="/background/"
                 text="· Earth Route"
-                className="button--portal button--portal-dark"
+                class="button--portal button--portal-dark"
               />
             </div>
           </div>

@@ -8,10 +8,11 @@
 # testing
 /coverage
 
-# production
-/build
-
+.cache
 /.cache
+
+# production
+/build.cache
 
 public 
 # misc

@@ -8,8 +8,13 @@
     text-align: center;
     font-family: adobe-garamond-pro, serif;
     margin-bottom: 10%;
-    padding-top: 10%;
+    padding-top: 0;
+    margin: 25vh 0;
     font-size: 45px;
+
+    @media (min-width: $tablet) {
+      padding-top: 10%;
+    }
   }
 
   &__container-wrapper {
@@ -24,24 +29,23 @@
 
   &__container-content-simple {
     font-size: 1rem;
-    line-height:1.2rem;
+    line-height: 1.2rem;
 
-    @media(min-width:$desktop){
-      font-size:1.2rem;
-      line-height:1.2rem;
+    @media (min-width: $desktop) {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
     }
   }
 
   &__container {
-    margin:-20px;
+    margin: -20px;
     height: 500px;
     width: 100%;
-    padding: 5%;
+    padding: 20px;
 
     @media (min-width: $tablet) {
       width: 50%;
-    margin:0;
-
+      margin: 0;
     }
 
     &--left {
@@ -56,10 +60,11 @@
     &--big {
       margin-top: $desktop-content-margin;
       width: 80%;
+      height: 100%;
     }
 
     &--right {
-      z-index: 3;
+      z-index: 1;
       background: $color__black;
       color: $color__whiteTotal;
 

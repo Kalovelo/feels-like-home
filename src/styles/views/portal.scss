@@ -71,10 +71,14 @@
     flex-direction: column;
   }
   &__title {
-    margin-top: 200px;
+    margin-top: 50px;
     font-family: roboto;
     font-weight: 100;
     font-size: 3em;
+
+    @media (min-width: $tablet) {
+      margin-top: 200px;
+    }
   }
 
   &__description {

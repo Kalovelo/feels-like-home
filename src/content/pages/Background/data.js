@@ -24,10 +24,10 @@ const skills = [
         tooltip: "JavaScript",
         component: <Javascript />
       },
-      {
-        tooltip: "TypeScript",
-        component: <TypeScript />
-      },
+      // {
+      //   tooltip: "TypeScript",
+      //   component: <TypeScript />
+      // },
       {
         tooltip: "Java",
         component: <Java />
@@ -72,15 +72,15 @@ const skills = [
       }
     ]
   },
-  {
-    Title: "Testing",
-    elements: [
-      {
-        tooltip: "Jest",
-        component: <Jest />
-      }
-    ]
-  },
+  // {
+  //   Title: "Testing",
+  //   elements: [
+  //     {
+  //       tooltip: "Jest",
+  //       component: <Jest />
+  //     }
+  //   ]
+  // },
   {
     Title: "Technologies & Tools",
     elements: [
