@@ -105,7 +105,7 @@ const communityTable = {
   content: [
     {
       data: [
-        <a target="_blank" href="https://openscn.gitlab.io/documentation/">
+        <a target="_blank" href="https://openscn.io">
           <OpenSCN class="background__svg" />
           OpenSCN
         </a>,
