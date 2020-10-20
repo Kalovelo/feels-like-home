@@ -5,7 +5,7 @@
 .App {
   color: $color__black;
   z-index: -1;
-  transition: all 1s;
+  transition: all 0.5s;
   background: $color__white;
   font-size: 16px;
   &--dark,
