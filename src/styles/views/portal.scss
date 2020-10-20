@@ -72,7 +72,7 @@
   }
   &__title {
     margin-top: 50px;
-    font-family: roboto;
+    font-family: $garamond;
     font-weight: 100;
     font-size: 3em;
 
@@ -83,6 +83,6 @@
 
   &__description {
     font-family: $maax;
-    font-size: 1em;
+    font-size: 1.2rem;
   }
 }
