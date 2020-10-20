@@ -29,7 +29,7 @@
 }
 html,
 body {
-  overflow-x:hidden!important;
+  overflow-x: hidden !important;
   margin: 0;
 }
 
@@ -81,6 +81,10 @@ body {
 }
 .topbar__right-mode-toggle button {
   pointer-events: none;
+}
+
+.topbar__right-mode-toggle svg {
+  width: 100%;
 }
 
 /* Color/shape of burger icon bars */
