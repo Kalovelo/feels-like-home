@@ -39,7 +39,7 @@ class PortalComponent extends React.Component {
           </div>
           <div className="portal__section portal__section--dark">
             <h1 className="portal__title">Background</h1>
-            <p>
+            <p className="portal__description">
               Check my journey as a digital deshi ·<br />
               My background, how it all started, the tools I use or my future plans.
             </p>

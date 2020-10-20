@@ -13,7 +13,8 @@ import {
   TypeScript,
   Figma,
   SocketIO,
-  Git
+  Git,
+  GraphQL
 } from "../../../content/svg/skills.jsx"
 
 const skills = [
@@ -24,10 +25,10 @@ const skills = [
         tooltip: "JavaScript",
         component: <Javascript />
       },
-      // {
-      //   tooltip: "TypeScript",
-      //   component: <TypeScript />
-      // },
+      {
+        tooltip: "TypeScript",
+        component: <TypeScript />
+      },
       {
         tooltip: "Java",
         component: <Java />
@@ -72,21 +73,25 @@ const skills = [
       }
     ]
   },
-  // {
-  //   Title: "Testing",
-  //   elements: [
-  //     {
-  //       tooltip: "Jest",
-  //       component: <Jest />
-  //     }
-  //   ]
-  // },
+  {
+    Title: "Testing",
+    elements: [
+      {
+        tooltip: "Jest",
+        component: <Jest />
+      }
+    ]
+  },
   {
     Title: "Technologies & Tools",
     elements: [
       {
         tooltip: "WordPress",
         component: <Wordpress />
+      },
+      {
+        tooltip: "graphQL",
+        component: <GraphQL />
       },
       {
         tooltip: "Figma",

@@ -79,8 +79,14 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
+      max-width: 500px;
       border-radius: 50%;
-      filter: grayscale(100%);
+      filter: grayscale(50%);
+      transition: filter 0.5s;
+
+      &:hover {
+        filter: none;
+      }
     }
 
     @media (min-width: $desktop) {
