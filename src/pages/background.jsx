@@ -73,45 +73,35 @@ const Background = () => {
         </div>
 
         <h2 className="background__subtitle">Communities</h2>
-        <ScrollAnimation
-          animateOnce
-          animateIn="fadeIn"
-          afterAnimatedIn={visible => tableAnimation(visible, theme)}
-        >
-          <table className="background__communities">
-            <thead>
-              <tr className="background__community-row">
-                {communityTable.attributes.map((attribute, index) => (
-                  <th
-                    style={{ opacity: 0 }} //default vaules for animation
-                    className="background__community-item background__community-item--head"
-                    key={index}
-                  >
-                    {attribute}
-                  </th>
+
+        <table className="background__communities">
+          <thead>
+            <tr className="background__community-row">
+              {communityTable.attributes.map((attribute, index) => (
+                <th
+                  className="background__community-item background__community-item--head"
+                  key={index}
+                >
+                  {attribute}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {communityTable.content.map((element, index) => (
+              <tr
+                key={index}
+                className="background__community-row background__community-row--content"
+              >
+                {element.data.map((dataItem, index) => (
+                  <td className="background__community-item" key={index}>
+                    {dataItem}
+                  </td>
                 ))}
               </tr>
-            </thead>
-            <tbody>
-              {communityTable.content.map((element, index) => (
-                <tr
-                  key={index}
-                  className="background__community-row background__community-row--content"
-                >
-                  {element.data.map((dataItem, index) => (
-                    <td
-                      style={{ opacity: 0 }}
-                      className="background__community-item"
-                      key={index}
-                    >
-                      {dataItem}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </ScrollAnimation>
+            ))}
+          </tbody>
+        </table>
         <ReactTooltip effect="solid" place="bottom" />
       </div>
     </Layout>
