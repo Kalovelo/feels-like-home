@@ -8,7 +8,6 @@ import { useDispatch } from "react-redux"
 import { toggleTheme } from "../../../reducers/themeActions"
 
 //animations
-import ScrollAnimation from "react-animate-on-scroll"
 import { scatterAnimation, informationAnimation, animateImages } from "./animations"
 
 //components

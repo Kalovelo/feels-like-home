@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import FloatingElements from "../components/components/floatingElements"
 import ReactTooltip from "react-tooltip"
-import ScrollAnimation from "react-animate-on-scroll"
 import { useSelector } from "react-redux"
 import { Helmet } from "react-helmet"
 import { communityTable, skills } from "../content/pages/Background/data"

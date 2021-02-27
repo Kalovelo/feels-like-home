@@ -12,7 +12,7 @@ const scatterAnimation = (timeline, title, subtitle) => {
       targets: " .letter",
       opacity: [0, 1],
       easing: "easeInOutSine",
-      duration: 400,
+      duration: 100,
       delay: function(el, i) {
         return 50 * (i + 1)
       }
@@ -34,8 +34,8 @@ const curveMovementAnimation = (target, valueX, valueY) => {
   return {
     targets: target,
     translateX: { value: valueX, duration: 2000 },
-    opacity: { value: 1, duration: 3000 },
-    translateY: { value: valueY, duration: 3000 },
+    opacity: { value: 1, duration: 2500 },
+    translateY: { value: valueY, duration: 2500 },
     easing: "easeInOutBack"
   }
 }
@@ -45,7 +45,7 @@ const informationAnimation = (callback, information) => {
     targets: information,
     opacity: 1,
     easing: "easeInOutQuad",
-    duration: 700,
+    duration: 400,
     begin: callback
   }
 }
