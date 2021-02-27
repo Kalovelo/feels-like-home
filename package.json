@@ -12,6 +12,7 @@
     "autoprefixer": "^9.7.6",
     "delayed-scroll-restoration-polyfill": "^0.1.1",
     "gatsby": "^2.21.12",
+    "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-postcss": "^2.3.1",
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-sass": "^2.3.1",
@@ -31,7 +32,7 @@
     "react-modal": "^3.11.2",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^4.0.3",
     "react-tooltip": "^4.2.5",
     "redux": "^4.0.5",
     "typewriter-effect": "^2.13.1"

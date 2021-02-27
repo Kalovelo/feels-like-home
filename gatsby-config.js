@@ -14,6 +14,15 @@ module.exports = {
       options: {
         path: `./src/content/pages`
       }
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "kalovelo-website",
+        start_url: "/",
+        background_color: "#fdfdfd",
+        icon: `src/content/Images/favicon.png`
+      }
     }
   ]
 }
