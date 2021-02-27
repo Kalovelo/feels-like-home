@@ -53,7 +53,7 @@ const Cookiefier = () => {
         <span></span>
       ) : (
         <div className="cookiefier" ref={cookiefierRef}>
-          <h5 className="cookiefier__title">Tea is served with cookies!</h5>
+          <span className="cookiefier__title">Tea is served with cookies!</span>
           <p className="cookiefier__information">
             In order to keep a functionality and fondness score, I am using GoSquared
             Analytics to track visitor navigation. Worry not, GoSquared is open
