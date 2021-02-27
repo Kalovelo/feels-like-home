@@ -1,12 +1,4 @@
-const getTheme = () => {
-  let currentHours = new Date().getHours()
-  return currentHours >= 7 && currentHours <= 19 ? "light" : "dark"
-}
-
 module.exports = {
-  siteMetadata: {
-    initialTheme: getTheme()
-  },
   plugins: [
     "gatsby-plugin-sass",
     {

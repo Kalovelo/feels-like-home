@@ -12,12 +12,10 @@ export const Layout = props => {
   return (
     <React.Fragment>
       <div className={"App App--" + theme}>
-        <div className="fade-in">
-          <Header isPortal={props.isPortal} />
-          {props.children}
-          {props.noFooter ? "" : <Footer />}
-          <Cookiefier />
-        </div>
+        <Header isPortal={props.isPortal} />
+        {props.children}
+        {props.noFooter ? "" : <Footer />}
+        <Cookiefier />
       </div>
     </React.Fragment>
   )

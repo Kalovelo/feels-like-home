@@ -107,7 +107,6 @@ const Projects = () => {
     <Layout>
       <SEO />
       <div className="Projects layout fade-in">
-        <FloatingElements num={2} />
         <div className="Projects__wrapper">
           <div className="Projects__image" ref={imageRef} style={{ opacity: 0 }}>
             {currentProjectState.logo}
