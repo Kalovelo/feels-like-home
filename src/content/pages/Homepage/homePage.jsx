@@ -33,6 +33,8 @@ const HomePage = props => {
   const ctaRef = useRef(null)
 
   const windowExists = () => {
+    // eslint-disable-next-line no-console
+    console.log("windowExists called!")
     if (typeof window !== "undefined") {
       return true
     } else {
@@ -53,7 +55,6 @@ const HomePage = props => {
   const { photoIndex, isOpen } = state
   return (
     <div className="homepage layout fade-in">
-      <FloatingElements num={2} />
       <div className="homepage__title-wrapper">
         <h1 ref={headtitleRef} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles. </span>
@@ -114,24 +115,22 @@ const HomePage = props => {
         </div>
       </div>
       <div ref={ctaRef} className="homepage__cta-wrapper">
-        <ScrollAnimation animateOnce duration={1.5} animateIn="fade-in">
-          <div
-            className="homepage__cta-innerWrapper "
-            onMouseEnter={() => dispatch(toggleTheme())}
-            onMouseLeave={() => dispatch(toggleTheme())}
+        <div
+          className="homepage__cta-innerWrapper "
+          onMouseEnter={() => dispatch(toggleTheme())}
+          onMouseLeave={() => dispatch(toggleTheme())}
+        >
+          <span className="homepage__cta-title">Up for a walk?</span>
+          <Link
+            to="/portal"
+            onClick={() =>
+              window && window.innerWidth >= 760 ? dispatch(toggleTheme()) : ""
+            }
+            className="homepage__cta"
           >
-            <span className="homepage__cta-title">Up for a walk?</span>
-            <Link
-              to="/portal"
-              onClick={() =>
-                window && window.innerWidth >= 760 ? dispatch(toggleTheme()) : ""
-              }
-              className="homepage__cta"
-            >
-              PROCEED
-            </Link>
-          </div>
-        </ScrollAnimation>
+            PROCEED
+          </Link>
+        </div>
       </div>
       {isOpen && (
         <Lightbox
