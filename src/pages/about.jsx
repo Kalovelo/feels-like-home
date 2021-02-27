@@ -22,7 +22,7 @@ class About extends Component {
       <Layout>
         <SEO />
         <div className="layout  fade-in about">
-          <FloatingElements num={3} />
+          <FloatingElements num={2} />
 
           <h1 className="fade-in about__pageTitle">FOOD TO KEEP PASSION FLOWING</h1>
           <div className="about__container-wrapper">

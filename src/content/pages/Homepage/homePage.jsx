@@ -53,7 +53,7 @@ const HomePage = props => {
   const { photoIndex, isOpen } = state
   return (
     <div className="homepage layout fade-in">
-      <FloatingElements num={3} />
+      <FloatingElements num={2} />
       <div className="homepage__title-wrapper">
         <h1 ref={headtitleRef} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles. </span>
