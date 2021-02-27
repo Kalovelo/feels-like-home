@@ -45,7 +45,6 @@ const HomePage = props => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      scatterAnimation(timeline, headtitleRef.current, subtitleRef.current)
       timeline.add(
         informationAnimation(() => animateImages(imageRefs), informationRef.current)
       )
