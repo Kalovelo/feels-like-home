@@ -39,8 +39,7 @@ class About extends Component {
                 <br />
                 <br />
                 <i>
-                  The story begins with a young kid having extra fat and a hard-copy
-                  of Rocky. Passion forged from the italian stallion's story.
+                  The story begins with a chubby young kid and a hard-copy of Rocky.
                 </i>
               </p>
             </div>
@@ -72,17 +71,6 @@ class About extends Component {
               exchange i got some extra passion for challenges and exploration. Grew
               up with Crash Bandicoot, fell in love with Dark Souls and lately I am
               on a hunt for unique & innovating indie games.
-              <br />I also used to write some amateur reviews on Steam, and you can
-              find them right{" "}
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://steamcommunity.com/id/Unscxrred/recommended/"
-              >
-                {" "}
-                here
-              </a>
-              , or you could simply hit me up with a friend request!{" "}
             </p>
             <span className="about__quote about__quote--last">
               'Don't you dare go hollow.'

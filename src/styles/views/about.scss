@@ -9,7 +9,7 @@
     font-family: adobe-garamond-pro, serif;
     margin-bottom: 10%;
     padding-top: 0;
-    margin: 10vh 0 50vh 0;
+    margin: 10vh 0 2 0vh 0;
     font-size: 45px;
   }
 
@@ -28,8 +28,8 @@
     line-height: 1.2rem;
 
     @media (min-width: $desktop) {
-      font-size: 1.2rem;
-      line-height: 1.2rem;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
     }
   }
 
@@ -55,7 +55,7 @@
 
     &--big {
       margin-top: $desktop-content-margin;
-      width: 80%;
+      width: 65%;
       height: 100%;
     }
 
