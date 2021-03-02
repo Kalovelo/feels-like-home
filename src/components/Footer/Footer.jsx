@@ -81,10 +81,10 @@ class Footer extends Component {
                 </span>
               </div>
             </h3>
-            <h3 className="footer__CTA" onClick={this.copyMailtoClipboard}>
+            <span className="footer__CTA" onClick={this.copyMailtoClipboard}>
               {" "}
               hello@kalovelo.com
-            </h3>
+            </span>
             <input
               type="hidden"
               id="copyText"

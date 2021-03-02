@@ -1,7 +1,7 @@
 import React from "react"
 import { Button } from "../components/components/button"
 import { Layout } from "../components/layout"
-
+import { Link } from "gatsby"
 //!SEO
 import { Helmet } from "react-helmet"
 import { analytics } from "../components/helmet/analytics"
@@ -33,7 +33,7 @@ class PortalComponent extends React.Component {
                 inside my cup.{" "}
               </p>
               <div className="portal__button-wrapper">
-                <Button link="/about" text="Ocean Route ·" class="button--portal" />
+                <Link to="/about/">· Ocean Route</Link>
               </div>
             </div>
           </div>
@@ -44,11 +44,7 @@ class PortalComponent extends React.Component {
               My background, how it all started, the tools I use or my future plans.
             </p>
             <div className="portal__button-wrapper">
-              <Button
-                link="/background/"
-                text="· Earth Route"
-                class="button--portal button--portal-dark"
-              />
+              <Link to="/background/">· Earth Route</Link>
             </div>
           </div>
         </div>

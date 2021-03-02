@@ -106,7 +106,7 @@ const Projects = () => {
   return (
     <Layout>
       <SEO />
-      <div className="Projects layout fade-in">
+      <div className="Projects fade-in">
         <div className="Projects__wrapper">
           <div className="Projects__image" ref={imageRef} style={{ opacity: 0 }}>
             {currentProjectState.logo}
@@ -128,7 +128,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={link.url}
-                  className="Projects__cta"
+                  className="button-link"
                 >
                   {link.text}
                 </a>

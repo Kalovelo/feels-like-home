@@ -1,63 +1,15 @@
-.button {
-  font-size: 20px;
-  transition: 0.5s;
-  display: inline;
-  cursor: pointer;
-
-  a {
-    font-family: $garamond;
-  }
-
-  &--square {
-    border: 1px solid white;
-    padding: 10px;
-    background: $color__black;
-
-    &:hover {
-      border: 1px solid white;
-      background: #fff;
-      a {
-        color: $color__black;
-      }
-    }
-  }
-  &--portal {
-    font-family: $garamond;
-    padding: 5px 15px;
-    font-weight: 100;
-    display: inline-block;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+.button-link {
+  margin: 10px 10px 10px 0;
+  padding: 10px 20px;
+  font-family: $maax;
+  font-weight: 100;
+  color: $color__white;
+  background: $color__black;
+  .App--dark & {
     color: $color__black;
+    background: $color__white;
     &:hover {
-      border-top: 1px solid $color__black;
-      border-bottom: 1px solid $color__black;
+      color: $color__accent;
     }
-
-    .App--dark & {
-      color: $color__white;
-      &:hover {
-        border-top: 1px solid $color__white;
-        border-bottom: 1px solid $color__white;
-      }
-    }
-
-    &-dark {
-      color: $color__white;
-      &:hover {
-        border-top: 1px solid $color__white;
-        border-bottom: 1px solid $color__white;
-      }
-
-      .App--dark & {
-        color: $color__black;
-        &:hover {
-          border-top: 1px solid $color__black;
-          border-bottom: 1px solid $color__black;
-        }
-      }
-    }
-
-    font-size: 2rem;
   }
 }
