@@ -77,22 +77,6 @@
     margin-top: 25px;
   }
 
-  &__cta {
-    margin: 10px 10px 10px 0;
-    padding: 10px 20px;
-    font-family: $maax;
-    font-weight: 100;
-    color: $color__white;
-    background: $color__black;
-    .App--dark & {
-      color: $color__black;
-      background: $color__white;
-      &:hover {
-        color: $color__accent;
-      }
-    }
-  }
-
   &__controller-text {
     padding: 20px 10px;
   }

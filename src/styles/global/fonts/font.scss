@@ -1,2 +1,14 @@
 $garamond: "adobe-garamond-pro";
 $maax: "Maax";
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  font-family: $garamond;
+}
+
+p {
+  font-family: "maax";
+  font-weight: 400;
+}

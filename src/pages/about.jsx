@@ -21,7 +21,7 @@ class About extends Component {
     return (
       <Layout>
         <SEO />
-        <div className="layout  fade-in about">
+        <div className="fade-in about">
           <h1 className="fade-in about__pageTitle">FOOD TO KEEP PASSION FLOWING</h1>
           <div className="about__container-wrapper">
             <div className="about__container about__container--left">
