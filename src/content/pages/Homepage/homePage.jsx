@@ -32,8 +32,6 @@ const HomePage = props => {
   const ctaRef = useRef(null)
 
   const windowExists = () => {
-    // eslint-disable-next-line no-console
-    console.log("windowExists called!")
     if (typeof window !== "undefined") {
       return true
     } else {
@@ -53,7 +51,7 @@ const HomePage = props => {
 
   const { photoIndex, isOpen } = state
   return (
-    <div className="homepage layout fade-in">
+    <div className="homepage fade-in">
       <div className="homepage__title-wrapper">
         <h1 ref={headtitleRef} className="homepage__headtitle">
           <span className="letters">Hey there, it's Apostoles. </span>
