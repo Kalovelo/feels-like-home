@@ -11,6 +11,7 @@ import {
 import { Layout } from "../components/layout"
 import { analytics } from "../components/helmet/analytics"
 
+import ProjectArchive from "../components/components/projectArchive"
 const Background = () => {
   const theme = useSelector(state => state.theme)
 
@@ -50,7 +51,7 @@ const Background = () => {
         </h1>
 
         <h2 className="background__subtitle">Working & Forging on</h2>
-        <div className="background__skills">
+        <section className="background__skills">
           {skills.map((skillContainer, index) => (
             <div key={index} className="background__skill-wrapper">
               <h5 className="background__skill-title">{skillContainer.Title}</h5>
@@ -68,7 +69,11 @@ const Background = () => {
               </div>
             </div>
           ))}
-        </div>
+        </section>
+
+        <section>
+          <ProjectArchive />
+        </section>
 
         <h2 className="background__subtitle">Communities</h2>
 

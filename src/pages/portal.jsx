@@ -41,7 +41,7 @@ class PortalComponent extends React.Component {
             <h1 className="portal__title">Background</h1>
             <p className="portal__description">
               Check my journey as a digital deshi ·<br />
-              My background, how it all started, the tools I use or my future plans.
+              My background, the tools I use and the communities I am part of.
             </p>
             <div className="portal__button-wrapper">
               <Link to="/background/">· Earth Route</Link>

@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react"
 
 import { Layout } from "../components/layout"
-import x from "../content/Images/project_sample.png"
-import whole from "../content/Images/project_sample_whole.png"
+import x from "../content/Images/desktop1.jpg"
+import whole from "../content/Images/whole.jpg"
 import Lightbox from "react-image-lightbox"
 
 export default () => {
@@ -13,7 +13,6 @@ export default () => {
   const images = [x, whole, x, x]
 
   useEffect(() => {
-    console.log(state)
     state.isOpen
       ? (document.documentElement.style.overflowY = "hidden")
       : (document.documentElement.style.overflowY = "visible")
