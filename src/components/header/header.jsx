@@ -4,9 +4,7 @@ import Sidebar from "./mobileNavMenu/sidebar"
 
 const links = [
   { title: "Home", link: "/" },
-  { title: "Projects", link: "/projects" },
-  { title: "Background", link: "/background" },
-  { title: "About", link: "/about" }
+  { title: "Background", link: "/background" }
 ]
 class Header extends React.Component {
   constructor(props) {

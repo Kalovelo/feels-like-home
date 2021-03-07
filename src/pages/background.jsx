@@ -3,7 +3,8 @@ import FloatingElements from "../components/components/floatingElements"
 import ReactTooltip from "react-tooltip"
 import { useSelector } from "react-redux"
 import { Helmet } from "react-helmet"
-import { communityTable, skills } from "../content/pages/Background/data"
+import { communityTable } from "../content/pages/Background/data"
+import Skills from "../components/skills/skills"
 import {
   tableAnimation,
   skillsAnimation
@@ -40,7 +41,7 @@ const Background = () => {
     <Layout>
       <SEO />
       <div className="background  fade-in">
-        <h1 className="background__content">
+        {/* <h1 className="background__content">
           Code like interfaces, <span className="layout__bold">clean</span> and{" "}
           <span className="layout__bold">
             <span className="background__word-bundle">
@@ -48,32 +49,9 @@ const Background = () => {
               <span className="background__title">a continuous goal</span>
             </span>
           </span>
-        </h1>
+        </h1> */}
 
-        <h2 className="background__subtitle">Working & Forging on</h2>
-        <section className="background__skills">
-          {skills.map((skillContainer, index) => (
-            <div key={index} className="background__skill-wrapper">
-              <h5 className="background__skill-title">{skillContainer.Title}</h5>
-              <div className="background__skill-container">
-                {skillContainer.elements.map((skill, index) => (
-                  <div
-                    data-tip={skill.tooltip}
-                    key={index}
-                    style={{ opacity: 0 }}
-                    className="background__skill background__svg float-infinite"
-                  >
-                    {skill.component}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </section>
-
-        <section>
-          <ProjectArchive />
-        </section>
+        <Skills />
 
         <h2 className="background__subtitle">Communities</h2>
 

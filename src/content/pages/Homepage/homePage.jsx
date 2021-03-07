@@ -15,6 +15,8 @@ import FloatingElements from "../../../components/components/floatingElements"
 import anime from "animejs/lib/anime.es.js"
 import Lightbox from "react-image-lightbox"
 import { Link } from "gatsby"
+import ProjectArchive from "../../../components/components/projectArchive"
+import Skills from "../../../components/skills/skills"
 
 const HomePage = props => {
   const dispatch = useDispatch()
@@ -57,7 +59,7 @@ const HomePage = props => {
           <span className="letters">Hey there, it's Apostoles. </span>
         </h1>
         <h2 ref={subtitleRef} style={{ opacity: 0 }} className="homepage__subtitle">
-          Front-End Dev.
+          Web Developer & CS Student.
         </h2>
       </div>
       <div className="halfRow homepage__introduction-wrapper">
@@ -73,9 +75,9 @@ const HomePage = props => {
             numbers & self - improvement.
           </p>
           <p className="homepage__paragraph">
-            Currently an IT student and working as a freelancer. You can find me at{" "}
-            <b> local meetups</b> about content - marketing or development, reading
-            peacefully a book on public transport, or jogging by the sea.
+            Currently a CS student and working as a freelancer. You can find me at{" "}
+            <b> local meetups</b>, reading peacefully a book on public transport, or
+            jogging by the sea.
           </p>
         </div>
 
@@ -111,24 +113,8 @@ const HomePage = props => {
           </div>
         </div>
       </div>
-      <div ref={ctaRef} className="homepage__cta-wrapper">
-        <div
-          className="homepage__cta-innerWrapper "
-          onMouseEnter={() => dispatch(toggleTheme())}
-          onMouseLeave={() => dispatch(toggleTheme())}
-        >
-          <span className="homepage__cta-title">Up for a walk?</span>
-          <Link
-            to="/portal"
-            onClick={() =>
-              window && window.innerWidth >= 760 ? dispatch(toggleTheme()) : ""
-            }
-            className="homepage__cta"
-          >
-            PROCEED
-          </Link>
-        </div>
-      </div>
+      <ProjectArchive />
+
       {isOpen && (
         <Lightbox
           mainSrc={images[photoIndex]}

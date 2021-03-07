@@ -26,7 +26,7 @@ export default () => {
   ]
   return (
     <section className="projectArchive">
-      <h2>Projects</h2>
+      <h2>Portfolio Highlights</h2>
       <div className="projectArchive__wrapper">
         {data.map((project, index) => (
           <a href={project.link} key={index} className="projectArchive__project">
