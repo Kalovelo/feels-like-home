@@ -1,11 +1,10 @@
-import React, { useRef, useEffect, useState } from "react"
-import { Layout } from "../components/layout"
-import x from "../content/Images/desktop1.jpg"
-import whole from "../content/Images/whole.jpg"
+import React, { useEffect, useState } from "react"
 import Lightbox from "react-image-lightbox"
 import ReactMarkdown from "react-markdown"
 import ProjectArchive from "../components/components/projectArchive"
-2
+import { Layout } from "../components/layout"
+import Fade from "react-reveal/Fade"
+
 export default ({ pageContext }) => {
   const {
     title,
@@ -98,49 +97,60 @@ export default ({ pageContext }) => {
             </ul>
           </div>
         </section>
-        <FullImage altText={primary.alternativeText} src={images[0]} />
-        <section className="project__double-section">
-          <Brief title="Purpose" description={brief} />
-          <Brief title="Strategy" description={explanation} />
+        <section>
+          <FullImage altText={primary.alternativeText} src={images[0]} />
         </section>
-        <section className="project__gallery">
-          <img
-            alt={whole.alternativeText}
-            src={images[1]}
-            onClick={() =>
-              setState(prevState => ({
-                ...prevState,
-                isOpen: true,
-                photoIndex: 1
-              }))
-            }
-          />
-          <img
-            alt={rest_images[0].alternativeText}
-            src={images[2]}
-            onClick={() =>
-              setState(prevState => ({
-                ...prevState,
-                isOpen: true,
-                photoIndex: 2
-              }))
-            }
-          />
-          <img
-            alt={rest_images[1].alternativeText}
-            src={images[3]}
-            onClick={() =>
-              setState(prevState => ({
-                ...prevState,
-                isOpen: true,
-                photoIndex: 3
-              }))
-            }
-          />
-        </section>
-        <section className="project__post-section">
-          <Brief title="Spotlight" description={spotlight} />
-        </section>
+
+        <Fade>
+          <section className="project__double-section">
+            <Brief title="Purpose" description={brief} />
+            <Brief title="Strategy" description={explanation} />
+          </section>
+        </Fade>
+
+        <Fade>
+          <section className="project__gallery">
+            <img
+              alt={whole.alternativeText}
+              src={images[1]}
+              onClick={() =>
+                setState(prevState => ({
+                  ...prevState,
+                  isOpen: true,
+                  photoIndex: 1
+                }))
+              }
+            />
+            <img
+              alt={rest_images[0].alternativeText}
+              src={images[2]}
+              onClick={() =>
+                setState(prevState => ({
+                  ...prevState,
+                  isOpen: true,
+                  photoIndex: 2
+                }))
+              }
+            />
+            <img
+              alt={rest_images[1].alternativeText}
+              src={images[3]}
+              onClick={() =>
+                setState(prevState => ({
+                  ...prevState,
+                  isOpen: true,
+                  photoIndex: 3
+                }))
+              }
+            />
+          </section>
+        </Fade>
+
+        <Fade>
+          <section className="project__post-section">
+            <Brief title="Spotlight" description={spotlight} />
+          </section>
+        </Fade>
 
         <ProjectArchive title="Rest Works" filter_slug={slug} />
       </main>

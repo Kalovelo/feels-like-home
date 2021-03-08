@@ -11,6 +11,11 @@
     width: 100%;
     height: 2px;
 
+    .App--dark & {
+      background: $color__greyPale;
+    }
+    background: $color__greyPale;
+
     @media (min-width: $mobile) {
       width: 80%;
     }

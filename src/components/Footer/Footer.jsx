@@ -136,7 +136,7 @@ class Footer extends Component {
               onMouseLeave={this.finishedHover}
             >
               {this.state.finished ? (
-                <span className="fade-in">even if you're Sisyphus.</span>
+                <span className=" ">even if you're Sisyphus.</span>
               ) : (
                 <span className="puff-in-center">Conquer the mountain </span>
               )}

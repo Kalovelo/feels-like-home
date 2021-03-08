@@ -11,6 +11,7 @@ import {
 } from "../content/pages/Background/animations"
 import { Layout } from "../components/layout"
 import { analytics } from "../components/helmet/analytics"
+import Fade from "react-reveal/Fade"
 
 import ProjectArchive from "../components/components/projectArchive"
 const Background = () => {
@@ -50,7 +51,6 @@ const Background = () => {
             </span>
           </span>
         </h1> */}
-
         <section>
           <p className="background__description">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -60,39 +60,40 @@ const Background = () => {
             centuries.
           </p>
         </section>
-
         <Skills />
-
-        <h2 className="background__subtitle">Communities</h2>
-
-        <table className="background__communities">
-          <thead>
-            <tr className="background__community-row">
-              {communityTable.attributes.map((attribute, index) => (
-                <th
-                  className="background__community-item background__community-item--head"
-                  key={index}
-                >
-                  {attribute}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {communityTable.content.map((element, index) => (
-              <tr
-                key={index}
-                className="background__community-row background__community-row--content"
-              >
-                {element.data.map((dataItem, index) => (
-                  <td className="background__community-item" key={index}>
-                    {dataItem}
-                  </td>
+        <Fade>
+          <section>
+            <h2 className="background__subtitle">Communities</h2>
+            <table className="background__communities">
+              <thead>
+                <tr className="background__community-row">
+                  {communityTable.attributes.map((attribute, index) => (
+                    <th
+                      className="background__community-item background__community-item--head"
+                      key={index}
+                    >
+                      {attribute}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {communityTable.content.map((element, index) => (
+                  <tr
+                    key={index}
+                    className="background__community-row background__community-row--content"
+                  >
+                    {element.data.map((dataItem, index) => (
+                      <td className="background__community-item" key={index}>
+                        {dataItem}
+                      </td>
+                    ))}
+                  </tr>
                 ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+              </tbody>
+            </table>
+          </section>
+        </Fade>
         <ReactTooltip effect="solid" place="bottom" />
       </div>
 
