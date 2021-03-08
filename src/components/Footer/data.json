@@ -23,16 +23,8 @@
       "title": "Home"
     },
     {
-      "link": "/projects",
-      "title": "Projects"
-    },
-    {
-      "link": "/background",
-      "title": "Background"
-    },
-    {
-      "link": "/about",
-      "title": "About"
+      "link": "/portfolio",
+      "title": "Portfolio"
     }
   ],
   "ctaConcepts": ["philosophy", "books", "your idea"]

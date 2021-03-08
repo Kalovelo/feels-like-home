@@ -1,7 +1,7 @@
 import React from "react"
 import x from "../../content/Images/desktop1.jpg"
 
-export default () => {
+export default ({ title }) => {
   const data = [
     {
       image: x,
@@ -26,7 +26,7 @@ export default () => {
   ]
   return (
     <section className="projectArchive">
-      <h2>Portfolio Highlights</h2>
+      <h2>{title}</h2>
       <div className="projectArchive__wrapper">
         {data.map((project, index) => (
           <a href={project.link} key={index} className="projectArchive__project">

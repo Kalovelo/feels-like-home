@@ -113,8 +113,13 @@ const HomePage = props => {
           </div>
         </div>
       </div>
-      <ProjectArchive />
+      <ProjectArchive title={"Portfolio Highlights"} />
 
+      <section className="homepage__cta-wrapper">
+        <Link to="/portfolio" className="homepage__cta">
+          Portfolio ›
+        </Link>
+      </section>
       {isOpen && (
         <Lightbox
           mainSrc={images[photoIndex]}

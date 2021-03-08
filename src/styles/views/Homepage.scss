@@ -120,32 +120,18 @@
     }
   }
   &__cta {
-    display: flex;
-    padding: 20px;
-    font-size: 60px;
+    font-size: 2rem;
     font-family: $maax;
-    text-align: center;
-    font-weight: 900;
+    font-weight: 500;
     cursor: pointer;
     color: inherit;
-
-    &:hover {
-      color: $color__black;
-      .App--dark & {
-        color: $color__white;
-      }
-      text-decoration: none;
-    }
-    @media (min-width: $tablet) {
-      font-size: 100px;
-    }
+    text-align: right;
   }
   &__cta-wrapper {
-    margin-top: $desktop-content-margin;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin-top: 20px;
   }
 
   &__cta-title {
