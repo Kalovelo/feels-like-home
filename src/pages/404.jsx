@@ -23,7 +23,7 @@ const NotFound404 = () => {
   return (
     <Layout>
       <SEO />
-      <div className="notFound layout fade-in">
+      <div className="notFound">
         {[...Array(ufoNum)].map((el, index) => (
           <span
             key={index}

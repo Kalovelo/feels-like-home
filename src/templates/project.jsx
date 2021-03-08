@@ -72,7 +72,7 @@ export default ({ pageContext }) => {
   const { photoIndex, isOpen } = state
   return (
     <Layout>
-      <main className="project fade-in">
+      <main className="project">
         <h1 className="project__title">{title}</h1>
         <section className="project__main-section">
           <div className="project__main-summary">

@@ -13,7 +13,7 @@ export const Layout = props => {
     <React.Fragment>
       <div className={"App App--" + theme}>
         <Header isPortal={props.isPortal} />
-        <div className="layout">
+        <div className="layout fade-in">
           {props.children}
           {props.noFooter ? "" : <Footer />}
         </div>

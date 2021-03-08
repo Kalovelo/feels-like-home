@@ -41,13 +41,7 @@ export default class Sidebar extends Component {
           </Menu>
         </div>
         <div className="topbar__right-mode-toggle">
-          <Menu
-            disableOverlayClick
-            customBurgerIcon={<ThemeToggler />}
-            // isOpen={this.state.menuOpen}
-            // onStateChange={state => this.handleStateChange(state)}
-            right
-          ></Menu>
+          <Menu disableOverlayClick customBurgerIcon={<ThemeToggler />} right></Menu>
         </div>
       </div>
     )

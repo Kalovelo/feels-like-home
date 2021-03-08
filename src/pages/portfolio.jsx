@@ -40,7 +40,7 @@ const Background = () => {
   return (
     <Layout>
       <SEO />
-      <div className="background  fade-in">
+      <div className="background">
         {/* <h1 className="background__content">
           Code like interfaces, <span className="layout__bold">clean</span> and{" "}
           <span className="layout__bold">

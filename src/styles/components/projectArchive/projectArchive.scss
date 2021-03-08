@@ -28,6 +28,10 @@
 
     p {
       color: $color__grey;
+
+      .App--dark & {
+        color: $color__greyPale;
+      }
     }
 
     img {

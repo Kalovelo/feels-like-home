@@ -27,10 +27,6 @@
 
     &--light {
       color: $color__greyPale;
-
-      .App--dark & {
-        color: $color__black;
-      }
     }
 
     &:hover {

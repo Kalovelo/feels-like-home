@@ -106,7 +106,7 @@ const Projects = () => {
   return (
     <Layout>
       <SEO />
-      <div className="Projects fade-in">
+      <div className="Projects">
         <div className="Projects__wrapper">
           <div className="Projects__image" ref={imageRef} style={{ opacity: 0 }}>
             {currentProjectState.logo}

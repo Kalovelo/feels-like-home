@@ -22,7 +22,7 @@ class PortalComponent extends React.Component {
     return (
       <React.Fragment>
         <SEO />
-        <div className="portal fade-in">
+        <div className="portal">
           <div className="portal__section portal__section--light">
             <div className="portal__section-wrapper">
               <h1 className="portal__title">About</h1>

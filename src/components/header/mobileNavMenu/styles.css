@@ -16,7 +16,7 @@
   list-style: none;
 }
 .sideMenu li {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #373a47;
   padding: 10%;
   text-align: center;
 }
@@ -24,9 +24,6 @@
   border: none;
 }
 
-.App--dark .sideMenu li {
-  border-bottom: 1px solid black;
-}
 html,
 body {
   overflow-x: hidden !important;
@@ -54,13 +51,13 @@ body {
   /* Our sidebar item styling */
   text-decoration: none;
   margin-bottom: 10px;
-  color: white;
+  color: #373a47;
   transition: color 0.2s;
 }
 
 /* Change color on hover */
 .bm-item:hover {
-  color: white;
+  color: #373a47;
 }
 
 /* The rest copied directly from react-burger-menu docs */
@@ -109,7 +106,7 @@ body {
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #373a47;
   width: 2px !important;
   height: 20px !important;
   transition: 0.5s;
@@ -119,13 +116,9 @@ body {
   transform: rotate(90deg) !important;
 }
 
-.App--dark .bm-cross {
-  background: #000000;
-}
-
 /* General sidebar styles */
 .bm-menu {
-  background: #000000;
+  background: #fdfdfd;
   padding: 2.5em 1em 0;
   font-size: 1.15em;
 }
@@ -137,21 +130,32 @@ body {
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
+  color: #373a47;
 }
 
 /* Color/shape of burger icon bars */
 
+.App--dark .bm-cross {
+  background: #fdfdfd;
+}
+
+.App--dark .sideMenu li:last-child {
+  border: none;
+}
+
+.App--dark .sideMenu li {
+  border-bottom: 1px solid #fdfdfd;
+}
 .App--dark .bm-burger-bars {
   background: #fdfdfd;
 }
 
 .App--dark .bm-item {
-  color: #373a47 !important;
+  color: #fdfdfd !important;
 }
 
 .App--dark .bm-menu {
-  background: #fdfdfd;
+  background: #232323;
 }
 .bm-burger-bars {
   background: #373a47;

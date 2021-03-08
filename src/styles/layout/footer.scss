@@ -1,25 +1,15 @@
 .footer {
   display: flex;
   min-height: 400px;
-  color: $color__blackPale;
   flex-direction: column;
   align-items: center;
   padding-top: 0;
   padding-bottom: 0;
 
-  &--darkMode {
-    color: $color__greyPale;
-  }
-
   &__divider {
     margin: 50px 0;
     width: 100%;
     height: 2px;
-
-    .App--dark & {
-      background: $color__greyPale;
-    }
-    background: $color__greyPale;
 
     @media (min-width: $mobile) {
       width: 80%;
@@ -50,14 +40,9 @@
     padding: 0;
 
     a {
-      color: $color__blackPale;
-      .App--dark & {
-        color: $color__greyPale;
-      }
       transition: 0.5s;
 
       &:hover {
-        color: $color__accent;
         text-decoration: none;
       }
     }
@@ -98,10 +83,7 @@
 
   &__CTA-concept {
     display: block;
-    color: $color__black;
-    .App--dark & {
-      color: $color__white;
-    }
+
     font-size: 30px;
 
     @media (min-width: $tablet) {
@@ -122,9 +104,6 @@
     font-size: 30px;
     text-align: center;
 
-    .App--dark & {
-      color: $color__whiteTotal;
-    }
     @media (min-width: $tablet) {
       font-size: 60px;
     }
