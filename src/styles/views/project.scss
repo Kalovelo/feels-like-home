@@ -32,8 +32,9 @@
   }
 
   &__subtitle {
+    font-family: $garamond;
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   &__main-section {
@@ -74,7 +75,7 @@
 
     .project__subtitle {
       margin: 0;
-      font-size: 1.2rem !important;
+      font-size: 1.3rem !important;
     }
 
     &--links {
@@ -132,7 +133,9 @@
 
   @media (min-width: $tablet) {
     &__double-section {
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
     }
     &__main-section {
       grid-template-columns: 1fr 1fr 100px 100px;

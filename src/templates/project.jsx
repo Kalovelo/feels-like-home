@@ -1,16 +1,36 @@
 import React, { useRef, useEffect, useState } from "react"
-
 import { Layout } from "../components/layout"
 import x from "../content/Images/desktop1.jpg"
 import whole from "../content/Images/whole.jpg"
 import Lightbox from "react-image-lightbox"
+import ReactMarkdown from "react-markdown"
+2
+export default ({ pageContext }) => {
+  const {
+    title,
+    slug,
+    description,
+    brief,
+    explanation,
+    goal,
+    spotlight,
+    technologies,
+    links,
+    primary,
+    whole,
+    rest_images
+  } = { ...pageContext }
 
-export default () => {
   const [state, setState] = useState({
     photoIndex: 0,
     isOpen: false
   })
-  const images = [x, whole, x, x]
+
+  const images = [
+    primary.formats.large.url,
+    whole.formats.large.url,
+    ...rest_images.map(image => image.formats.large.url)
+  ]
 
   useEffect(() => {
     state.isOpen
@@ -21,52 +41,11 @@ export default () => {
     }
   })
 
-  const data = {
-    title: "Colourful Presentation",
-    summary: {
-      title: "What",
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum has been the industry's standard 
-      dummy text ever since the 1500s, when an unknown 
-      printer took a galley of type and scrambled it to make a 
-      type specimen book.`
-    },
-    featuredImage: x,
-    wholeImage: whole,
-    restImages: [x, x],
-    stack: ["React", "Gatsby", "Strapi"],
-    links: ["Live", "Repo"],
-    goal: {
-      title: "Why",
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum has been the industry's standard 
-      dummy text ever since the 1500s, when an unknown 
-      printer took a galley of type and scrambled it to make a 
-      type specimen book.`
-    },
-    explanation: {
-      title: "How",
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum has been the industry's standard 
-      dummy text ever since the 1500s, when an unknown 
-      printer took a galley of type and scrambled it to make a 
-      type specimen book.`
-    },
-    explanation: {
-      title: "How",
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum has been the industry's standard 
-      dummy text ever since the 1500s, when an unknown 
-      printer took a galley of type and scrambled it to make a 
-      type specimen book.`
-    }
-  }
-
   const Brief = ({ title, description }) => {
     return (
       <div>
         <h3 className="project__subtitle">{title}</h3>
-        <p>{description}</p>
+        <ReactMarkdown source={description} />
       </div>
     )
   }
@@ -93,19 +72,16 @@ export default () => {
   return (
     <Layout>
       <main className="project">
-        <h1 className="project__title">{data.title}</h1>
+        <h1 className="project__title">{title}</h1>
         <section className="project__main-section">
           <div className="project__main-summary">
-            <Brief
-              title={data.summary.title}
-              description={data.summary.description}
-            />
+            <Brief title="Summary" description={description} />
           </div>
           <div className="project__stack">
             <h4 className="project__subtitle">Stack</h4>
             <ul className="project__stack-list">
-              {data.stack.map((item, index) => (
-                <li key={index}>{item}</li>
+              {technologies.map(({ technology }, index) => (
+                <li key={index}>{technology}</li>
               ))}
             </ul>
           </div>
@@ -113,20 +89,23 @@ export default () => {
           <div className="project__stack project__stack--links">
             <h4 className="project__subtitle">Links</h4>
             <ul className="project__stack-list">
-              {data.links.map((item, index) => (
-                <li key={index}>{item}</li>
+              {links.map((link, index) => (
+                <li key={index}>
+                  <a href={link.url}>{link.title}</a>
+                </li>
               ))}
             </ul>
           </div>
         </section>
-        <FullImage src={x} />
+        <FullImage altText={primary.alternativeText} src={images[0]} />
         <section className="project__double-section">
-          <Brief title={data.goal.title} description={data.goal.description} />
-          <Brief title={data.goal.title} description={data.goal.description} />
+          <Brief title="Purpose" description={brief} />
+          <Brief title="Strategy" description={explanation} />
         </section>
         <section className="project__gallery">
           <img
-            src={whole}
+            alt={whole.alternativeText}
+            src={images[1]}
             onClick={() =>
               setState(prevState => ({
                 ...prevState,
@@ -136,7 +115,8 @@ export default () => {
             }
           />
           <img
-            src={data.featuredImage}
+            alt={rest_images[0].alternativeText}
+            src={images[2]}
             onClick={() =>
               setState(prevState => ({
                 ...prevState,
@@ -146,7 +126,8 @@ export default () => {
             }
           />
           <img
-            src={x}
+            alt={rest_images[1].alternativeText}
+            src={images[3]}
             onClick={() =>
               setState(prevState => ({
                 ...prevState,
@@ -157,7 +138,7 @@ export default () => {
           />
         </section>
         <section className="project__post-section">
-          <Brief title={data.summary.title} description={data.summary.description} />
+          <Brief title="Spotlight" description={spotlight} />
         </section>
       </main>
       {isOpen && (

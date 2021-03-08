@@ -1,3 +1,12 @@
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+console.log(`Using environment config: '${activeEnv}'`)
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`
+})
+
 module.exports = {
   plugins: [
     "gatsby-plugin-sass",
@@ -8,11 +17,15 @@ module.exports = {
       }
     },
     "gatsby-plugin-react-helmet",
-    "gatsby-transformer-json",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-graphql",
       options: {
-        path: `./src/content/pages`
+        // Arbitrary name for the remote schema Query type
+        typeName: "api",
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: "api",
+        // Url to query from
+        url: process.env.GATSBY_API_URL + "/graphql"
       }
     },
     {
@@ -26,3 +39,5 @@ module.exports = {
     }
   ]
 }
+
+console.log(process.env.GATSBY_API_URL + "/graphql")
