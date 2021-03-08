@@ -51,7 +51,7 @@ class Footer extends Component {
   render() {
     return (
       <div
-        className="footer layout"
+        className="footer "
         ref={footer => {
           this.footer = footer
         }}

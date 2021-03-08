@@ -1,43 +1,47 @@
+import { useStaticQuery } from "gatsby"
 import React from "react"
-import x from "../../content/Images/desktop1.jpg"
+import { Link } from "gatsby"
 
-export default ({ title }) => {
-  const data = [
-    {
-      image: x,
-      title: "Colourful Presentation",
-      brief: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
-      link: "#"
-    },
-    {
-      image: x,
-      title: "Colourful Presentation",
-      brief: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum has been the industry's standard 
-      dummy text ever since the 1500s,`,
-      link: "#"
-    },
-    {
-      image: x,
-      title: "Colourful Presentation",
-      brief: "alala la la al l ala lalalalala alal",
-      link: "#"
+export default ({ title, filter_slug }) => {
+  const projects_query = useStaticQuery(graphql`
+    query {
+      api {
+        projects {
+          brief: Brief
+          primary {
+            formats
+          }
+          title
+          slug
+        }
+      }
     }
-  ]
+  `)
+
+  const rest_projects = projects_query.api.projects.filter(
+    project => project.slug != filter_slug
+  )
+
+  if (!rest_projects.length) return ""
+
   return (
     <section className="projectArchive">
       <h2>{title}</h2>
       <div className="projectArchive__wrapper">
-        {data.map((project, index) => (
-          <a href={project.link} key={index} className="projectArchive__project">
+        {rest_projects.map((project, index) => (
+          <Link
+            to={`/portfolio/${project.slug}`}
+            key={index}
+            className="projectArchive__project"
+          >
             <article>
               <figure className="projectArchive__image-wrapper">
-                <img src={project.image} />
+                <img src={project.primary.formats.small.url} />
               </figure>
               <h4>{project.title}</h4>
               <p>{project.brief}</p>
             </article>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

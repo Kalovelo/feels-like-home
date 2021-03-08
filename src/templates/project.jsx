@@ -4,6 +4,7 @@ import x from "../content/Images/desktop1.jpg"
 import whole from "../content/Images/whole.jpg"
 import Lightbox from "react-image-lightbox"
 import ReactMarkdown from "react-markdown"
+import ProjectArchive from "../components/components/projectArchive"
 2
 export default ({ pageContext }) => {
   const {
@@ -71,7 +72,7 @@ export default ({ pageContext }) => {
   const { photoIndex, isOpen } = state
   return (
     <Layout>
-      <main className="project">
+      <main className="project fade-in">
         <h1 className="project__title">{title}</h1>
         <section className="project__main-section">
           <div className="project__main-summary">
@@ -140,6 +141,8 @@ export default ({ pageContext }) => {
         <section className="project__post-section">
           <Brief title="Spotlight" description={spotlight} />
         </section>
+
+        <ProjectArchive title="Rest Works" filter_slug={slug} />
       </main>
       {isOpen && (
         <Lightbox
