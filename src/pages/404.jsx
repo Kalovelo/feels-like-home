@@ -1,11 +1,12 @@
-import React, { useEffect } from "react"
-import { UFO } from "../content/pages/notFound404/alien"
-import { Layout } from "../components/layout"
+import React from "react"
 import { Helmet } from "react-helmet"
 import { analytics } from "../components/helmet/analytics"
+import Layout from "../components/layout/layout"
+import { UFO } from "./404/alien"
+import "./404/notFound404.scss"
 
 const NotFound404 = () => {
-  const ufoNum = 3
+  const ufoNum = 2
 
   const SEO = () => (
     <Helmet>

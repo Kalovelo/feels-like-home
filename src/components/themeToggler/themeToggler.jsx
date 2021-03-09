@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { toggleTheme } from "../../reducers/themeActions"
 import { Moon, Sun } from "../../content/svg/themeIcons"
 import anime from "animejs/lib/anime.es.js"
 import { useRef } from "react"
+import "./themeToggler.scss"
 
 export const ThemeToggler = props => {
   const theme = useSelector(state => state.theme)
@@ -29,8 +30,8 @@ export const ThemeToggler = props => {
 
   const updateStore = () => dispatch(toggleTheme())
   return (
-    <span ref={togglerRef} onClick={playAnimation}>
+    <button className="themeToggler" ref={togglerRef} onClick={playAnimation}>
       <Icon />
-    </span>
+    </button>
   )
 }

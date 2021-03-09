@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { slide as Menu } from "react-burger-menu"
 import "./styles.css"
 import { Link } from "gatsby"
-import { ThemeToggler } from "../themeToggler"
+import { ThemeToggler } from "../../themeToggler/themeToggler"
 
 export default class Sidebar extends Component {
   constructor(props) {

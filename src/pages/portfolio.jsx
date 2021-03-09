@@ -1,19 +1,16 @@
 import React, { useEffect } from "react"
-import FloatingElements from "../components/components/floatingElements"
-import ReactTooltip from "react-tooltip"
-import { useSelector } from "react-redux"
 import { Helmet } from "react-helmet"
-import { communityTable } from "../content/pages/Background/data"
-import Skills from "../components/skills/skills"
-import {
-  tableAnimation,
-  skillsAnimation
-} from "../content/pages/Background/animations"
-import { Layout } from "../components/layout"
-import { analytics } from "../components/helmet/analytics"
+import { useSelector } from "react-redux"
 import Fade from "react-reveal/Fade"
+import ReactTooltip from "react-tooltip"
+import ProjectArchive from "../components/projectArchive/projectArchive"
+import { analytics } from "../components/helmet/analytics"
+import Layout from "../components/layout/layout"
+import Skills from "../components/skills/skills"
+import { skillsAnimation } from "./portfolio/animations"
+import { communityTable } from "./portfolio/data"
+import "./portfolio/portfolio.scss"
 
-import ProjectArchive from "../components/components/projectArchive"
 const Background = () => {
   const theme = useSelector(state => state.theme)
 
@@ -42,15 +39,6 @@ const Background = () => {
     <Layout>
       <SEO />
       <div className="background">
-        {/* <h1 className="background__content">
-          Code like interfaces, <span className="layout__bold">clean</span> and{" "}
-          <span className="layout__bold">
-            <span className="background__word-bundle">
-              meaningful
-              <span className="background__title">a continuous goal</span>
-            </span>
-          </span>
-        </h1> */}
         <section>
           <p className="background__description">
             Lorem Ipsum is simply dummy text of the printing and typesetting

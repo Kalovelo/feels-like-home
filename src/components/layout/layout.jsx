@@ -1,12 +1,11 @@
-import Footer from "./Footer/Footer"
-import Header from "./header/header"
 import React from "react"
-import Cookiefier from "./cookiefier"
 import { useSelector } from "react-redux"
-import { useDispatch } from "react-redux"
-import { getTheme } from "../store/store"
+import Cookiefier from "../cookiefier/cookiefier"
+import Footer from "../Footer/Footer"
+import Header from "../header/header"
+import "./layout.scss"
 
-export const Layout = props => {
+export default props => {
   const theme = useSelector(state => state.theme)
 
   return (

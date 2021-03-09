@@ -1,0 +1,14 @@
+.themeToggler {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    border: none;
+    outline: 0;
+    svg {
+      fill: $color__accent;
+    }
+  }
+}

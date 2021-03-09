@@ -1,22 +1,22 @@
 import React, { useRef, useEffect, useState } from "react"
 //images
-import apostoles1 from "../../../content/Images/apostoles1.jpg"
-import apostoles2 from "../../../content/Images/apostoles2.jpg"
+import apostoles1 from "../../content/Images/apostoles1.jpg"
+import apostoles2 from "../../content/Images/apostoles2.jpg"
 
 //store
 import { useDispatch } from "react-redux"
-import { toggleTheme } from "../../../reducers/themeActions"
+import { toggleTheme } from "../../reducers/themeActions"
 
 //animations
 import { scatterAnimation, informationAnimation, animateImages } from "./animations"
-
+import "./Homepage.scss"
 //components
-import FloatingElements from "../../../components/components/floatingElements"
+import FloatingElements from "../../components/floatingElements/floatingElements"
 import anime from "animejs/lib/anime.es.js"
 import Lightbox from "react-image-lightbox"
 import { Link } from "gatsby"
-import ProjectArchive from "../../../components/components/projectArchive"
-import Skills from "../../../components/skills/skills"
+import ProjectArchive from "../../components/projectArchive/projectArchive"
+import Skills from "../../components/skills/skills"
 import Fade from "react-reveal/Fade"
 
 const HomePage = props => {

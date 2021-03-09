@@ -1,5 +1,5 @@
 import React from "react"
-import { Wordpress, Ihu, Fosdem, OpenSCN } from "../../../content/svg/communities"
+import { Wordpress, Ihu, Fosdem, OpenSCN } from "../../content/svg/communities"
 import {
   Python,
   Java,
@@ -15,7 +15,7 @@ import {
   SocketIO,
   Git,
   GraphQL
-} from "../../../content/svg/skills.jsx"
+} from "../../content/svg/skills.jsx"
 
 const skills = [
   {

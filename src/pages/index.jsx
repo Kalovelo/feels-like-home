@@ -10,10 +10,8 @@ import "../styles/styles.scss"
 import "../animations/animations.css"
 import "react-image-lightbox/style.css"
 //! pages
-import Homepage from "../content/pages/Homepage/homePage"
-
-//!store
-import { Layout } from "../components/layout"
+import Homepage from "./index/_homePage"
+import Layout from "../components/layout/layout"
 
 export default () => {
   const SEO = () => (

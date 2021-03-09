@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
 import Lightbox from "react-image-lightbox"
 import ReactMarkdown from "react-markdown"
-import ProjectArchive from "../components/components/projectArchive"
-import { Layout } from "../components/layout"
 import Fade from "react-reveal/Fade"
+import ProjectArchive from "../components/projectArchive/projectArchive"
+import Layout from "../components/layout/layout"
+import "./project/project.scss"
 
 export default ({ pageContext }) => {
   const {

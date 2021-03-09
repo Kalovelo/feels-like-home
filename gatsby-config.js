@@ -9,7 +9,10 @@ require("dotenv").config({
 
 module.exports = {
   plugins: [
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: { data: `@import "${__dirname}/src/styles/styles";` }
+    },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {

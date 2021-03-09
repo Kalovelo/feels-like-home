@@ -1,6 +1,7 @@
 import { Link, useStaticQuery } from "gatsby"
 import React from "react"
 import Fade from "react-reveal/Fade"
+import "./projectArchive.scss"
 
 export default ({ title, filter_slug }) => {
   const projects_query = useStaticQuery(graphql`

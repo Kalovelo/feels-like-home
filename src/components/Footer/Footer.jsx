@@ -3,6 +3,7 @@ import Typewriter from "typewriter-effect"
 import { Component } from "react"
 import { Link } from "gatsby"
 import { copyAnimation } from "./animations"
+import "./footer.scss"
 
 //Data
 const data = require("./data.json")

@@ -1,4 +1,6 @@
 import React from "react"
+import "./element_animations.scss"
+
 const FloatingElements = props =>
   props.hideElements ? (
     ""

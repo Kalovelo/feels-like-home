@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { ThemeToggler } from "../themeToggler"
+import { ThemeToggler } from "../../themeToggler/themeToggler"
 const HeaderDesktop = props => {
   return (
     <div className="header">
