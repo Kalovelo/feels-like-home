@@ -1,8 +1,6 @@
 import React from "react"
 
 //!SEO
-import { Helmet } from "react-helmet"
-import { analytics } from "../components/helmet/analytics"
 
 //! styles
 import "../content/fonts/font.css"
@@ -12,28 +10,16 @@ import "react-image-lightbox/style.css"
 //! pages
 import Homepage from "./index/_homePage"
 import Layout from "../components/layout/layout"
+import SEO from "../components/seo/seo"
 
-export default () => {
-  const SEO = () => (
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Kalovelo | Front End Developer & IT Student</title>
-      <meta
-        name="description"
-        content="Apostolos Kalovelonis, front end developer and IT student. Check out my portfolio, find me on social media or share a beer with me discussing your project idea."
-      />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://kalovelo.com/" />
-      <script>{analytics}</script>
-      <meta property="og:image" content="https://kalovelo.com/SEO/meta_img.jpg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="628" />{" "}
-    </Helmet>
-  )
-
+export default ({ location }) => {
   return (
     <Layout>
-      <SEO />
+      <SEO
+        title="Apostolos Kalovelonis | Web Developer & CS Student"
+        description="Apostolos Kalovelonis, Check out my portfolio, connect with me on social media or let's find some time to grab a beer."
+        url={location.href}
+      />
       <Homepage />
     </Layout>
   )

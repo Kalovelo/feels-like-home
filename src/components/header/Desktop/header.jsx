@@ -5,13 +5,13 @@ import Logo from "../../../content/svg/logo"
 const HeaderDesktop = props => {
   return (
     <div className="header">
-      <Link className="header__icon" to="/">
-        <Logo />
-      </Link>
+      <span className="header__icon">
+        <ThemeToggler />
+      </span>
       <div className="header__wrapper">
-        <span className="header__icon">
-          <ThemeToggler />
-        </span>
+        <Link className="header__icon" to="/">
+          <Logo />
+        </Link>
         {props.links.map((path, index) => (
           <Link
             key={index}

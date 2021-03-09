@@ -4,12 +4,12 @@ import { useSelector } from "react-redux"
 import Fade from "react-reveal/Fade"
 import ReactTooltip from "react-tooltip"
 import ProjectArchive from "../components/projectArchive/projectArchive"
-import { analytics } from "../components/helmet/analytics"
 import Layout from "../components/layout/layout"
 import Skills from "../components/skills/skills"
 import { skillsAnimation } from "./portfolio/animations"
 import { communityTable } from "./portfolio/data"
 import "./portfolio/portfolio.scss"
+import SEO from "../components/seo/seo"
 
 const Background = () => {
   const theme = useSelector(state => state.theme)
@@ -18,26 +18,12 @@ const Background = () => {
     skillsAnimation()
   }, [])
 
-  const SEO = () => (
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Earth Herself</title>
-      <meta
-        name="description"
-        content="Information about the technologies I use and the communities I am part of"
-      />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://kalovelo.com/background" />
-      <script>{analytics}</script>
-      <meta property="og:image" content="https://kalovelo.com/SEO/meta_img.jpg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="628" />{" "}
-    </Helmet>
-  )
-
   return (
     <Layout>
-      <SEO />
+      <SEO
+        title="Portfolio"
+        description="Technologies I use, the communities I am part of, and notable projects"
+      />
       <div className="background">
         <section>
           <p className="background__description">

@@ -78,7 +78,7 @@ const HomePage = props => {
             <p className="homepage__paragraph">
               My name is Apostolos Kalovelonis, coming straight out of the olives and
               oregano country, <b>Greece</b>. I am keen on clean interfaces, high
-              score numbers & self - improvement.
+              score numbers & overall improvement.
             </p>
             <p className="homepage__paragraph">
               Currently a CS student and working as a freelancer. You can find me at{" "}
