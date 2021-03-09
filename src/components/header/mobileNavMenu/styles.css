@@ -15,6 +15,11 @@
 .sideMenu {
   list-style: none;
 }
+
+.sideMenu svg {
+  width: 30px;
+}
+
 .sideMenu li {
   border-bottom: 1px solid #373a47;
   padding: 10%;

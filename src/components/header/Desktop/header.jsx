@@ -1,13 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
 import { ThemeToggler } from "../../themeToggler/themeToggler"
+import Logo from "../../../content/svg/logo"
 const HeaderDesktop = props => {
   return (
     <div className="header">
-      <span className="header__icon">
-        <ThemeToggler />
-      </span>
+      <Link className="header__icon" to="/">
+        <Logo />
+      </Link>
       <div className="header__wrapper">
+        <span className="header__icon">
+          <ThemeToggler />
+        </span>
         {props.links.map((path, index) => (
           <Link
             key={index}

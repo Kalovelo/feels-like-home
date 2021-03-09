@@ -3,6 +3,7 @@ import { slide as Menu } from "react-burger-menu"
 import "./styles.css"
 import { Link } from "gatsby"
 import { ThemeToggler } from "../../themeToggler/themeToggler"
+import Logo from "../../../content/svg/logo"
 
 export default class Sidebar extends Component {
   constructor(props) {
@@ -30,11 +31,14 @@ export default class Sidebar extends Component {
             width="100%"
           >
             <div className="sideMenu">
+              <li>
+                <Link to="/">
+                  <Logo />
+                </Link>
+              </li>
               {this.props.links.map((path, index) => (
                 <li key={index}>
-                  <Link onClick={() => this.closeMenu()} to={path.link}>
-                    {path.title}
-                  </Link>
+                  <Link to={path.link}>{path.title}</Link>
                 </li>
               ))}
             </div>

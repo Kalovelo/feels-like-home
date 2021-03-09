@@ -9,6 +9,7 @@
   overflow-x: hidden;
   &__wrapper {
     display: flex;
+    align-items: center;
 
     @media (min-width: $desktop) {
       margin-right: 50px;

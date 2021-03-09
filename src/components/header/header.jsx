@@ -2,10 +2,7 @@ import React from "react"
 import HeaderDesktop from "./Desktop/header"
 import Sidebar from "./mobileNavMenu/sidebar"
 import "./header.scss"
-const links = [
-  { title: "Home", link: "/" },
-  { title: "Portfolio", link: "/portfolio" }
-]
+const links = [{ title: "Portfolio", link: "/portfolio" }]
 class Header extends React.Component {
   constructor(props) {
     super(props)
