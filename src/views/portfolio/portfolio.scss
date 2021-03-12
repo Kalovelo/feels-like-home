@@ -1,4 +1,4 @@
-.background {
+.portfolio {
   display: flex;
   flex-direction: column;
 
@@ -153,6 +153,11 @@
         height: 51px;
       }
     }
+  }
+
+  &__cta {
+    text-align: center;
+    font-size: 1.2rem;
   }
 
   &__svg {

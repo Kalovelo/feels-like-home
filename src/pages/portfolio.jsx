@@ -12,7 +12,7 @@ import { communityTable } from "../views/portfolio/data"
 import "../views/portfolio/portfolio.scss"
 import ReactMarkdown from "react-markdown"
 
-const Background = ({ location }) => {
+const Portfolio = ({ location }) => {
   const theme = useSelector(state => state.theme)
 
   useEffect(() => {
@@ -36,20 +36,20 @@ const Background = ({ location }) => {
   return (
     <Layout>
       <SEO url={location.href} title={seo_title} description={seo_description} />
-      <div className="background">
-        <section className="background__description">
+      <div className="portfolio">
+        <section className="portfolio__description">
           <ReactMarkdown source={description} />
         </section>
         <Skills />
         <Fade>
           <section>
-            <h2 className="background__subtitle">Communities</h2>
-            <table className="background__communities">
+            <h2 className="portfolio__subtitle">Communities</h2>
+            <table className="portfolio__communities">
               <thead>
-                <tr className="background__community-row">
+                <tr className="portfolio__community-row">
                   {communityTable.attributes.map((attribute, index) => (
                     <th
-                      className="background__community-item background__community-item--head"
+                      className="portfolio__community-item portfolio__community-item--head"
                       key={index}
                     >
                       {attribute}
@@ -61,10 +61,10 @@ const Background = ({ location }) => {
                 {communityTable.content.map((element, index) => (
                   <tr
                     key={index}
-                    className="background__community-row background__community-row--content"
+                    className="portfolio__community-row portfolio__community-row--content"
                   >
                     {element.data.map((dataItem, index) => (
-                      <td className="background__community-item" key={index}>
+                      <td className="portfolio__community-item" key={index}>
                         {dataItem}
                       </td>
                     ))}
@@ -78,8 +78,16 @@ const Background = ({ location }) => {
       </div>
 
       <ProjectArchive title={"Notable projects"} />
+      <section className="portfolio__cta">
+        <p>
+          You can find more projects & tools, on{" "}
+          <a target="_blank" href="https://github.com/kalovelo">
+            github.
+          </a>
+        </p>
+      </section>
     </Layout>
   )
 }
 
-export default Background
+export default Portfolio
