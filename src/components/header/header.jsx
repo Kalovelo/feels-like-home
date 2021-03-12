@@ -2,33 +2,15 @@ import React from "react"
 import HeaderDesktop from "./Desktop/header"
 import Sidebar from "./mobileNavMenu/sidebar"
 import "./header.scss"
-const links = [{ title: "Portfolio", link: "/portfolio" }]
-class Header extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      nav: HeaderDesktop
-    }
-  }
+const Header = () => {
+  const links = [{ title: "Portfolio", link: "/portfolio" }]
 
-  componentDidMount() {
-    if (window) window.addEventListener("resize", this.resize)
-    this.resize()
-  }
-  componentWillUnmount() {
-    if (window) window.removeEventListener("resize", this.resize)
-  }
-
-  resize = () => {
-    let currentHideNav = window.innerWidth <= 760
-    if (currentHideNav) {
-      this.setState({ nav: Sidebar })
-    } else this.setState({ nav: HeaderDesktop })
-  }
-
-  render() {
-    return <this.state.nav isPortal={this.props.isPortal} links={links} />
-  }
+  return (
+    <>
+      <Sidebar links={links} />
+      <HeaderDesktop links={links} />
+    </>
+  )
 }
 
 export default Header

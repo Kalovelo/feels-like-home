@@ -1,4 +1,8 @@
 .header {
+  @media (max-width: $desktop) {
+    display: none;
+  }
+
   display: flex;
   right: 10px;
   justify-content: space-between;

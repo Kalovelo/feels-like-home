@@ -1,38 +1,44 @@
+import { useStaticQuery } from "gatsby"
 import React, { useEffect } from "react"
-import { Helmet } from "react-helmet"
 import { useSelector } from "react-redux"
 import Fade from "react-reveal/Fade"
 import ReactTooltip from "react-tooltip"
-import ProjectArchive from "../components/projectArchive/projectArchive"
 import Layout from "../components/layout/layout"
-import Skills from "../components/skills/skills"
-import { skillsAnimation } from "./portfolio/animations"
-import { communityTable } from "./portfolio/data"
-import "./portfolio/portfolio.scss"
+import ProjectArchive from "../components/projectArchive/projectArchive"
 import SEO from "../components/seo/seo"
+import Skills from "../components/skills/skills"
+import { skillsAnimation } from "../views/portfolio/animations"
+import { communityTable } from "../views/portfolio/data"
+import "../views/portfolio/portfolio.scss"
+import ReactMarkdown from "react-markdown"
 
-const Background = () => {
+const Background = ({ location }) => {
   const theme = useSelector(state => state.theme)
 
   useEffect(() => {
     skillsAnimation()
   }, [])
 
+  const data = useStaticQuery(graphql`
+    query {
+      api {
+        portfolio {
+          description
+          seo_title
+          seo_description
+        }
+      }
+    }
+  `)
+
+  const { description, seo_title, seo_description } = { ...data.api.portfolio }
+
   return (
     <Layout>
-      <SEO
-        title="Portfolio"
-        description="Technologies I use, the communities I am part of, and notable projects"
-      />
+      <SEO url={location.href} title={seo_title} description={seo_description} />
       <div className="background">
-        <section>
-          <p className="background__description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five
-            centuries.
-          </p>
+        <section className="background__description">
+          <ReactMarkdown source={description} />
         </section>
         <Skills />
         <Fade>

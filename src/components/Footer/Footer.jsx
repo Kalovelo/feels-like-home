@@ -61,7 +61,7 @@ class Footer extends Component {
 
         <div className="footer__wrapper">
           <div className="footer__CTA-wrapper">
-            <h3 className="footer__CTA-title">
+            <span className="footer__CTA-title">
               Let's talk about
               <div>
                 <span className="footer__CTA-concept">
@@ -81,7 +81,7 @@ class Footer extends Component {
                   </span>
                 </span>
               </div>
-            </h3>
+            </span>
             <span className="footer__CTA" onClick={this.copyMailtoClipboard}>
               {" "}
               hello@kalovelo.com
@@ -131,7 +131,7 @@ class Footer extends Component {
           </div>
 
           <div className="footer__quote-wrapper">
-            <h2
+            <span
               className="footer__quote"
               onMouseEnter={this.finishedHover}
               onMouseLeave={this.finishedHover}
@@ -141,7 +141,7 @@ class Footer extends Component {
               ) : (
                 <span className="puff-in-center">Conquer the mountain </span>
               )}
-            </h2>
+            </span>
           </div>
         </div>
         <div className="footer__divider" />

@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { slide as Menu } from "react-burger-menu"
-import "./styles.css"
+import "./sidebar.scss"
 import { Link } from "gatsby"
 import { ThemeToggler } from "../../themeToggler/themeToggler"
 import Logo from "../../../content/svg/logo"
@@ -23,30 +23,36 @@ export default class Sidebar extends Component {
 
   render() {
     return (
-      <div id="topbar">
-        <div className="topbar__icons-wrapper">
-          <Menu
-            isOpen={this.state.menuOpen}
-            onStateChange={state => this.handleStateChange(state)}
-            width="100%"
-          >
-            <div className="sideMenu">
-              <li>
-                <Link to="/">
-                  <Logo />
-                </Link>
-              </li>
-              {this.props.links.map((path, index) => (
-                <li key={index}>
-                  <Link to={path.link}>{path.title}</Link>
+      <div className="sidebar">
+        <nav id="topbar">
+          <div className="topbar__icons-wrapper">
+            <Menu
+              isOpen={this.state.menuOpen}
+              onStateChange={state => this.handleStateChange(state)}
+              width="100%"
+            >
+              <div className="sideMenu">
+                <li>
+                  <Link to="/">
+                    <Logo />
+                  </Link>
                 </li>
-              ))}
-            </div>
-          </Menu>
-        </div>
-        <div className="topbar__right-mode-toggle">
-          <Menu disableOverlayClick customBurgerIcon={<ThemeToggler />} right></Menu>
-        </div>
+                {this.props.links.map((path, index) => (
+                  <li key={index}>
+                    <Link to={path.link}>{path.title}</Link>
+                  </li>
+                ))}
+              </div>
+            </Menu>
+          </div>
+          <div className="topbar__right-mode-toggle">
+            <Menu
+              disableOverlayClick
+              customBurgerIcon={<ThemeToggler />}
+              right
+            ></Menu>
+          </div>
+        </nav>
       </div>
     )
   }

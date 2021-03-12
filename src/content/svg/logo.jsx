@@ -14,6 +14,6 @@ export default () => (
       />
     </defs>
     <use fill="#4b4b4b" xlinkHref="#a" />
-    <use fill-opacity="0" stroke="#000" stroke-opacity="0" xlinkHref="#a" />
+    <use stroke="#000" xlinkHref="#a" />
   </svg>
 )

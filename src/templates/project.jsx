@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade"
 import ProjectArchive from "../components/projectArchive/projectArchive"
 import Layout from "../components/layout/layout"
 import "./project/project.scss"
+import SEO from "../components/seo/seo"
 
 export default ({ pageContext }) => {
   const {
@@ -27,11 +28,7 @@ export default ({ pageContext }) => {
     isOpen: false
   })
 
-  const images = [
-    primary.formats.large.url,
-    whole.formats.large.url,
-    ...rest_images.map(image => image.formats.large.url)
-  ]
+  const images = [primary.url, whole.url, ...rest_images.map(image => image.url)]
 
   useEffect(() => {
     state.isOpen
@@ -72,6 +69,7 @@ export default ({ pageContext }) => {
   const { photoIndex, isOpen } = state
   return (
     <Layout>
+      <SEO image={images[0]} title={title} description={brief} />
       <main className="project">
         <h1 className="project__title">{title}</h1>
         <section className="project__main-section">
@@ -104,7 +102,7 @@ export default ({ pageContext }) => {
 
         <Fade>
           <section className="project__double-section">
-            <Brief title="Purpose" description={brief} />
+            <Brief title="Purpose" description={goal} />
             <Brief title="Strategy" description={explanation} />
           </section>
         </Fade>
@@ -122,28 +120,19 @@ export default ({ pageContext }) => {
                 }))
               }
             />
-            <img
-              alt={rest_images[0].alternativeText}
-              src={images[2]}
-              onClick={() =>
-                setState(prevState => ({
-                  ...prevState,
-                  isOpen: true,
-                  photoIndex: 2
-                }))
-              }
-            />
-            <img
-              alt={rest_images[1].alternativeText}
-              src={images[3]}
-              onClick={() =>
-                setState(prevState => ({
-                  ...prevState,
-                  isOpen: true,
-                  photoIndex: 3
-                }))
-              }
-            />
+            {rest_images.map((rest_image, index) => (
+              <img
+                alt={rest_image.alternativeText}
+                src={images[index + 2]}
+                onClick={() =>
+                  setState(prevState => ({
+                    ...prevState,
+                    isOpen: true,
+                    photoIndex: index + 2
+                  }))
+                }
+              />
+            ))}
           </section>
         </Fade>
 

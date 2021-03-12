@@ -1,24 +1,36 @@
 import React from "react"
 
-//!SEO
-
-//! styles
 import "../content/fonts/font.css"
 import "../styles/styles.scss"
 import "../animations/animations.css"
 import "react-image-lightbox/style.css"
-//! pages
-import Homepage from "./index/_homePage"
+
+import Homepage from "../views/index/_homePage"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo/seo"
+import { useStaticQuery } from "gatsby"
 
 export default ({ location }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      api {
+        homepage {
+          seo_title
+          seo_description
+          seo_image {
+            url
+          }
+        }
+      }
+    }
+  `)
   return (
     <Layout>
       <SEO
-        title="Apostolos Kalovelonis | Web Developer & CS Student"
-        description="Apostolos Kalovelonis, Check out my portfolio, connect with me on social media or let's find some time to grab a beer."
+        title={data.api.homepage.seo_title}
+        description={data.api.homepage.seo_description}
         url={location.href}
+        image={data.api.homepage.seo_image?.url}
       />
       <Homepage />
     </Layout>

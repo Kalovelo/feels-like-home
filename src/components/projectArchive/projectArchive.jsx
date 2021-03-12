@@ -38,7 +38,7 @@ export default ({ title, filter_slug }) => {
             >
               <article>
                 <figure className="projectArchive__image-wrapper">
-                  <img src={project.primary.formats.small.url} />
+                  <img src={project.primary.formats.medium.url} />
                 </figure>
                 <h4>{project.title}</h4>
                 <p>{project.brief}</p>

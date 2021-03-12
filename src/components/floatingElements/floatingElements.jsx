@@ -12,7 +12,9 @@ const FloatingElements = props =>
           className={`floatingElement ${
             props.class ? `floatingElement--${props.class}` : ""
           }`}
-        ></span>
+        >
+          {props.children}
+        </span>
       ))}
     </div>
   )

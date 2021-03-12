@@ -20,14 +20,17 @@ exports.createPages = async ({ graphql, actions }) => {
           }
 
           primary {
+            url
             formats
             alternativeText
           }
           whole {
+            url
             formats
             alternativeText
           }
           rest_images {
+            url
             formats
             alternativeText
           }

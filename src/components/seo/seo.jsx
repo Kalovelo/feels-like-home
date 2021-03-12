@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { analytics } from "./analytics"
 
-function SEO({ description, title, url, image }) {
+function SEO({ description, title, url, image, robots }) {
   return (
     <Helmet
       htmlAttributes={{
@@ -44,6 +44,7 @@ function SEO({ description, title, url, image }) {
         }
       ]}
     >
+      <meta name="robots" content={robots ? robots : "index, follow"} />
       <script>{analytics}</script>
     </Helmet>
   )

@@ -36,7 +36,7 @@
     display: grid;
     margin: 0 auto;
     max-width: 800px;
-    gap: 50px;
+    gap: 60px;
     grid-template-columns: 1fr 1fr 80px 80px;
     grid-template-areas:
       "text text text text"
@@ -89,6 +89,10 @@
     list-style-type: none;
     padding: 0;
     display: block;
+
+    li {
+      width: 140px;
+    }
   }
 
   &__full-image {
