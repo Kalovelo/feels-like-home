@@ -2,6 +2,16 @@
 @import "./normalize/normalize.scss";
 @import "./colors/colors.scss";
 
+$desktop-large-paddings: 0 200px;
+$desktop-paddings: 0px 50px;
+$mobile-paddings: 0 20px;
+$desktop-content-margin: 10vh;
+
+$mobile: 460px;
+$tablet: 720px;
+$desktop: 1024px;
+$desktop-large: 1350px;
+
 .App {
   color: $color__black;
   z-index: -1;
@@ -50,6 +60,19 @@ span {
   position: relative;
 }
 
+section {
+  width: 100%;
+  margin: 50px 0;
+
+  &:first-child {
+    margin: 100px 0 0 0;
+  }
+}
+
+p {
+  letter-spacing: 0.03em;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -68,7 +91,6 @@ body {
   background: $color__white;
   position: relative;
   scroll-behavior: smooth;
-  overflow-x: hidden !important;
 }
 
 @media (min-width: 1000px) {
@@ -84,14 +106,6 @@ body {
     width: 300% !important;
     height: 50% !important;
   }
-}
-h1,
-h2,
-h3,
-h4,
-p {
-  font-family: "maax";
-  font-weight: 400;
 }
 
 .btn:focus {
@@ -119,5 +133,16 @@ a {
   .App--dark & {
     background: $color__white;
     color: $color__black;
+  }
+}
+
+@media (min-width: $desktop) {
+  section {
+    width: 100%;
+    margin: 100px 0;
+
+    &:first-child {
+      margin: 200px 0 0 0;
+    }
   }
 }

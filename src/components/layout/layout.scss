@@ -1,0 +1,38 @@
+.layout {
+  z-index: -1;
+  overflow-x: hidden;
+  transition: all 0.5s;
+  padding: $mobile-paddings;
+
+  &__bold {
+    display: flex;
+    font-weight: 700;
+  }
+
+  @media (min-width: $desktop) {
+    padding: $desktop-paddings;
+  }
+
+  @media (min-width: $desktop-large) {
+    padding: $desktop-large-paddings;
+  }
+
+  &__container-content {
+    font-size: 1rem;
+
+    @media (min-width: $desktop) {
+      font-size: 1.2rem;
+    }
+
+    &::first-letter {
+      font-family: adobe-garamond-pro, serif;
+      font-weight: 300;
+      float: left;
+      font-size: 75px;
+      line-height: 60px;
+      padding-top: 4px;
+      padding-right: 8px;
+      padding-left: 3px;
+    }
+  }
+}

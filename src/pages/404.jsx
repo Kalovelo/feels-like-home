@@ -1,39 +1,27 @@
-import React, { useEffect } from "react"
-import { UFO } from "../content/pages/notFound404/alien"
-import { Layout } from "../components/layout"
-import { Helmet } from "react-helmet"
-import { analytics } from "../components/helmet/analytics"
+import React from "react"
+import FloatingElements from "../components/floatingElements/floatingElements"
+import Layout from "../components/layout/layout"
+import SEO from "../components/seo/seo"
+import { UFO } from "../views/404/alien"
+import "../views/404/notFound404.scss"
 
 const NotFound404 = () => {
-  const ufoNum = 3
-
-  const SEO = () => (
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Oops!</title>
-      <meta name="description" content="That's a 404 Dead end!" />
-      <meta name="robots" content="noindex, nofollow" />
-      <link rel="canonical" href="https://kalovelo.com/404" />
-      <meta property="og:image" content="https://kalovelo.com/SEO/meta_img.jpg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="628" /> <script>{analytics}</script>
-    </Helmet>
-  )
+  const ufoNum = 2
 
   return (
     <Layout>
-      <SEO />
-      <div className="notFound layout fade-in">
-        {[...Array(ufoNum)].map((el, index) => (
-          <span
-            key={index}
-            className="notFound__ufo floatingElement floatingElement--ufo"
-          >
-            <UFO />
-          </span>
-        ))}
+      <SEO
+        robots="noindex, nofollow"
+        title="Oops!"
+        description="That's a 404 Dead end!"
+      />
+      <main className="notFound">
+        <FloatingElements num={2} class="ufo">
+          {" "}
+          <UFO />
+        </FloatingElements>
         <h1 className="notFound__title"> Oops. That's a 404 dead end.</h1>
-      </div>
+      </main>
     </Layout>
   )
 }

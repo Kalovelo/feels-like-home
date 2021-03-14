@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import { ThemeToggler } from "../themeToggler"
+import { ThemeToggler } from "../../themeToggler/themeToggler"
+import Logo from "../../../content/svg/logo"
 const HeaderDesktop = props => {
   return (
     <div className="header">
@@ -8,6 +9,9 @@ const HeaderDesktop = props => {
         <ThemeToggler />
       </span>
       <div className="header__wrapper">
+        <Link className="header__icon" to="/">
+          <Logo />
+        </Link>
         {props.links.map((path, index) => (
           <Link
             key={index}

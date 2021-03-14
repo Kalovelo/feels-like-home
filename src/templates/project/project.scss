@@ -1,0 +1,146 @@
+.project {
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+
+  p {
+    line-height: 180%;
+  }
+
+  img {
+    box-shadow: $boxShadowLight;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-family: $garamond;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-family: $garamond;
+    font-weight: 100;
+    font-size: 1.7rem;
+  }
+
+  &__main-section {
+    display: grid;
+    margin: 0 auto;
+    max-width: 800px;
+    gap: 60px;
+    grid-template-columns: 1fr 1fr 80px 80px;
+    grid-template-areas:
+      "text text text text"
+      ". . stack links";
+  }
+
+  &__double-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__main-summary {
+    grid-area: text;
+    max-width: 100%;
+  }
+
+  &__post-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    p {
+      max-width: 800px;
+    }
+  }
+
+  &__stack {
+    grid-area: stack;
+
+    .project__subtitle {
+      margin: 0;
+      font-size: 1.3rem !important;
+    }
+
+    &--links {
+      grid-area: links;
+
+      .project__stack-list {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__stack-list {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-family: $maax;
+    list-style-type: none;
+    padding: 0;
+    display: block;
+
+    li {
+      width: 140px;
+    }
+  }
+
+  &__full-image {
+    padding: 10px;
+    img {
+      width: 100%;
+      box-shadow: $boxShadowLight;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+    grid-template-areas:
+      "whole ."
+      "whole ."
+      "whole ."
+      "whole .";
+
+    img:nth-child(1) {
+      grid-area: whole;
+    }
+
+    img:nth-child(2) {
+      grid-row: 2;
+    }
+
+    img:nth-child(3) {
+      grid-row: 3;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &__double-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+    }
+    &__main-section {
+      grid-template-columns: 1fr 1fr 100px 100px;
+    }
+  }
+  @media (min-width: $desktop) {
+    margin: 100px auto;
+  }
+}

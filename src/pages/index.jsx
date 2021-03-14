@@ -1,44 +1,38 @@
 import React from "react"
 
-//!SEO
-import { Helmet } from "react-helmet"
-import { analytics } from "../components/helmet/analytics"
-
-//! styles
 import "../content/fonts/font.css"
 import "../styles/styles.scss"
 import "../animations/animations.css"
 import "react-image-lightbox/style.css"
-//! pages
-import Homepage from "../content/pages/Homepage/homePage"
 
-//!store
-import { Layout } from "../components/layout"
+import Homepage from "../views/index/_homePage"
+import Layout from "../components/layout/layout"
+import SEO from "../components/seo/seo"
+import { useStaticQuery } from "gatsby"
 
-export default () => {
-  const SEO = () => (
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Kalovelo | Front End Developer & IT Student</title>
-      <meta
-        name="description"
-        content="Apostolos Kalovelonis, front end developer and IT student. Check out my portfolio, find me on social media or share a beer with me discussing your project idea."
-      />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://kalovelo.com/" />
-      <script>{analytics}</script>
-      <meta property="og:image" content="https://kalovelo.com/SEO/meta_img.jpg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="628" />{" "}
-    </Helmet>
-  )
-
+export default ({ location }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      api {
+        homepage {
+          seo_title
+          seo_description
+          seo_image {
+            url
+          }
+        }
+      }
+    }
+  `)
   return (
-    <React.StrictMode>
-      <Layout>
-        <SEO />
-        <Homepage />
-      </Layout>
-    </React.StrictMode>
+    <Layout>
+      <SEO
+        title={data.api.homepage.seo_title}
+        description={data.api.homepage.seo_description}
+        url={location.href}
+        image={data.api.homepage.seo_image?.url}
+      />
+      <Homepage />
+    </Layout>
   )
 }

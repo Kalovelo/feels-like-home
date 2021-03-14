@@ -3,6 +3,7 @@ import Typewriter from "typewriter-effect"
 import { Component } from "react"
 import { Link } from "gatsby"
 import { copyAnimation } from "./animations"
+import "./footer.scss"
 
 //Data
 const data = require("./data.json")
@@ -51,7 +52,7 @@ class Footer extends Component {
   render() {
     return (
       <div
-        className="footer layout"
+        className="footer "
         ref={footer => {
           this.footer = footer
         }}
@@ -60,7 +61,7 @@ class Footer extends Component {
 
         <div className="footer__wrapper">
           <div className="footer__CTA-wrapper">
-            <h3 className="footer__CTA-title">
+            <span className="footer__CTA-title">
               Let's talk about
               <div>
                 <span className="footer__CTA-concept">
@@ -80,11 +81,11 @@ class Footer extends Component {
                   </span>
                 </span>
               </div>
-            </h3>
-            <h3 className="footer__CTA" onClick={this.copyMailtoClipboard}>
+            </span>
+            <span className="footer__CTA" onClick={this.copyMailtoClipboard}>
               {" "}
               hello@kalovelo.com
-            </h3>
+            </span>
             <input
               type="hidden"
               id="copyText"
@@ -130,7 +131,7 @@ class Footer extends Component {
           </div>
 
           <div className="footer__quote-wrapper">
-            <h2
+            <span
               className="footer__quote"
               onMouseEnter={this.finishedHover}
               onMouseLeave={this.finishedHover}
@@ -140,7 +141,7 @@ class Footer extends Component {
               ) : (
                 <span className="puff-in-center">Conquer the mountain </span>
               )}
-            </h2>
+            </span>
           </div>
         </div>
         <div className="footer__divider" />
