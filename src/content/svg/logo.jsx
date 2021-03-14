@@ -5,6 +5,7 @@ export default () => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="234.464 236.489 199.028 183.621"
+    className="logo"
   >
     <defs />
     <defs>

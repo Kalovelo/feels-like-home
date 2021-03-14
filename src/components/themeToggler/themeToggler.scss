@@ -3,11 +3,19 @@
   background: none;
   border: none;
   cursor: pointer;
+  fill: $color__black;
+  * {
+    transition: fill 0.5s;
+  }
+  .App--dark & * {
+    fill: $color__white;
+  }
 
-  &:focus {
+  &:focus,
+  &:hover {
     border: none;
     outline: 0;
-    svg {
+    svg * {
       fill: $color__accent;
     }
   }

@@ -24,7 +24,7 @@ export default class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar">
-        <nav id="topbar">
+        <nav className="topbar">
           <div className="topbar__icons-wrapper">
             <Menu
               isOpen={this.state.menuOpen}
@@ -44,13 +44,7 @@ export default class Sidebar extends Component {
                 ))}
               </div>
             </Menu>
-          </div>
-          <div className="topbar__right-mode-toggle">
-            <Menu
-              disableOverlayClick
-              customBurgerIcon={<ThemeToggler />}
-              right
-            ></Menu>
+            <ThemeToggler />
           </div>
         </nav>
       </div>

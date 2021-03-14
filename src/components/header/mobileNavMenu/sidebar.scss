@@ -4,15 +4,6 @@
     padding-top: 3%;
   }
 
-  #topbar {
-    display: flex;
-    justify-content: space-between;
-  }
-  #topbar * {
-    font-family: adobe-garamond-pro;
-    font-size: 25px;
-    outline: none;
-  }
   .sideMenu {
     list-style: none;
   }
@@ -78,21 +69,9 @@
     margin: 20px;
   }
 
-  .topbar__icons-wrapper {
-    height: 100%;
-    display: flex;
-  }
-  .topbar__right-mode-toggle button {
-    pointer-events: none;
-  }
-
-  .topbar__right-mode-toggle svg {
-    width: 100%;
-  }
-
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    margin-top: 8px;
+    margin-top: 2px;
     background: #373a47;
     transition: 0.5s;
   }
@@ -141,35 +120,76 @@
 
   /* Color/shape of burger icon bars */
 
-  .App--dark .bm-cross {
+  .App--dark & .bm-cross {
     background: #fdfdfd;
   }
 
-  .App--dark .sideMenu li:last-child {
+  .App--dark & .sideMenu li:last-child {
     border: none;
   }
 
-  .App--dark .sideMenu li {
+  .App--dark & .sideMenu li {
     border-bottom: 1px solid #fdfdfd;
   }
-  .App--dark .bm-burger-bars {
+  .App--dark & .bm-burger-bars {
     background: #fdfdfd;
   }
 
-  .App--dark .bm-item {
+  .App--dark & .bm-item {
     color: #fdfdfd !important;
   }
 
-  .App--dark .bm-menu {
+  .App--dark & .bm-menu {
     background: #232323;
   }
   .bm-burger-bars {
     background: #373a47;
     width: 20px;
-    height: 1.5px !important;
+    height: 2px !important;
   }
 
   @media (min-width: $desktop) {
     display: none;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden !important;
+    svg * {
+      cursor: pointer;
+      transition: all 0.5s;
+      box-shadow: 4px 9px 31px -19px $color__black;
+      .App--dark & {
+        fill: $color__white;
+        box-shadow: 4px 9px 31px -19px $color__white;
+      }
+    }
+    * {
+      font-family: adobe-garamond-pro;
+      font-size: 25px;
+      outline: none;
+    }
+
+    button {
+      height: 35px;
+      width: 35px;
+      margin: 20px;
+    }
+
+    &__icons-wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__right-mode-toggle button {
+      pointer-events: none;
+    }
+
+    &__right-mode-toggle svg {
+      width: 100%;
+    }
   }
 }
