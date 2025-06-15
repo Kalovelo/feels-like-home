@@ -1,27 +1,13 @@
 {
-  "files.associations": {
-    "*.tcc": "cpp",
-    "cctype": "cpp",
-    "clocale": "cpp",
-    "cmath": "cpp",
-    "cstdint": "cpp",
-    "cstdio": "cpp",
-    "cstdlib": "cpp",
-    "cwchar": "cpp",
-    "cwctype": "cpp",
-    "exception": "cpp",
-    "initializer_list": "cpp",
-    "iosfwd": "cpp",
-    "iostream": "cpp",
-    "istream": "cpp",
-    "limits": "cpp",
-    "new": "cpp",
-    "ostream": "cpp",
-    "stdexcept": "cpp",
-    "streambuf": "cpp",
-    "string_view": "cpp",
-    "system_error": "cpp",
-    "type_traits": "cpp",
-    "typeinfo": "cpp"
-  }
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .oxlint*, oxlint*, .prettier*, prettier*, .editorconfig"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

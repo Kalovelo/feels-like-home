@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Kode+Mono:wght@400..700&family=Pixelify+Sans:wght@400..700&family=VT323&display=swap');
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+@tailwind utilities;
+
+@theme {
+  --font-pixel: 'Pixelify Sans', sans-serif;
+  --font-vt: 'Kode Mono', sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6, .title * {
+    @apply font-pixel; 
+  }
+
+  span, div, p {
+    @apply font-vt;
+    letter-spacing: 0.05em;
+    font-size: 1.2rem;
+  }
+}
