@@ -1,57 +1,94 @@
 <template>
-  <div class="carousel-container">
-    <div class="carousel" :style="carouselStyle">
-      <div
-        v-for="(char, index) in characters"
-        :key="index"
-        class="character"
-        :style="getCharacterStyle(index)"
-        :class="{ selected: index === selectedIndex }"
-      >
-        <img :src="char.image" :alt="char.name" />
-        <div class="name">{{ char.name }}</div>
+  <div>
+    <h2 class="text-3xl mb-4 text-center">Interests</h2>
+    <div class="grid grid-cols-2 gap-2">
+      <div>
+        <h3>{{ characters[selectedIndex].name }}</h3>
+        <p class="mt-12">{{ characters[selectedIndex].info }}</p>
       </div>
-    </div>
-    <div class="controls">
-      <button @click="prev">◀</button>
-      <button @click="next">▶</button>
+      <div class="carousel-container">
+        <h3 class="text-center">Select Character</h3>
+        <div class="carousel" :style="carouselStyle">
+          <div
+            v-for="(char, index) in characters"
+            :key="index"
+            class="character"
+            :style="getCharacterStyle(index)"
+            :class="{ selected: index === selectedIndex }"
+          >
+            <img :src="char.image" :alt="char.name" />
+            <div class="name">{{ char.name }}</div>
+          </div>
+        </div>
+        <div class="controls">
+          <button @click="prev">◀</button>
+          <button @click="next">▶</button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import image from '@/assets/images/travelling.png'
+
 export default {
   data() {
     return {
       characters: [
-        { name: 'Isaac', image: '/isaac.png' },
-        { name: 'Magdalene', image: '/magdalene.png' },
-        { name: 'Cain', image: '/cain.png' },
-        { name: 'Judas', image: '/judas.png' },
-        { name: 'Eve', image: '/eve.png' },
-        { name: 'Samson', image: '/samson.png' },
+        {
+          name: 'Traveling',
+          info: `Ex solo-traveler who loved to explore hidden gems and meet new people in hostels, 
+      where I learnt the beauty of bonding in a transient world.
+      Now, I prefer traveling on my motorcycle, alone or with my closest people.
+      Still hunting for hidden beauties, but now with more fun, freedom and a whole lot more adrenaline.`,
+          image: image,
+        },
+        {
+          name: 'Off-roading',
+          info: `The epitome of fun.
+      I am really sorry to my motorcycle for the abuse I put it through,
+      but I have promised it that there's only glory ahead, and that's through Valhalla.`,
+        },
+        {
+          name: 'Literature',
+        },
+        {
+          name: 'Fitness & Martial Arts',
+        },
       ],
-      selectedIndex: 0,
+      rotationY: 0, // ← NEW
     }
   },
   computed: {
+    selectedIndex() {
+      const total = this.characters.length
+      const normalizedAngle = ((-this.rotationY % 360) + 360) % 360
+      return Math.round(normalizedAngle / (360 / total)) % total
+    },
     carouselStyle() {
-      const rotation = (360 / this.characters.length) * this.selectedIndex
       return {
-        transform: `translateZ(-300px) rotateY(${-rotation}deg)`,
+        transform: `translateZ(-300px) rotateY(${this.rotationY}deg)`,
       }
     },
   },
   methods: {
+    next() {
+      const step = 360 / this.characters.length
+      this.rotationY -= step
+    },
+    prev() {
+      const step = 360 / this.characters.length
+      this.rotationY += step
+    },
+
     getCharacterStyle(index: number) {
       const total = this.characters.length
-      const anglePer = 360 / total
+      const angle = (360 / total) * index
 
       const diff = (index - this.selectedIndex + total) % total
-      const shortestDistance = diff > total / 2 ? diff - total : diff
-
-      const angle = anglePer * index
-      const yOffset = -Math.abs(shortestDistance) * 15 // raise characters behind
+      const shortest = diff > total / 2 ? diff - total : diff
+      const yOffset = -Math.abs(shortest) * 15
 
       return {
         transform: `
@@ -59,16 +96,16 @@ export default {
       translateZ(300px)
       translateY(${yOffset}px)
     `,
-        zIndex: total - Math.abs(shortestDistance), // ensure proper layering
       }
     },
-    next() {
-      this.selectedIndex = (this.selectedIndex + 1) % this.characters.length
-    },
-    prev() {
-      this.selectedIndex =
-        (this.selectedIndex - 1 + this.characters.length) % this.characters.length
-    },
+  },
+  next() {
+    const step = 360 / this.characters.length
+    this.rotationY -= step // rotate forward
+  },
+  prev() {
+    const step = 360 / this.characters.length
+    this.rotationY += step // rotate backward
   },
 }
 </script>
@@ -77,46 +114,50 @@ export default {
 .carousel-container {
   perspective: 1000px;
   width: 400px;
-  height: 400px;
+  height: 300px; /* increase if characters overlap controls */
   margin: auto;
   position: relative;
 }
 
 .carousel {
   width: 100%;
-  height: 100%;
+  height: 80px;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative; /* changed from absolute */
+  transform-origin: center center; /* make sure rotation is around the center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .character {
   position: absolute;
   top: 50%;
-  left: 50%;
+  /* left: 50%; */
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
   text-align: center;
+  transform: translate(-50%, -50%); /* center from the middle */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .character img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
   border: 2px solid transparent;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .character .name {
+  width: 140px;
   margin-top: 8px;
   color: white;
   font-weight: bold;
 }
 
 .selected img {
-  border-color: yellow;
   transform: scale(1.2);
 }
 

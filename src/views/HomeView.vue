@@ -14,8 +14,8 @@ import image from '@/assets/images/me.jpg'
           <div
             class="flex-col text-7xl font-semibold uppercase leading-[85px] max-lg:text-4xl max-md:leading-snug"
           >
-            <h1 class="title px-5! inline-block">
-              Hey, it's <span class="bg-green-200"> Apo. </span> Software Engineer.
+            <h1 class="title grid m-0 p-0">
+              <span class="bg-green-200 text-7xl w-min"> Apo. </span> Software Engineer.
             </h1>
           </div>
           <div class="reveal-hero-text mt-2 max-w-[750px] p-2 text-justify max-lg:max-w-full">
@@ -40,9 +40,5 @@ import image from '@/assets/images/me.jpg'
         </div>
       </div>
     </section>
-    <section
-      class="experience flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-800"
-    ></section>
-    <ExperienceSection />
   </main>
 </template>

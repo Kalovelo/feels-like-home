@@ -2,7 +2,7 @@
   <header class="flex">
     <div class="collapsible-header animated-collapse max-lg:shadow-md" id="collapsed-header-items">
       <div
-        class="flex h-full w-max gap-5 text-base text-black max-lg:mt-[30px] max-lg:flex-col max-lg:place-items-end max-lg:gap-5 lg:mx-auto lg:place-items-center"
+        class="flex h-full w-max gap-5 text-base max-lg:mt-[30px] max-lg:flex-col max-lg:place-items-end max-lg:gap-5 lg:mx-auto lg:place-items-center"
       >
         <a class="header-links" href=""> Experience </a>
         <a class="header-links" href="#pricing"> Life </a>

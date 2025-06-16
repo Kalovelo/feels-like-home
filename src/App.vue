@@ -1,13 +1,23 @@
 <script setup lang="ts">
-import CharacterSelect from './components/InterestsSection.vue'
+import CharacterSelect from './components/CharacterSelect.vue'
 import HeaderH from './components/HeaderH.vue'
 import HomeView from './views/HomeView.vue'
+import ContactSection from './components/ContactSection.vue'
+import ExperienceSection from './components/ExperienceSection.vue'
 </script>
 <template>
   <div class="flex flex-col min-h-screen py-5! px-20!">
     <HeaderH />
     <HomeView />
-    <CharacterSelect />
+    <div class="my-10">
+      <ExperienceSection />
+    </div>
+    <div class="my-10">
+      <CharacterSelect />
+    </div>
+    <div class="my-10">
+      <ContactSection />
+    </div>
   </div>
 </template>
 

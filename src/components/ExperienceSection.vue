@@ -7,31 +7,31 @@ const positions = ref([
     company: 'Zumo Enterprise',
     position: 'Software Engineer',
     date: '2023 - Present',
-    info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    info: 'Designed and delivered product features and core services in <strong>Node.js</strong> and <strong>TypeScript</strong>. Promoted <strong>performance and scalability</strong> awareness through load testing and led the design & implementation of <strong>reusable GitHub Actions workflows</strong>, used by all product teams.',
   },
   {
     company: 'Aeternity',
     position: 'Full-Stack Engineer',
     date: '2022 - 2023',
-    info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    info: 'Co-designed & Co-implemented the <strong>TypeScript</strong> migration of the Aeternity Javascript SDK. Full-stack developer of <strong>web3</strong> applications.',
   },
   {
-    company: 'Savium',
+    company: 'PennyChain (prev. Savium)',
     position: 'Full-Stack Engineer',
     date: '2021 - 2022',
-    info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    info: 'Led the migration of backend services from JavaScript (Node.js) to <strong>Nest.js</strong> and <strong>TypeScript</strong>. Headed front-end development with <strong>React.js</strong> and <strong>TypeScript</strong>.',
   },
   {
-    company: 'Freelancing',
-    position: 'Potpourri of technologies',
+    company: 'Greece & Upwork',
+    position: 'Freelancer',
     date: '2019 - 2021',
-    info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    info: 'Pixel-perfect <strong>React.js</strong> applications and custom plugins & themes using <strong>Wordpress</strong>.',
   },
   {
     company: 'Bear in Mind',
     position: 'Junior Front-End Developer',
     date: '2019',
-    info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    info: 'My introduction to the production world of software development! Havoc wreaking <strong>React.js</strong>.',
   },
 ])
 
@@ -46,7 +46,7 @@ const volunteering = [
   {
     organization: 'FOSDEM',
     date: '2018 - Present',
-    info: 'FOSDEM is the largest free and open-source software conference in Europe, where I have been volunteering there since 2018',
+    info: 'FOSDEM is the largest free and open-source software conference in Europe, where I have been volunteering there since 2018.',
   },
   {
     organization: 'IEEE IHU Thessaloniki Student Branch',
@@ -62,29 +62,29 @@ const volunteering = [
 </script>
 
 <template>
-  <h2 class="text-3xl">Experience</h2>
+  <h2 class="text-3xl text-center mb-15">Experience</h2>
   <div class="flex gap-2 space-between">
     <div class="mb-6 flex-1">
-      <h3 class="text-2xl">Work</h3>
+      <h3 class="text-2xl mb-4">Work</h3>
       <Timeline :value="positions">
         <template #content="slotProps">
-          <h4>{{ slotProps.item.company }}</h4>
+          <h4 class="text-md mb-2" style="line-height: 0.9">{{ slotProps.item.company }}</h4>
           <p class="text-sm font-bold">{{ slotProps.item.position }}</p>
-          <p class="text-xs">{{ slotProps.item.date }}</p>
-          <p class="text-sm">{{ slotProps.item.info }}</p>
+          <p class="text-xs mb-1">{{ slotProps.item.date }}</p>
+          <p class="text-sm" v-html="slotProps.item.info" />
         </template>
       </Timeline>
     </div>
     <div class="mb-6 flex-1 flex flex-col space-between place-content-between">
       <div>
-        <h3 class="text-2xl font-semibold">Education</h3>
+        <h3 class="text-2xl font-semibold mb-4">Education</h3>
         <p class="text-sm font-bold">{{ education.university }}</p>
         <p class="text-sm">{{ education.degree }}</p>
         <p class="text-xs">{{ education.date }}</p>
         <p class="text-xs font-bold">GPA: {{ education.gpa }}</p>
       </div>
       <div>
-        <h3 class="text-2xl">Volunteering</h3>
+        <h3 class="text-2xl mb-4">Volunteering</h3>
         <Timeline :value="volunteering">
           <template #content="slotProps">
             <h4>{{ slotProps.item.company }}</h4>
@@ -101,5 +101,9 @@ const volunteering = [
 <style>
 .p-timeline-event-opposite {
   display: none !important;
+}
+
+.p-timeline-event-content {
+  padding-bottom: 20px !important;
 }
 </style>
