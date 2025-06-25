@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col w-max mr-auto ml-auto">
-    <span class="accent text-3xl font-semibold mb-4">Let's connect</span>
+    <span class="accent text-3xl font-semibold mb-4">Conquer the mountain</span>
     <span class="accent text-8xl overflow-hidden font-semibold mb-4 text-center"
       >hello@kalovelo.com</span
     >
@@ -18,7 +18,7 @@
         {{ link.name }}
       </a>
     </div>
-    <span class="accent text-3xl font-thin! mb-4 text-right">Conquer the Mountain</span>
+    <span class="accent text-3xl font-thin! mb-4 text-right">even if you're Sisyphus.</span>
   </div>
 </template>
 

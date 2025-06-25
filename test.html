@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ouroboros Animation</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="module">
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js';
+    import { SVGLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/loaders/SVGLoader.js';
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+    camera.position.z = 300;
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Load SVG
+    const loader = new SVGLoader();
+    loader.load('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 199"><path d="M148,45 C110,0 50,20 35,75 C20,130 80,180 125,165 C170,150 190,100 160,60" /></svg>',
+      (data) => {
+        const paths = data.paths;
+        for (let path of paths) {
+          const shapes = SVGLoader.createShapes(path);
+          for (let shape of shapes) {
+            const points = shape.getPoints(200);
+            const geometry = new THREE.BufferGeometry().setFromPoints(points);
+            const material = new THREE.LineDashedMaterial({
+              color: 0x4b4b4b,
+              dashSize: 1,
+              gapSize: 1,
+              linewidth: 2
+            });
+
+            geometry.computeBoundingBox();
+            geometry.computeBoundingSphere();
+            geometry.computeLineDistances();
+
+            const line = new THREE.Line(geometry, material);
+            line.scale.set(1.5, -1.5, 1); // Flip Y axis
+            line.position.set(-90, -100, 0);
+            scene.add(line);
+
+            // Animate the dashOffset
+            let offset = 1000;
+            const animate = () => {
+              if (offset > 0) {
+                offset -= 8; // control speed
+                material.dashOffset = -offset;
+              }
+              renderer.render(scene, camera);
+              requestAnimationFrame(animate);
+            };
+            animate();
+          }
+        }
+      }
+    );
+  </script>
+</body>
+
+</html>
