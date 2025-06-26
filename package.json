@@ -17,6 +17,7 @@
   "dependencies": {
     "@primeuix/themes": "^1.1.1",
     "@tailwindcss/vite": "^4.1.8",
+    "animejs": "^4.0.2",
     "i": "^0.3.7",
     "npm": "^11.4.1",
     "pinia": "^3.0.1",

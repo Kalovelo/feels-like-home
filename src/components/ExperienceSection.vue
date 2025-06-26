@@ -56,7 +56,7 @@ const volunteering = [
   {
     organization: 'WordPress Greek Community',
     date: '2018 - 2020',
-    info: 'As an active member of the WordPress, I volunteered in local meetups and events.',
+    info: 'Volunteering in local meetups and events.',
   },
 ]
 </script>
@@ -105,5 +105,17 @@ const volunteering = [
 
 .p-timeline-event-content {
   padding-bottom: 20px !important;
+}
+
+.p-timeline-event-marker::before {
+  background: var(--p-content-color) !important;
+}
+
+.p-timeline-event-marker {
+  border-color: var(--p-content-color) !important;
+}
+
+.p-timeline-event-connector {
+  background: var(--p-content-color) !important;
 }
 </style>
