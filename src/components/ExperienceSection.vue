@@ -1,6 +1,95 @@
 <script lang="ts" setup>
 import Timeline from 'primevue/timeline'
 import { ref } from 'vue'
+import * as anime from 'animejs'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  const workTimeline = anime.createTimeline()
+  const educationTimeline = anime.createTimeline()
+  const volunteeringTimeline = anime.createTimeline()
+  const workContent = document.querySelector('.work-content') as HTMLElement
+  const title = workContent.querySelector('.section-title') as HTMLElement
+  workTimeline.add(title, {
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    duration: 400,
+  })
+
+  let offset = 200
+  const events = workContent.querySelectorAll('.p-timeline-event')
+  events.forEach((event, index) => {
+    const marker = event.querySelector('.p-timeline-event-marker') as HTMLElement
+    workTimeline.add(
+      marker,
+      {
+        opacity: [0, 1],
+        easing: 'easeInOutSine',
+        duration: 500,
+      },
+      offset - index * 300,
+    )
+
+    const separator = event.querySelector('.p-timeline-event-separator') as HTMLElement
+    workTimeline.add(
+      separator,
+      {
+        ['max-height']: ['17px', '170px'],
+        easing: 'easeInOutSine',
+        duration: 3000,
+      },
+      offset,
+    )
+
+    const company = event.querySelector('.company') as HTMLElement
+    const position = event.querySelector('.position') as HTMLElement
+    const date = event.querySelector('.date') as HTMLElement
+    const info = event.querySelector('.info') as HTMLElement
+
+    ;[company, position, date, info].forEach((element, i) => {
+      workTimeline.add(
+        element,
+        {
+          opacity: [0, 1],
+          easing: 'easeInOutSine',
+          duration: 600,
+          delay: (i + 1) * 100,
+        },
+        offset + i * 300,
+      )
+    })
+
+    offset += 1700
+  })
+
+  educationTimeline.add('.section-education h3', {
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    duration: 800,
+  })
+  educationTimeline.add('.section-education .section-content', {
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    duration: 800,
+  })
+
+  const volunteeringContent = document.querySelector('.section-volunteering') as HTMLElement
+  volunteeringTimeline.add(volunteeringContent.querySelector('.section-title') as HTMLElement, {
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    duration: 800,
+  })
+
+  const volunteeringEvents = volunteeringContent.querySelectorAll('.p-timeline-event')
+  offset = 200
+  volunteeringEvents.forEach((event) => {
+    volunteeringTimeline.add(event, {
+      opacity: [0, 1],
+      easing: 'easeInOutSine',
+      duration: 500,
+    })
+  })
+})
 
 const positions = ref([
   {
@@ -64,27 +153,31 @@ const volunteering = [
 <template>
   <h2 class="text-3xl text-center mb-15">Experience</h2>
   <div class="flex gap-2 space-between">
-    <div class="mb-6 flex-1">
-      <h3 class="text-2xl mb-4">Work</h3>
+    <div class="mb-6 flex-1 section-content work-content">
+      <h3 class="text-2xl mb-4 section-title">Work</h3>
       <Timeline :value="positions">
         <template #content="slotProps">
-          <h4 class="text-md mb-2" style="line-height: 0.9">{{ slotProps.item.company }}</h4>
-          <p class="text-sm font-bold">{{ slotProps.item.position }}</p>
-          <p class="text-xs mb-1">{{ slotProps.item.date }}</p>
-          <p class="text-sm" v-html="slotProps.item.info" />
+          <h4 class="text-md mb-2 company" style="line-height: 0.9">
+            {{ slotProps.item.company }}
+          </h4>
+          <p class="text-sm font-bold position">{{ slotProps.item.position }}</p>
+          <p class="text-xs mb-1 date">{{ slotProps.item.date }}</p>
+          <p class="text-sm info" v-html="slotProps.item.info" />
         </template>
       </Timeline>
     </div>
     <div class="mb-6 flex-1 flex flex-col space-between place-content-between">
-      <div>
-        <h3 class="text-2xl font-semibold mb-4">Education</h3>
-        <p class="text-sm font-bold">{{ education.university }}</p>
-        <p class="text-sm">{{ education.degree }}</p>
-        <p class="text-xs">{{ education.date }}</p>
-        <p class="text-xs font-bold">GPA: {{ education.gpa }}</p>
+      <div class="section-education">
+        <h3 class="text-2xl font-semibold mb-4 section-title">Education</h3>
+        <div class="section-content">
+          <p class="text-sm font-bold">{{ education.university }}</p>
+          <p class="text-sm">{{ education.degree }}</p>
+          <p class="text-xs">{{ education.date }}</p>
+          <p class="text-xs font-bold">GPA: {{ education.gpa }}</p>
+        </div>
       </div>
-      <div>
-        <h3 class="text-2xl mb-4">Volunteering</h3>
+      <div class="section-content section-volunteering">
+        <h3 class="text-2xl mb-4 section-title">Volunteering</h3>
         <Timeline :value="volunteering">
           <template #content="slotProps">
             <h4>{{ slotProps.item.company }}</h4>
@@ -112,10 +205,31 @@ const volunteering = [
 }
 
 .p-timeline-event-marker {
+  opacity: 0;
   border-color: var(--p-content-color) !important;
+}
+
+.p-timeline-event-separator {
+  max-height: 17px;
 }
 
 .p-timeline-event-connector {
   background: var(--p-content-color) !important;
+}
+
+.company,
+.position,
+.date,
+.info,
+.section-title {
+  opacity: 0;
+}
+
+.section-education .section-content {
+  opacity: 0;
+}
+
+.section-volunteering .p-timeline-event {
+  opacity: 0;
 }
 </style>

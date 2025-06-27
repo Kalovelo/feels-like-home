@@ -14,7 +14,7 @@
           >
             <h1 class="title grid m-0 p-0">
               <span class="text-7xl name opacity-0"> Apostolos Kalovelonis. </span>
-              <span class="text-7xl info opacity-0">Software Engineer.</span>
+              <span class="text-7xl subtitle opacity-0">Software Engineer.</span>
             </h1>
           </div>
           <div class="bio mt-2 max-w-[750px] p-2 text-justify max-lg:max-w-full opacity-0">
@@ -73,7 +73,7 @@ const scatterAnimation = (timeline, title) => {
       },
     })
 
-    .add('.info', {
+    .add('.subtitle', {
       opacity: [0, 1],
       easing: 'easeInOutSine',
       duration: 400,
