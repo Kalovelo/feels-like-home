@@ -3,6 +3,7 @@ import HomeView from './views/HomeView.vue'
 import ContactSection from './components/ContactSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
 import LifeSection from './components/LifeSection.vue'
+import CookieNotice from './components/CookieNotice.vue'
 import { useSeoMeta } from '@unhead/vue'
 
 useSeoMeta({
@@ -11,6 +12,7 @@ useSeoMeta({
 })
 </script>
 <template>
+  <CookieNotice />
   <div class="flex flex-col overflow-x-hidden min-h-screen lg:py-5! lg:px-50!">
     <HomeView />
     <div class="my-10">
