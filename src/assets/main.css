@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inconsolata:wght@200..900&family=Kode+Mono:wght@400..700&family=Pixelify+Sans:wght@400..700&family=VT323&display=swap');
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+@tailwind utilities;
+
+@theme {
+  --font-title: 'EB Garamond', sans-serif;
+  --font-text: 'Kode Mono', serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6, .title * {
+    @apply font-title; 
+    font-weight: 500!important;
+  }
+
+  .accent {
+    @apply font-title;
+    font-weight: 500!important;
+  }
+
+  span, div, p  {
+    @apply font-text;
+    letter-spacing: 0.05em;
+    font-size: 1.2rem;
+  }
+}
+
+.name {
+  font-weight: 700;
+}
+
+.title {
+  text-transform: none!important;
+}
