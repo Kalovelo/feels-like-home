@@ -3,6 +3,12 @@ import HomeView from './views/HomeView.vue'
 import ContactSection from './components/ContactSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
 import LifeSection from './components/LifeSection.vue'
+import { useSeoMeta } from '@unhead/vue'
+
+useSeoMeta({
+  title: 'Apostolos Kalovelonis',
+  description: 'Personal website of Apostolos Kalovelonis, a software engineer',
+})
 </script>
 <template>
   <div class="flex flex-col overflow-x-hidden min-h-screen lg:py-5! lg:px-50!">
