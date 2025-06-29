@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
@@ -17,6 +17,7 @@
   "dependencies": {
     "@primeuix/themes": "^1.1.1",
     "@tailwindcss/vite": "^4.1.8",
+    "@vueuse/core": "^13.4.0",
     "animejs": "^4.0.2",
     "i": "^0.3.7",
     "npm": "^11.4.1",

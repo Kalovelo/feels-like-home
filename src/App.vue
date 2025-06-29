@@ -1,19 +1,17 @@
 <script setup lang="ts">
-import HeaderH from './components/HeaderH.vue'
 import HomeView from './views/HomeView.vue'
 import ContactSection from './components/ContactSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
-import GalleryTest from './components/GalleryTest.vue'
+import LifeSection from './components/LifeSection.vue'
 </script>
 <template>
-  <div class="flex flex-col min-h-screen py-5! px-50!">
-    <HeaderH />
+  <div class="flex flex-col overflow-x-hidden min-h-screen lg:py-5! lg:px-50!">
     <HomeView />
     <div class="my-10">
       <ExperienceSection />
     </div>
     <div class="my-10">
-      <GalleryTest />
+      <LifeSection />
     </div>
     <div class="my-10">
       <ContactSection />

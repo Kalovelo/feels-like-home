@@ -3,28 +3,32 @@
 <template>
   <main>
     <section
-      class="relative grid grid-cols-[3fr_1fr] align-center justify-center items-center min-h-[100vh] space-between w-full max-w-[100vw] overflow-hidden max-lg:p-4 max-md:mt-[50px]"
+      class="relative gap-6 md:w-max flex flex-col-reverse lg:grid lg:grid-cols-[3fr_1fr] mt-20 md:mt-0 align-center justify-end md:justify-center items-center min-h-[100vh] space-between lg:w-full md:max-w-[100vw] overflow-hidden max-lg:p-4"
     >
       <div
-        class="flex h-full min-h-[100vh] w-full place-content-between gap-6 max-xl:place-items-center max-lg:flex-col"
+        class="flex h-full lg:min-h-[100vh] place-content-between gap-6 max-xl:place-items-center max-lg:flex-col"
       >
-        <div class="flex-col place-content-center">
+        <div class="flex flex-col place-content-center gap-10">
           <div
-            class="flex-col text-7xl font-semibold uppercase leading-[85px] max-lg:text-4xl max-md:leading-snug"
+            class="text-7xl flex-col font-semibold uppercase lg:leading-[85px] max-lg:text-4xl max-md:leading-snug"
           >
-            <h1 class="title grid m-0 p-0">
-              <span class="text-7xl name opacity-0"> Apostolos Kalovelonis. </span>
-              <span class="text-7xl subtitle opacity-0">Software Engineer.</span>
+            <h1 class="title grid m-0 p-0 text-center md:text-justify">
+              <span class="name md:text-7xl opacity-0"> Apostolos Kalovelonis, </span>
+              <span class="text-xl md:text-7xl subtitle opacity-0">Software Engineer.</span>
             </h1>
           </div>
-          <div class="bio mt-2 max-w-[750px] p-2 text-justify max-lg:max-w-full opacity-0">
+          <p
+            class="bio text-base md:text-3xl mt-2 max-w-[750px] text-center md:text-justify max-lg:max-w-full opacity-0"
+          >
             Challenge-driven software engineer with a mentee mindset (even as a mentor) who seeks
             adventure in both personal and professional life.
-          </div>
+          </p>
         </div>
       </div>
 
-      <div>
+      <div
+        class="svg-wrapper w-[250px] lg:w-[400px] self-start md:ml-[15px] lg:ml-0 lg:self-center mr-auto ml-auto"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -61,7 +65,7 @@ const scatterAnimation = (timeline, title) => {
   title.style.opacity = 1
   textWrapper.innerHTML = textWrapper.textContent.replace(
     /\S/g,
-    "<span class='letter text-7xl name opacity-0'>$&</span>",
+    "<span class='letter text-xl md:text-7xl name opacity-0'>$&</span>",
   )
   timeline
     .add(' .letter', {
@@ -93,6 +97,15 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.svg-wrapper {
+  width: 250px;
+}
+
+@media (min-width: 768px) {
+  .svg-wrapper {
+    width: 400px;
+  }
+}
 .animated-path {
   stroke-dasharray: 1000;
   stroke-dashoffset: -1000;
