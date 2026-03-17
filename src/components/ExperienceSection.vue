@@ -154,9 +154,15 @@ useIntersectionObserver(
 
 const positions = ref([
   {
+    company: 'Alpheya',
+    position: 'Senior Software Engineer',
+    date: '2025 - Present',
+    info: 'Working closely with financial experts to build & design robo advisory and portfolio management services with <strong>Nest.js</strong> and <strong>Python</strong>, in an <strong>AI-first</strong> environment.',
+  },
+  {
     company: 'Zumo Enterprise',
     position: 'Software Engineer',
-    date: '2023 - Present',
+    date: '2023 - 2025',
     info: 'Designed and delivered product features and core services in <strong>Node.js</strong> and <strong>TypeScript</strong>. Promoted <strong>performance and scalability</strong> awareness through load testing and led the design & implementation of <strong>reusable GitHub Actions workflows</strong>, used by all product teams.',
   },
   {
@@ -213,7 +219,7 @@ const volunteering = [
 
 <template>
   <h2 class="text-3xl text-center mb-15">Experience</h2>
-  <div class="flex flex-col md:flex-row gap-7 md:gap-2 space-between">
+  <div class="flex flex-col md:flex-row gap-7 md:gap-2">
     <div ref="workRef" class="mb-6 flex-1 section-content work-content">
       <h3 class="text-2xl mb-4 section-title">Work</h3>
       <Timeline :value="positions">
@@ -227,7 +233,7 @@ const volunteering = [
         </template>
       </Timeline>
     </div>
-    <div class="mb-6 p-2 flex-1 flex flex-col gap-20 md:gap-10 space-between place-content-between">
+    <div class="mb-6 p-2 flex-1 flex flex-col gap-20 md:gap-10 space-between">
       <div ref="educationRef" class="section-education">
         <h3 class="text-2xl font-semibold mb-4 section-title">Education</h3>
         <div class="section-content">
