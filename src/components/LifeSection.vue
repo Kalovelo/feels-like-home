@@ -81,8 +81,7 @@ const galleryItems: GalleryItem[] = [
     title: 'The beauty of a transient world',
     info: `Ex solo-traveler who loved to explore hidden gems and meet new people in hostels, 
       where I learnt the beauty of bonding in a transient world.
-      Now, I prefer traveling on my motorcycle, alone or with my closest people.
-      Still hunting for hidden beauties, but now with more fun, freedom and lotta more adrenaline.`,
+      Nowadays I prefer traveling on my motorcycle, alone or with my closest people.`,
   },
   {
     image: new URL('@/assets/images/explore.jpeg', import.meta.url).href,
