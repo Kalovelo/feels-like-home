@@ -34,8 +34,8 @@ import { useTemplateRef } from 'vue'
 
 const links = [
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/kalovelo' },
-  { name: 'GitHub', url: 'https://www.github.com/in/Kalovelo' },
-  { name: 'YouTube', url: 'https://www.youtube.com/@apoverse' },
+  { name: 'GitHub', url: 'https://www.github.com/Kalovelo' },
+  { name: 'YouTube', url: 'https://www.youtube.com/@okalovelo' },
 ]
 
 const contactSection = useTemplateRef<HTMLDivElement>('contactSection')
