@@ -187,7 +187,7 @@ const positions = ref([
     company: 'Bear in Mind',
     position: 'Junior Front-End Developer',
     date: '2019',
-    info: ' tMy introduction tohe production world of software development. Havoc wreaking <strong>React.js</strong>.',
+    info: ' My introduction the production world of software development. Havoc wreaking <strong>React.js</strong>.',
   },
 ])
 
