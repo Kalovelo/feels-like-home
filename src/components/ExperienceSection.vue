@@ -163,7 +163,7 @@ const positions = ref([
     company: 'Zumo Enterprise',
     position: 'Software Engineer',
     date: '2023 - 2025',
-    info: 'Designed and delivered product features and core services in <strong>Node.js</strong> and <strong>TypeScript</strong>. Promoted <strong>performance and scalability</strong> awareness through load testing and led the design & implementation of <strong>reusable GitHub Actions workflows</strong>, used by all product teams.',
+    info: 'Designed and delivered trading, quotation & liquidity management services in <strong>Node.js</strong> and <strong>TypeScript</strong>. Promoted <strong>performance and scalability</strong> awareness through load testing and led the design & implementation of <strong>reusable GitHub Actions workflows</strong>, used by all product teams.',
   },
   {
     company: 'Aeternity',

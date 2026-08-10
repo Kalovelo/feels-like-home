@@ -20,7 +20,7 @@
           <p
             class="bio text-base md:text-3xl mt-2 max-w-[750px] text-center md:text-justify max-lg:max-w-full opacity-0"
           >
-            Challenge-driven software engineer with a mentee mindset (even as a mentor) who seeks
+            Challenge-driven software engineer who seeks
             adventure in both personal and professional life.
           </p>
         </div>
