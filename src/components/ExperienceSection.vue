@@ -9,6 +9,7 @@ const offset = ref(0)
 const workRef = useTemplateRef<HTMLDivElement>('workRef')
 const educationRef = useTemplateRef<HTMLDivElement>('educationRef')
 const volunteeringRef = useTemplateRef<HTMLDivElement>('volunteeringRef')
+const presentationsRef = useTemplateRef<HTMLDivElement>('presentationsRef')
 
 useIntersectionObserver(
   workRef,
@@ -152,6 +153,54 @@ useIntersectionObserver(
   },
 )
 
+useIntersectionObserver(
+  presentationsRef,
+  ([entry], observerElement) => {
+    if (entry?.isIntersecting) {
+      const presentationsContent = document.querySelector('.section-presentations') as HTMLElement
+      anime.animate(presentationsContent.querySelector('.section-title') as HTMLElement, {
+        opacity: [0, 1],
+        easing: 'easeInOutSine',
+        duration: 600,
+      })
+
+      const presentationEvents = presentationsContent.querySelectorAll('.p-timeline-event')
+      presentationEvents.forEach((event, index) => {
+        const markerTimeline = anime.createTimeline()
+        const contentTimeline = anime.createTimeline()
+        const marker = event.querySelector('.p-timeline-event-marker') as HTMLElement
+        markerTimeline.add(marker, {
+          opacity: [0, 1],
+          easing: 'easeInOutSine',
+          duration: 500,
+          delay: index * 300,
+        })
+
+        const separator = event.querySelector('.p-timeline-event-separator') as HTMLElement
+        markerTimeline.add(separator, {
+          ['max-height']: ['17px', '250px'],
+          easing: 'easeInOutSine',
+          duration: 2000,
+          delay: index * 500,
+        })
+
+        contentTimeline.add(event.querySelector('.p-timeline-event-content') as HTMLElement, {
+          opacity: [0, 1],
+          easing: 'easeInOutSine',
+          duration: 1000,
+          delay: index * 800,
+        })
+        offset.value += 1000
+      })
+
+      observerElement.disconnect()
+    }
+  },
+  {
+    threshold: 0.3,
+  },
+)
+
 const positions = ref([
   {
     company: 'Alpheya',
@@ -215,6 +264,22 @@ const volunteering = [
     info: 'Volunteering in local meetups and events.',
   },
 ]
+
+const presentations = [
+  {
+    title: 'k6',
+    info: 'How to nuke (or load test) your services with k6',
+    links: [
+      { name: 'slides', url: 'https://presentations.kalovelo.com/k6/' },
+      { name: 'video', url: 'https://www.youtube.com/watch?v=1nWYAjyT9Ms' },
+    ],
+  },
+  {
+    title: 'Æternity State Channels',
+    info: 'Reliable and limitless contract calls with State Channels',
+    links: [{ name: 'video', url: 'https://www.youtube.com/watch?v=x7_8jh0OmPA' }],
+  },
+]
 </script>
 
 <template>
@@ -251,6 +316,27 @@ const volunteering = [
             <p class="text-sm font-bold">{{ slotProps.item.organization }}</p>
             <p class="text-xs">{{ slotProps.item.date }}</p>
             <p class="text-sm">{{ slotProps.item.info }}</p>
+          </template>
+        </Timeline>
+      </div>
+      <div ref="presentationsRef" class="section-content section-presentations">
+        <h3 class="text-2xl mb-4 section-title">Presentations</h3>
+        <Timeline :value="presentations">
+          <template #content="slotProps">
+            <p class="text-sm font-bold">{{ slotProps.item.title }}</p>
+            <p class="text-sm">{{ slotProps.item.info }}</p>
+            <div class="flex gap-4 mt-1">
+              <a
+                v-for="link in slotProps.item.links"
+                :key="link.name"
+                :href="link.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs font-black uppercase hover:underline"
+              >
+                {{ link.name }} &#8599;
+              </a>
+            </div>
           </template>
         </Timeline>
       </div>
